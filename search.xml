@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Maven清理下载失败文件</title>
+      <link href="2021/01/15/maven-qing-li-xia-zai-shi-bai-wen-jian/"/>
+      <url>2021/01/15/maven-qing-li-xia-zai-shi-bai-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<hr><h1 id="Maven清理下载失败文件"><a href="#Maven清理下载失败文件" class="headerlink" title="Maven清理下载失败文件"></a>Maven清理下载失败文件</h1><ul><li><p>cleanLastUpdated.bat（windows版本）</p><pre class=" language-visual"><code class="language-visual">@echo offrem create by niudehuarem 这里写你的仓库路径set REPOSITORY_PATH=D:\Java\maven-repository\maven-aliyun\repositoryrem 正在搜索...for /f "delims=" %%i in ('dir /b /s "%REPOSITORY_PATH%\*lastUpdated*"') do (   echo %%i   del /s /q "%%i")rem 搜索完毕pause</code></pre></li><li><p>cleanLastUpdated.sh（linux版本）</p><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># create by niudehua</span><span class="token comment" spellcheck="true"># 这里写你的仓库路径</span>REPOSITORY_PATH<span class="token operator">=</span>/Users/deng/.m2/repository<span class="token function">rm</span> -f lastUpdatedFile.txt<span class="token comment" spellcheck="true"># 查询</span>  <span class="token function">date</span> <span class="token string">"+%Y-%m-%d %H:%M:%S"</span>  <span class="token operator">>></span> lastUpdatedFile.txt  <span class="token keyword">echo</span>  <span class="token string">"开始搜索"</span><span class="token variable">$REPOSITORY_PATH</span> <span class="token operator">>></span> lastUpdatedFile.txt  <span class="token function">find</span> <span class="token variable">$REPOSITORY_PATH</span> -name <span class="token string">"*lastUpdated*"</span> <span class="token operator">>></span> lastUpdatedFile.txt<span class="token comment" spellcheck="true"># 删除</span>  <span class="token function">find</span> <span class="token variable">$REPOSITORY_PATH</span> -name <span class="token string">"*lastUpdated*"</span> <span class="token operator">|</span><span class="token function">xargs</span> <span class="token function">rm</span> -fr  <span class="token function">date</span> <span class="token string">"+%Y-%m-%d %H:%M:%S"</span>  <span class="token operator">>></span> lastUpdatedFile.txt  <span class="token keyword">echo</span> <span class="token string">"搜索完毕"</span><span class="token variable">$REPOSITORY_PATH</span> <span class="token operator">>></span> lastUpdatedFile.txt  <span class="token function">cat</span>  lastUpdatedFile.txt</code></pre></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Maven </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Maven </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>win10系统专业版激活</title>
       <link href="2020/11/17/win10-xi-tong-zhuan-ye-ban-ji-huo/"/>
       <url>2020/11/17/win10-xi-tong-zhuan-ye-ban-ji-huo/</url>
