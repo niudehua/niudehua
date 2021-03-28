@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 牛德滑">
+    <meta name="keywords" content="分类: elasticsearch, 牛德滑">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 牛德滑</title>
+    <title>分类: elasticsearch | 牛德滑</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/niudehua/niudehua//favicon.png">
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/niudehua/niudehua//libs/awesome/css/all.css">
@@ -306,91 +306,173 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/tags/python/" title="python: 3">
+                
+                <a href="/categories/Python/" title="Python: 3">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="python" style="background-color: #F9EBEA;">python
+                            style="background-color: #F9EBEA;">Python
                         <span class="tag-length">3</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/win10/" title="win10: 1">
+                <a href="/categories/Win10/" title="Win10: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="win10" style="background-color: #F5EEF8;">win10
+                            style="background-color: #F5EEF8;">Win10
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/Maven/" title="Maven: 1">
+                <a href="/categories/Maven/" title="Maven: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Maven" style="background-color: #D5F5E3;">Maven
+                            style="background-color: #D5F5E3;">Maven
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/%E8%BD%AF%E8%80%83%E9%AB%98%E9%A1%B9/" title="软考高项: 2">
+                <a href="/categories/%E8%80%83%E8%AF%81/" title="考证: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="软考高项" style="background-color: #E8F8F5;">软考高项
+                            style="background-color: #E8F8F5;">考证
                         <span class="tag-length">2</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/elasticsearch/" title="elasticsearch: 2">
+                <a href="/categories/elasticsearch/" title="elasticsearch: 2">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="elasticsearch" style="background-color: #FEF9E7;">elasticsearch
+                             chip-active "
+                            style="background-color: #FEF9E7;">elasticsearch
                         <span class="tag-length">2</span>
                     </span>
                 </a>
+                
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/niudehua/niudehua//libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/niudehua/niudehua//libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"python","weight":3,"link":"/tags/python/"},{"text":"win10","weight":1,"link":"/tags/win10/"},{"text":"Maven","weight":1,"link":"/tags/Maven/"},{"text":"软考高项","weight":2,"link":"/tags/软考高项/"},{"text":"elasticsearch","weight":2,"link":"/tags/elasticsearch/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/03/28/elasticsearch-jiao-cheng-er/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/niudehua/niudehua//medias/featureimages/8.jpg" class="responsive-img" alt="Elasticsearch 教程（二）">
+                            
+                            <span class="card-title">Elasticsearch 教程（二）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                一 Request Body深入搜索1.1 term查询
+term是表达语义的最小单位，在搜索的时候基本都要使用到term。 
+term查询的种类有：Term Query、Range Query等。
+在ES中，Term查询不会对输入进行分词
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/elasticsearch/" class="post-category">
+                                    elasticsearch
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/elasticsearch/">
+                            <span class="chip bg-color">elasticsearch</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2021/03/28/elasticsearch-jiao-cheng-yi/">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="https://cdn.jsdelivr.net/gh/niudehua/niudehua//medias/featureimages/12.jpg" class="responsive-img" alt="Elasticsearch 教程（一）">
+                            
+                            <span class="card-title">Elasticsearch 教程（一）</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                一 前序
+Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎。无论在开源还是专有领域，Lucene可以被认为是迄今为止最先进、性能最好的、功能最全的搜索引擎库。但是，Lucene只是一个库。想要 使用它，你
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-28
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/elasticsearch/" class="post-category">
+                                    elasticsearch
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/elasticsearch/">
+                            <span class="chip bg-color">elasticsearch</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">
