@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    163
+                    260
                 </div>
                 
 
@@ -440,35 +440,10 @@
                 <hr>
 <h1 id="Maven清理下载失败文件"><a href="#Maven清理下载失败文件" class="headerlink" title="Maven清理下载失败文件"></a>Maven清理下载失败文件</h1><ul>
 <li><p>cleanLastUpdated.bat（windows版本）</p>
-<pre><div class="caption"><span>basic</span></div><code class="hljs visual">@echo off
-rem create by niudehua
-  
-rem 这里写你的仓库路径
-set REPOSITORY_PATH&#x3D;D:\Java\maven-repository\maven-aliyun\repository
-rem 正在搜索...
-for &#x2F;f &quot;delims&#x3D;&quot; %%i in (&#39;dir &#x2F;b &#x2F;s &quot;%REPOSITORY_PATH%\*lastUpdated*&quot;&#39;) do (
-    echo %%i
-    del &#x2F;s &#x2F;q &quot;%%i&quot;
-)
-rem 搜索完毕
-pause</code></pre>
+<figure class="highlight plain"><figcaption><span>basic</span></figcaption><table><tr><td class="code"><pre class=" language-hljs visual"><code class="language-hljs visual">@echo off<br>rem create by niudehua<br>  <br>rem 这里写你的仓库路径<br>set REPOSITORY_PATH&#x3D;D:\Java\maven-repository\maven-aliyun\repository<br>rem 正在搜索...<br>for &#x2F;f "delims&#x3D;" %%i in ('dir &#x2F;b &#x2F;s "%REPOSITORY_PATH%\*lastUpdated*"') do (<br>    echo %%i<br>    del &#x2F;s &#x2F;q "%%i"<br>)<br>rem 搜索完毕<br>pause<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>cleanLastUpdated.sh（linux版本）</p>
-<pre class=" language-hljs bash"><span class="hljs-comment"><code class="language-hljs bash"><span class="hljs-comment"># create by niudehua</span>
-
-<span class="hljs-comment"># 这里写你的仓库路径</span>
-REPOSITORY_PATH=/Users/deng/.m2/repository
-rm -f lastUpdatedFile.txt
-<span class="hljs-comment"># 查询</span>
-  date <span class="hljs-string">"+%Y-%m-%d %H:%M:%S"</span>  >> lastUpdatedFile.txt
-  <span class="hljs-built_in">echo</span>  <span class="hljs-string">"开始搜索"</span><span class="hljs-variable">$REPOSITORY_PATH</span> >> lastUpdatedFile.txt
-  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">"*lastUpdated*"</span> >> lastUpdatedFile.txt
-<span class="hljs-comment"># 删除</span>
-  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">"*lastUpdated*"</span> |xargs rm -fr
-  date <span class="hljs-string">"+%Y-%m-%d %H:%M:%S"</span>  >> lastUpdatedFile.txt
-  <span class="hljs-built_in">echo</span> <span class="hljs-string">"搜索完毕"</span><span class="hljs-variable">$REPOSITORY_PATH</span> >> lastUpdatedFile.txt
-  cat  lastUpdatedFile.txt
-</code></pre>
+<figure class="highlight bash"><table><tr><td class="code"><pre class=" language-hljs bash"><span class="hljs-comment"># create by niudehua</span><br><br><span class="hljs-comment"># 这里写你的仓库路径</span><br>REPOSITORY_PATH=/Users/deng/.m2/repository<br>rm -f lastUpdatedFile.txt<br><span class="hljs-comment"># 查询</span><br>  date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>  &gt;&gt; lastUpdatedFile.txt<br>  <span class="hljs-built_in">echo</span>  <span class="hljs-string">&quot;开始搜索&quot;</span><span class="hljs-variable">$REPOSITORY_PATH</span> &gt;&gt; lastUpdatedFile.txt<br>  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">&quot;*lastUpdated*&quot;</span> &gt;&gt; lastUpdatedFile.txt<br><span class="hljs-comment"># 删除</span><br>  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">&quot;*lastUpdated*&quot;</span> |xargs rm -fr<br>  date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>  &gt;&gt; lastUpdatedFile.txt<br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;搜索完毕&quot;</span><span class="hljs-variable"><code class="language-hljs bash"><span class="hljs-comment"># create by niudehua</span><br><br><span class="hljs-comment"># 这里写你的仓库路径</span><br>REPOSITORY_PATH=/Users/deng/.m2/repository<br>rm -f lastUpdatedFile.txt<br><span class="hljs-comment"># 查询</span><br>  date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>  &gt;&gt; lastUpdatedFile.txt<br>  <span class="hljs-built_in">echo</span>  <span class="hljs-string">&quot;开始搜索&quot;</span><span class="hljs-variable">$REPOSITORY_PATH</span> &gt;&gt; lastUpdatedFile.txt<br>  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">&quot;*lastUpdated*&quot;</span> &gt;&gt; lastUpdatedFile.txt<br><span class="hljs-comment"># 删除</span><br>  find <span class="hljs-variable">$REPOSITORY_PATH</span> -name <span class="hljs-string">&quot;*lastUpdated*&quot;</span> |xargs rm -fr<br>  date <span class="hljs-string">&quot;+%Y-%m-%d %H:%M:%S&quot;</span>  &gt;&gt; lastUpdatedFile.txt<br>  <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;搜索完毕&quot;</span><span class="hljs-variable">$REPOSITORY_PATH</span> >> lastUpdatedFile.txt<br>  cat  lastUpdatedFile.txt<br><br></code></pre></td></tr></table></figure>
 
 </li>
 </ul>

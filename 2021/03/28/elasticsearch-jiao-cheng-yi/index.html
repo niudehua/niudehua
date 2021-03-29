@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    3k
                 </div>
                 
 
@@ -446,17 +446,17 @@
 <p>正向索引与倒排索引，这是在搜索领域中非常重要的两个名词，正向索引通常用于数据库中，在搜索引擎领域使用的最多的就是倒排索引，我们根据如下两个网页来对这两个概念进行阐述：</p>
 </blockquote>
 <p><strong>html1</strong> </p>
-<pre class=" language-hljs plain"><code class="language-hljs plain">我爱我的祖国，我爱编程</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre class=" language-hljs plain"><code class="language-hljs plain">我爱我的祖国，我爱编程<br></code></pre></td></tr></table></figure>
 
 <p><strong>html2</strong> </p>
-<pre class=" language-hljs plain"><code class="language-hljs plain">我爱编程，我是个快乐的小码农</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre class=" language-hljs plain"><code class="language-hljs plain">我爱编程，我是个快乐的小码农<br></code></pre></td></tr></table></figure>
 
 <h4 id="1-1-1-正向索引"><a href="#1-1-1-正向索引" class="headerlink" title="1.1.1 正向索引"></a>1.1.1 正向索引</h4><blockquote>
 <p>假设我们使用mysql的全文检索，会对如上两句话分别进行分词处理，那么预计得到的结果如下：</p>
 </blockquote>
-<pre class=" language-hljs plain"><code class="language-hljs plain">我 爱 爱我 祖国 我的祖国 编程 爱编程 我爱编程</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre class=" language-hljs plain"><code class="language-hljs plain">我 爱 爱我 祖国 我的祖国 编程 爱编程 我爱编程 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs plain"><code class="language-hljs plain">我 我爱 爱 编程 爱编程 我爱编程 快乐 码农 小码农</code></pre>
+<figure class="highlight plain"><table><tr><td class="code"><pre class=" language-hljs plain"><code class="language-hljs plain">我 我爱 爱 编程 爱编程 我爱编程 快乐 码农 小码农<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>假设我们现在使用正向索引搜索 编程 这个词，那么会到第一句话中去查找是否包含有 编程 这个关键词，如果有则加入到结果集中；第二句话也是如此。假设现在有成千上百个网页，每个网页非常非常的分词，那么搜索的效率将会非常非常低些。</p>
@@ -567,54 +567,12 @@
 <blockquote>
 <p>将 ml-latest.zip 加压文件中的 movies.csv 文件拷贝到 logstash 的家目录下；再将 logstash 的 config 目录下新建名为 logstash.conf 的文件，文件内容如下:</p>
 </blockquote>
-<pre class=" language-hljs java"><code class="language-hljs java">input &#123;
-  file &#123;
-    path => <span class="hljs-string">"/Users/deng/Documents/software/logstash-7.12.0/movies.csv"</span>
-    start_position => <span class="hljs-string">"beginning"</span>
-    sincedb_path => <span class="hljs-string">"/Users/deng/Documents/software/logstash-7.12.0/db_path.log"</span>
-  &#125;
-&#125;
-filter &#123;
-  csv &#123;
-    separator => <span class="hljs-string">","</span>
-    columns => [<span class="hljs-string">"id"</span>,<span class="hljs-string">"content"</span>,<span class="hljs-string">"genre"</span>]
-  &#125;
-
-  mutate &#123;
-    split => &#123; <span class="hljs-string">"genre"</span> => <span class="hljs-string">"|"</span> &#125;
-    remove_field => [<span class="hljs-string">"path"</span>, <span class="hljs-string">"host"</span>,<span class="hljs-string">"@timestamp"</span>,<span class="hljs-string">"message"</span>]
-  &#125;
-
-  mutate &#123;
-
-    split => [<span class="hljs-string">"content"</span>, <span class="hljs-string">"("</span>]
-    add_field => &#123; <span class="hljs-string">"title"</span> => <span class="hljs-string">"%&#123;[content][0]&#125;"</span>&#125;
-    add_field => &#123; <span class="hljs-string">"year"</span> => <span class="hljs-string">"%&#123;[content][1]&#125;"</span>&#125;
-  &#125;
-
-  mutate &#123;
-    convert => &#123;
-      <span class="hljs-string">"year"</span> => <span class="hljs-string">"integer"</span>
-    &#125;
-    strip => [<span class="hljs-string">"title"</span>]
-    remove_field => [<span class="hljs-string">"path"</span>, <span class="hljs-string">"host"</span>,<span class="hljs-string">"@timestamp"</span>,<span class="hljs-string">"message"</span>,<span class="hljs-string">"content"</span>]
-  &#125;
-
-&#125;
-output &#123;
-   elasticsearch &#123;
-     # 双引号中的内容为ES的地址，视实际情况而定
-     hosts => <span class="hljs-string">"http://localhost:9200"</span>
-     index => <span class="hljs-string">"movies"</span>
-     document_id => <span class="hljs-string">"%&#123;id&#125;"</span>
-   &#125;
-  stdout &#123;&#125;
-&#125;</code></pre>
+<figure class="highlight java"><table><tr><td class="code"><pre class=" language-hljs java">input &#123;<br>  file &#123;<br>    path =&gt; <span class="hljs-string">&quot;/Users/deng/Documents/software/logstash-7.12.0/movies.csv&quot;</span><br>    start_position =&gt; <span class="hljs-string">&quot;beginning&quot;</span><br>    sincedb_path =&gt; <span class="hljs-string">&quot;/Users/deng/Documents/software/logstash-7.12.0/db_path.log&quot;</span><br>  &#125;<br>&#125;<br>filter &#123;<br>  csv &#123;<br>    separator =&gt; <span class="hljs-string">&quot;,&quot;</span><br>    columns =&gt; [<span class="hljs-string">&quot;id&quot;</span>,<span class="hljs-string">&quot;content&quot;</span>,<span class="hljs-string">&quot;genre&quot;</span>]<br>  &#125;<br><br>  mutate &#123;<br>    split =&gt; &#123; <span class="hljs-string">&quot;genre&quot;</span> =&gt; <span class="hljs-string">&quot;|&quot;</span> &#125;<br>    remove_field =&gt; [<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;host&quot;</span>,<span class="hljs-string">&quot;@timestamp&quot;</span>,<span class="hljs-string">&quot;message&quot;</span>]<br>  &#125;<br><br>  mutate &#123;<br><br>    split =&gt; [<span class="hljs-string">&quot;content&quot;</span>, <span class="hljs-string">&quot;(&quot;</span>]<br>    add_field =&gt; &#123; <span class="hljs-string">&quot;title&quot;</span> =&gt; <span class="hljs-string">&quot;%&#123;[content][0]&#125;&quot;</span>&#125;<br>    add_field =&gt; &#123; <span class="hljs-string">&quot;year&quot;</span> =&gt; <span class="hljs-string">&quot;%&#123;[content][1]&#125;&quot;</span>&#125;<br>  &#125;<br><br>  mutate &#123;<br>    convert =&gt; &#123;<br>      <span class="hljs-string">&quot;year&quot;</span> =&gt; <span class="hljs-string">&quot;integer&quot;</span><br>    &#125;<br>    strip =&gt; [<span class="hljs-string">&quot;title&quot;</span>]<br>    remove_field =&gt; [<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;host&quot;</span>,<span class="hljs-string">&quot;@timestamp&quot;</span>,<span class="hljs-string">&quot;message&quot;</span>,<span class="hljs-string">&quot;content&quot;</span>]<br>  &#125;<br><br>&#125;<br>output &#123;<br>   elasticsearch &#123;<br>     # 双引号中的内容为ES的地址，视实际情况而定<br>     hosts =&gt; <span class="hljs-string">&quot;http://localhost:9200&quot;</span><br>     index =&gt; <span class="hljs-string">&quot;movies&quot;</span><br>     document_id =&gt; <span class="hljs-string"><code class="language-hljs java">input &#123;<br>  file &#123;<br>    path =&gt; <span class="hljs-string">&quot;/Users/deng/Documents/software/logstash-7.12.0/movies.csv&quot;</span><br>    start_position =&gt; <span class="hljs-string">&quot;beginning&quot;</span><br>    sincedb_path =&gt; <span class="hljs-string">&quot;/Users/deng/Documents/software/logstash-7.12.0/db_path.log&quot;</span><br>  &#125;<br>&#125;<br>filter &#123;<br>  csv &#123;<br>    separator =&gt; <span class="hljs-string">&quot;,&quot;</span><br>    columns =&gt; [<span class="hljs-string">&quot;id&quot;</span>,<span class="hljs-string">&quot;content&quot;</span>,<span class="hljs-string">&quot;genre&quot;</span>]<br>  &#125;<br><br>  mutate &#123;<br>    split =&gt; &#123; <span class="hljs-string">&quot;genre&quot;</span> =&gt; <span class="hljs-string">&quot;|&quot;</span> &#125;<br>    remove_field =&gt; [<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;host&quot;</span>,<span class="hljs-string">&quot;@timestamp&quot;</span>,<span class="hljs-string">&quot;message&quot;</span>]<br>  &#125;<br><br>  mutate &#123;<br><br>    split =&gt; [<span class="hljs-string">&quot;content&quot;</span>, <span class="hljs-string">&quot;(&quot;</span>]<br>    add_field =&gt; &#123; <span class="hljs-string">&quot;title&quot;</span> =&gt; <span class="hljs-string">&quot;%&#123;[content][0]&#125;&quot;</span>&#125;<br>    add_field =&gt; &#123; <span class="hljs-string">&quot;year&quot;</span> =&gt; <span class="hljs-string">&quot;%&#123;[content][1]&#125;&quot;</span>&#125;<br>  &#125;<br><br>  mutate &#123;<br>    convert =&gt; &#123;<br>      <span class="hljs-string">&quot;year&quot;</span> =&gt; <span class="hljs-string">&quot;integer&quot;</span><br>    &#125;<br>    strip =&gt; [<span class="hljs-string">&quot;title&quot;</span>]<br>    remove_field =&gt; [<span class="hljs-string">&quot;path&quot;</span>, <span class="hljs-string">&quot;host&quot;</span>,<span class="hljs-string">&quot;@timestamp&quot;</span>,<span class="hljs-string">&quot;message&quot;</span>,<span class="hljs-string">&quot;content&quot;</span>]<br>  &#125;<br><br>&#125;<br>output &#123;<br>   elasticsearch &#123;<br>     # 双引号中的内容为ES的地址，视实际情况而定<br>     hosts =&gt; <span class="hljs-string">&quot;http://localhost:9200&quot;</span><br>     index =&gt; <span class="hljs-string">&quot;movies&quot;</span><br>     document_id =&gt; <span class="hljs-string">"%&#123;id&#125;"</span><br>   &#125;<br>  stdout &#123;&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <blockquote>
 <p>打开命令行，进入到 logstash 的 bin 目录下，执行如下命令导入 movielens 的数据集。</p>
 </blockquote>
-<pre class=" language-hljs shell"><code class="language-hljs shell">logstash -f ../config/logstash.conf</code></pre>
+<figure class="highlight shell"><table><tr><td class="code"><pre class=" language-hljs shell"><code class="language-hljs shell">logstash -f ../config/logstash.conf<br></code></pre></td></tr></table></figure>
 
 <h4 id="2-4-3-验证"><a href="#2-4-3-验证" class="headerlink" title="2.4.3 验证"></a>2.4.3 验证</h4><blockquote>
 <p>进入到 kibana 的命令行页面，执行 GET _cat/indices 验证数据是否成功导入</p>
@@ -629,21 +587,7 @@ output &#123;
 <h3 id="3-2-文档"><a href="#3-2-文档" class="headerlink" title="3.2 文档"></a>3.2 文档</h3><blockquote>
 <p>具体的一条数据，类比到数据库就是一条记录。</p>
 </blockquote>
-<h3 id="3-3-ES文档的结构"><a href="#3-3-ES文档的结构" class="headerlink" title="3.3 ES文档的结构"></a>3.3 ES文档的结构</h3><pre class=" language-hljs json"><code class="language-hljs json">&#123;
-    "_index": "movies", # 索引名
-    "_type": "_doc",		# 类型
-    "_id": "83556",			# ID
-    "_score": 1,
-    "_source": &#123;				# 存放具体的数据
-        "year": 2008,
-        "genre": [
-            <span class="hljs-string">"Drama"</span>
-        ],
-        "title": "Stella",
-        "id": "83556",
-        "@version": "1"
-    &#125;
-&#125;</code></pre>
+<h3 id="3-3-ES文档的结构"><a href="#3-3-ES文档的结构" class="headerlink" title="3.3 ES文档的结构"></a>3.3 ES文档的结构</h3><figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json">&#123;<br>    &quot;_index&quot;: &quot;movies&quot;, # 索引名<br>    &quot;_type&quot;: &quot;_doc&quot;,		# 类型<br>    &quot;_id&quot;: &quot;83556&quot;,			# ID<br>    &quot;_score&quot;: 1,<br>    &quot;_source&quot;: &#123;				# 存放具体的数据<br>        &quot;year&quot;: 2008,<br>        &quot;genre&quot;: [<br>            <span class="hljs-string"><code class="language-hljs json">&#123;<br>    &quot;_index&quot;: &quot;movies&quot;, # 索引名<br>    &quot;_type&quot;: &quot;_doc&quot;,		# 类型<br>    &quot;_id&quot;: &quot;83556&quot;,			# ID<br>    &quot;_score&quot;: 1,<br>    &quot;_source&quot;: &#123;				# 存放具体的数据<br>        &quot;year&quot;: 2008,<br>        &quot;genre&quot;: [<br>            <span class="hljs-string">"Drama"</span><br>        ],<br>        "title": "Stella",<br>        "id": "83556",<br>        "@version": "1"<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
 <h3 id="3-4-mapping"><a href="#3-4-mapping" class="headerlink" title="3.4 mapping"></a>3.4 mapping</h3><blockquote>
 <p>mapping 是ES每一个文档的约束信息，例如属性的类型，是否能被索引等。</p>
@@ -689,113 +633,70 @@ output &#123;
 <blockquote>
 <p>在7.0之前，一个Index可以创建多个类型，从7.0开始，一个索引只能创建一个类型，也就是 _doc</p>
 </blockquote>
-<h2 id="四-RestAPI"><a href="#四-RestAPI" class="headerlink" title="四 RestAPI"></a>四 RestAPI</h2><h3 id="4-1-基本CRUD"><a href="#4-1-基本CRUD" class="headerlink" title="4.1 基本CRUD"></a>4.1 基本CRUD</h3><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search 		# 查询movies的数据</code></pre>
+<h2 id="四-RestAPI"><a href="#四-RestAPI" class="headerlink" title="四 RestAPI"></a>四 RestAPI</h2><h3 id="4-1-基本CRUD"><a href="#4-1-基本CRUD" class="headerlink" title="4.1 基本CRUD"></a>4.1 基本CRUD</h3><figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search 		# 查询movies的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_count 		#查询movies的总数</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_count 		#查询movies的总数 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET _cat/indices 			#查看所有的索引</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET _cat/indices 			#查看所有的索引 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_doc/24 		#查询id为24的数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_doc/24 		#查询id为24的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">POST users/_doc/1  		#添加id为1的文档 ，如果没有指定id，ES会自动生成
-&#123;
-    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"will"</span>,
-    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"smith"</span>
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">POST users/_doc/1  		#添加id为1的文档 ，如果没有指定id，ES会自动生成<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string"><code class="language-hljs json">POST users/_doc/1  		#添加id为1的文档 ，如果没有指定id，ES会自动生成<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">"smith"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">POST users/_create/2	#创建id为2的文档，如果索引中已存在相同id，会报错；
-&#123;
-    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"will"</span>,
-    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"smith"</span>
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">POST users/_create/2	#创建id为2的文档，如果索引中已存在相同id，会报错；<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string"><code class="language-hljs json">POST users/_create/2	#创建id为2的文档，如果索引中已存在相同id，会报错；<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">"smith"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">POST users/_update/2 	#在id位2的文档中添加一个age属性，修改结构 
-&#123;
-    <span class="hljs-attr">"doc"</span>: &#123;
-        <span class="hljs-attr">"age"</span>: <span class="hljs-number">30</span>
-    &#125;
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">POST users/_update/2 	#在id位2的文档中添加一个age属性，修改结构 <br>&#123;<br>    <span class="hljs-attr">&quot;doc&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number"><code class="language-hljs json">POST users/_update/2 	#在id位2的文档中添加一个age属性，修改结构 <br>&#123;<br>    <span class="hljs-attr">&quot;doc&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">30</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">DELETE users/_doc/2 	#删除id为2的文档</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">DELETE users/_doc/2 	#删除id为2的文档 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">DELETE users 					#删除 users 索引</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">DELETE users 					#删除 users 索引 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">PUT users/_doc/1 			#创建或者修改文档
-&#123;
-    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Jack"</span>,
-    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"ma"</span>
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">PUT users/_doc/1 			#创建或者修改文档<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jack&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string"><code class="language-hljs json">PUT users/_doc/1 			#创建或者修改文档<br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Jack&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">"ma"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">PUT users/_create/2  	#创建id为2的文档，如果已存在就报错，如果不存在就创建 
-&#123;
-    <span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"will"</span>,
-    <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"smith"</span>
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">PUT users/_create/2  	#创建id为2的文档，如果已存在就报错，如果不存在就创建 <br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string"><code class="language-hljs json">PUT users/_create/2  	#创建id为2的文档，如果已存在就报错，如果不存在就创建 <br>&#123;<br>    <span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;will&quot;</span>,<br>    <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">"smith"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET mget   						#批量查询多个指定的id的数据，也可以批量查询
-&#123;
-    <span class="hljs-attr">"docs"</span>: [
-        &#123;
-            <span class="hljs-attr">" index"</span>: <span class="hljs-string">"users"</span>,
-            <span class="hljs-attr">" id"</span>: <span class="hljs-number">1</span>
-        &#125;,
-        &#123;
-            <span class="hljs-attr">" index"</span>: <span class="hljs-string">"users"</span>,
-            <span class="hljs-attr">"_id"</span>: <span class="hljs-number">2</span>
-        &#125;
-    ]
-&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET mget   						#批量查询多个指定的id的数据，也可以批量查询<br>&#123;<br>    <span class="hljs-attr">&quot;docs&quot;</span>: [<br>        &#123;<br>            <span class="hljs-attr">&quot; index&quot;</span>: <span class="hljs-string">&quot;users&quot;</span>,<br>            <span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">1</span><br>        &#125;,<br>        &#123;<br>            <span class="hljs-attr">&quot; index&quot;</span>: <span class="hljs-string">&quot;users&quot;</span>,<br>            <span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET mget   						#批量查询多个指定的id的数据，也可以批量查询<br>&#123;<br>    <span class="hljs-attr">&quot;docs&quot;</span>: [<br>        &#123;<br>            <span class="hljs-attr">&quot; index&quot;</span>: <span class="hljs-string">&quot;users&quot;</span>,<br>            <span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">1</span><br>        &#125;,<br>        &#123;<br>            <span class="hljs-attr">&quot; index&quot;</span>: <span class="hljs-string">&quot;users&quot;</span>,<br>            <span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">2</span><br>        &#125;<br>    ]<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">POST users/ bulk  		#批量插入数据 
-&#123;<span class="hljs-attr">"index"</span>: &#123;<span class="hljs-attr">" id"</span>: <span class="hljs-number">3</span>&#125;&#125; 
-&#123;<span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"A"</span>, <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"a"</span>&#125; 
-&#123;<span class="hljs-attr">"index"</span>: &#123;<span class="hljs-attr">" id"</span>: <span class="hljs-number">4</span>&#125;&#125; 
-&#123;<span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"B"</span>, <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"b"</span>&#125; 
-&#123;<span class="hljs-attr">"index"</span>: &#123;<span class="hljs-attr">" id"</span>: <span class="hljs-number">5</span>&#125;&#125;
-&#123;<span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"X"</span>, <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"x"</span>&#125; 
-&#123;<span class="hljs-attr">"index"</span>: &#123;<span class="hljs-attr">"_id"</span>: <span class="hljs-number">6</span>&#125;&#125;
-&#123;<span class="hljs-attr">"firstname"</span>: <span class="hljs-string">"Z"</span>, <span class="hljs-attr">"lastname"</span>: <span class="hljs-string">"z"</span>&#125;</code></pre>
+<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">POST users/ bulk  		#批量插入数据 <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">3</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;a&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">4</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;b&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">5</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;X&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;x&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">6</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Z&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string"><code class="language-hljs json">POST users/ bulk  		#批量插入数据 <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">3</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;A&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;a&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">4</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;B&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;b&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot; id&quot;</span>: <span class="hljs-number">5</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;X&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">&quot;x&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">6</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;firstname&quot;</span>: <span class="hljs-string">&quot;Z&quot;</span>, <span class="hljs-attr">&quot;lastname&quot;</span>: <span class="hljs-string">"z"</span>&#125; <br></code></pre></td></tr></table></figure>
 
 
 
-<h3 id="4-2-URI查询"><a href="#4-2-URI查询" class="headerlink" title="4.2 URI查询"></a>4.2 URI查询</h3><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=2012 #查询所有的属性中只要包含2012的所有的数据，泛查询</code></pre>
+<h3 id="4-2-URI查询"><a href="#4-2-URI查询" class="headerlink" title="4.2 URI查询"></a>4.2 URI查询</h3><figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=2012 #查询所有的属性中只要包含2012的所有的数据，泛查询<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=2012&df=title #查询title中包含2012的所有的电影，df(default field)或者 
-GET movies/_search?q=title:2012</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=2012&df=title #查询title中包含2012的所有的电影，df(default field)或者 <br>GET movies/_search?q=title:2012 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:2012&from=10&size=8 #查询title中包含2012，从第10条开始，查询8条数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:2012&from=10&size=8 #查询title中包含2012，从第10条开始，查询8条数据<br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Beautiful Mind #查询title中包含Beautiful或者Mind的所有的数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Beautiful Mind #查询title中包含Beautiful或者Mind的所有的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful Mind)</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful Mind) <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(+Beautiful +Mind)</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(+Beautiful +Mind) <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:"Beautiful Mind" #查询title中包含 "Beautiful Mind"这个短语的所有的数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:"Beautiful Mind" #查询title中包含 "Beautiful Mind"这个短语的所有的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Mind AND Beautiful) #查询title中既包含Mind又包含Beautiful的所有的数据，与顺序没有关系</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Mind AND Beautiful) #查询title中既包含Mind又包含Beautiful的所有的数据，与顺序没有关系 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful NOT Mind) #查询title中包含Beautiful但是不包含mind的所有的数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful NOT Mind) #查询title中包含Beautiful但是不包含mind的所有的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful -Mind)</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:(Beautiful -Mind) <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Beautiful AND year:>=2012 #查询title中包含Beautiful且电影上映时间在2012年之后的所有的数据</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Beautiful AND year:>=2012 #查询title中包含Beautiful且电影上映时间在2012年之后的所有的数据 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:>=2018 #查询2018年之后上映的电影</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:>=2018 #查询2018年之后上映的电影 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:(>=2012 AND <2018) #查询在2012到2017年上映的电影</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:(>=2012 AND <2018) #查询在2012到2017年上映的电影 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:&#123;2015 TO 2017] #查询2016年到2017年上映的电影，必须以 ] 结尾</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=year:&#123;2015 TO 2017] #查询2016年到2017年上映的电影，必须以 ] 结尾 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Min?x # ？代表一个字母</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Min?x # ？代表一个字母 <br></code></pre></td></tr></table></figure>
 
-<pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Min* # 查询title中包含以 Min开头的字母的电影</code></pre>
+<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET movies/_search?q=title:Min* # 查询title中包含以 Min开头的字母的电影 <br></code></pre></td></tr></table></figure>
 
 <h2 id="五-Analysis"><a href="#五-Analysis" class="headerlink" title="五 Analysis"></a>五 Analysis</h2><blockquote>
 <p>analysis(只是一个概念)，文本分析是将全文本转换为一系列单词的过程，也叫分词。analysis是通过analyzer(分词器)来实现的，可以使用Elasticsearch内置的分词器，也可以自己去定制一些分词器。 <strong>除了在数据写入的时候进行分词处理，那么在查询的时候也可以使用分析器对查询语句进行分词</strong>。 </p>
 <p>anaylzer是由三部分组成，例如有:</p>
-<pre class=" language-hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello a World, the world is beautiful<span class="hljs-tag">&lt;/<span class="hljs-name"><code class="language-hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Hello a World, the world is beautiful<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>></span></code></pre>
-
+<p><img src="https://gitee.com/niu_dehua/oss/raw/master/uPic/image-20210329234134720-7032592.png" alt="image-20210329234134720"></p>
 <ol>
 <li><p>Character Filter: 将文本中html标签剔除掉。</p>
 </li>
@@ -839,41 +740,17 @@ GET movies/_search?q=title:2012</code></pre>
 <td>正则表达式，默认是\W+(非字符串分隔)</td>
 </tr>
 </tbody></table>
-<h4 id="5-2-内置分词器示例"><a href="#5-2-内置分词器示例" class="headerlink" title="5.2 内置分词器示例"></a>5.2 内置分词器示例</h4><h5 id="5-2-1-Standard-Analyzer"><a href="#5-2-1-Standard-Analyzer" class="headerlink" title="5.2.1 Standard Analyzer"></a>5.2.1 Standard Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-  <span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"standard"</span>, 
-  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span>
-&#125;</code></pre>
+<h4 id="5-2-内置分词器示例"><a href="#5-2-内置分词器示例" class="headerlink" title="5.2 内置分词器示例"></a>5.2 内置分词器示例</h4><h5 id="5-2-1-Standard-Analyzer"><a href="#5-2-1-Standard-Analyzer" class="headerlink" title="5.2.1 Standard Analyzer"></a>5.2.1 Standard Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>  <span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;standard&quot;</span>, <br>  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>  <span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;standard&quot;</span>, <br>  <span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h5 id="5-2-2-Simple-Analyzer"><a href="#5-2-2-Simple-Analyzer" class="headerlink" title="5.2.2 Simple Analyzer"></a>5.2.2 Simple Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-	<span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"simple"</span>, 
-	<span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span>
-&#125;</code></pre>
+<h5 id="5-2-2-Simple-Analyzer"><a href="#5-2-2-Simple-Analyzer" class="headerlink" title="5.2.2 Simple Analyzer"></a>5.2.2 Simple Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;simple&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;simple&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span><br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h5 id="5-2-3-Stop-Analyzer"><a href="#5-2-3-Stop-Analyzer" class="headerlink" title="5.2.3 Stop Analyzer"></a>5.2.3 Stop Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-	<span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"stop"</span>, 
-	<span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> 
-&#125;</code></pre>
+<h5 id="5-2-3-Stop-Analyzer"><a href="#5-2-3-Stop-Analyzer" class="headerlink" title="5.2.3 Stop Analyzer"></a>5.2.3 Stop Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;stop&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;stop&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h5 id="5-2-4-Whitespace-Analyzer"><a href="#5-2-4-Whitespace-Analyzer" class="headerlink" title="5.2.4 Whitespace Analyzer"></a>5.2.4 Whitespace Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-	<span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"whitespace"</span>, 
-	<span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> 
-&#125;</code></pre>
+<h5 id="5-2-4-Whitespace-Analyzer"><a href="#5-2-4-Whitespace-Analyzer" class="headerlink" title="5.2.4 Whitespace Analyzer"></a>5.2.4 Whitespace Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;whitespace&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;whitespace&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h5 id="5-2-5-Keyword-Analyzer"><a href="#5-2-5-Keyword-Analyzer" class="headerlink" title="5.2.5 Keyword Analyzer"></a>5.2.5 Keyword Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-	<span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"keyword"</span>, 
-	<span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> 
-&#125;</code></pre>
+<h5 id="5-2-5-Keyword-Analyzer"><a href="#5-2-5-Keyword-Analyzer" class="headerlink" title="5.2.5 Keyword Analyzer"></a>5.2.5 Keyword Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> <br>&#125;<br></code></pre></td></tr></table></figure>
 
-<h5 id="5-2-6-Pattern-Analyzer"><a href="#5-2-6-Pattern-Analyzer" class="headerlink" title="5.2.6 Pattern Analyzer"></a>5.2.6 Pattern Analyzer</h5><pre class=" language-hljs json"><code class="language-hljs json">GET _analyze 
-&#123; 
-	<span class="hljs-attr">"analyzer"</span>: <span class="hljs-string">"pattern"</span>, 
-	<span class="hljs-attr">"text"</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> 
-&#125;</code></pre>
+<h5 id="5-2-6-Pattern-Analyzer"><a href="#5-2-6-Pattern-Analyzer" class="headerlink" title="5.2.6 Pattern Analyzer"></a>5.2.6 Pattern Analyzer</h5><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;pattern&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET _analyze <br>&#123; <br>	<span class="hljs-attr">&quot;analyzer&quot;</span>: <span class="hljs-string">&quot;pattern&quot;</span>, <br>	<span class="hljs-attr">&quot;text&quot;</span>: <span class="hljs-string">"2 Running quick brown-foxes leap over lazy dog in the summer evening"</span> <br>&#125;<br></code></pre></td></tr></table></figure>
 
 
             </div>
