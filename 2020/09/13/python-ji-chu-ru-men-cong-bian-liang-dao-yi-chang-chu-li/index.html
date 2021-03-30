@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.7k
+                    6.6k
                 </div>
                 
 
@@ -444,13 +444,22 @@
 <li>在Python中，# 表示单行注释，作用于整行</li>
 </ul>
 <p>【例子】单行注释</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-comment"># 单行注释</span><br>print(<span class="hljs-string"><code class="language-hljs python"><span class="hljs-comment"># 单行注释</span><br>print(<span class="hljs-string">"单行注释"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 单行注释</span>
+print(<span class="string">"单行注释"</span>)</code></pre>
 
 <ul>
 <li>‘’’ ‘’’ 或者 “”” “”” 表示区间注释，在三引号之间的所有内容被注释</li>
 </ul>
 <p>【例子】 多行注释</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">单引号多行注释</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>print(<span class="hljs-string">&quot;多行注释&quot;</span>)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">双引号多行注释</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>print(<span class="hljs-string"><code class="language-hljs python"><span class="hljs-string">&#x27;&#x27;&#x27;</span><br><span class="hljs-string">单引号多行注释</span><br><span class="hljs-string">&#x27;&#x27;&#x27;</span><br>print(<span class="hljs-string">&quot;多行注释&quot;</span>)<br><br><span class="hljs-string">&quot;&quot;&quot;</span><br><span class="hljs-string">双引号多行注释</span><br><span class="hljs-string">&quot;&quot;&quot;</span><br>print(<span class="hljs-string">"双引号多行注释"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="string"><code class="language-highlight python"><span class="string">&#x27;&#x27;&#x27;</span>
+<span class="string">单引号多行注释</span>
+<span class="string">&#x27;&#x27;&#x27;</span>
+print(<span class="string">"多行注释"</span>)
+
+<span class="string">"""</span>
+<span class="string">双引号多行注释</span>
+<span class="string">"""</span>
+print(<span class="string">"双引号多行注释"</span>)</code></pre>
 
 <h3 id="2-运算符"><a href="#2-运算符" class="headerlink" title="2.运算符"></a>2.运算符</h3><p><strong>算术运算符</strong></p>
 <table>
@@ -498,7 +507,13 @@
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(<span class="hljs-number">1</span> + <span class="hljs-number">1</span>)  <span class="hljs-comment"># 2</span><br>print(<span class="hljs-number">2</span> - <span class="hljs-number">1</span>)  <span class="hljs-comment"># 1</span><br>print(<span class="hljs-number">3</span> * <span class="hljs-number">4</span>)  <span class="hljs-comment"># 12</span><br>print(<span class="hljs-number">3</span> / <span class="hljs-number">4</span>)  <span class="hljs-comment"># 0.75</span><br>print(<span class="hljs-number">3</span> // <span class="hljs-number">4</span>) <span class="hljs-comment"># 0</span><br>print(<span class="hljs-number">3</span> % <span class="hljs-number">4</span>)  <span class="hljs-comment"># 3</span><br>print(<span class="hljs-number">2</span>**<span class="hljs-number">3</span>)   <span class="hljs-comment"><code class="language-hljs python">print(<span class="hljs-number">1</span> + <span class="hljs-number">1</span>)  <span class="hljs-comment"># 2</span><br>print(<span class="hljs-number">2</span> - <span class="hljs-number">1</span>)  <span class="hljs-comment"># 1</span><br>print(<span class="hljs-number">3</span> * <span class="hljs-number">4</span>)  <span class="hljs-comment"># 12</span><br>print(<span class="hljs-number">3</span> / <span class="hljs-number">4</span>)  <span class="hljs-comment"># 0.75</span><br>print(<span class="hljs-number">3</span> // <span class="hljs-number">4</span>) <span class="hljs-comment"># 0</span><br>print(<span class="hljs-number">3</span> % <span class="hljs-number">4</span>)  <span class="hljs-comment"># 3</span><br>print(<span class="hljs-number">2</span>**<span class="hljs-number">3</span>)   <span class="hljs-comment"># 8</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(<span class="number">1</span> + <span class="number">1</span>)  <span class="comment"><code class="language-highlight python">print(<span class="number">1</span> + <span class="number">1</span>)  <span class="comment"># 2</span>
+print(<span class="number">2</span> - <span class="number">1</span>)  <span class="comment"># 1</span>
+print(<span class="number">3</span> * <span class="number">4</span>)  <span class="comment"># 12</span>
+print(<span class="number">3</span> / <span class="number">4</span>)  <span class="comment"># 0.75</span>
+print(<span class="number">3</span> // <span class="number">4</span>) <span class="comment"># 0</span>
+print(<span class="number">3</span> % <span class="number">4</span>)  <span class="comment"># 3</span>
+print(<span class="number">2</span>**<span class="number">3</span>)   <span class="comment"># 8</span></code></pre>
 
 <p><strong>比较运算符</strong></p>
 <table>
@@ -541,7 +556,12 @@
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(<span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>)   <span class="hljs-comment"># True</span><br>print(<span class="hljs-number">2</span> &gt;= <span class="hljs-number">4</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">1</span> &lt; <span class="hljs-number">2</span>)   <span class="hljs-comment"># True</span><br>print(<span class="hljs-number">5</span> &lt;= <span class="hljs-number">2</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">3</span> == <span class="hljs-number">4</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">3</span> != <span class="hljs-number">5</span>)  <span class="hljs-comment"><code class="language-hljs python">print(<span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>)   <span class="hljs-comment"># True</span><br>print(<span class="hljs-number">2</span> &gt;= <span class="hljs-number">4</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">1</span> &lt; <span class="hljs-number">2</span>)   <span class="hljs-comment"># True</span><br>print(<span class="hljs-number">5</span> &lt;= <span class="hljs-number">2</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">3</span> == <span class="hljs-number">4</span>)  <span class="hljs-comment"># False</span><br>print(<span class="hljs-number">3</span> != <span class="hljs-number">5</span>)  <span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(<span class="number">2</span> &gt; <span class="number">1</span>)   <span class="comment"><code class="language-highlight python">print(<span class="number">2</span> &gt; <span class="number">1</span>)   <span class="comment"># True</span>
+print(<span class="number">2</span> >= <span class="number">4</span>)  <span class="comment"># False</span>
+print(<span class="number">1</span> < <span class="number">2</span>)   <span class="comment"># True</span>
+print(<span class="number">5</span> <= <span class="number">2</span>)  <span class="comment"># False</span>
+print(<span class="number">3</span> == <span class="number">4</span>)  <span class="comment"># False</span>
+print(<span class="number">3</span> != <span class="number">5</span>)  <span class="comment"># True</span></code></pre>
 
 <p><strong>逻辑运算符</strong></p>
 <table>
@@ -569,7 +589,9 @@
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print((<span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>) <span class="hljs-keyword">and</span> (<span class="hljs-number">3</span> &lt; <span class="hljs-number">5</span>))  <span class="hljs-comment"># True</span><br>print((<span class="hljs-number">1</span> &gt; <span class="hljs-number">3</span>) <span class="hljs-keyword">or</span> (<span class="hljs-number">9</span> &lt; <span class="hljs-number">89</span>))  <span class="hljs-comment"># False</span><br>print(<span class="hljs-keyword">not</span> (<span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>))          <span class="hljs-comment"><code class="language-hljs python">print((<span class="hljs-number">3</span> &gt; <span class="hljs-number">2</span>) <span class="hljs-keyword">and</span> (<span class="hljs-number">3</span> &lt; <span class="hljs-number">5</span>))  <span class="hljs-comment"># True</span><br>print((<span class="hljs-number">1</span> &gt; <span class="hljs-number">3</span>) <span class="hljs-keyword">or</span> (<span class="hljs-number">9</span> &lt; <span class="hljs-number">89</span>))  <span class="hljs-comment"># False</span><br>print(<span class="hljs-keyword">not</span> (<span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span>))          <span class="hljs-comment"># False</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print((<span class="number">3</span> &gt; <span class="number">2</span>) <span class="keyword">and</span> (<span class="number">3</span> &lt; <span class="number">5</span>))  <span class="comment"><code class="language-highlight python">print((<span class="number">3</span> &gt; <span class="number">2</span>) <span class="keyword">and</span> (<span class="number">3</span> &lt; <span class="number">5</span>))  <span class="comment"># True</span>
+print((<span class="number">1</span> > <span class="number">3</span>) <span class="keyword">or</span> (<span class="number">9</span> < <span class="number">89</span>))  <span class="comment"># False</span>
+print(<span class="keyword">not</span> (<span class="number">2</span> > <span class="number">1</span>))          <span class="comment"># False</span></code></pre>
 
 <p><strong>位运算符</strong></p>
 <table>
@@ -612,14 +634,30 @@
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(bin(<span class="hljs-number">4</span>))               <span class="hljs-comment"># 0b100</span><br>print(bin(<span class="hljs-number">5</span>))               <span class="hljs-comment"># 0b101</span><br>print(bin(~<span class="hljs-number">4</span>), ~<span class="hljs-number">4</span>)          <span class="hljs-comment"># -0b101 -5</span><br>print(bin(<span class="hljs-number">4</span> &amp; <span class="hljs-number">5</span>), <span class="hljs-number">4</span> &amp; <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b100 4</span><br>print(bin(<span class="hljs-number">4</span> | <span class="hljs-number">5</span>), <span class="hljs-number">4</span> | <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b101 5</span><br>print(bin(<span class="hljs-number">4</span> ^ <span class="hljs-number">5</span>), <span class="hljs-number">4</span> ^ <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b1 1</span><br>print(bin(<span class="hljs-number">4</span> &lt;&lt; <span class="hljs-number">2</span>), <span class="hljs-number">4</span> &lt;&lt; <span class="hljs-number">2</span>)  <span class="hljs-comment"># 0b10000 16</span><br>print(bin(<span class="hljs-number">4</span> &gt;&gt; <span class="hljs-number">2</span>), <span class="hljs-number">4</span> &gt;&gt; <span class="hljs-number">2</span>)  <span class="hljs-comment"><code class="language-hljs python">print(bin(<span class="hljs-number">4</span>))               <span class="hljs-comment"># 0b100</span><br>print(bin(<span class="hljs-number">5</span>))               <span class="hljs-comment"># 0b101</span><br>print(bin(~<span class="hljs-number">4</span>), ~<span class="hljs-number">4</span>)          <span class="hljs-comment"># -0b101 -5</span><br>print(bin(<span class="hljs-number">4</span> &amp; <span class="hljs-number">5</span>), <span class="hljs-number">4</span> &amp; <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b100 4</span><br>print(bin(<span class="hljs-number">4</span> | <span class="hljs-number">5</span>), <span class="hljs-number">4</span> | <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b101 5</span><br>print(bin(<span class="hljs-number">4</span> ^ <span class="hljs-number">5</span>), <span class="hljs-number">4</span> ^ <span class="hljs-number">5</span>)    <span class="hljs-comment"># 0b1 1</span><br>print(bin(<span class="hljs-number">4</span> &lt;&lt; <span class="hljs-number">2</span>), <span class="hljs-number">4</span> &lt;&lt; <span class="hljs-number">2</span>)  <span class="hljs-comment"># 0b10000 16</span><br>print(bin(<span class="hljs-number">4</span> &gt;&gt; <span class="hljs-number">2</span>), <span class="hljs-number">4</span> &gt;&gt; <span class="hljs-number">2</span>)  <span class="hljs-comment"># 0b1 1</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(bin(<span class="number">4</span>))               <span class="comment"><code class="language-highlight python">print(bin(<span class="number">4</span>))               <span class="comment"># 0b100</span>
+print(bin(<span class="number">5</span>))               <span class="comment"># 0b101</span>
+print(bin(~<span class="number">4</span>), ~<span class="number">4</span>)          <span class="comment"># -0b101 -5</span>
+print(bin(<span class="number">4</span> & <span class="number">5</span>), <span class="number">4</span> & <span class="number">5</span>)    <span class="comment"># 0b100 4</span>
+print(bin(<span class="number">4</span> | <span class="number">5</span>), <span class="number">4</span> | <span class="number">5</span>)    <span class="comment"># 0b101 5</span>
+print(bin(<span class="number">4</span> ^ <span class="number">5</span>), <span class="number">4</span> ^ <span class="number">5</span>)    <span class="comment"># 0b1 1</span>
+print(bin(<span class="number">4</span> << <span class="number">2</span>), <span class="number">4</span> << <span class="number">2</span>)  <span class="comment"># 0b10000 16</span>
+print(bin(<span class="number">4</span> >> <span class="number">2</span>), <span class="number">4</span> >> <span class="number">2</span>)  <span class="comment"># 0b1 1</span></code></pre>
 
 <p><strong>三元运算符</strong></p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> x &lt; y:<br>    small = x<br><span class="hljs-keyword">else</span>:<br>    small = y<br><br>print(small)  <span class="hljs-comment"># 4</span><br>x, y = <span class="hljs-number">4</span>, <span class="hljs-number"><code class="language-hljs python">x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br><span class="hljs-keyword">if</span> x &lt; y:<br>    small = x<br><span class="hljs-keyword">else</span>:<br>    small = y<br><br>print(small)  <span class="hljs-comment"># 4</span><br>x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x, y = <span class="number">4</span>, <span class="number"><code class="language-highlight python">x, y = <span class="number">4</span>, <span class="number">5</span>
+<span class="keyword">if</span> x < y:
+    small = x
+<span class="keyword">else</span>:
+    small = y
+
+print(small)  <span class="comment"># 4</span>
+x, y = <span class="number">4</span>, <span class="number">5</span></code></pre>
 
 <p>有了三元操作符的条件表达式，你可以使用一条语句来完成以上的条件判断和赋值操作。<br>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br>small = x <span class="hljs-keyword">if</span> x &lt; y <span class="hljs-keyword">else</span> y<br>print(small)  <span class="hljs-comment"><code class="language-hljs python">x, y = <span class="hljs-number">4</span>, <span class="hljs-number">5</span><br>small = x <span class="hljs-keyword">if</span> x &lt; y <span class="hljs-keyword">else</span> y<br>print(small)  <span class="hljs-comment"># 4</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x, y = <span class="number">4</span>, <span class="number"><code class="language-highlight python">x, y = <span class="number">4</span>, <span class="number">5</span>
+small = x <span class="keyword">if</span> x < y <span class="keyword">else</span> y
+print(small)  <span class="comment"># 4</span></code></pre>
 
 <p><strong>其他运算符</strong></p>
 <table>
@@ -652,13 +690,25 @@
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">letters = [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>]<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">in</span> letters:<br>    print(<span class="hljs-string">&#x27;A&#x27;</span> + <span class="hljs-string">&#x27; exists&#x27;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;h&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> letters:<br>    print(<span class="hljs-string">&#x27;h&#x27;</span> + <span class="hljs-string">&#x27; not exists&#x27;</span>)<br><span class="hljs-comment"># A exists</span><br><span class="hljs-comment"><code class="language-hljs python">letters = [<span class="hljs-string">&#x27;A&#x27;</span>, <span class="hljs-string">&#x27;B&#x27;</span>, <span class="hljs-string">&#x27;C&#x27;</span>]<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;A&#x27;</span> <span class="hljs-keyword">in</span> letters:<br>    print(<span class="hljs-string">&#x27;A&#x27;</span> + <span class="hljs-string">&#x27; exists&#x27;</span>)<br><span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;h&#x27;</span> <span class="hljs-keyword">not</span> <span class="hljs-keyword">in</span> letters:<br>    print(<span class="hljs-string">&#x27;h&#x27;</span> + <span class="hljs-string">&#x27; not exists&#x27;</span>)<br><span class="hljs-comment"># A exists</span><br><span class="hljs-comment"># h not exists</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">letters = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string"><code class="language-highlight python">letters = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>]
+<span class="keyword">if</span> <span class="string">&#x27;A&#x27;</span> <span class="keyword">in</span> letters:
+    print(<span class="string">&#x27;A&#x27;</span> + <span class="string">&#x27; exists&#x27;</span>)
+<span class="keyword">if</span> <span class="string">&#x27;h&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> letters:
+    print(<span class="string">&#x27;h&#x27;</span> + <span class="string">&#x27; not exists&#x27;</span>)
+<span class="comment"># A exists</span>
+<span class="comment"># h not exists</span></code></pre>
 
 <p>【例子】比较的两个变量均指向不可变类型。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = <span class="hljs-string">&quot;hello&quot;</span><br>b = <span class="hljs-string">&quot;hello&quot;</span><br>print(a <span class="hljs-keyword">is</span> b, a == b)           <span class="hljs-comment"># True True</span><br>print(a <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> b, a != b)       <span class="hljs-comment"><code class="language-hljs python">a = <span class="hljs-string">&quot;hello&quot;</span><br>b = <span class="hljs-string">&quot;hello&quot;</span><br>print(a <span class="hljs-keyword">is</span> b, a == b)           <span class="hljs-comment"># True True</span><br>print(a <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> b, a != b)       <span class="hljs-comment"># False False</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = <span class="string"><code class="language-highlight python">a = <span class="string">"hello"</span>
+b = <span class="string">"hello"</span>
+print(a <span class="keyword">is</span> b, a == b)           <span class="comment"># True True</span>
+print(a <span class="keyword">is</span> <span class="keyword">not</span> b, a != b)       <span class="comment"># False False</span></code></pre>
 
 <p>【例子】比较的两个变量均指向可变类型。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = [<span class="hljs-string">&quot;hello&quot;</span>]<br>b = [<span class="hljs-string">&quot;hello&quot;</span>]<br>print(a <span class="hljs-keyword">is</span> b, a == b)       <span class="hljs-comment"># False True</span><br>print(a <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> b, a != b)   <span class="hljs-comment"><code class="language-hljs python">a = [<span class="hljs-string">&quot;hello&quot;</span>]<br>b = [<span class="hljs-string">&quot;hello&quot;</span>]<br>print(a <span class="hljs-keyword">is</span> b, a == b)       <span class="hljs-comment"># False True</span><br>print(a <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> b, a != b)   <span class="hljs-comment"># True False</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = [<span class="string"><code class="language-highlight python">a = [<span class="string">"hello"</span>]
+b = [<span class="string">"hello"</span>]
+print(a <span class="keyword">is</span> b, a == b)       <span class="comment"># False True</span>
+print(a <span class="keyword">is</span> <span class="keyword">not</span> b, a != b)   <span class="comment"># True False</span></code></pre>
 
 <p>注意：</p>
 <ul>
@@ -674,7 +724,11 @@
 <li>逻辑运算最后结合。例如<code>3 &lt; 4 and 4 &lt; 5</code>等价于<code>(3 &lt; 4) and (4 &lt; 5)</code>。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(<span class="hljs-number">-3</span> ** <span class="hljs-number">2</span>)              <span class="hljs-comment"># -9</span><br>print(<span class="hljs-number">3</span> ** <span class="hljs-number">-2</span>)              <span class="hljs-comment"># 0.1111111111111111</span><br>print(<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">3</span> + <span class="hljs-number">2</span> &amp; <span class="hljs-number">7</span>)       <span class="hljs-comment"># 0</span><br>print(<span class="hljs-number">-3</span> * <span class="hljs-number">2</span> + <span class="hljs-number">5</span> / <span class="hljs-number">-2</span> - <span class="hljs-number">4</span>)  <span class="hljs-comment"># -12.5</span><br>print(<span class="hljs-number">3</span> &lt; <span class="hljs-number">4</span> <span class="hljs-keyword">and</span> <span class="hljs-number">4</span> &lt; <span class="hljs-number">5</span>)      <span class="hljs-comment"><code class="language-hljs python">print(<span class="hljs-number">-3</span> ** <span class="hljs-number">2</span>)              <span class="hljs-comment"># -9</span><br>print(<span class="hljs-number">3</span> ** <span class="hljs-number">-2</span>)              <span class="hljs-comment"># 0.1111111111111111</span><br>print(<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-number">3</span> + <span class="hljs-number">2</span> &amp; <span class="hljs-number">7</span>)       <span class="hljs-comment"># 0</span><br>print(<span class="hljs-number">-3</span> * <span class="hljs-number">2</span> + <span class="hljs-number">5</span> / <span class="hljs-number">-2</span> - <span class="hljs-number">4</span>)  <span class="hljs-comment"># -12.5</span><br>print(<span class="hljs-number">3</span> &lt; <span class="hljs-number">4</span> <span class="hljs-keyword">and</span> <span class="hljs-number">4</span> &lt; <span class="hljs-number">5</span>)      <span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(<span class="number">-3</span> ** <span class="number">2</span>)              <span class="comment"><code class="language-highlight python">print(<span class="number">-3</span> ** <span class="number">2</span>)              <span class="comment"># -9</span>
+print(<span class="number">3</span> ** <span class="number">-2</span>)              <span class="comment"># 0.1111111111111111</span>
+print(<span class="number">1</span> << <span class="number">3</span> + <span class="number">2</span> & <span class="number">7</span>)       <span class="comment"># 0</span>
+print(<span class="number">-3</span> * <span class="number">2</span> + <span class="number">5</span> / <span class="number">-2</span> - <span class="number">4</span>)  <span class="comment"># -12.5</span>
+print(<span class="number">3</span> < <span class="number">4</span> <span class="keyword">and</span> <span class="number">4</span> < <span class="number">5</span>)      <span class="comment"># True</span></code></pre>
 
 <h3 id="3-变量和赋值"><a href="#3-变量和赋值" class="headerlink" title="3. 变量和赋值"></a>3. 变量和赋值</h3><ul>
 <li>在使用变量之前，需要对其先赋值。</li>
@@ -682,7 +736,18 @@
 <li>Python 变量名是大小写敏感的，foo != Foo。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">teacher = <span class="hljs-string">&quot;老马的程序人生&quot;</span><br>print(teacher)  <span class="hljs-comment"># 老马的程序人生</span><br><br>first = <span class="hljs-number">2</span><br>second = <span class="hljs-number">3</span><br>third = first + second<br>print(third)  <span class="hljs-comment"># 5</span><br><br>myTeacher = <span class="hljs-string">&quot;老马的程序人生&quot;</span><br>yourTeacher = <span class="hljs-string">&quot;小马的程序人生&quot;</span><br>ourTeacher = myTeacher + <span class="hljs-string">&#x27;,&#x27;</span> + yourTeacher<br>print(ourTeacher)  <span class="hljs-comment"><code class="language-hljs python">teacher = <span class="hljs-string">&quot;老马的程序人生&quot;</span><br>print(teacher)  <span class="hljs-comment"># 老马的程序人生</span><br><br>first = <span class="hljs-number">2</span><br>second = <span class="hljs-number">3</span><br>third = first + second<br>print(third)  <span class="hljs-comment"># 5</span><br><br>myTeacher = <span class="hljs-string">&quot;老马的程序人生&quot;</span><br>yourTeacher = <span class="hljs-string">&quot;小马的程序人生&quot;</span><br>ourTeacher = myTeacher + <span class="hljs-string">&#x27;,&#x27;</span> + yourTeacher<br>print(ourTeacher)  <span class="hljs-comment"># 老马的程序人生,小马的程序人生</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">teacher = <span class="string"><code class="language-highlight python">teacher = <span class="string">"老马的程序人生"</span>
+print(teacher)  <span class="comment"># 老马的程序人生</span>
+
+first = <span class="number">2</span>
+second = <span class="number">3</span>
+third = first + second
+print(third)  <span class="comment"># 5</span>
+
+myTeacher = <span class="string">"老马的程序人生"</span>
+yourTeacher = <span class="string">"小马的程序人生"</span>
+ourTeacher = myTeacher + <span class="string">&#x27;,&#x27;</span> + yourTeacher
+print(ourTeacher)  <span class="comment"># 老马的程序人生,小马的程序人生</span></code></pre>
 
 <h3 id="4-数据类型与转换"><a href="#4-数据类型与转换" class="headerlink" title="4. 数据类型与转换"></a>4. 数据类型与转换</h3><table>
 <thead>
@@ -710,28 +775,69 @@
 </tbody></table>
 <p><strong>整型</strong></p>
 <p>【例子】通过 <code>print()</code> 可看出 <code>a</code> 的值，以及类 (class) 是<code>int</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = <span class="hljs-number">1031</span><br>print(a, type(a))<br><span class="hljs-comment"><code class="language-hljs python">a = <span class="hljs-number">1031</span><br>print(a, type(a))<br><span class="hljs-comment"># 1031 <class &#x27;int&#x27;></span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = <span class="number"><code class="language-highlight python">a = <span class="number">1031</span>
+print(a, type(a))
+<span class="comment"># 1031 <class &#x27;int&#x27;></span></code></pre>
 
 <p>Python 里面万物皆对象（object），整型也不例外，只要是对象，就有相应的属性 （attributes） 和方法（methods）。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">b = dir(int)<br>print(b)<br><span class="hljs-comment"># [&#x27;__abs__&#x27;, &#x27;__add__&#x27;, &#x27;__and__&#x27;, &#x27;__bool__&#x27;, &#x27;__ceil__&#x27;, &#x27;__class__&#x27;,</span><br><span class="hljs-comment"># &#x27;__delattr__&#x27;, &#x27;__dir__&#x27;, &#x27;__divmod__&#x27;, &#x27;__doc__&#x27;, &#x27;__eq__&#x27;,</span><br><span class="hljs-comment"># &#x27;__float__&#x27;, &#x27;__floor__&#x27;, &#x27;__floordiv__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;,</span><br><span class="hljs-comment"># &#x27;__getattribute__&#x27;, &#x27;__getnewargs__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;,</span><br><span class="hljs-comment"># &#x27;__index__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__int__&#x27;, &#x27;__invert__&#x27;,</span><br><span class="hljs-comment"># &#x27;__le__&#x27;, &#x27;__lshift__&#x27;, &#x27;__lt__&#x27;, &#x27;__mod__&#x27;, &#x27;__mul__&#x27;, &#x27;__ne__&#x27;,</span><br><span class="hljs-comment"># &#x27;__neg__&#x27;, &#x27;__new__&#x27;, &#x27;__or__&#x27;, &#x27;__pos__&#x27;, &#x27;__pow__&#x27;, &#x27;__radd__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rand__&#x27;, &#x27;__rdivmod__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rfloordiv__&#x27;, &#x27;__rlshift__&#x27;, &#x27;__rmod__&#x27;, &#x27;__rmul__&#x27;, &#x27;__ror__&#x27;,</span><br><span class="hljs-comment"># &#x27;__round__&#x27;, &#x27;__rpow__&#x27;, &#x27;__rrshift__&#x27;, &#x27;__rshift__&#x27;, &#x27;__rsub__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rtruediv__&#x27;, &#x27;__rxor__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;,</span><br><span class="hljs-comment"># &#x27;__sub__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;__truediv__&#x27;, &#x27;__trunc__&#x27;, &#x27;__xor__&#x27;,</span><br><span class="hljs-comment"># &#x27;bit_length&#x27;, &#x27;conjugate&#x27;, &#x27;denominator&#x27;, &#x27;from_bytes&#x27;, &#x27;imag&#x27;,</span><br><span class="hljs-comment"><code class="language-hljs python">b = dir(int)<br>print(b)<br><span class="hljs-comment"># [&#x27;__abs__&#x27;, &#x27;__add__&#x27;, &#x27;__and__&#x27;, &#x27;__bool__&#x27;, &#x27;__ceil__&#x27;, &#x27;__class__&#x27;,</span><br><span class="hljs-comment"># &#x27;__delattr__&#x27;, &#x27;__dir__&#x27;, &#x27;__divmod__&#x27;, &#x27;__doc__&#x27;, &#x27;__eq__&#x27;,</span><br><span class="hljs-comment"># &#x27;__float__&#x27;, &#x27;__floor__&#x27;, &#x27;__floordiv__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;,</span><br><span class="hljs-comment"># &#x27;__getattribute__&#x27;, &#x27;__getnewargs__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;,</span><br><span class="hljs-comment"># &#x27;__index__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__int__&#x27;, &#x27;__invert__&#x27;,</span><br><span class="hljs-comment"># &#x27;__le__&#x27;, &#x27;__lshift__&#x27;, &#x27;__lt__&#x27;, &#x27;__mod__&#x27;, &#x27;__mul__&#x27;, &#x27;__ne__&#x27;,</span><br><span class="hljs-comment"># &#x27;__neg__&#x27;, &#x27;__new__&#x27;, &#x27;__or__&#x27;, &#x27;__pos__&#x27;, &#x27;__pow__&#x27;, &#x27;__radd__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rand__&#x27;, &#x27;__rdivmod__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rfloordiv__&#x27;, &#x27;__rlshift__&#x27;, &#x27;__rmod__&#x27;, &#x27;__rmul__&#x27;, &#x27;__ror__&#x27;,</span><br><span class="hljs-comment"># &#x27;__round__&#x27;, &#x27;__rpow__&#x27;, &#x27;__rrshift__&#x27;, &#x27;__rshift__&#x27;, &#x27;__rsub__&#x27;,</span><br><span class="hljs-comment"># &#x27;__rtruediv__&#x27;, &#x27;__rxor__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;,</span><br><span class="hljs-comment"># &#x27;__sub__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;__truediv__&#x27;, &#x27;__trunc__&#x27;, &#x27;__xor__&#x27;,</span><br><span class="hljs-comment"># &#x27;bit_length&#x27;, &#x27;conjugate&#x27;, &#x27;denominator&#x27;, &#x27;from_bytes&#x27;, &#x27;imag&#x27;,</span><br><span class="hljs-comment"># &#x27;numerator&#x27;, &#x27;real&#x27;, &#x27;to_bytes&#x27;]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">b = dir(int)
+print(b)
+<span class="comment"># [&#x27;__abs__&#x27;, &#x27;__add__&#x27;, &#x27;__and__&#x27;, &#x27;__bool__&#x27;, &#x27;__ceil__&#x27;, &#x27;__class__&#x27;,</span>
+<span class="comment"># &#x27;__delattr__&#x27;, &#x27;__dir__&#x27;, &#x27;__divmod__&#x27;, &#x27;__doc__&#x27;, &#x27;__eq__&#x27;,</span>
+<span class="comment"># &#x27;__float__&#x27;, &#x27;__floor__&#x27;, &#x27;__floordiv__&#x27;, &#x27;__format__&#x27;, &#x27;__ge__&#x27;,</span>
+<span class="comment"># &#x27;__getattribute__&#x27;, &#x27;__getnewargs__&#x27;, &#x27;__gt__&#x27;, &#x27;__hash__&#x27;,</span>
+<span class="comment"># &#x27;__index__&#x27;, &#x27;__init__&#x27;, &#x27;__init_subclass__&#x27;, &#x27;__int__&#x27;, &#x27;__invert__&#x27;,</span>
+<span class="comment"># &#x27;__le__&#x27;, &#x27;__lshift__&#x27;, &#x27;__lt__&#x27;, &#x27;__mod__&#x27;, &#x27;__mul__&#x27;, &#x27;__ne__&#x27;,</span>
+<span class="comment"># &#x27;__neg__&#x27;, &#x27;__new__&#x27;, &#x27;__or__&#x27;, &#x27;__pos__&#x27;, &#x27;__pow__&#x27;, &#x27;__radd__&#x27;,</span>
+<span class="comment"># &#x27;__rand__&#x27;, &#x27;__rdivmod__&#x27;, &#x27;__reduce__&#x27;, &#x27;__reduce_ex__&#x27;, &#x27;__repr__&#x27;,</span>
+<span class="comment"># &#x27;__rfloordiv__&#x27;, &#x27;__rlshift__&#x27;, &#x27;__rmod__&#x27;, &#x27;__rmul__&#x27;, &#x27;__ror__&#x27;,</span>
+<span class="comment"># &#x27;__round__&#x27;, &#x27;__rpow__&#x27;, &#x27;__rrshift__&#x27;, &#x27;__rshift__&#x27;, &#x27;__rsub__&#x27;,</span>
+<span class="comment"># &#x27;__rtruediv__&#x27;, &#x27;__rxor__&#x27;, &#x27;__setattr__&#x27;, &#x27;__sizeof__&#x27;, &#x27;__str__&#x27;,</span>
+<span class="comment"># &#x27;__sub__&#x27;, &#x27;__subclasshook__&#x27;, &#x27;__truediv__&#x27;, &#x27;__trunc__&#x27;, &#x27;__xor__&#x27;,</span>
+<span class="comment"># &#x27;bit_length&#x27;, &#x27;conjugate&#x27;, &#x27;denominator&#x27;, &#x27;from_bytes&#x27;, &#x27;imag&#x27;,</span>
+<span class="comment"># &#x27;numerator&#x27;, &#x27;real&#x27;, &#x27;to_bytes&#x27;]</span></code></pre>
 <p>对它们有个大概印象就可以了，具体怎么用，需要哪些参数 （argument），还需要查文档。看个<code>bit_length()</code>的例子。</p>
 <p>【例子】找到一个整数的二进制表示，再返回其长度。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = <span class="hljs-number">1031</span><br>print(bin(a))           <span class="hljs-comment"># 0b10000000111</span><br>print(a.bit_length())   <span class="hljs-comment"><code class="language-hljs python">a = <span class="hljs-number">1031</span><br>print(bin(a))           <span class="hljs-comment"># 0b10000000111</span><br>print(a.bit_length())   <span class="hljs-comment"># 11</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = <span class="number"><code class="language-highlight python">a = <span class="number">1031</span>
+print(bin(a))           <span class="comment"># 0b10000000111</span>
+print(a.bit_length())   <span class="comment"># 11</span></code></pre>
 
 <p><strong>浮点型</strong></p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(<span class="hljs-number">1</span>, type(<span class="hljs-number">1</span>))<br><span class="hljs-comment"># 1 &lt;class &#x27;int&#x27;&gt;</span><br><br>print(<span class="hljs-number">1.</span>, type(<span class="hljs-number">1.</span>))<br><span class="hljs-comment"># 1.0 &lt;class &#x27;float&#x27;&gt;</span><br><br>a = <span class="hljs-number">0.00000023</span><br>b = <span class="hljs-number">2.3e-7</span><br>print(a)  <span class="hljs-comment"># 2.3e-07</span><br>print(b)  <span class="hljs-comment"><code class="language-hljs python">print(<span class="hljs-number">1</span>, type(<span class="hljs-number">1</span>))<br><span class="hljs-comment"># 1 &lt;class &#x27;int&#x27;&gt;</span><br><br>print(<span class="hljs-number">1.</span>, type(<span class="hljs-number">1.</span>))<br><span class="hljs-comment"># 1.0 &lt;class &#x27;float&#x27;&gt;</span><br><br>a = <span class="hljs-number">0.00000023</span><br>b = <span class="hljs-number">2.3e-7</span><br>print(a)  <span class="hljs-comment"># 2.3e-07</span><br>print(b)  <span class="hljs-comment"># 2.3e-07</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(<span class="number">1</span>, type(<span class="number"><code class="language-highlight python">print(<span class="number">1</span>, type(<span class="number">1</span>))
+<span class="comment"># 1 <class &#x27;int&#x27;></span>
+
+print(<span class="number">1.</span>, type(<span class="number">1.</span>))
+<span class="comment"># 1.0 <class &#x27;float&#x27;></span>
+
+a = <span class="number">0.00000023</span>
+b = <span class="number">2.3e-7</span>
+print(a)  <span class="comment"># 2.3e-07</span>
+print(b)  <span class="comment"># 2.3e-07</span></code></pre>
 
 <p>有时候我们想保留浮点型的小数点后 <code>n</code> 位。可以用 <code>decimal</code> 包里的 <code>Decimal</code> 对象和 <code>getcontext()</code> 方法来实现。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> decimal
+<span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal</code></pre>
 <p>Python 里面有很多用途广泛的包 (package)，用什么你就引进 (import) 什么。包也是对象，也可以用上面提到的<code>dir(decimal)</code> 来看其属性和方法。</p>
 <p>【例子】<code>getcontext()</code> 显示了 <code>Decimal</code> 对象的默认精度值是 28 位 (<code>prec=28</code>)。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal<br><br>decimal.getcontext().prec = <span class="hljs-number">4</span><br>b = Decimal(<span class="hljs-number">1</span>) / Decimal(<span class="hljs-number">3</span>)<br><br>print(b)<br><br>decimal.getcontext().prec = <span class="hljs-number">4</span><br>c = Decimal(<span class="hljs-number">1012</span>) / Decimal(<span class="hljs-number"><code class="language-hljs python"><span class="hljs-keyword">import</span> decimal<br><span class="hljs-keyword">from</span> decimal <span class="hljs-keyword">import</span> Decimal<br><br>decimal.getcontext().prec = <span class="hljs-number">4</span><br>b = Decimal(<span class="hljs-number">1</span>) / Decimal(<span class="hljs-number">3</span>)<br><br>print(b)<br><br>decimal.getcontext().prec = <span class="hljs-number">4</span><br>c = Decimal(<span class="hljs-number">1012</span>) / Decimal(<span class="hljs-number">3</span>)<br>print(c)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> decimal
+<span class="keyword">from</span> decimal <span class="keyword">import</span> Decimal
+
+decimal.getcontext().prec = <span class="number">4</span>
+b = Decimal(<span class="number">1</span>) / Decimal(<span class="number">3</span>)
+
+print(b)
+
+decimal.getcontext().prec = <span class="number">4</span>
+c = Decimal(<span class="number">1012</span>) / Decimal(<span class="number">3</span>)
+print(c)</code></pre>
 
 <p><strong>布尔型</strong></p>
 <p>布尔 (boolean) 型变量只能取两个值，<code>True</code> 和 <code>False</code>。当把布尔型变量用在数字运算中，用 <code>1</code> 和 <code>0</code> 代表 <code>True</code> 和 <code>False</code>。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(<span class="hljs-literal">True</span> + <span class="hljs-literal">True</span>)  <span class="hljs-comment"># 2</span><br>print(<span class="hljs-literal">True</span> + <span class="hljs-literal">False</span>)  <span class="hljs-comment"># 1</span><br>print(<span class="hljs-literal">True</span> * <span class="hljs-literal">False</span>)  <span class="hljs-comment"><code class="language-hljs python">print(<span class="hljs-literal">True</span> + <span class="hljs-literal">True</span>)  <span class="hljs-comment"># 2</span><br>print(<span class="hljs-literal">True</span> + <span class="hljs-literal">False</span>)  <span class="hljs-comment"># 1</span><br>print(<span class="hljs-literal">True</span> * <span class="hljs-literal">False</span>)  <span class="hljs-comment"># 0</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(<span class="literal">True</span> + <span class="literal">True</span>)  <span class="comment"><code class="language-highlight python">print(<span class="literal">True</span> + <span class="literal">True</span>)  <span class="comment"># 2</span>
+print(<span class="literal">True</span> + <span class="literal">False</span>)  <span class="comment"># 1</span>
+print(<span class="literal">True</span> * <span class="literal">False</span>)  <span class="comment"># 0</span></code></pre>
 
 <p>除了直接给变量赋值 <code>True</code> 和 <code>False</code>，还可以用 <code>bool(X)</code> 来创建变量，其中 <code>X</code> 可以是</p>
 <ul>
@@ -749,7 +855,10 @@
 <li>获取类型信息 <code>type(object)</code></li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(isinstance(<span class="hljs-number">1</span>, int))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-number">5.2</span>, float))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-literal">True</span>, bool))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-string">&#x27;5.2&#x27;</span>, str))  <span class="hljs-comment"><code class="language-hljs python">print(isinstance(<span class="hljs-number">1</span>, int))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-number">5.2</span>, float))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-literal">True</span>, bool))  <span class="hljs-comment"># True</span><br>print(isinstance(<span class="hljs-string">&#x27;5.2&#x27;</span>, str))  <span class="hljs-comment"># True</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(isinstance(<span class="number">1</span>, int))  <span class="comment"><code class="language-highlight python">print(isinstance(<span class="number">1</span>, int))  <span class="comment"># True</span>
+print(isinstance(<span class="number">5.2</span>, float))  <span class="comment"># True</span>
+print(isinstance(<span class="literal">True</span>, bool))  <span class="comment"># True</span>
+print(isinstance(<span class="string">&#x27;5.2&#x27;</span>, str))  <span class="comment"># True</span></code></pre>
 
 
 <p>注：</p>
@@ -765,9 +874,14 @@
 <li>转换为浮点型 <code>float(x)</code></li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(int(<span class="hljs-string">&#x27;520&#x27;</span>))  <span class="hljs-comment"># 520</span><br>print(int(<span class="hljs-number">520.52</span>))  <span class="hljs-comment"># 520</span><br>print(float(<span class="hljs-string">&#x27;520.52&#x27;</span>))  <span class="hljs-comment"># 520.52</span><br>print(float(<span class="hljs-number">520</span>))  <span class="hljs-comment"># 520.0</span><br>print(str(<span class="hljs-number">10</span> + <span class="hljs-number">10</span>))  <span class="hljs-comment"># 20</span><br>print(str(<span class="hljs-number">10.1</span> + <span class="hljs-number">5.2</span>))  <span class="hljs-comment"><code class="language-hljs python">print(int(<span class="hljs-string">&#x27;520&#x27;</span>))  <span class="hljs-comment"># 520</span><br>print(int(<span class="hljs-number">520.52</span>))  <span class="hljs-comment"># 520</span><br>print(float(<span class="hljs-string">&#x27;520.52&#x27;</span>))  <span class="hljs-comment"># 520.52</span><br>print(float(<span class="hljs-number">520</span>))  <span class="hljs-comment"># 520.0</span><br>print(str(<span class="hljs-number">10</span> + <span class="hljs-number">10</span>))  <span class="hljs-comment"># 20</span><br>print(str(<span class="hljs-number">10.1</span> + <span class="hljs-number">5.2</span>))  <span class="hljs-comment"># 15.3</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(int(<span class="string">&#x27;520&#x27;</span>))  <span class="comment"><code class="language-highlight python">print(int(<span class="string">&#x27;520&#x27;</span>))  <span class="comment"># 520</span>
+print(int(<span class="number">520.52</span>))  <span class="comment"># 520</span>
+print(float(<span class="string">&#x27;520.52&#x27;</span>))  <span class="comment"># 520.52</span>
+print(float(<span class="number">520</span>))  <span class="comment"># 520.0</span>
+print(str(<span class="number">10</span> + <span class="number">10</span>))  <span class="comment"># 20</span>
+print(str(<span class="number">10.1</span> + <span class="number">5.2</span>))  <span class="comment"># 15.3</span></code></pre>
 
-<h3 id="5-print-函数"><a href="#5-print-函数" class="headerlink" title="5. print() 函数"></a>5. print() 函数</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(*objects, sep=<span class="hljs-string">&#x27; &#x27;</span>, end=<span class="hljs-string">&#x27;\n&#x27;</span>, file=sys.stdout, flush=<span class="hljs-literal"><code class="language-hljs python">print(*objects, sep=<span class="hljs-string">&#x27; &#x27;</span>, end=<span class="hljs-string">&#x27;\n&#x27;</span>, file=sys.stdout, flush=<span class="hljs-literal">False</span>)<br></code></pre></td></tr></table></figure>
+<h3 id="5-print-函数"><a href="#5-print-函数" class="headerlink" title="5. print() 函数"></a>5. print() 函数</h3><pre class=" language-highlight python">print(*objects, sep=<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27;\n&#x27;</span>, file=sys.stdout, flush=<span class="literal"><code class="language-highlight python">print(*objects, sep=<span class="string">&#x27; &#x27;</span>, end=<span class="string">&#x27;\n&#x27;</span>, file=sys.stdout, flush=<span class="literal">False</span>)</code></pre>
 <ul>
 <li>将对象以字符串表示的方式格式化输出到流文件对象file里。其中所有非关键字参数都按<code>str()</code>方式进行转换为字符串输出；</li>
 <li>关键字参数<code>sep</code>是实现分隔符，比如多个参数输出时想要输出中间的分隔字符；</li>
@@ -776,90 +890,205 @@
 <li>关键字参数<code>flush</code>是立即把内容输出到流文件，不作缓存。</li>
 </ul>
 <p>【例子】没有参数时，每次输出后都会换行。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed without &#x27;end&#x27;and &#x27;sep&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item)<br><br><span class="hljs-comment"># This is printed without &#x27;end&#x27;and &#x27;sep&#x27;.</span><br><span class="hljs-comment"># apple</span><br><span class="hljs-comment"># mango</span><br><span class="hljs-comment"># carrot</span><br><span class="hljs-comment"><code class="language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed without &#x27;end&#x27;and &#x27;sep&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item)<br><br><span class="hljs-comment"># This is printed without &#x27;end&#x27;and &#x27;sep&#x27;.</span><br><span class="hljs-comment"># apple</span><br><span class="hljs-comment"># mango</span><br><span class="hljs-comment"># carrot</span><br><span class="hljs-comment"># banana</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string"><code class="language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>]
+print(<span class="string">"This is printed without &#x27;end&#x27;and &#x27;sep&#x27;."</span>)
+<span class="keyword">for</span> item <span class="keyword">in</span> shoplist:
+    print(item)
+
+<span class="comment"># This is printed without &#x27;end&#x27;and &#x27;sep&#x27;.</span>
+<span class="comment"># apple</span>
+<span class="comment"># mango</span>
+<span class="comment"># carrot</span>
+<span class="comment"># banana</span></code></pre>
 
 <p>【例子】每次输出结束都用<code>end</code>设置的参数<code>&amp;</code>结尾，并没有默认换行。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed with &#x27;end=&#x27;&amp;&#x27;&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item, end=<span class="hljs-string">&#x27;&amp;&#x27;</span>)<br>print(<span class="hljs-string">&#x27;hello world&#x27;</span>)<br><br><span class="hljs-comment"># This is printed with &#x27;end=&#x27;&amp;&#x27;&#x27;.</span><br><span class="hljs-comment"><code class="language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed with &#x27;end=&#x27;&amp;&#x27;&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item, end=<span class="hljs-string">&#x27;&amp;&#x27;</span>)<br>print(<span class="hljs-string">&#x27;hello world&#x27;</span>)<br><br><span class="hljs-comment"># This is printed with &#x27;end=&#x27;&amp;&#x27;&#x27;.</span><br><span class="hljs-comment"># apple&mango&carrot&banana&hello world</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string"><code class="language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>]
+print(<span class="string">"This is printed with &#x27;end=&#x27;&&#x27;&#x27;."</span>)
+<span class="keyword">for</span> item <span class="keyword">in</span> shoplist:
+    print(item, end=<span class="string">&#x27;&&#x27;</span>)
+print(<span class="string">&#x27;hello world&#x27;</span>)
+
+<span class="comment"># This is printed with &#x27;end=&#x27;&&#x27;&#x27;.</span>
+<span class="comment"># apple&mango&carrot&banana&hello world</span></code></pre>
 
 
 <p>【例子】<code>item</code>值与<code>&#39;another string&#39;</code>两个值之间用<code>sep</code>设置的参数<code>&amp;</code>分割。由于<code>end</code>参数没有设置，因此默认是输出解释后换行，即<code>end</code>参数的默认值为<code>\n</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed with &#x27;sep=&#x27;&amp;&#x27;&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item, <span class="hljs-string">&#x27;another string&#x27;</span>, sep=<span class="hljs-string">&#x27;&amp;&#x27;</span>)<br><br><span class="hljs-comment"># This is printed with &#x27;sep=&#x27;&amp;&#x27;&#x27;.</span><br><span class="hljs-comment"># apple&amp;another string</span><br><span class="hljs-comment"># mango&amp;another string</span><br><span class="hljs-comment"># carrot&amp;another string</span><br><span class="hljs-comment"><code class="language-hljs python">shoplist = [<span class="hljs-string">&#x27;apple&#x27;</span>, <span class="hljs-string">&#x27;mango&#x27;</span>, <span class="hljs-string">&#x27;carrot&#x27;</span>, <span class="hljs-string">&#x27;banana&#x27;</span>]<br>print(<span class="hljs-string">&quot;This is printed with &#x27;sep=&#x27;&amp;&#x27;&#x27;.&quot;</span>)<br><span class="hljs-keyword">for</span> item <span class="hljs-keyword">in</span> shoplist:<br>    print(item, <span class="hljs-string">&#x27;another string&#x27;</span>, sep=<span class="hljs-string">&#x27;&amp;&#x27;</span>)<br><br><span class="hljs-comment"># This is printed with &#x27;sep=&#x27;&amp;&#x27;&#x27;.</span><br><span class="hljs-comment"># apple&amp;another string</span><br><span class="hljs-comment"># mango&amp;another string</span><br><span class="hljs-comment"># carrot&amp;another string</span><br><span class="hljs-comment"># banana&another string</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string"><code class="language-highlight python">shoplist = [<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;mango&#x27;</span>, <span class="string">&#x27;carrot&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>]
+print(<span class="string">"This is printed with &#x27;sep=&#x27;&&#x27;&#x27;."</span>)
+<span class="keyword">for</span> item <span class="keyword">in</span> shoplist:
+    print(item, <span class="string">&#x27;another string&#x27;</span>, sep=<span class="string">&#x27;&&#x27;</span>)
+
+<span class="comment"># This is printed with &#x27;sep=&#x27;&&#x27;&#x27;.</span>
+<span class="comment"># apple&another string</span>
+<span class="comment"># mango&another string</span>
+<span class="comment"># carrot&another string</span>
+<span class="comment"># banana&another string</span></code></pre>
 
 
 <h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><h3 id="1-原码、反码和补码"><a href="#1-原码、反码和补码" class="headerlink" title="1. 原码、反码和补码"></a>1. 原码、反码和补码</h3><p>二进制有三种不同的表示形式：原码、反码和补码，<u>计算机内部使用补码来表示</u>。</p>
 <p><strong>原码</strong>：就是其二进制表示（注意，有一位符号位,第一是符号位，0表示整数，1表示负数）。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 00 11 -> 3<br>10 00 00 11 -> -3<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 00 11 -> 3
+10 00 00 11 -> -3</code></pre>
 <p><strong>反码</strong>：正数的反码就是原码，负数的反码是符号位不变，其余位取反（对应正数按位取反）。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 00 11 -> 3<br>11 11 11 00 -> -3<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 00 11 -> 3
+11 11 11 00 -> -3</code></pre>
 <p><strong>补码</strong>：正数的补码就是原码，负数的补码是反码+1。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 00 11 -> 3<br>11 11 11 01 -> -3<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 00 11 -> 3
+11 11 11 01 -> -3</code></pre>
 <p><strong>符号位</strong>：最高位为符号位，0表示正数，1表示负数。在位运算中符号位也参与运算。</p>
 <h3 id="2-按位运算"><a href="#2-按位运算" class="headerlink" title="2. 按位运算"></a>2. 按位运算</h3><ul>
 <li>按位非操作 ~</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">~ <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br>~ <span class="hljs-number">0</span> = <span class="hljs-number"><code class="language-hljs python">~ <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br>~ <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">~ <span class="number">1</span> = <span class="number"><code class="language-highlight python">~ <span class="number">1</span> = <span class="number">0</span>
+~ <span class="number">0</span> = <span class="number">1</span></code></pre>
 <p><code>~</code> 把<code>num</code>的补码中的 0 和 1 全部取反（0 变为 1，1 变为 0）有符号整数的符号位在 <code>~</code> 运算中同样会取反。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 01 01 -> 5<br>~<br>---<br>11 11 10 10 -> -6<br><br>11 11 10 11 -> -5<br>~<br>---<br>00 00 01 00 -> 4<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 01 01 -> 5
+~
+---
+11 11 10 10 -> -6
+
+11 11 10 11 -> -5
+~
+---
+00 00 01 00 -> 4</code></pre>
 
 <ul>
 <li>按位与操作 &amp;  </li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-number">1</span> &amp; <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">1</span> &amp; <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> &amp; <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> &amp; <span class="hljs-number">0</span> = <span class="hljs-number"><code class="language-hljs python"><span class="hljs-number">1</span> &amp; <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">1</span> &amp; <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> &amp; <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">0</span> &amp; <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="number">1</span> &amp; <span class="number">1</span> = <span class="number"><code class="language-highlight python"><span class="number">1</span> &amp; <span class="number">1</span> = <span class="number">1</span>
+<span class="number">1</span> & <span class="number">0</span> = <span class="number">0</span>
+<span class="number">0</span> & <span class="number">1</span> = <span class="number">0</span>
+<span class="number">0</span> & <span class="number">0</span> = <span class="number">0</span></code></pre>
 <p>只有两个对应位都为 1 时才为 1</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 01 01 -> 5<br>&<br>00 00 01 10 -> 6<br>---<br>00 00 01 00 -> 4<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 01 01 -> 5
+&
+00 00 01 10 -> 6
+---
+00 00 01 00 -> 4</code></pre>
 <ul>
 <li>按位或操作 |</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-number">1</span> | <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">1</span> | <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> | <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> | <span class="hljs-number">0</span> = <span class="hljs-number"><code class="language-hljs python"><span class="hljs-number">1</span> | <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">1</span> | <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> | <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> | <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="number">1</span> | <span class="number">1</span> = <span class="number"><code class="language-highlight python"><span class="number">1</span> | <span class="number">1</span> = <span class="number">1</span>
+<span class="number">1</span> | <span class="number">0</span> = <span class="number">1</span>
+<span class="number">0</span> | <span class="number">1</span> = <span class="number">1</span>
+<span class="number">0</span> | <span class="number">0</span> = <span class="number">0</span></code></pre>
 
 <p>只要两个对应位中有一个 1 时就为 1</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 01 01 -> 5<br>|<br>00 00 01 10 -> 6<br>---<br>00 00 01 11 -> 7<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 01 01 -> 5
+|
+00 00 01 10 -> 6
+---
+00 00 01 11 -> 7</code></pre>
 <ul>
 <li>按位异或操作 ^</li>
 </ul>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-number">1</span> ^ <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">1</span> ^ <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> ^ <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> ^ <span class="hljs-number">0</span> = <span class="hljs-number"><code class="language-hljs python"><span class="hljs-number">1</span> ^ <span class="hljs-number">1</span> = <span class="hljs-number">0</span><br><span class="hljs-number">1</span> ^ <span class="hljs-number">0</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> ^ <span class="hljs-number">1</span> = <span class="hljs-number">1</span><br><span class="hljs-number">0</span> ^ <span class="hljs-number">0</span> = <span class="hljs-number">0</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="number">1</span> ^ <span class="number">1</span> = <span class="number"><code class="language-highlight python"><span class="number">1</span> ^ <span class="number">1</span> = <span class="number">0</span>
+<span class="number">1</span> ^ <span class="number">0</span> = <span class="number">1</span>
+<span class="number">0</span> ^ <span class="number">1</span> = <span class="number">1</span>
+<span class="number">0</span> ^ <span class="number">0</span> = <span class="number">0</span></code></pre>
 
 <p>只有两个对应位不同时才为 1</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 01 01 -> 5<br>^<br>00 00 01 10 -> 6<br>---<br>00 00 00 11 -> 3<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 01 01 -> 5
+^
+00 00 01 10 -> 6
+---
+00 00 00 11 -> 3</code></pre>
 
 <p>异或操作的性质：满足交换律和结合律</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">11</span> <span class="hljs-number">00</span><br>B: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">01</span> <span class="hljs-number">11</span><br><br>A^B: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span><br>B^A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span><br><br>A^A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span><br>A^<span class="hljs-number">0</span>: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">11</span> <span class="hljs-number">00</span><br><br>A^B^A: = A^A^B = B = <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">01</span> <span class="hljs-number"><code class="language-hljs python">A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">11</span> <span class="hljs-number">00</span><br>B: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">01</span> <span class="hljs-number">11</span><br><br>A^B: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span><br>B^A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">10</span> <span class="hljs-number">11</span><br><br>A^A: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">00</span><br>A^<span class="hljs-number">0</span>: <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">11</span> <span class="hljs-number">00</span><br><br>A^B^A: = A^A^B = B = <span class="hljs-number">00</span> <span class="hljs-number">00</span> <span class="hljs-number">01</span> <span class="hljs-number">11</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">A: <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number"><code class="language-highlight python">A: <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number">00</span>
+B: <span class="number">00</span> <span class="number">00</span> <span class="number">01</span> <span class="number">11</span>
+
+A^B: <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span>
+B^A: <span class="number">00</span> <span class="number">00</span> <span class="number">10</span> <span class="number">11</span>
+
+A^A: <span class="number">00</span> <span class="number">00</span> <span class="number">00</span> <span class="number">00</span>
+A^<span class="number">0</span>: <span class="number">00</span> <span class="number">00</span> <span class="number">11</span> <span class="number">00</span>
+
+A^B^A: = A^A^B = B = <span class="number">00</span> <span class="number">00</span> <span class="number">01</span> <span class="number">11</span></code></pre>
 <ul>
 <li>按位左移操作 &lt;&lt;</li>
 </ul>
 <p><code>num &lt;&lt; i</code> 将<code>num</code>的二进制表示向左移动<code>i</code>位所得的值。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python">00 00 10 11 -&gt; 11<br><span class="hljs-number">11</span> &lt;&lt; <span class="hljs-number"><code class="language-hljs python">00 00 10 11 -&gt; 11<br><span class="hljs-number">11</span> &lt;&lt; <span class="hljs-number">3</span><br>---<br>01 01 10 00 -> 88 <br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 10 11 -> 11
+<span class="number">11</span> << <span class="number">3</span>
+---
+01 01 10 00 -> 88</code></pre>
 
 <ul>
 <li>按位右移操作 &gt;&gt;</li>
 </ul>
 <p><code>num &gt;&gt; i</code> 将<code>num</code>的二进制表示向右移动<code>i</code>位所得的值。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python">00 00 10 11 -&gt; 11<br><span class="hljs-number">11</span> &gt;&gt; <span class="hljs-number"><code class="language-hljs python">00 00 10 11 -&gt; 11<br><span class="hljs-number">11</span> &gt;&gt; <span class="hljs-number">2</span><br>---<br>00 00 00 10 -> 2 <br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 10 11 -> 11
+<span class="number">11</span> >> <span class="number">2</span>
+---
+00 00 00 10 -> 2</code></pre>
 
 <h3 id="3-利用位运算实现快速计算"><a href="#3-利用位运算实现快速计算" class="headerlink" title="3. 利用位运算实现快速计算"></a>3. 利用位运算实现快速计算</h3><p>通过 <code>&lt;&lt;</code>，<code>&gt;&gt;</code> 快速计算2的倍数问题。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">n << 1 -> 计算 n*2<br>n >> 1 -> 计算 n/2，负奇数的运算不可用<br>n << m -> 计算 n*(2^m)，即乘以 2 的 m 次方<br>n >> m -> 计算 n/(2^m)，即除以 2 的 m 次方<br>1 << n -> 2^n<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">n << 1 -> 计算 n*2
+n >> 1 -> 计算 n/2，负奇数的运算不可用
+n << m -> 计算 n*(2^m)，即乘以 2 的 m 次方
+n >> m -> 计算 n/(2^m)，即除以 2 的 m 次方
+1 << n -> 2^n</code></pre>
 
 <p>通过 <code>^</code> 快速交换两个整数。（异或交换律）</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">a ^= b<br>b ^= a<br>a ^= b<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">a ^= b
+b ^= a
+a ^= b</code></pre>
 
 <p>通过 <code>a &amp; (-a)</code> 快速获取<code>a</code>的最后为 1 位置的整数。</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">00 00 01 01 -> 5<br>&<br>11 11 10 11 -> -5<br>---<br>00 00 00 01 -> 1<br><br>00 00 11 10 -> 14<br>&<br>11 11 00 10 -> -14<br>---<br>00 00 00 10 -> 2<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">00 00 01 01 -> 5
+&
+11 11 10 11 -> -5
+---
+00 00 00 01 -> 1
+
+00 00 11 10 -> 14
+&
+11 11 00 10 -> -14
+---
+00 00 00 10 -> 2</code></pre>
 
 <h3 id="4-利用位运算实现整数集合"><a href="#4-利用位运算实现整数集合" class="headerlink" title="4. 利用位运算实现整数集合"></a>4. 利用位运算实现整数集合</h3><p>一个数的二进制表示可以看作是一个集合（0 表示不在集合中，1 表示在集合中）。</p>
 <p>比如集合 <code>&#123;1, 3, 4, 8&#125;</code>，可以表示成 <code>01 00 01 10 10</code> 而对应的位运算也就可以看作是对集合进行的操作。</p>
 <p>元素与集合的操作：</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">a | (1<<i)  -> 把 i 插入到集合中<br>a & ~(1<<i) -> 把 i 从集合中删除<br>a & (1<<i)  -> 判断 i 是否属于该集合（零不属于，非零属于）<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">a | (1<<i)  -> 把 i 插入到集合中
+a & ~(1<<i) -> 把 i 从集合中删除
+a & (1<<i)  -> 判断 i 是否属于该集合（零不属于，非零属于）</code></pre>
 
 <p>集合之间的操作：</p>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs python"><code class="language-hljs python">a 补   -> ~a<br>a 交 b -> a & b<br>a 并 b -> a | b<br>a 差 b -> a & (~b)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><code class="language-highlight python">a 补   -> ~a
+a 交 b -> a & b
+a 并 b -> a | b
+a 差 b -> a & (~b)</code></pre>
 
 
 <p>注意：整数在内存中是以补码的形式存在的，输出自然也是按照补码输出。</p>
 <p>【例子】C#语言输出负数。</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre class=" language-hljs C#"><span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-keyword">string</span> s1 = Convert.ToString(<span class="hljs-number">-3</span>, <span class="hljs-number">2</span>);<br>        Console.WriteLine(s1); <br>        <span class="hljs-comment">// 11111111111111111111111111111101</span><br>        <br>        <span class="hljs-keyword">string</span> s2 = Convert.ToString(<span class="hljs-number">-3</span>, <span class="hljs-number">16</span>);<br>        Console.WriteLine(s2); <br>        <span class="hljs-comment"><code class="language-hljs C#"><span class="hljs-keyword">class</span> <span class="hljs-title">Program</span><br>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Main</span>(<span class="hljs-params"><span class="hljs-keyword">string</span>[] args</span>)</span><br><span class="hljs-function"></span>    &#123;<br>        <span class="hljs-keyword">string</span> s1 = Convert.ToString(<span class="hljs-number">-3</span>, <span class="hljs-number">2</span>);<br>        Console.WriteLine(s1); <br>        <span class="hljs-comment">// 11111111111111111111111111111101</span><br>        <br>        <span class="hljs-keyword">string</span> s2 = Convert.ToString(<span class="hljs-number">-3</span>, <span class="hljs-number">16</span>);<br>        Console.WriteLine(s2); <br>        <span class="hljs-comment">// fffffffd</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight C#"><span class="keyword">class</span> <span class="title"><code class="language-highlight C#"><span class="keyword">class</span> <span class="title">Program</span>
+&#123;
+    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">Main</span>(<span class="params"><span class="keyword">string</span>[] args</span>)</span>
+<span class="function"></span>    &#123;
+        <span class="keyword">string</span> s1 = Convert.ToString(<span class="number">-3</span>, <span class="number">2</span>);
+        Console.WriteLine(s1); 
+        <span class="comment">// 11111111111111111111111111111101</span>
+        
+        <span class="keyword">string</span> s2 = Convert.ToString(<span class="number">-3</span>, <span class="number">16</span>);
+        Console.WriteLine(s2); 
+        <span class="comment">// fffffffd</span>
+    &#125;
+&#125;</code></pre>
 
 <p>【例子】 Python 的<code>bin()</code> 输出。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">print(bin(<span class="hljs-number">3</span>))  <span class="hljs-comment"># 0b11</span><br>print(bin(<span class="hljs-number">-3</span>))  <span class="hljs-comment"># -0b11</span><br><br>print(bin(<span class="hljs-number">-3</span> &amp; <span class="hljs-number">0xffffffff</span>))  <br><span class="hljs-comment"># 0b11111111111111111111111111111101</span><br><br>print(bin(<span class="hljs-number">0xfffffffd</span>))       <br><span class="hljs-comment"># 0b11111111111111111111111111111101</span><br><br>print(<span class="hljs-number">0xfffffffd</span>)  <span class="hljs-comment"><code class="language-hljs python">print(bin(<span class="hljs-number">3</span>))  <span class="hljs-comment"># 0b11</span><br>print(bin(<span class="hljs-number">-3</span>))  <span class="hljs-comment"># -0b11</span><br><br>print(bin(<span class="hljs-number">-3</span> &amp; <span class="hljs-number">0xffffffff</span>))  <br><span class="hljs-comment"># 0b11111111111111111111111111111101</span><br><br>print(bin(<span class="hljs-number">0xfffffffd</span>))       <br><span class="hljs-comment"># 0b11111111111111111111111111111101</span><br><br>print(<span class="hljs-number">0xfffffffd</span>)  <span class="hljs-comment"># 4294967293</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">print(bin(<span class="number">3</span>))  <span class="comment"><code class="language-highlight python">print(bin(<span class="number">3</span>))  <span class="comment"># 0b11</span>
+print(bin(<span class="number">-3</span>))  <span class="comment"># -0b11</span>
+
+print(bin(<span class="number">-3</span> & <span class="number">0xffffffff</span>))  
+<span class="comment"># 0b11111111111111111111111111111101</span>
+
+print(bin(<span class="number">0xfffffffd</span>))       
+<span class="comment"># 0b11111111111111111111111111111101</span>
+
+print(<span class="number">0xfffffffd</span>)  <span class="comment"># 4294967293</span></code></pre>
 
 <p>是不是很颠覆认知，我们从结果可以看出：</p>
 <ul>
@@ -868,181 +1097,455 @@
 <li>Python中整型是不限制长度的不会超范围溢出。</li>
 </ul>
 <p>所以为了获得负数（十进制表示）的补码，需要手动将其和十六进制数<code>0xffffffff</code>进行按位与操作，再交给<code>bin()</code>进行输出，得到的才是负数的补码表示。</p>
-<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><h3 id="1-if-语句"><a href="#1-if-语句" class="headerlink" title="1. if 语句"></a>1. if 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">if</span> expression:<br>    expr_true_suite<br></code></pre></td></tr></table></figure>
+<h2 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h2><h3 id="1-if-语句"><a href="#1-if-语句" class="headerlink" title="1. if 语句"></a>1. if 语句</h3><pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">if</span> expression:
+    expr_true_suite</code></pre>
 <ul>
 <li>if 语句的 <code>expr_true_suite</code> 代码块只有当条件表达式 <code>expression</code> 结果为真时才执行，否则将继续执行紧跟在该代码块后面的语句。</li>
 <li>单个 if 语句中的 <code>expression</code> 条件表达式可以通过布尔操作符 <code>and</code>，<code>or</code>和<code>not</code> 实现多重条件判断。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">if</span> <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> <span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span>:<br>    print(<span class="hljs-string">&#x27;Correct Judgement!&#x27;</span>)<br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">if</span> <span class="hljs-number">2</span> &gt; <span class="hljs-number">1</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">not</span> <span class="hljs-number">2</span> &gt; <span class="hljs-number">3</span>:<br>    print(<span class="hljs-string">&#x27;Correct Judgement!&#x27;</span>)<br><br><span class="hljs-comment"># Correct Judgement!</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">if</span> <span class="number">2</span> &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="keyword">not</span> <span class="number">2</span> &gt; <span class="number"><code class="language-highlight python"><span class="keyword">if</span> <span class="number">2</span> &gt; <span class="number">1</span> <span class="keyword">and</span> <span class="keyword">not</span> <span class="number">2</span> &gt; <span class="number">3</span>:
+    print(<span class="string">&#x27;Correct Judgement!&#x27;</span>)
+
+<span class="comment"># Correct Judgement!</span></code></pre>
 
 
-<h3 id="2-if-else-语句"><a href="#2-if-else-语句" class="headerlink" title="2. if - else 语句"></a>2. if - else 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">if</span> expression:<br>    expr_true_suite<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">if</span> expression:<br>    expr_true_suite<br><span class="hljs-keyword">else</span>:<br>    expr_false_suite<br></code></pre></td></tr></table></figure>
+<h3 id="2-if-else-语句"><a href="#2-if-else-语句" class="headerlink" title="2. if - else 语句"></a>2. if - else 语句</h3><pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">if</span> expression:
+    expr_true_suite
+<span class="keyword">else</span>:
+    expr_false_suite</code></pre>
 <ul>
 <li>Python 提供与 if 搭配使用的 else，如果 if 语句的条件表达式结果布尔值为假，那么程序将执行 else 语句后的代码。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>guess = int(temp) <span class="hljs-comment"># input 函数将接收的任何数据类型都默认为 str。</span><br><span class="hljs-keyword">if</span> guess == <span class="hljs-number">666</span>:<br>    print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>    print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;猜错了，小姐姐现在心里想的是666！&quot;</span>)<br>print(<span class="hljs-string"><code class="language-hljs python">temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>guess = int(temp) <span class="hljs-comment"># input 函数将接收的任何数据类型都默认为 str。</span><br><span class="hljs-keyword">if</span> guess == <span class="hljs-number">666</span>:<br>    print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>    print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;猜错了，小姐姐现在心里想的是666！&quot;</span>)<br>print(<span class="hljs-string">"游戏结束，不玩儿啦！"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">temp = input(<span class="string"><code class="language-highlight python">temp = input(<span class="string">"猜一猜小姐姐想的是哪个数字？"</span>)
+guess = int(temp) <span class="comment"># input 函数将接收的任何数据类型都默认为 str。</span>
+<span class="keyword">if</span> guess == <span class="number">666</span>:
+    print(<span class="string">"你太了解小姐姐的心思了！"</span>)
+    print(<span class="string">"哼，猜对也没有奖励！"</span>)
+<span class="keyword">else</span>:
+    print(<span class="string">"猜错了，小姐姐现在心里想的是666！"</span>)
+print(<span class="string">"游戏结束，不玩儿啦！"</span>)</code></pre>
 
 
 <p><code>if</code>语句支持嵌套，即在一个<code>if</code>语句中嵌入另一个<code>if</code>语句，从而构成不同层次的选择结构。</p>
 <p>【例子】Python 使用缩进而不是大括号来标记代码块边界，因此要特别注意<code>else</code>的悬挂问题。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">hi = <span class="hljs-number">6</span><br><span class="hljs-keyword">if</span> hi &gt; <span class="hljs-number">2</span>:<br>    <span class="hljs-keyword">if</span> hi &gt; <span class="hljs-number">7</span>:<br>        print(<span class="hljs-string">&#x27;好棒!好棒!&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&#x27;切~&#x27;</span>)<br><br><span class="hljs-comment"><code class="language-hljs python">hi = <span class="hljs-number">6</span><br><span class="hljs-keyword">if</span> hi &gt; <span class="hljs-number">2</span>:<br>    <span class="hljs-keyword">if</span> hi &gt; <span class="hljs-number">7</span>:<br>        print(<span class="hljs-string">&#x27;好棒!好棒!&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&#x27;切~&#x27;</span>)<br><br><span class="hljs-comment"># 无输出</span><br></code></pre></td></tr></table></figure>
-<p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>guess = int(temp)<br><span class="hljs-keyword">if</span> guess &gt; <span class="hljs-number">8</span>:<br>    print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-keyword">if</span> guess == <span class="hljs-number">8</span>:<br>        print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>        print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>print(<span class="hljs-string"><code class="language-hljs python">temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>guess = int(temp)<br><span class="hljs-keyword">if</span> guess &gt; <span class="hljs-number">8</span>:<br>    print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    <span class="hljs-keyword">if</span> guess == <span class="hljs-number">8</span>:<br>        print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>        print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>print(<span class="hljs-string">"游戏结束，不玩儿啦！"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">hi = <span class="number"><code class="language-highlight python">hi = <span class="number">6</span>
+<span class="keyword">if</span> hi > <span class="number">2</span>:
+    <span class="keyword">if</span> hi > <span class="number">7</span>:
+        print(<span class="string">&#x27;好棒!好棒!&#x27;</span>)
+<span class="keyword">else</span>:
+    print(<span class="string">&#x27;切~&#x27;</span>)
 
-<h3 id="3-if-elif-else-语句"><a href="#3-if-elif-else-语句" class="headerlink" title="3. if - elif - else 语句"></a>3. if - elif - else 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">if</span> expression1:<br>    expr1_true_suite<br><span class="hljs-keyword">elif</span> expression2:<br>    expr2_true_suite<br>    .<br>    .<br><span class="hljs-keyword">elif</span> expressionN:<br>    exprN_true_suite<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">if</span> expression1:<br>    expr1_true_suite<br><span class="hljs-keyword">elif</span> expression2:<br>    expr2_true_suite<br>    .<br>    .<br><span class="hljs-keyword">elif</span> expressionN:<br>    exprN_true_suite<br><span class="hljs-keyword">else</span>:<br>    expr_false_suite<br></code></pre></td></tr></table></figure>
+<span class="comment"># 无输出</span></code></pre>
+<p>【例子】</p>
+<pre class=" language-highlight python">temp = input(<span class="string"><code class="language-highlight python">temp = input(<span class="string">"猜一猜小姐姐想的是哪个数字？"</span>)
+guess = int(temp)
+<span class="keyword">if</span> guess > <span class="number">8</span>:
+    print(<span class="string">"大了，大了"</span>)
+<span class="keyword">else</span>:
+    <span class="keyword">if</span> guess == <span class="number">8</span>:
+        print(<span class="string">"你太了解小姐姐的心思了！"</span>)
+        print(<span class="string">"哼，猜对也没有奖励！"</span>)
+    <span class="keyword">else</span>:
+        print(<span class="string">"小了，小了"</span>)
+print(<span class="string">"游戏结束，不玩儿啦！"</span>)</code></pre>
+
+<h3 id="3-if-elif-else-语句"><a href="#3-if-elif-else-语句" class="headerlink" title="3. if - elif - else 语句"></a>3. if - elif - else 语句</h3><pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">if</span> expression1:
+    expr1_true_suite
+<span class="keyword">elif</span> expression2:
+    expr2_true_suite
+    .
+    .
+<span class="keyword">elif</span> expressionN:
+    exprN_true_suite
+<span class="keyword">else</span>:
+    expr_false_suite</code></pre>
 
 <ul>
 <li>elif 语句即为 else if，用来检查多个表达式是否为真，并在为真时执行特定代码块中的代码。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">temp = input(<span class="hljs-string">&#x27;请输入成绩:&#x27;</span>)<br>source = int(temp)<br><span class="hljs-keyword">if</span> <span class="hljs-number">100</span> &gt;= source &gt;= <span class="hljs-number">90</span>:<br>    print(<span class="hljs-string">&#x27;A&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">90</span> &gt; source &gt;= <span class="hljs-number">80</span>:<br>    print(<span class="hljs-string">&#x27;B&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">80</span> &gt; source &gt;= <span class="hljs-number">60</span>:<br>    print(<span class="hljs-string">&#x27;C&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">60</span> &gt; source &gt;= <span class="hljs-number">0</span>:<br>    print(<span class="hljs-string">&#x27;D&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string"><code class="language-hljs python">temp = input(<span class="hljs-string">&#x27;请输入成绩:&#x27;</span>)<br>source = int(temp)<br><span class="hljs-keyword">if</span> <span class="hljs-number">100</span> &gt;= source &gt;= <span class="hljs-number">90</span>:<br>    print(<span class="hljs-string">&#x27;A&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">90</span> &gt; source &gt;= <span class="hljs-number">80</span>:<br>    print(<span class="hljs-string">&#x27;B&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">80</span> &gt; source &gt;= <span class="hljs-number">60</span>:<br>    print(<span class="hljs-string">&#x27;C&#x27;</span>)<br><span class="hljs-keyword">elif</span> <span class="hljs-number">60</span> &gt; source &gt;= <span class="hljs-number">0</span>:<br>    print(<span class="hljs-string">&#x27;D&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&#x27;输入错误！&#x27;</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">temp = input(<span class="string"><code class="language-highlight python">temp = input(<span class="string">&#x27;请输入成绩:&#x27;</span>)
+source = int(temp)
+<span class="keyword">if</span> <span class="number">100</span> >= source >= <span class="number">90</span>:
+    print(<span class="string">&#x27;A&#x27;</span>)
+<span class="keyword">elif</span> <span class="number">90</span> > source >= <span class="number">80</span>:
+    print(<span class="string">&#x27;B&#x27;</span>)
+<span class="keyword">elif</span> <span class="number">80</span> > source >= <span class="number">60</span>:
+    print(<span class="string">&#x27;C&#x27;</span>)
+<span class="keyword">elif</span> <span class="number">60</span> > source >= <span class="number">0</span>:
+    print(<span class="string">&#x27;D&#x27;</span>)
+<span class="keyword">else</span>:
+    print(<span class="string">&#x27;输入错误！&#x27;</span>)</code></pre>
 <h3 id="4-assert-关键词"><a href="#4-assert-关键词" class="headerlink" title="4. assert 关键词"></a>4. assert 关键词</h3><ul>
 <li><code>assert</code>这个关键词我们称之为“断言”，当这个关键词后边的条件为 False 时，程序自动崩溃并抛出<code>AssertionError</code>的异常。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">my_list = [<span class="hljs-string">&#x27;lsgogroup&#x27;</span>]<br>my_list.pop(<span class="hljs-number">0</span>)<br><span class="hljs-keyword">assert</span> len(my_list) &gt; <span class="hljs-number">0</span><br><br><span class="hljs-comment"><code class="language-hljs python">my_list = [<span class="hljs-string">&#x27;lsgogroup&#x27;</span>]<br>my_list.pop(<span class="hljs-number">0</span>)<br><span class="hljs-keyword">assert</span> len(my_list) &gt; <span class="hljs-number">0</span><br><br><span class="hljs-comment"># AssertionError</span><br></code></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">assert</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">7</span><br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">assert</span> <span class="hljs-number">3</span> &gt; <span class="hljs-number">7</span><br><br><span class="hljs-comment"># AssertionError</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">my_list = [<span class="string"><code class="language-highlight python">my_list = [<span class="string">&#x27;lsgogroup&#x27;</span>]
+my_list.pop(<span class="number">0</span>)
+<span class="keyword">assert</span> len(my_list) > <span class="number">0</span>
+
+<span class="comment"># AssertionError</span></code></pre>
+<pre class=" language-highlight python"><span class="keyword">assert</span> <span class="number">3</span> &gt; <span class="number"><code class="language-highlight python"><span class="keyword">assert</span> <span class="number">3</span> &gt; <span class="number">7</span>
+
+<span class="comment"># AssertionError</span></code></pre>
 
 <h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2><h3 id="1-while-循环"><a href="#1-while-循环" class="headerlink" title="1. while 循环"></a>1. while 循环</h3><p><code>while</code>语句最基本的形式包括一个位于顶部的布尔表达式，一个或多个属于<code>while</code>代码块的缩进语句。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">while</span> 布尔表达式:<br>    代码块<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">while</span> 布尔表达式:
+    代码块</code></pre>
 
 <p><code>while</code>循环的代码块会一直循环执行，直到布尔表达式的值为布尔假。</p>
 <p>如果布尔表达式不带有<code>&lt;、&gt;、==、！=、in、not in</code>等运算符，仅仅给出数值之类的条件，也是可以的。当<code>while</code>后写入一个非零整数时，视为真值，执行循环体；写入<code>0</code>时，视为假值，不执行循环体。也可以写入<code>str、list</code>或任何序列，长度非零则视为真值，执行循环体；否则视为假值，不执行循环体。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">3</span>:<br>    temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>    guess = int(temp)<br>    <span class="hljs-keyword">if</span> guess &gt; <span class="hljs-number">8</span>:<br>        print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> guess == <span class="hljs-number">8</span>:<br>            print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>            print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>            count = <span class="hljs-number">3</span><br>        <span class="hljs-keyword">else</span>:<br>            print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>    count = count + <span class="hljs-number">1</span><br>print(<span class="hljs-string"><code class="language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">3</span>:<br>    temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>    guess = int(temp)<br>    <span class="hljs-keyword">if</span> guess &gt; <span class="hljs-number">8</span>:<br>        print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> guess == <span class="hljs-number">8</span>:<br>            print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>            print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>            count = <span class="hljs-number">3</span><br>        <span class="hljs-keyword">else</span>:<br>            print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>    count = count + <span class="hljs-number">1</span><br>print(<span class="hljs-string">"游戏结束，不玩儿啦！"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">count = <span class="number"><code class="language-highlight python">count = <span class="number">0</span>
+<span class="keyword">while</span> count < <span class="number">3</span>:
+    temp = input(<span class="string">"猜一猜小姐姐想的是哪个数字？"</span>)
+    guess = int(temp)
+    <span class="keyword">if</span> guess > <span class="number">8</span>:
+        print(<span class="string">"大了，大了"</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">if</span> guess == <span class="number">8</span>:
+            print(<span class="string">"你太了解小姐姐的心思了！"</span>)
+            print(<span class="string">"哼，猜对也没有奖励！"</span>)
+            count = <span class="number">3</span>
+        <span class="keyword">else</span>:
+            print(<span class="string">"小了，小了"</span>)
+    count = count + <span class="number">1</span>
+print(<span class="string">"游戏结束，不玩儿啦！"</span>)</code></pre>
 
 <hr>
-<h3 id="2-while-else-循环"><a href="#2-while-else-循环" class="headerlink" title="2. while - else 循环"></a>2. while - else 循环</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">while</span> 布尔表达式:<br>    代码块<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">while</span> 布尔表达式:<br>    代码块<br><span class="hljs-keyword">else</span>:<br>    代码块<br></code></pre></td></tr></table></figure>
+<h3 id="2-while-else-循环"><a href="#2-while-else-循环" class="headerlink" title="2. while - else 循环"></a>2. while - else 循环</h3><pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">while</span> 布尔表达式:
+    代码块
+<span class="keyword">else</span>:
+    代码块</code></pre>
 
 <p>当<code>while</code>循环正常执行完的情况下，执行<code>else</code>输出，如果<code>while</code>循环中执行了跳出循环的语句，比如 <code>break</code>，将不执行<code>else</code>代码块的内容。    </p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">5</span>:<br>    print(<span class="hljs-string">&quot;%d is  less than 5&quot;</span> % count)<br>    count = count + <span class="hljs-number">1</span><br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;%d is not less than 5&quot;</span> % count)<br>    <br><span class="hljs-comment"># 0 is  less than 5</span><br><span class="hljs-comment"># 1 is  less than 5</span><br><span class="hljs-comment"># 2 is  less than 5</span><br><span class="hljs-comment"># 3 is  less than 5</span><br><span class="hljs-comment"># 4 is  less than 5</span><br><span class="hljs-comment"><code class="language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">5</span>:<br>    print(<span class="hljs-string">&quot;%d is  less than 5&quot;</span> % count)<br>    count = count + <span class="hljs-number">1</span><br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;%d is not less than 5&quot;</span> % count)<br>    <br><span class="hljs-comment"># 0 is  less than 5</span><br><span class="hljs-comment"># 1 is  less than 5</span><br><span class="hljs-comment"># 2 is  less than 5</span><br><span class="hljs-comment"># 3 is  less than 5</span><br><span class="hljs-comment"># 4 is  less than 5</span><br><span class="hljs-comment"># 5 is not less than 5</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">count = <span class="number"><code class="language-highlight python">count = <span class="number">0</span>
+<span class="keyword">while</span> count < <span class="number">5</span>:
+    print(<span class="string">"%d is  less than 5"</span> % count)
+    count = count + <span class="number">1</span>
+<span class="keyword">else</span>:
+    print(<span class="string">"%d is not less than 5"</span> % count)
+    
+<span class="comment"># 0 is  less than 5</span>
+<span class="comment"># 1 is  less than 5</span>
+<span class="comment"># 2 is  less than 5</span>
+<span class="comment"># 3 is  less than 5</span>
+<span class="comment"># 4 is  less than 5</span>
+<span class="comment"># 5 is not less than 5</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">5</span>:<br>    print(<span class="hljs-string">&quot;%d is  less than 5&quot;</span> % count)<br>    count = <span class="hljs-number">6</span><br>    <span class="hljs-keyword">break</span><br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;%d is not less than 5&quot;</span> % count)<br><br><span class="hljs-comment"><code class="language-hljs python">count = <span class="hljs-number">0</span><br><span class="hljs-keyword">while</span> count &lt; <span class="hljs-number">5</span>:<br>    print(<span class="hljs-string">&quot;%d is  less than 5&quot;</span> % count)<br>    count = <span class="hljs-number">6</span><br>    <span class="hljs-keyword">break</span><br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;%d is not less than 5&quot;</span> % count)<br><br><span class="hljs-comment"># 0 is  less than 5</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">count = <span class="number"><code class="language-highlight python">count = <span class="number">0</span>
+<span class="keyword">while</span> count < <span class="number">5</span>:
+    print(<span class="string">"%d is  less than 5"</span> % count)
+    count = <span class="number">6</span>
+    <span class="keyword">break</span>
+<span class="keyword">else</span>:
+    print(<span class="string">"%d is not less than 5"</span> % count)
+
+<span class="comment"># 0 is  less than 5</span></code></pre>
 
 <hr>
 <h3 id="3-for-循环"><a href="#3-for-循环" class="headerlink" title="3. for 循环"></a>3. for 循环</h3><p><code>for</code>循环是迭代循环，在Python中相当于一个通用的序列迭代器，可以遍历任何有序序列，如<code>str、list、tuple</code>等，也可以遍历任何可迭代对象，如<code>dict</code>。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> 迭代变量 <span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">for</span> 迭代变量 <span class="hljs-keyword">in</span> 可迭代对象:<br>    代码块<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> 迭代变量 <span class="keyword"><code class="language-highlight python"><span class="keyword">for</span> 迭代变量 <span class="keyword">in</span> 可迭代对象:
+    代码块</code></pre>
 <p>每次循环，迭代变量被设置为可迭代对象的当前元素，提供给代码块使用。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;ILoveLSGO&#x27;</span>:<br>    print(i, end=<span class="hljs-string">&#x27; &#x27;</span>)  <span class="hljs-comment"># 不换行输出</span><br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-string">&#x27;ILoveLSGO&#x27;</span>:<br>    print(i, end=<span class="hljs-string">&#x27; &#x27;</span>)  <span class="hljs-comment"># 不换行输出</span><br><br><span class="hljs-comment"># I L o v e L S G O</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string"><code class="language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="string">&#x27;ILoveLSGO&#x27;</span>:
+    print(i, end=<span class="string">&#x27; &#x27;</span>)  <span class="comment"># 不换行输出</span>
+
+<span class="comment"># I L o v e L S G O</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">member = [<span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;刘德华&#x27;</span>, <span class="hljs-string">&#x27;刘六&#x27;</span>, <span class="hljs-string">&#x27;周润发&#x27;</span>]<br><span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> member:<br>    print(each)<br><br><span class="hljs-comment"># 张三</span><br><span class="hljs-comment"># 李四</span><br><span class="hljs-comment"># 刘德华</span><br><span class="hljs-comment"># 刘六</span><br><span class="hljs-comment"># 周润发</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(member)):<br>    print(member[i])<br><br><span class="hljs-comment"># 张三</span><br><span class="hljs-comment"># 李四</span><br><span class="hljs-comment"># 刘德华</span><br><span class="hljs-comment"># 刘六</span><br><span class="hljs-comment"><code class="language-hljs python">member = [<span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;刘德华&#x27;</span>, <span class="hljs-string">&#x27;刘六&#x27;</span>, <span class="hljs-string">&#x27;周润发&#x27;</span>]<br><span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> member:<br>    print(each)<br><br><span class="hljs-comment"># 张三</span><br><span class="hljs-comment"># 李四</span><br><span class="hljs-comment"># 刘德华</span><br><span class="hljs-comment"># 刘六</span><br><span class="hljs-comment"># 周润发</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(len(member)):<br>    print(member[i])<br><br><span class="hljs-comment"># 张三</span><br><span class="hljs-comment"># 李四</span><br><span class="hljs-comment"># 刘德华</span><br><span class="hljs-comment"># 刘六</span><br><span class="hljs-comment"># 周润发</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">member = [<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;李四&#x27;</span>, <span class="string">&#x27;刘德华&#x27;</span>, <span class="string">&#x27;刘六&#x27;</span>, <span class="string"><code class="language-highlight python">member = [<span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;李四&#x27;</span>, <span class="string">&#x27;刘德华&#x27;</span>, <span class="string">&#x27;刘六&#x27;</span>, <span class="string">&#x27;周润发&#x27;</span>]
+<span class="keyword">for</span> each <span class="keyword">in</span> member:
+    print(each)
+
+<span class="comment"># 张三</span>
+<span class="comment"># 李四</span>
+<span class="comment"># 刘德华</span>
+<span class="comment"># 刘六</span>
+<span class="comment"># 周润发</span>
+
+<span class="keyword">for</span> i <span class="keyword">in</span> range(len(member)):
+    print(member[i])
+
+<span class="comment"># 张三</span>
+<span class="comment"># 李四</span>
+<span class="comment"># 刘德华</span>
+<span class="comment"># 刘六</span>
+<span class="comment"># 周润发</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> dic.items():<br>    print(key, value, sep=<span class="hljs-string">&#x27;:&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"><code class="language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> key, value <span class="hljs-keyword">in</span> dic.items():<br>    print(key, value, sep=<span class="hljs-string">&#x27;:&#x27;</span>, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"># a:1 b:2 c:3 d:4 </span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>&#125;
+
+<span class="keyword">for</span> key, value <span class="keyword">in</span> dic.items():
+    print(key, value, sep=<span class="string">&#x27;:&#x27;</span>, end=<span class="string">&#x27; &#x27;</span>)
+    
+<span class="comment"># a:1 b:2 c:3 d:4 </span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> dic.keys():<br>    print(key, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"><code class="language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> key <span class="hljs-keyword">in</span> dic.keys():<br>    print(key, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"># a b c d </span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>&#125;
+
+<span class="keyword">for</span> key <span class="keyword">in</span> dic.keys():
+    print(key, end=<span class="string">&#x27; &#x27;</span>)
+    
+<span class="comment"># a b c d </span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> dic.values():<br>    print(value, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"><code class="language-hljs python">dic = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;c&#x27;</span>: <span class="hljs-number">3</span>, <span class="hljs-string">&#x27;d&#x27;</span>: <span class="hljs-number">4</span>&#125;<br><br><span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> dic.values():<br>    print(value, end=<span class="hljs-string">&#x27; &#x27;</span>)<br>    <br><span class="hljs-comment"># 1 2 3 4</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;c&#x27;</span>: <span class="number">3</span>, <span class="string">&#x27;d&#x27;</span>: <span class="number">4</span>&#125;
+
+<span class="keyword">for</span> value <span class="keyword">in</span> dic.values():
+    print(value, end=<span class="string">&#x27; &#x27;</span>)
+    
+<span class="comment"># 1 2 3 4</span></code></pre>
 
 <hr>
-<h3 id="4-for-else-循环"><a href="#4-for-else-循环" class="headerlink" title="4. for - else 循环"></a>4. for - else 循环</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> 迭代变量 <span class="hljs-keyword">in</span> 可迭代对象:<br>    代码块<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">for</span> 迭代变量 <span class="hljs-keyword">in</span> 可迭代对象:<br>    代码块<br><span class="hljs-keyword">else</span>:<br>    代码块<br></code></pre></td></tr></table></figure>
+<h3 id="4-for-else-循环"><a href="#4-for-else-循环" class="headerlink" title="4. for - else 循环"></a>4. for - else 循环</h3><pre class=" language-highlight python"><span class="keyword">for</span> 迭代变量 <span class="keyword"><code class="language-highlight python"><span class="keyword">for</span> 迭代变量 <span class="keyword">in</span> 可迭代对象:
+    代码块
+<span class="keyword">else</span>:
+    代码块</code></pre>
 
 <p>当<code>for</code>循环正常执行完的情况下，执行<code>else</code>输出，如果<code>for</code>循环中执行了跳出循环的语句，比如 <code>break</code>，将不执行<code>else</code>代码块的内容，与<code>while - else</code>语句一样。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>):  <span class="hljs-comment"># 迭代 10 到 20 之间的数字</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, num):  <span class="hljs-comment"># 根据因子迭代</span><br>        <span class="hljs-keyword">if</span> num % i == <span class="hljs-number">0</span>:  <span class="hljs-comment"># 确定第一个因子</span><br>            j = num / i  <span class="hljs-comment"># 计算第二个因子</span><br>            print(<span class="hljs-string">&#x27;%d 等于 %d * %d&#x27;</span> % (num, i, j))<br>            <span class="hljs-keyword">break</span>  <span class="hljs-comment"># 跳出当前循环</span><br>    <span class="hljs-keyword">else</span>:  <span class="hljs-comment"># 循环的 else 部分</span><br>        print(num, <span class="hljs-string">&#x27;是一个质数&#x27;</span>)<br><br><span class="hljs-comment"># 10 等于 2 * 5</span><br><span class="hljs-comment"># 11 是一个质数</span><br><span class="hljs-comment"># 12 等于 2 * 6</span><br><span class="hljs-comment"># 13 是一个质数</span><br><span class="hljs-comment"># 14 等于 2 * 7</span><br><span class="hljs-comment"># 15 等于 3 * 5</span><br><span class="hljs-comment"># 16 等于 2 * 8</span><br><span class="hljs-comment"># 17 是一个质数</span><br><span class="hljs-comment"># 18 等于 2 * 9</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">for</span> num <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>):  <span class="hljs-comment"># 迭代 10 到 20 之间的数字</span><br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, num):  <span class="hljs-comment"># 根据因子迭代</span><br>        <span class="hljs-keyword">if</span> num % i == <span class="hljs-number">0</span>:  <span class="hljs-comment"># 确定第一个因子</span><br>            j = num / i  <span class="hljs-comment"># 计算第二个因子</span><br>            print(<span class="hljs-string">&#x27;%d 等于 %d * %d&#x27;</span> % (num, i, j))<br>            <span class="hljs-keyword">break</span>  <span class="hljs-comment"># 跳出当前循环</span><br>    <span class="hljs-keyword">else</span>:  <span class="hljs-comment"># 循环的 else 部分</span><br>        print(num, <span class="hljs-string">&#x27;是一个质数&#x27;</span>)<br><br><span class="hljs-comment"># 10 等于 2 * 5</span><br><span class="hljs-comment"># 11 是一个质数</span><br><span class="hljs-comment"># 12 等于 2 * 6</span><br><span class="hljs-comment"># 13 是一个质数</span><br><span class="hljs-comment"># 14 等于 2 * 7</span><br><span class="hljs-comment"># 15 等于 3 * 5</span><br><span class="hljs-comment"># 16 等于 2 * 8</span><br><span class="hljs-comment"># 17 是一个质数</span><br><span class="hljs-comment"># 18 等于 2 * 9</span><br><span class="hljs-comment"># 19 是一个质数</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">10</span>, <span class="number">20</span>):  <span class="comment"><code class="language-highlight python"><span class="keyword">for</span> num <span class="keyword">in</span> range(<span class="number">10</span>, <span class="number">20</span>):  <span class="comment"># 迭代 10 到 20 之间的数字</span>
+    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, num):  <span class="comment"># 根据因子迭代</span>
+        <span class="keyword">if</span> num % i == <span class="number">0</span>:  <span class="comment"># 确定第一个因子</span>
+            j = num / i  <span class="comment"># 计算第二个因子</span>
+            print(<span class="string">&#x27;%d 等于 %d * %d&#x27;</span> % (num, i, j))
+            <span class="keyword">break</span>  <span class="comment"># 跳出当前循环</span>
+    <span class="keyword">else</span>:  <span class="comment"># 循环的 else 部分</span>
+        print(num, <span class="string">&#x27;是一个质数&#x27;</span>)
+
+<span class="comment"># 10 等于 2 * 5</span>
+<span class="comment"># 11 是一个质数</span>
+<span class="comment"># 12 等于 2 * 6</span>
+<span class="comment"># 13 是一个质数</span>
+<span class="comment"># 14 等于 2 * 7</span>
+<span class="comment"># 15 等于 3 * 5</span>
+<span class="comment"># 16 等于 2 * 8</span>
+<span class="comment"># 17 是一个质数</span>
+<span class="comment"># 18 等于 2 * 9</span>
+<span class="comment"># 19 是一个质数</span></code></pre>
 
 <hr>
-<h3 id="5-range-函数"><a href="#5-range-函数" class="headerlink" title="5. range() 函数"></a>5. range() 函数</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">range([start,] stop[, step=<span class="hljs-number"><code class="language-hljs python">range([start,] stop[, step=<span class="hljs-number">1</span>])<br></code></pre></td></tr></table></figure>
+<h3 id="5-range-函数"><a href="#5-range-函数" class="headerlink" title="5. range() 函数"></a>5. range() 函数</h3><pre class=" language-highlight python">range([start,] stop[, step=<span class="number"><code class="language-highlight python">range([start,] stop[, step=<span class="number">1</span>])</code></pre>
 <ul>
 <li>这个BIF（Built-in functions）有三个参数，其中用中括号括起来的两个表示这两个参数是可选的。</li>
 <li><code>step=1</code> 表示第三个参数的默认值是1。</li>
 <li><code>range</code> 这个BIF的作用是生成一个从<code>start</code>参数的值开始到<code>stop</code>参数的值结束的数字序列，该序列包含<code>start</code>的值但不包含<code>stop</code>的值。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">9</span>):  <span class="hljs-comment"># 不包含9</span><br>    print(i)<br><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">2</span>, <span class="hljs-number">9</span>):  <span class="hljs-comment"># 不包含9</span><br>    print(i)<br><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"># 8</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">9</span>):  <span class="comment"><code class="language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">9</span>):  <span class="comment"># 不包含9</span>
+    print(i)
+
+<span class="comment"># 2</span>
+<span class="comment"># 3</span>
+<span class="comment"># 4</span>
+<span class="comment"># 5</span>
+<span class="comment"># 6</span>
+<span class="comment"># 7</span>
+<span class="comment"># 8</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>):<br>    print(i)<br><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>):<br>    print(i)<br><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"># 9</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>, <span class="number"><code class="language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>, <span class="number">2</span>):
+    print(i)
+
+<span class="comment"># 1</span>
+<span class="comment"># 3</span>
+<span class="comment"># 5</span>
+<span class="comment"># 7</span>
+<span class="comment"># 9</span></code></pre>
 
 <hr>
-<h3 id="6-enumerate-函数"><a href="#6-enumerate-函数" class="headerlink" title="6. enumerate()函数"></a>6. enumerate()函数</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">enumerate(sequence, [start=<span class="hljs-number"><code class="language-hljs python">enumerate(sequence, [start=<span class="hljs-number">0</span>])<br></code></pre></td></tr></table></figure>
+<h3 id="6-enumerate-函数"><a href="#6-enumerate-函数" class="headerlink" title="6. enumerate()函数"></a>6. enumerate()函数</h3><pre class=" language-highlight python">enumerate(sequence, [start=<span class="number"><code class="language-highlight python">enumerate(sequence, [start=<span class="number">0</span>])</code></pre>
 <ul>
 <li>sequence：一个序列、迭代器或其他支持迭代对象。</li>
 <li>start：下标起始位置。</li>
 <li>返回 enumerate(枚举) 对象</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">seasons = [<span class="hljs-string">&#x27;Spring&#x27;</span>, <span class="hljs-string">&#x27;Summer&#x27;</span>, <span class="hljs-string">&#x27;Fall&#x27;</span>, <span class="hljs-string">&#x27;Winter&#x27;</span>]<br>lst = list(enumerate(seasons))<br>print(lst)<br><span class="hljs-comment"># [(0, &#x27;Spring&#x27;), (1, &#x27;Summer&#x27;), (2, &#x27;Fall&#x27;), (3, &#x27;Winter&#x27;)]</span><br>lst = list(enumerate(seasons, start=<span class="hljs-number">1</span>))  <span class="hljs-comment"># 下标从 1 开始</span><br>print(lst)<br><span class="hljs-comment"><code class="language-hljs python">seasons = [<span class="hljs-string">&#x27;Spring&#x27;</span>, <span class="hljs-string">&#x27;Summer&#x27;</span>, <span class="hljs-string">&#x27;Fall&#x27;</span>, <span class="hljs-string">&#x27;Winter&#x27;</span>]<br>lst = list(enumerate(seasons))<br>print(lst)<br><span class="hljs-comment"># [(0, &#x27;Spring&#x27;), (1, &#x27;Summer&#x27;), (2, &#x27;Fall&#x27;), (3, &#x27;Winter&#x27;)]</span><br>lst = list(enumerate(seasons, start=<span class="hljs-number">1</span>))  <span class="hljs-comment"># 下标从 1 开始</span><br>print(lst)<br><span class="hljs-comment"># [(1, &#x27;Spring&#x27;), (2, &#x27;Summer&#x27;), (3, &#x27;Fall&#x27;), (4, &#x27;Winter&#x27;)]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string"><code class="language-highlight python">seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string">&#x27;Winter&#x27;</span>]
+lst = list(enumerate(seasons))
+print(lst)
+<span class="comment"># [(0, &#x27;Spring&#x27;), (1, &#x27;Summer&#x27;), (2, &#x27;Fall&#x27;), (3, &#x27;Winter&#x27;)]</span>
+lst = list(enumerate(seasons, start=<span class="number">1</span>))  <span class="comment"># 下标从 1 开始</span>
+print(lst)
+<span class="comment"># [(1, &#x27;Spring&#x27;), (2, &#x27;Summer&#x27;), (3, &#x27;Fall&#x27;), (4, &#x27;Winter&#x27;)]</span></code></pre>
 
 <p><code>enumerate()</code>与 for 循环的结合使用。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> i, a <span class="hljs-keyword">in</span> enumerate(A)<br>    do something <span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">for</span> i, a <span class="hljs-keyword">in</span> enumerate(A)<br>    do something <span class="hljs-keyword">with</span> a  <br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> i, a <span class="keyword"><code class="language-highlight python"><span class="keyword">for</span> i, a <span class="keyword">in</span> enumerate(A)
+    do something <span class="keyword">with</span> a</code></pre>
 <p>用 <code>enumerate(A)</code> 不仅返回了 <code>A</code> 中的元素，还顺便给该元素一个索引值 (默认从 0 开始)。此外，用 <code>enumerate(A, j)</code> 还可以确定索引起始值为 <code>j</code>。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">languages = [<span class="hljs-string">&#x27;Python&#x27;</span>, <span class="hljs-string">&#x27;R&#x27;</span>, <span class="hljs-string">&#x27;Matlab&#x27;</span>, <span class="hljs-string">&#x27;C++&#x27;</span>]<br><span class="hljs-keyword">for</span> language <span class="hljs-keyword">in</span> languages:<br>    print(<span class="hljs-string">&#x27;I love&#x27;</span>, language)<br>print(<span class="hljs-string">&#x27;Done!&#x27;</span>)<br><span class="hljs-comment"># I love Python</span><br><span class="hljs-comment"># I love R</span><br><span class="hljs-comment"># I love Matlab</span><br><span class="hljs-comment"># I love C++</span><br><span class="hljs-comment"># Done!</span><br><br><br><span class="hljs-keyword">for</span> i, language <span class="hljs-keyword">in</span> enumerate(languages, <span class="hljs-number">2</span>):<br>    print(i, <span class="hljs-string">&#x27;I love&#x27;</span>, language)<br>print(<span class="hljs-string">&#x27;Done!&#x27;</span>)<br><span class="hljs-comment"># 2 I love Python</span><br><span class="hljs-comment"># 3 I love R</span><br><span class="hljs-comment"># 4 I love Matlab</span><br><span class="hljs-comment"># 5 I love C++</span><br><span class="hljs-comment"><code class="language-hljs python">languages = [<span class="hljs-string">&#x27;Python&#x27;</span>, <span class="hljs-string">&#x27;R&#x27;</span>, <span class="hljs-string">&#x27;Matlab&#x27;</span>, <span class="hljs-string">&#x27;C++&#x27;</span>]<br><span class="hljs-keyword">for</span> language <span class="hljs-keyword">in</span> languages:<br>    print(<span class="hljs-string">&#x27;I love&#x27;</span>, language)<br>print(<span class="hljs-string">&#x27;Done!&#x27;</span>)<br><span class="hljs-comment"># I love Python</span><br><span class="hljs-comment"># I love R</span><br><span class="hljs-comment"># I love Matlab</span><br><span class="hljs-comment"># I love C++</span><br><span class="hljs-comment"># Done!</span><br><br><br><span class="hljs-keyword">for</span> i, language <span class="hljs-keyword">in</span> enumerate(languages, <span class="hljs-number">2</span>):<br>    print(i, <span class="hljs-string">&#x27;I love&#x27;</span>, language)<br>print(<span class="hljs-string">&#x27;Done!&#x27;</span>)<br><span class="hljs-comment"># 2 I love Python</span><br><span class="hljs-comment"># 3 I love R</span><br><span class="hljs-comment"># 4 I love Matlab</span><br><span class="hljs-comment"># 5 I love C++</span><br><span class="hljs-comment"># Done!</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">languages = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;R&#x27;</span>, <span class="string">&#x27;Matlab&#x27;</span>, <span class="string"><code class="language-highlight python">languages = [<span class="string">&#x27;Python&#x27;</span>, <span class="string">&#x27;R&#x27;</span>, <span class="string">&#x27;Matlab&#x27;</span>, <span class="string">&#x27;C++&#x27;</span>]
+<span class="keyword">for</span> language <span class="keyword">in</span> languages:
+    print(<span class="string">&#x27;I love&#x27;</span>, language)
+print(<span class="string">&#x27;Done!&#x27;</span>)
+<span class="comment"># I love Python</span>
+<span class="comment"># I love R</span>
+<span class="comment"># I love Matlab</span>
+<span class="comment"># I love C++</span>
+<span class="comment"># Done!</span>
+
+
+<span class="keyword">for</span> i, language <span class="keyword">in</span> enumerate(languages, <span class="number">2</span>):
+    print(i, <span class="string">&#x27;I love&#x27;</span>, language)
+print(<span class="string">&#x27;Done!&#x27;</span>)
+<span class="comment"># 2 I love Python</span>
+<span class="comment"># 3 I love R</span>
+<span class="comment"># 4 I love Matlab</span>
+<span class="comment"># 5 I love C++</span>
+<span class="comment"># Done!</span></code></pre>
 
 <hr>
 <h3 id="7-break-语句"><a href="#7-break-语句" class="headerlink" title="7. break 语句"></a>7. break 语句</h3><p><code>break</code>语句可以跳出当前所在层的循环。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">import</span> random<br>secret = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">#[1,10]之间的随机数</span><br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>    guess = int(temp)<br>    <span class="hljs-keyword">if</span> guess &gt; secret:<br>        print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> guess == secret:<br>            print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>            print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>            <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">else</span>:<br>            print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>print(<span class="hljs-string"><code class="language-hljs python"><span class="hljs-keyword">import</span> random<br>secret = random.randint(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>) <span class="hljs-comment">#[1,10]之间的随机数</span><br><br><span class="hljs-keyword">while</span> <span class="hljs-literal">True</span>:<br>    temp = input(<span class="hljs-string">&quot;猜一猜小姐姐想的是哪个数字？&quot;</span>)<br>    guess = int(temp)<br>    <span class="hljs-keyword">if</span> guess &gt; secret:<br>        print(<span class="hljs-string">&quot;大了，大了&quot;</span>)<br>    <span class="hljs-keyword">else</span>:<br>        <span class="hljs-keyword">if</span> guess == secret:<br>            print(<span class="hljs-string">&quot;你太了解小姐姐的心思了！&quot;</span>)<br>            print(<span class="hljs-string">&quot;哼，猜对也没有奖励！&quot;</span>)<br>            <span class="hljs-keyword">break</span><br>        <span class="hljs-keyword">else</span>:<br>            print(<span class="hljs-string">&quot;小了，小了&quot;</span>)<br>print(<span class="hljs-string">"游戏结束，不玩儿啦！"</span>)<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> random
+secret = random.randint(<span class="number">1</span>, <span class="number">10</span>) <span class="comment">#[1,10]之间的随机数</span>
+
+<span class="keyword">while</span> <span class="literal">True</span>:
+    temp = input(<span class="string">"猜一猜小姐姐想的是哪个数字？"</span>)
+    guess = int(temp)
+    <span class="keyword">if</span> guess > secret:
+        print(<span class="string">"大了，大了"</span>)
+    <span class="keyword">else</span>:
+        <span class="keyword">if</span> guess == secret:
+            print(<span class="string">"你太了解小姐姐的心思了！"</span>)
+            print(<span class="string">"哼，猜对也没有奖励！"</span>)
+            <span class="keyword">break</span>
+        <span class="keyword">else</span>:
+            print(<span class="string">"小了，小了"</span>)
+print(<span class="string">"游戏结束，不玩儿啦！"</span>)</code></pre>
 
 <hr>
 <h3 id="8-continue-语句"><a href="#8-continue-语句" class="headerlink" title="8. continue 语句"></a>8. continue 语句</h3><p><code>continue</code>终止本轮循环并开始下一轮循环。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):<br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>:<br>        print(i)<br>        <span class="hljs-keyword">continue</span><br>    i += <span class="hljs-number">2</span><br>    print(i)<br><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 8</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>):<br>    <span class="hljs-keyword">if</span> i % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>:<br>        print(i)<br>        <span class="hljs-keyword">continue</span><br>    i += <span class="hljs-number">2</span><br>    print(i)<br><br><span class="hljs-comment"># 2</span><br><span class="hljs-comment"># 1</span><br><span class="hljs-comment"># 4</span><br><span class="hljs-comment"># 3</span><br><span class="hljs-comment"># 6</span><br><span class="hljs-comment"># 5</span><br><span class="hljs-comment"># 8</span><br><span class="hljs-comment"># 7</span><br><span class="hljs-comment"># 10</span><br><span class="hljs-comment"># 9</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number"><code class="language-highlight python"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):
+    <span class="keyword">if</span> i % <span class="number">2</span> != <span class="number">0</span>:
+        print(i)
+        <span class="keyword">continue</span>
+    i += <span class="number">2</span>
+    print(i)
+
+<span class="comment"># 2</span>
+<span class="comment"># 1</span>
+<span class="comment"># 4</span>
+<span class="comment"># 3</span>
+<span class="comment"># 6</span>
+<span class="comment"># 5</span>
+<span class="comment"># 8</span>
+<span class="comment"># 7</span>
+<span class="comment"># 10</span>
+<span class="comment"># 9</span></code></pre>
 
 <hr>
 <h3 id="9-pass-语句"><a href="#9-pass-语句" class="headerlink" title="9. pass 语句"></a>9. pass 语句</h3><p><code>pass</code> 语句的意思是“不做任何事”，如果你在需要有语句的地方不写任何语句，那么解释器会提示出错，而 <code>pass</code> 语句就是用来解决这些问题的。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a_func</span>():</span><br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a_func</span>():</span><br><br><span class="hljs-comment"># SyntaxError: unexpected EOF while parsing</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">a_func</span>():</span>
+
+<span class="comment"># SyntaxError: unexpected EOF while parsing</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a_func</span>():</span><br>    <span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">a_func</span>():</span><br>    <span class="hljs-keyword">pass</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">a_func</span>():</span>
+    <span class="keyword">pass</span></code></pre>
 <p><code>pass</code>是空语句，不做任何操作，只起到占位的作用，其作用是为了保持程序结构的完整性。尽管<code>pass</code>语句不做任何操作，但如果暂时不确定要在一个位置放上什么样的代码，可以先放置一个<code>pass</code>语句，让代码可以正常运行。</p>
 <hr>
-<h3 id="10-推导式"><a href="#10-推导式" class="headerlink" title="10. 推导式"></a>10. 推导式</h3><h4 id="列表推导式"><a href="#列表推导式" class="headerlink" title="列表推导式"></a>列表推导式</h4><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">[ expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword"><code class="language-hljs python">[ expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword">if</span> condition] ]<br></code></pre></td></tr></table></figure>
+<h3 id="10-推导式"><a href="#10-推导式" class="headerlink" title="10. 推导式"></a>10. 推导式</h3><h4 id="列表推导式"><a href="#列表推导式" class="headerlink" title="列表推导式"></a>列表推导式</h4><pre class=" language-highlight python">[ expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword"><code class="language-highlight python">[ expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword">if</span> condition] ]</code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x = [<span class="hljs-number">-4</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]<br>y = [a * <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> x]<br>print(y)<br><span class="hljs-comment"><code class="language-hljs python">x = [<span class="hljs-number">-4</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">0</span>, <span class="hljs-number">2</span>, <span class="hljs-number">4</span>]<br>y = [a * <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> a <span class="hljs-keyword">in</span> x]<br>print(y)<br><span class="hljs-comment"># [-8, -4, 0, 4, 8]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x = [<span class="number">-4</span>, <span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight python">x = [<span class="number">-4</span>, <span class="number">-2</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">4</span>]
+y = [a * <span class="number">2</span> <span class="keyword">for</span> a <span class="keyword">in</span> x]
+print(y)
+<span class="comment"># [-8, -4, 0, 4, 8]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x = [i ** <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)]<br>print(x)<br><span class="hljs-comment"><code class="language-hljs python">x = [i ** <span class="hljs-number">2</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">1</span>, <span class="hljs-number">10</span>)]<br>print(x)<br><span class="hljs-comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x = [i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number"><code class="language-highlight python">x = [i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>)]
+print(x)
+<span class="comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x = [(i, i ** <span class="hljs-number">2</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>)]<br>print(x)<br><br><span class="hljs-comment"><code class="language-hljs python">x = [(i, i ** <span class="hljs-number">2</span>) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">6</span>)]<br>print(x)<br><br><span class="hljs-comment"># [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x = [(i, i ** <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number"><code class="language-highlight python">x = [(i, i ** <span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">6</span>)]
+print(x)
+
+<span class="comment"># [(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>) <span class="hljs-keyword">if</span> (i % <span class="hljs-number">2</span>) != <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> (i % <span class="hljs-number">3</span>) == <span class="hljs-number">0</span>]<br>print(x)<br><br><span class="hljs-comment"><code class="language-hljs python">x = [i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">100</span>) <span class="hljs-keyword">if</span> (i % <span class="hljs-number">2</span>) != <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> (i % <span class="hljs-number">3</span>) == <span class="hljs-number">0</span>]<br>print(x)<br><br><span class="hljs-comment"># [3, 9, 15, 21, 27, 33, 39, 45, 51, 57, 63, 69, 75, 81, 87, 93, 99]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>) <span class="keyword">if</span> (i % <span class="number">2</span>) != <span class="number">0</span> <span class="keyword">and</span> (i % <span class="number">3</span>) == <span class="number"><code class="language-highlight python">x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>) <span class="keyword">if</span> (i % <span class="number">2</span>) != <span class="number">0</span> <span class="keyword">and</span> (i % <span class="number">3</span>) == <span class="number">0</span>]
+print(x)
+
+<span class="comment"># [3, 9, 15, 21, 27, 33, 39, 45, 51, 57, 63, 69, 75, 81, 87, 93, 99]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = [(i, j) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)]<br>print(a)<br><br><span class="hljs-comment"><code class="language-hljs python">a = [(i, j) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)]<br>print(a)<br><br><span class="hljs-comment"># [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = [(i, j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number"><code class="language-highlight python">a = [(i, j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>)]
+print(a)
+
+<span class="comment"># [(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">x = [[i, j] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)]<br>print(x)<br><span class="hljs-comment"># [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]</span><br><br>x[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">10</span><br>print(x)<br><span class="hljs-comment"><code class="language-hljs python">x = [[i, j] <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>)]<br>print(x)<br><span class="hljs-comment"># [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]</span><br><br>x[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>] = <span class="hljs-number">10</span><br>print(x)<br><span class="hljs-comment"># [[10, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">x = [[i, j] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number"><code class="language-highlight python">x = [[i, j] <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>)]
+print(x)
+<span class="comment"># [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]</span>
+
+x[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">10</span>
+print(x)
+<span class="comment"># [[10, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = [(i, j) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">if</span> i &lt; <span class="hljs-number">1</span> <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">if</span> j &gt; <span class="hljs-number">1</span>]<br>print(a)<br><br><span class="hljs-comment"><code class="language-hljs python">a = [(i, j) <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">if</span> i &lt; <span class="hljs-number">1</span> <span class="hljs-keyword">for</span> j <span class="hljs-keyword">in</span> range(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>) <span class="hljs-keyword">if</span> j &gt; <span class="hljs-number">1</span>]<br>print(a)<br><br><span class="hljs-comment"># [(0, 2)]</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = [(i, j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">if</span> i &lt; <span class="number">1</span> <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">if</span> j &gt; <span class="number"><code class="language-highlight python">a = [(i, j) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">if</span> i &lt; <span class="number">1</span> <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>, <span class="number">3</span>) <span class="keyword">if</span> j &gt; <span class="number">1</span>]
+print(a)
 
-<h4 id="元组推导式"><a href="#元组推导式" class="headerlink" title="元组推导式"></a>元组推导式</h4><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">( expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword"><code class="language-hljs python">( expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword">if</span> condition] )<br></code></pre></td></tr></table></figure>
+<span class="comment"># [(0, 2)]</span></code></pre>
 
-<p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">a = (x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>))<br>print(a)<br><br><span class="hljs-comment"># &lt;generator object &lt;genexpr&gt; at 0x0000025BE511CC48&gt;</span><br><br>print(tuple(a))<br><br><span class="hljs-comment"><code class="language-hljs python">a = (x <span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>))<br>print(a)<br><br><span class="hljs-comment"># &lt;generator object &lt;genexpr&gt; at 0x0000025BE511CC48&gt;</span><br><br>print(tuple(a))<br><br><span class="hljs-comment"># (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</span><br></code></pre></td></tr></table></figure>
-
-<h4 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h4><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">&#123; key_expr: value_expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword"><code class="language-hljs python">&#123; key_expr: value_expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword">if</span> condition] &#125;<br></code></pre></td></tr></table></figure>
+<h4 id="元组推导式"><a href="#元组推导式" class="headerlink" title="元组推导式"></a>元组推导式</h4><pre class=" language-highlight python">( expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword"><code class="language-highlight python">( expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword">if</span> condition] )</code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">b = &#123;i: i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>) <span class="hljs-keyword">if</span> i % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>&#125;<br>print(b)<br><span class="hljs-comment"><code class="language-hljs python">b = &#123;i: i % <span class="hljs-number">2</span> == <span class="hljs-number">0</span> <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>) <span class="hljs-keyword">if</span> i % <span class="hljs-number">3</span> == <span class="hljs-number">0</span>&#125;<br>print(b)<br><span class="hljs-comment"># &#123;0: True, 3: False, 6: True, 9: False&#125;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">a = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number"><code class="language-highlight python">a = (x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))
+print(a)
 
-<h4 id="集合推导式"><a href="#集合推导式" class="headerlink" title="集合推导式"></a>集合推导式</h4><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">&#123; expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword"><code class="language-hljs python">&#123; expr <span class="hljs-keyword">for</span> value <span class="hljs-keyword">in</span> collection [<span class="hljs-keyword">if</span> condition] &#125;<br></code></pre></td></tr></table></figure>
+<span class="comment"># <generator object <genexpr> at 0x0000025BE511CC48></span>
+
+print(tuple(a))
+
+<span class="comment"># (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)</span></code></pre>
+
+<h4 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h4><pre class=" language-highlight python">&#123; key_expr: value_expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword"><code class="language-highlight python">&#123; key_expr: value_expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword">if</span> condition] &#125;</code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">c = &#123;i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]&#125;<br>print(c)<br><span class="hljs-comment"><code class="language-hljs python">c = &#123;i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">4</span>, <span class="hljs-number">3</span>, <span class="hljs-number">2</span>, <span class="hljs-number">1</span>]&#125;<br>print(c)<br><span class="hljs-comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">b = &#123;i: i % <span class="number">2</span> == <span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> i % <span class="number">3</span> == <span class="number"><code class="language-highlight python">b = &#123;i: i % <span class="number">2</span> == <span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>) <span class="keyword">if</span> i % <span class="number">3</span> == <span class="number">0</span>&#125;
+print(b)
+<span class="comment"># &#123;0: True, 3: False, 6: True, 9: False&#125;</span></code></pre>
+
+<h4 id="集合推导式"><a href="#集合推导式" class="headerlink" title="集合推导式"></a>集合推导式</h4><pre class=" language-highlight python">&#123; expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword"><code class="language-highlight python">&#123; expr <span class="keyword">for</span> value <span class="keyword">in</span> collection [<span class="keyword">if</span> condition] &#125;</code></pre>
+
+<p>【例子】</p>
+<pre class=" language-highlight python">c = &#123;i <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight python">c = &#123;i <span class="keyword">for</span> i <span class="keyword">in</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>]&#125;
+print(c)
+<span class="comment"># &#123;1, 2, 3, 4, 5, 6&#125;</span></code></pre>
 
 <h4 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h4><ul>
 <li><code>next(iterator[, default])</code> Return the next item from the iterator. If default is given and the iterator is exhausted, it is returned instead of raising Stop Iteration.</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">e = (i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>))<br>print(e)<br><span class="hljs-comment"># &lt;generator object &lt;genexpr&gt; at 0x0000007A0B8D01B0&gt;</span><br><br>print(next(e))  <span class="hljs-comment"># 0</span><br>print(next(e))  <span class="hljs-comment"># 1</span><br><br><span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> e:<br>    print(each, end=<span class="hljs-string">&#x27; &#x27;</span>)<br><br><span class="hljs-comment"><code class="language-hljs python">e = (i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">10</span>))<br>print(e)<br><span class="hljs-comment"># &lt;generator object &lt;genexpr&gt; at 0x0000007A0B8D01B0&gt;</span><br><br>print(next(e))  <span class="hljs-comment"># 0</span><br>print(next(e))  <span class="hljs-comment"># 1</span><br><br><span class="hljs-keyword">for</span> each <span class="hljs-keyword">in</span> e:<br>    print(each, end=<span class="hljs-string">&#x27; &#x27;</span>)<br><br><span class="hljs-comment"># 2 3 4 5 6 7 8 9</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">e = (i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number"><code class="language-highlight python">e = (i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>))
+print(e)
+<span class="comment"># <generator object <genexpr> at 0x0000007A0B8D01B0></span>
+
+print(next(e))  <span class="comment"># 0</span>
+print(next(e))  <span class="comment"># 1</span>
+
+<span class="keyword">for</span> each <span class="keyword">in</span> e:
+    print(each, end=<span class="string">&#x27; &#x27;</span>)
+
+<span class="comment"># 2 3 4 5 6 7 8 9</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">s = sum([i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>)])<br>print(s)  <span class="hljs-comment"># 5050</span><br>s = sum((i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>)))<br>print(s)  <span class="hljs-comment"><code class="language-hljs python">s = sum([i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>)])<br>print(s)  <span class="hljs-comment"># 5050</span><br>s = sum((i <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">101</span>)))<br>print(s)  <span class="hljs-comment"># 5050</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">s = sum([i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number"><code class="language-highlight python">s = sum([i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>)])
+print(s)  <span class="comment"># 5050</span>
+s = sum((i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">101</span>)))
+print(s)  <span class="comment"># 5050</span></code></pre>
 
 
 
@@ -1112,7 +1615,10 @@
 <hr>
 </li>
 </ul>
-<h3 id="3-try-except-语句"><a href="#3-try-except-语句" class="headerlink" title="3. try - except 语句"></a>3. try - except 语句</h3><figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span> Exception[<span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span> Exception[<span class="hljs-keyword">as</span> reason]:<br>    出现异常后的处理代码<br></code></pre></td></tr></table></figure>
+<h3 id="3-try-except-语句"><a href="#3-try-except-语句" class="headerlink" title="3. try - except 语句"></a>3. try - except 语句</h3><pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    检测范围
+<span class="keyword">except</span> Exception[<span class="keyword">as</span> reason]:
+    出现异常后的处理代码</code></pre>
 
 <p>try 语句按照如下方式工作：</p>
 <ul>
@@ -1122,43 +1628,146 @@
 <li>如果一个异常没有与任何的<code>except</code>匹配，那么这个异常将会传递给上层的<code>try</code>中。</li>
 </ul>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError:<br>    print(<span class="hljs-string">&#x27;打开文件出错&#x27;</span>)<br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError:<br>    print(<span class="hljs-string">&#x27;打开文件出错&#x27;</span>)<br><br><span class="hljs-comment"># 打开文件出错</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    f = open(<span class="string">&#x27;test.txt&#x27;</span>)
+    print(f.read())
+    f.close()
+<span class="keyword">except</span> OSError:
+    print(<span class="string">&#x27;打开文件出错&#x27;</span>)
+
+<span class="comment"># 打开文件出错</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 打开文件出错</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 打开文件出错</span><br><span class="hljs-comment"># 原因是：[Errno 2] No such file or directory: &#x27;test.txt&#x27;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    f = open(<span class="string">&#x27;test.txt&#x27;</span>)
+    print(f.read())
+    f.close()
+<span class="keyword">except</span> OSError <span class="keyword">as</span> error:
+    print(<span class="string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))
+
+<span class="comment"># 打开文件出错</span>
+<span class="comment"># 原因是：[Errno 2] No such file or directory: &#x27;test.txt&#x27;</span></code></pre>
 
 <p>【例子】一个<code>try</code>语句可能包含多个<code>except</code>子句，分别来处理不同的特定的异常。最多只有一个分支会被执行。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    int(<span class="hljs-string">&quot;abc&quot;</span>)<br>    s = <span class="hljs-number">1</span> + <span class="hljs-string">&#x27;1&#x27;</span><br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))<br><span class="hljs-keyword">except</span> TypeError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;类型出错\n原因是：&#x27;</span> + str(error))<br><span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;数值出错\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 数值出错</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    int(<span class="hljs-string">&quot;abc&quot;</span>)<br>    s = <span class="hljs-number">1</span> + <span class="hljs-string">&#x27;1&#x27;</span><br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> OSError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))<br><span class="hljs-keyword">except</span> TypeError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;类型出错\n原因是：&#x27;</span> + str(error))<br><span class="hljs-keyword">except</span> ValueError <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;数值出错\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 数值出错</span><br><span class="hljs-comment"># 原因是：invalid literal for int() with base 10: &#x27;abc&#x27;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    int(<span class="string">"abc"</span>)
+    s = <span class="number">1</span> + <span class="string">&#x27;1&#x27;</span>
+    f = open(<span class="string">&#x27;test.txt&#x27;</span>)
+    print(f.read())
+    f.close()
+<span class="keyword">except</span> OSError <span class="keyword">as</span> error:
+    print(<span class="string">&#x27;打开文件出错\n原因是：&#x27;</span> + str(error))
+<span class="keyword">except</span> TypeError <span class="keyword">as</span> error:
+    print(<span class="string">&#x27;类型出错\n原因是：&#x27;</span> + str(error))
+<span class="keyword">except</span> ValueError <span class="keyword">as</span> error:
+    print(<span class="string">&#x27;数值出错\n原因是：&#x27;</span> + str(error))
+
+<span class="comment"># 数值出错</span>
+<span class="comment"># 原因是：invalid literal for int() with base 10: &#x27;abc&#x27;</span></code></pre>
 
 <p>【例子】<code>try-except-else</code>语句尝试查询不在<code>dict</code>中的键值对，从而引发了异常。这一异常准确地说应属于<code>KeyError</code>，但由于<code>KeyError</code>是<code>LookupError</code>的子类，且将<code>LookupError</code>置于<code>KeyError</code>之前，因此程序优先执行该<code>except</code>代码块。所以，使用多个<code>except</code>代码块时，必须坚持对其规范排序，要从最具针对性的异常到最通用的异常。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">dict1 = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;v&#x27;</span>: <span class="hljs-number">22</span>&#125;<br><span class="hljs-keyword">try</span>:<br>    x = dict1[<span class="hljs-string">&#x27;y&#x27;</span>]<br><span class="hljs-keyword">except</span> LookupError:<br>    print(<span class="hljs-string">&#x27;查询错误&#x27;</span>)<br><span class="hljs-keyword">except</span> KeyError:<br>    print(<span class="hljs-string">&#x27;键错误&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(x)<br>    <br><span class="hljs-comment"><code class="language-hljs python">dict1 = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;v&#x27;</span>: <span class="hljs-number">22</span>&#125;<br><span class="hljs-keyword">try</span>:<br>    x = dict1[<span class="hljs-string">&#x27;y&#x27;</span>]<br><span class="hljs-keyword">except</span> LookupError:<br>    print(<span class="hljs-string">&#x27;查询错误&#x27;</span>)<br><span class="hljs-keyword">except</span> KeyError:<br>    print(<span class="hljs-string">&#x27;键错误&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(x)<br>    <br><span class="hljs-comment"># 查询错误</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;v&#x27;</span>: <span class="number"><code class="language-highlight python">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;v&#x27;</span>: <span class="number">22</span>&#125;
+<span class="keyword">try</span>:
+    x = dict1[<span class="string">&#x27;y&#x27;</span>]
+<span class="keyword">except</span> LookupError:
+    print(<span class="string">&#x27;查询错误&#x27;</span>)
+<span class="keyword">except</span> KeyError:
+    print(<span class="string">&#x27;键错误&#x27;</span>)
+<span class="keyword">else</span>:
+    print(x)
+    
+<span class="comment"># 查询错误</span></code></pre>
 
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python">dict1 = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;v&#x27;</span>: <span class="hljs-number">22</span>&#125;<br><span class="hljs-keyword">try</span>:<br>    x = dict1[<span class="hljs-string">&#x27;y&#x27;</span>]<br><span class="hljs-keyword">except</span> KeyError:<br>    print(<span class="hljs-string">&#x27;键错误&#x27;</span>)<br><span class="hljs-keyword">except</span> LookupError:<br>    print(<span class="hljs-string">&#x27;查询错误&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(x)<br><br><span class="hljs-comment"><code class="language-hljs python">dict1 = &#123;<span class="hljs-string">&#x27;a&#x27;</span>: <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;b&#x27;</span>: <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;v&#x27;</span>: <span class="hljs-number">22</span>&#125;<br><span class="hljs-keyword">try</span>:<br>    x = dict1[<span class="hljs-string">&#x27;y&#x27;</span>]<br><span class="hljs-keyword">except</span> KeyError:<br>    print(<span class="hljs-string">&#x27;键错误&#x27;</span>)<br><span class="hljs-keyword">except</span> LookupError:<br>    print(<span class="hljs-string">&#x27;查询错误&#x27;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(x)<br><br><span class="hljs-comment"># 键错误</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;v&#x27;</span>: <span class="number"><code class="language-highlight python">dict1 = &#123;<span class="string">&#x27;a&#x27;</span>: <span class="number">1</span>, <span class="string">&#x27;b&#x27;</span>: <span class="number">2</span>, <span class="string">&#x27;v&#x27;</span>: <span class="number">22</span>&#125;
+<span class="keyword">try</span>:
+    x = dict1[<span class="string">&#x27;y&#x27;</span>]
+<span class="keyword">except</span> KeyError:
+    print(<span class="string">&#x27;键错误&#x27;</span>)
+<span class="keyword">except</span> LookupError:
+    print(<span class="string">&#x27;查询错误&#x27;</span>)
+<span class="keyword">else</span>:
+    print(x)
+
+<span class="comment"># 键错误</span></code></pre>
 
 <p>【例子】一个 <code>except</code> 子句可以同时处理多个异常，这些异常将被放在一个括号里成为一个元组。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    s = <span class="hljs-number">1</span> + <span class="hljs-string">&#x27;1&#x27;</span><br>    int(<span class="hljs-string">&quot;abc&quot;</span>)<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> (OSError, TypeError, ValueError) <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;出错了！\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 出错了！</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    s = <span class="hljs-number">1</span> + <span class="hljs-string">&#x27;1&#x27;</span><br>    int(<span class="hljs-string">&quot;abc&quot;</span>)<br>    f = open(<span class="hljs-string">&#x27;test.txt&#x27;</span>)<br>    print(f.read())<br>    f.close()<br><span class="hljs-keyword">except</span> (OSError, TypeError, ValueError) <span class="hljs-keyword">as</span> error:<br>    print(<span class="hljs-string">&#x27;出错了！\n原因是：&#x27;</span> + str(error))<br><br><span class="hljs-comment"># 出错了！</span><br><span class="hljs-comment"># 原因是：unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    s = <span class="number">1</span> + <span class="string">&#x27;1&#x27;</span>
+    int(<span class="string">"abc"</span>)
+    f = open(<span class="string">&#x27;test.txt&#x27;</span>)
+    print(f.read())
+    f.close()
+<span class="keyword">except</span> (OSError, TypeError, ValueError) <span class="keyword">as</span> error:
+    print(<span class="string">&#x27;出错了！\n原因是：&#x27;</span> + str(error))
+
+<span class="comment"># 出错了！</span>
+<span class="comment"># 原因是：unsupported operand type(s) for +: &#x27;int&#x27; and &#x27;str&#x27;</span></code></pre>
 
 <hr>
 <h3 id="4-try-except-finally-语句"><a href="#4-try-except-finally-语句" class="headerlink" title="4. try - except - finally 语句"></a>4. try - except - finally 语句</h3><p>try:<br>    检测范围<br>except Exception[as reason]:<br>    出现异常后的处理代码<br>finally:<br>    无论如何都会被执行的代码</p>
 <p>不管<code>try</code>子句里面有没有发生异常，<code>finally</code>子句都会执行。</p>
 <p>【例子】如果一个异常在<code>try</code>子句里被抛出，而又没有任何的<code>except</code>把它截住，那么这个异常会在<code>finally</code>子句执行后被抛出。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span>(<span class="hljs-params">x, y</span>):</span><br>    <span class="hljs-keyword">try</span>:<br>        result = x / y<br>        print(<span class="hljs-string">&quot;result is&quot;</span>, result)<br>    <span class="hljs-keyword">except</span> ZeroDivisionError:<br>        print(<span class="hljs-string">&quot;division by zero!&quot;</span>)<br>    <span class="hljs-keyword">finally</span>:<br>        print(<span class="hljs-string">&quot;executing finally clause&quot;</span>)<br><br><br>divide(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)<br><span class="hljs-comment"># result is 2.0</span><br><span class="hljs-comment"># executing finally clause</span><br>divide(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>)<br><span class="hljs-comment"># division by zero!</span><br><span class="hljs-comment"># executing finally clause</span><br>divide(<span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;1&quot;</span>)<br><span class="hljs-comment"># executing finally clause</span><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">divide</span>(<span class="hljs-params">x, y</span>):</span><br>    <span class="hljs-keyword">try</span>:<br>        result = x / y<br>        print(<span class="hljs-string">&quot;result is&quot;</span>, result)<br>    <span class="hljs-keyword">except</span> ZeroDivisionError:<br>        print(<span class="hljs-string">&quot;division by zero!&quot;</span>)<br>    <span class="hljs-keyword">finally</span>:<br>        print(<span class="hljs-string">&quot;executing finally clause&quot;</span>)<br><br><br>divide(<span class="hljs-number">2</span>, <span class="hljs-number">1</span>)<br><span class="hljs-comment"># result is 2.0</span><br><span class="hljs-comment"># executing finally clause</span><br>divide(<span class="hljs-number">2</span>, <span class="hljs-number">0</span>)<br><span class="hljs-comment"># division by zero!</span><br><span class="hljs-comment"># executing finally clause</span><br>divide(<span class="hljs-string">&quot;2&quot;</span>, <span class="hljs-string">&quot;1&quot;</span>)<br><span class="hljs-comment"># executing finally clause</span><br><span class="hljs-comment"># TypeError: unsupported operand type(s) for /: &#x27;str&#x27; and &#x27;str&#x27;</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">divide</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">divide</span>(<span class="params">x, y</span>):</span>
+    <span class="keyword">try</span>:
+        result = x / y
+        print(<span class="string">"result is"</span>, result)
+    <span class="keyword">except</span> ZeroDivisionError:
+        print(<span class="string">"division by zero!"</span>)
+    <span class="keyword">finally</span>:
+        print(<span class="string">"executing finally clause"</span>)
+
+
+divide(<span class="number">2</span>, <span class="number">1</span>)
+<span class="comment"># result is 2.0</span>
+<span class="comment"># executing finally clause</span>
+divide(<span class="number">2</span>, <span class="number">0</span>)
+<span class="comment"># division by zero!</span>
+<span class="comment"># executing finally clause</span>
+divide(<span class="string">"2"</span>, <span class="string">"1"</span>)
+<span class="comment"># executing finally clause</span>
+<span class="comment"># TypeError: unsupported operand type(s) for /: &#x27;str&#x27; and &#x27;str&#x27;</span></code></pre>
 
 <hr>
 <h3 id="5-try-except-else-语句"><a href="#5-try-except-else-语句" class="headerlink" title="5. try - except - else 语句"></a>5. try - except - else 语句</h3><p>如果在<code>try</code>子句执行时没有发生异常，Python将执行<code>else</code>语句后的语句。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span>:<br>    出现异常后的处理代码<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span>:<br>    出现异常后的处理代码<br><span class="hljs-keyword">else</span>:<br>    如果没有异常执行这块代码<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    检测范围
+<span class="keyword">except</span>:
+    出现异常后的处理代码
+<span class="keyword">else</span>:
+    如果没有异常执行这块代码</code></pre>
 
 <p>使用<code>except</code>而不带任何异常类型，这不是一个很好的方式，我们不能通过该程序识别出具体的异常信息，因为它捕获所有的异常。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span>(Exception1[, Exception2[,...ExceptionN]]]):<br>   发生以上多个异常中的一个，执行这块代码<br><span class="hljs-keyword"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    检测范围<br><span class="hljs-keyword">except</span>(Exception1[, Exception2[,...ExceptionN]]]):<br>   发生以上多个异常中的一个，执行这块代码<br><span class="hljs-keyword">else</span>:<br>    如果没有异常执行这块代码<br>    <br>【例子】<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    检测范围
+<span class="keyword">except</span>(Exception1[, Exception2[,...ExceptionN]]]):
+   发生以上多个异常中的一个，执行这块代码
+<span class="keyword">else</span>:
+    如果没有异常执行这块代码
+    
+【例子】</code></pre>
 
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    fh = open(<span class="hljs-string">&quot;testfile.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>)<br>    fh.write(<span class="hljs-string">&quot;这是一个测试文件，用于测试异常!!&quot;</span>)<br><span class="hljs-keyword">except</span> IOError:<br>    print(<span class="hljs-string">&quot;Error: 没有找到文件或读取文件失败&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;内容写入文件成功&quot;</span>)<br>    fh.close()<br><br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    fh = open(<span class="hljs-string">&quot;testfile.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>)<br>    fh.write(<span class="hljs-string">&quot;这是一个测试文件，用于测试异常!!&quot;</span>)<br><span class="hljs-keyword">except</span> IOError:<br>    print(<span class="hljs-string">&quot;Error: 没有找到文件或读取文件失败&quot;</span>)<br><span class="hljs-keyword">else</span>:<br>    print(<span class="hljs-string">&quot;内容写入文件成功&quot;</span>)<br>    fh.close()<br><br><span class="hljs-comment"># 内容写入文件成功</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    fh = open(<span class="string">"testfile.txt"</span>, <span class="string">"w"</span>)
+    fh.write(<span class="string">"这是一个测试文件，用于测试异常!!"</span>)
+<span class="keyword">except</span> IOError:
+    print(<span class="string">"Error: 没有找到文件或读取文件失败"</span>)
+<span class="keyword">else</span>:
+    print(<span class="string">"内容写入文件成功"</span>)
+    fh.close()
+
+<span class="comment"># 内容写入文件成功</span></code></pre>
 
 <p>注意：<code>else</code>语句的存在必须以<code>except</code>语句的存在为前提，在没有<code>except</code>语句的<code>try</code>语句中使用<code>else</code>语句，会引发语法错误。</p>
 <hr>
 <h3 id="6-raise语句"><a href="#6-raise语句" class="headerlink" title="6. raise语句"></a>6. raise语句</h3><p>Python 使用<code>raise</code>语句抛出一个指定的异常。</p>
 <p>【例子】</p>
-<figure class="highlight python"><table><tr><td class="code"><pre class=" language-hljs python"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">raise</span> NameError(<span class="hljs-string">&#x27;HiThere&#x27;</span>)<br><span class="hljs-keyword">except</span> NameError:<br>    print(<span class="hljs-string">&#x27;An exception flew by!&#x27;</span>)<br>    <br><span class="hljs-comment"><code class="language-hljs python"><span class="hljs-keyword">try</span>:<br>    <span class="hljs-keyword">raise</span> NameError(<span class="hljs-string">&#x27;HiThere&#x27;</span>)<br><span class="hljs-keyword">except</span> NameError:<br>    print(<span class="hljs-string">&#x27;An exception flew by!&#x27;</span>)<br>    <br><span class="hljs-comment"># An exception flew by!</span><br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">try</span>:
+    <span class="keyword">raise</span> NameError(<span class="string">&#x27;HiThere&#x27;</span>)
+<span class="keyword">except</span> NameError:
+    print(<span class="string">&#x27;An exception flew by!&#x27;</span>)
+    
+<span class="comment"># An exception flew by!</span></code></pre>
 
 
 

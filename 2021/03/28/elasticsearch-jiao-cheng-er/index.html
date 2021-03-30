@@ -425,7 +425,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.3k
+                    2.8k
                 </div>
                 
 
@@ -445,22 +445,69 @@
 <h4 id="1-1-1-term与terms"><a href="#1-1-1-term与terms" class="headerlink" title="1.1.1 term与terms"></a>1.1.1 term与terms</h4><blockquote>
 <p><strong>查询电影名字中包含有 beautiful 这个单词的所有的电影，用于查询的单词不会进行分词的处理</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search <br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search <br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">"beautiful"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search 
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"term"</span>: &#123;
+            <span class="attr">"title"</span>: &#123;
+                <span class="attr">"value"</span>: <span class="string">"beautiful"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询电影名字中包含有 beautiful 或者 mind 这两个单词的所有的电影，用于查询的单词不会进行分词的处理</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: [<br>                <span class="hljs-string">&quot;beautiful&quot;</span>,<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: [<br>                <span class="hljs-string">&quot;beautiful&quot;</span>,<br>                <span class="hljs-string">"mind"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"terms"</span>: &#123;
+            <span class="attr">"title"</span>: [
+                <span class="string">"beautiful"</span>,
+                <span class="string">"mind"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-1-2-range"><a href="#1-1-2-range" class="headerlink" title="1.1.2 range"></a>1.1.2 range</h4><blockquote>
 <p><strong>查询上映在2016到2018年的所有的电影，再根据上映时间的倒序进行排序</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>            &#125;<br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;sort&quot;</span>: [<br>        &#123;<br>            <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;order&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>            &#125;<br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;sort&quot;</span>: [<br>        &#123;<br>            <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;order&quot;</span>: <span class="hljs-string">"desc"</span><br>            &#125;<br>        &#125;<br>    ]<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"range"</span>: &#123;
+            <span class="attr">"year"</span>: &#123;
+                <span class="attr">"gte"</span>: <span class="number">2016</span>,
+                <span class="attr">"lte"</span>: <span class="number">2018</span>
+            &#125;
+        &#125;
+    &#125;,
+    <span class="attr">"sort"</span>: [
+        &#123;
+            <span class="attr">"year"</span>: &#123;
+                <span class="attr">"order"</span>: <span class="string">"desc"</span>
+            &#125;
+        &#125;
+    ]
+&#125;</code></pre>
 
 <h4 id="1-1-3-Constant-Score"><a href="#1-1-3-Constant-Score" class="headerlink" title="1.1.3 Constant Score"></a>1.1.3 Constant Score</h4><blockquote>
 <p><strong>查询title中包含有beautiful的所有的电影，不进行相关性算分，查询的数据进行缓存，提高效率</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;constant_score&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;constant_score&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">"beautiful"</span><br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"constant_score"</span>: &#123;
+            <span class="attr">"filter"</span>: &#123;
+                <span class="attr">"term"</span>: &#123;
+                    <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h3 id="1-2-全文查询"><a href="#1-2-全文查询" class="headerlink" title="1.2 全文查询"></a>1.2 全文查询</h3><blockquote>
 <p>全文查询的种类有: Match Query、Match Phrase Query、Query String Query等 </p>
@@ -469,34 +516,94 @@
 <h4 id="1-2-1-match"><a href="#1-2-1-match" class="headerlink" title="1.2.1 match"></a>1.2.1 match</h4><blockquote>
 <p><strong>查询电影名字中包含有beautiful的所有电影，每页十条，取第二页的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">10</span>,<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">10</span>,<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">10</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"match"</span>: &#123;
+            <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+        &#125;
+    &#125;,
+    <span class="attr">"from"</span>: <span class="number">10</span>,
+    <span class="attr">"size"</span>: <span class="number">10</span>
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询电影名字中包含有 beautiful 或者 mind 的所有的数据，但是只查询title和id两个属性</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;_source&quot;</span>: [<br>        <span class="hljs-string">&quot;title&quot;</span>,<br>        <span class="hljs-string">&quot;id&quot;</span><br>    ],<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;_source&quot;</span>: [<br>        <span class="hljs-string">&quot;title&quot;</span>,<br>        <span class="hljs-string">&quot;id&quot;</span><br>    ],<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">"beautiful mind"</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"_source"</span>: [
+        <span class="string">"title"</span>,
+        <span class="string">"id"</span>
+    ],
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"match"</span>: &#123;
+            <span class="attr">"title"</span>: <span class="string">"beautiful mind"</span>
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-2-2-match-phrase"><a href="#1-2-2-match-phrase" class="headerlink" title="1.2.2 match_phrase"></a>1.2.2 match_phrase</h4><blockquote>
 <p><strong>查询电影名字中包含有 “beautiful mind” 这个短语的所有的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match_phrase&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match_phrase&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">"beautiful mind"</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"match_phrase"</span>: &#123;
+            <span class="attr">"title"</span>: <span class="string">"beautiful mind"</span>
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-2-3-multi-match"><a href="#1-2-3-multi-match" class="headerlink" title="1.2.3 multi_match"></a>1.2.3 multi_match</h4><blockquote>
 <p><strong>查询 title 或 genre 中包含有 beautiful 或者 Adventure 的所有的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;multi_match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful Adventure&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;multi_match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful Adventure&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string">"genre"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"multi_match"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"beautiful Adventure"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>,
+                <span class="string">"genre"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-2-4-match-all"><a href="#1-2-4-match-all" class="headerlink" title="1.2.4 match_all"></a>1.2.4 match_all</h4><blockquote>
 <p><strong>查询所有的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">"match_all"</span>: &#123;&#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"match_all"</span>: &#123;&#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-2-5-query-string"><a href="#1-2-5-query-string" class="headerlink" title="1.2.5 query_string"></a>1.2.5 query_string</h4><blockquote>
 <p><strong>查询 title 中包含有 beautiful 和 mind 的所有的电影</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;default_field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;default_field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">"mind AND beautiful"</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"query_string"</span>: &#123;
+            <span class="attr">"default_field"</span>: <span class="string">"title"</span>,
+            <span class="attr">"query"</span>: <span class="string">"mind AND beautiful"</span>
+        &#125;
+    &#125;
+&#125;</code></pre>
 
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;default_field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;mind beautiful&quot;</span>,<br>            <span class="hljs-attr">&quot;default_operator&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;default_field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;mind beautiful&quot;</span>,<br>            <span class="hljs-attr">&quot;default_operator&quot;</span>: <span class="hljs-string">"AND"</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"query_string"</span>: &#123;
+            <span class="attr">"default_field"</span>: <span class="string">"title"</span>,
+            <span class="attr">"query"</span>: <span class="string">"mind beautiful"</span>,
+            <span class="attr">"default_operator"</span>: <span class="string">"AND"</span>
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="1-2-6-simple-query-string"><a href="#1-2-6-simple-query-string" class="headerlink" title="1.2.6 simple_query_string"></a>1.2.6 simple_query_string</h4><blockquote>
 <p>simple_query_string 覆盖了很多其他查询的用法。</p>
@@ -504,59 +611,236 @@
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 和 mind 的所有的电影</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful + mind&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful + mind&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">"title"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"beautiful + mind"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span><br>            ],<br>            <span class="hljs-attr">&quot;default_operator&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span><br>            ],<br>            <span class="hljs-attr">&quot;default_operator&quot;</span>: <span class="hljs-string">"AND"</span><br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>
+            ],
+            <span class="attr">"default_operator"</span>: <span class="string">"AND"</span>
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询title中包含 “beautiful mind” 这个短语的所有的电影 (用法和match_phrase类似)</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;\&quot;beautiful mind\&quot;&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;\&quot;beautiful mind\&quot;&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">"title"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"\"beautiful mind\""</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询title或genre中包含有 beautiful mind romance 这个三个单词的所有的电影 （与multi_match类似）</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search <br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind Romance&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search <br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind Romance&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string">"genre"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search 
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"beautiful mind Romance"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>,
+                <span class="string">"genre"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询title中包含 “beautiful mind” 或者 “Modern Romance” 这两个短语的所有的电影</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;\&quot;beautiful mind\&quot; | \&quot;Modern Romance\&quot;&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;\&quot;beautiful mind\&quot; | \&quot;Modern Romance\&quot;&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">"title"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"\"beautiful mind\" | \"Modern Romance\""</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询title或者genre中包含有 beautiful + mind 这个两个词，或者Comedy + Romance + Musical + Drama + Children 这个五个词的所有的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;(beautiful + mind) | (Comedy + Romance + Musical + Drama + Children)&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;(beautiful + mind) | (Comedy + Romance + Musical + Drama + Children)&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-string">"genre"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"(beautiful + mind) | (Comedy + Romance + Musical + Drama + Children)"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>,
+                <span class="string">"genre"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含 beautiful 和 people 但是不包含 Animals 的所有的数据</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful + people + -Animals&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful + people + -Animals&quot;</span>,<br>            <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                <span class="hljs-string">"title"</span><br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"simple_query_string"</span>: &#123;
+            <span class="attr">"query"</span>: <span class="string">"beautiful + people + -Animals"</span>,
+            <span class="attr">"fields"</span>: [
+                <span class="string">"title"</span>
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 <p>.</p>
 <h3 id="1-3-模糊搜索"><a href="#1-3-模糊搜索" class="headerlink" title="1.3 模糊搜索"></a>1.3 模糊搜索</h3><blockquote>
 <p><strong>查询title中从第6个字母开始只要最多纠正一次，就与 neverendign 匹配的所有的数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;fuzzy&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;neverendign&quot;</span>,<br>                <span class="hljs-attr">&quot;fuzziness&quot;</span>: <span class="hljs-number">1</span>,<br>                <span class="hljs-attr">&quot;prefix_length&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;fuzzy&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;value&quot;</span>: <span class="hljs-string">&quot;neverendign&quot;</span>,<br>                <span class="hljs-attr">&quot;fuzziness&quot;</span>: <span class="hljs-number">1</span>,<br>                <span class="hljs-attr">&quot;prefix_length&quot;</span>: <span class="hljs-number">5</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"fuzzy"</span>: &#123;
+            <span class="attr">"title"</span>: &#123;
+                <span class="attr">"value"</span>: <span class="string">"neverendign"</span>,
+                <span class="attr">"fuzziness"</span>: <span class="number">1</span>,
+                <span class="attr">"prefix_length"</span>: <span class="number">5</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h3 id="1-4-多条件查询"><a href="#1-4-多条件查询" class="headerlink" title="1.4 多条件查询"></a>1.4 多条件查询</h3><blockquote>
 <p><strong>查询title中包含有beautiful或者mind单词，并且上映时间在2016~1018年的所有的电影</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;must&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>                        <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                            <span class="hljs-string">&quot;title&quot;</span><br>                        ]<br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;must&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>                        <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                            <span class="hljs-string">&quot;title&quot;</span><br>                        ]<br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>                        &#125;<br>                    &#125;<br>                &#125;<br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"bool"</span>: &#123;
+            <span class="attr">"must"</span>: [
+                &#123;
+                    <span class="attr">"simple_query_string"</span>: &#123;
+                        <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
+                        <span class="attr">"fields"</span>: [
+                            <span class="string">"title"</span>
+                        ]
+                    &#125;
+                &#125;,
+                &#123;
+                    <span class="attr">"range"</span>: &#123;
+                        <span class="attr">"year"</span>: &#123;
+                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
+                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                        &#125;
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询title中包含有beautiful或者mind单词，并且上映时间不在2016~1018年的所有的电影</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;must&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>                        <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                            <span class="hljs-string">&quot;title&quot;</span><br>                        ]<br>                    &#125;<br>                &#125;<br>            ],<br>            <span class="hljs-attr">&quot;must_not&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;must&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;simple_query_string&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;query&quot;</span>: <span class="hljs-string">&quot;beautiful mind&quot;</span>,<br>                        <span class="hljs-attr">&quot;fields&quot;</span>: [<br>                            <span class="hljs-string">&quot;title&quot;</span><br>                        ]<br>                    &#125;<br>                &#125;<br>            ],<br>            <span class="hljs-attr">&quot;must_not&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>                        &#125;<br>                    &#125;<br>                &#125;<br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"bool"</span>: &#123;
+            <span class="attr">"must"</span>: [
+                &#123;
+                    <span class="attr">"simple_query_string"</span>: &#123;
+                        <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
+                        <span class="attr">"fields"</span>: [
+                            <span class="string">"title"</span>
+                        ]
+                    &#125;
+                &#125;
+            ],
+            <span class="attr">"must_not"</span>: [
+                &#123;
+                    <span class="attr">"range"</span>: &#123;
+                        <span class="attr">"year"</span>: &#123;
+                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
+                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                        &#125;
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 这个单词，并且上映年份在2016~2018年间的所有电影，但是不进行相关性的算分</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json"># filter不会进行相关性的算分，并且会将查出来的结果进行缓存，效率上比 query 高 <br>GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number"><code class="language-hljs json"># filter不会进行相关性的算分，并且会将查出来的结果进行缓存，效率上比 query 高 <br>GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>                        &#125;<br>                    &#125;<br>                &#125;<br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json"># filter不会进行相关性的算分，并且会将查出来的结果进行缓存，效率上比 query 高 
+GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"bool"</span>: &#123;
+            <span class="attr">"filter"</span>: [
+                &#123;
+                    <span class="attr">"term"</span>: &#123;
+                        <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+                    &#125;
+                &#125;,
+                &#123;
+                    <span class="attr">"range"</span>: &#123;
+                        <span class="attr">"year"</span>: &#123;
+                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
+                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                        &#125;
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 这个单词，或者年份在2016~2018年间的所有电影</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;should&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;bool&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;should&quot;</span>: [<br>                &#123;<br>                    <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>                    &#125;<br>                &#125;,<br>                &#123;<br>                    <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;year&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">2016</span>,<br>                            <span class="hljs-attr">&quot;lte&quot;</span>: <span class="hljs-number">2018</span><br>                        &#125;<br>                    &#125;<br>                &#125;<br>            ]<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"bool"</span>: &#123;
+            <span class="attr">"should"</span>: [
+                &#123;
+                    <span class="attr">"term"</span>: &#123;
+                        <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+                    &#125;
+                &#125;,
+                &#123;
+                    <span class="attr">"range"</span>: &#123;
+                        <span class="attr">"year"</span>: &#123;
+                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
+                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                        &#125;
+                    &#125;
+                &#125;
+            ]
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>must</strong></p>
@@ -609,7 +893,10 @@
 <h3 id="2-2-Mapping的定义"><a href="#2-2-Mapping的定义" class="headerlink" title="2.2 Mapping的定义"></a>2.2 Mapping的定义</h3><blockquote>
 <p>语法格式如下：</p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">PUT users <br>&#123;<br>    <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<span class="hljs-comment"><code class="language-hljs json">PUT users <br>&#123;<br>    <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<span class="hljs-comment">// define your mappings here&#125;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">PUT users 
+&#123;
+    <span class="attr">"mappings"</span>: &#123;<span class="comment">// define your mappings here&#125;</span>
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>定义mapping的建议方式: 写入一个样本文档到临时索引中，ES会自动生成mapping信息，通过访问mapping信息的api查询mapping的定义，修改自动生成的mapping成为我们需要方式，创建索引，删除临时索引，简而言之就是 “卸磨杀驴” 。</strong></p>
@@ -624,17 +911,79 @@
 <blockquote>
 <p>聚合搜索的语法格式如下：</p>
 </blockquote>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json"><code class="language-hljs json">GET indexName/_search <br>&#123;<br>    "aggs": &#123;   #聚合分析的名字是由用户自定义的<br>        "aggs_name": &#123;<br>            "aggs_type": &#123;<br>               # aggregation body<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET indexName/_search 
+&#123;
+    "aggs": &#123;   #聚合分析的名字是由用户自定义的
+        "aggs_name": &#123;
+            "aggs_type": &#123;
+               # aggregation body
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>给employee索引创建mapping信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">PUT employee<br>&#123;<br>    <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;properties&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;id&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;name&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;job&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;gender&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string"><code class="language-hljs json">PUT employee<br>&#123;<br>    <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;properties&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;id&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;name&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;job&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;integer&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;gender&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">"keyword"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">PUT employee
+&#123;
+    <span class="attr">"mappings"</span>: &#123;
+        <span class="attr">"properties"</span>: &#123;
+            <span class="attr">"id"</span>: &#123;
+                <span class="attr">"type"</span>: <span class="string">"integer"</span>
+            &#125;,
+            <span class="attr">"name"</span>: &#123;
+                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &#125;,
+            <span class="attr">"job"</span>: &#123;
+                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &#125;,
+            <span class="attr">"age"</span>: &#123;
+                <span class="attr">"type"</span>: <span class="string">"integer"</span>
+            &#125;,
+            <span class="attr">"gender"</span>: &#123;
+                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>往 employee索引中写入数据</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">PUT employee/_bulk <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">1</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">21</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">8000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">2</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Rod&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">31</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">18000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">3</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Gaving&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">12000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">4</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;King&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">26</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">15000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">5</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Jonhson&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">29</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">16000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">6</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Douge&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">41</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">20000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">7</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">7</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;cutting&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">27</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">7000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">8</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">8</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Bona&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">22</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">14000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">9</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Shyon&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">20</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">19000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">10</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;James&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">18</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">22000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">11</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">11</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Golsling&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">23000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">12</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lily&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">2000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">13</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">13</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Jack&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">23</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">3000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">14</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">14</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Rose&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">36</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">6000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">15</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">15</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Will&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">38</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">4500</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">16</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;smith&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">23000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string"><code class="language-hljs json">PUT employee/_bulk <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">1</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Bob&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">21</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">8000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">2</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">2</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Rod&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">31</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">18000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">3</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">3</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Gaving&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">12000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">4</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">4</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;King&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">26</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">15000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">5</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">5</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Jonhson&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">29</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">16000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">6</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">6</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Douge&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">41</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">20000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">7</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">7</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;cutting&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">27</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">7000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">8</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">8</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Bona&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">22</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">14000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">9</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">9</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Shyon&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">20</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">19000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">10</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;James&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">18</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">22000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">11</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">11</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Golsling&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">23000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">12</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">12</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Lily&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">24</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">2000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">13</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">13</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Jack&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;html&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">23</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">3000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125; <br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">14</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">14</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Rose&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">36</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">6000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;female&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">15</span>&#125;&#125; <br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">15</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;Will&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;dba&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">38</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">4500</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">&quot;male&quot;</span>&#125;<br>&#123;<span class="hljs-attr">&quot;index&quot;</span>: &#123;<span class="hljs-attr">&quot;_id&quot;</span>: <span class="hljs-number">16</span>&#125;&#125;<br>&#123;<span class="hljs-attr">&quot;id&quot;</span>: <span class="hljs-number">16</span>, <span class="hljs-attr">&quot;name&quot;</span>: <span class="hljs-string">&quot;smith&quot;</span>, <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span>, <span class="hljs-attr">&quot;age&quot;</span>: <span class="hljs-number">32</span>, <span class="hljs-attr">&quot;sal&quot;</span>: <span class="hljs-number">23000</span>, <span class="hljs-attr">&quot;gender&quot;</span>: <span class="hljs-string">"male"</span>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">PUT employee/_bulk 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">1</span>&#125;&#125;
+&#123;<span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"name"</span>: <span class="string">"Bob"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">21</span>, <span class="attr">"sal"</span>: <span class="number">8000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">2</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">2</span>, <span class="attr">"name"</span>: <span class="string">"Rod"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">31</span>, <span class="attr">"sal"</span>: <span class="number">18000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">3</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">3</span>, <span class="attr">"name"</span>: <span class="string">"Gaving"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">24</span>, <span class="attr">"sal"</span>: <span class="number">12000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">4</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">4</span>, <span class="attr">"name"</span>: <span class="string">"King"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">26</span>, <span class="attr">"sal"</span>: <span class="number">15000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">5</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">5</span>, <span class="attr">"name"</span>: <span class="string">"Jonhson"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">29</span>, <span class="attr">"sal"</span>: <span class="number">16000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">6</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">6</span>, <span class="attr">"name"</span>: <span class="string">"Douge"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">41</span>, <span class="attr">"sal"</span>: <span class="number">20000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">7</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">7</span>, <span class="attr">"name"</span>: <span class="string">"cutting"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">27</span>, <span class="attr">"sal"</span>: <span class="number">7000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">8</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">8</span>, <span class="attr">"name"</span>: <span class="string">"Bona"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">22</span>, <span class="attr">"sal"</span>: <span class="number">14000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">9</span>&#125;&#125;
+&#123;<span class="attr">"id"</span>: <span class="number">9</span>, <span class="attr">"name"</span>: <span class="string">"Shyon"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">20</span>, <span class="attr">"sal"</span>: <span class="number">19000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">10</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">10</span>, <span class="attr">"name"</span>: <span class="string">"James"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">18</span>, <span class="attr">"sal"</span>: <span class="number">22000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">11</span>&#125;&#125;
+&#123;<span class="attr">"id"</span>: <span class="number">11</span>, <span class="attr">"name"</span>: <span class="string">"Golsling"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">32</span>, <span class="attr">"sal"</span>: <span class="number">23000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">12</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">12</span>, <span class="attr">"name"</span>: <span class="string">"Lily"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">24</span>, <span class="attr">"sal"</span>: <span class="number">2000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">13</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">13</span>, <span class="attr">"name"</span>: <span class="string">"Jack"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">23</span>, <span class="attr">"sal"</span>: <span class="number">3000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">14</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">14</span>, <span class="attr">"name"</span>: <span class="string">"Rose"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">36</span>, <span class="attr">"sal"</span>: <span class="number">6000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">15</span>&#125;&#125; 
+&#123;<span class="attr">"id"</span>: <span class="number">15</span>, <span class="attr">"name"</span>: <span class="string">"Will"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">38</span>, <span class="attr">"sal"</span>: <span class="number">4500</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125;
+&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">16</span>&#125;&#125;
+&#123;<span class="attr">"id"</span>: <span class="number">16</span>, <span class="attr">"name"</span>: <span class="string">"smith"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">32</span>, <span class="attr">"sal"</span>: <span class="number">23000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125;</code></pre>
 
 <h4 id="3-1-1-单值的输出"><a href="#3-1-1-单值的输出" class="headerlink" title="3.1.1 单值的输出"></a>3.1.1 单值的输出</h4><blockquote>
 <p>ES中大多数的数学计算只输出一个值，如：min、max、sum、avg、cardinality</p>
@@ -642,22 +991,72 @@
 <blockquote>
 <p><strong>查询工资的总和</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search <br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;other_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;sum&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search <br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;other_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;sum&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search 
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"other_info"</span>: &#123;
+            <span class="attr">"sum"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询员工的平均工资</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search <br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;other_aggs_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search <br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;other_aggs_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search 
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"other_aggs_info"</span>: &#123;
+            <span class="attr">"avg"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询总共有多少个岗位, cardinality的值类似于sql中的 count distinct,即去重统计总数</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_count&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;cardinality&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_count&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;cardinality&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"job"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_count"</span>: &#123;
+            <span class="attr">"cardinality"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询航班票价的最高值、平均值、最低值</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;max_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;max&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;AvgTicketPrice&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;min_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;min&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;AvgTicketPrice&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;avg_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;max_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;max&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;AvgTicketPrice&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;min_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;min&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;AvgTicketPrice&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;avg_price&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"AvgTicketPrice"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"max_price"</span>: &#123;
+            <span class="attr">"max"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+            &#125;
+        &#125;,
+        <span class="attr">"min_price"</span>: &#123;
+            <span class="attr">"min"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+            &#125;
+        &#125;,
+        <span class="attr">"avg_price"</span>: &#123;
+            <span class="attr">"avg"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h4 id="3-1-2-多值的输出"><a href="#3-1-2-多值的输出" class="headerlink" title="3.1.2 多值的输出"></a>3.1.2 多值的输出</h4><blockquote>
 <p>ES还有些函数，可以一次性输出很多个统计的数据: terms、stats </p>
@@ -665,47 +1064,194 @@
 <blockquote>
 <p><strong>查询工资的信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"sal_info"</span>: &#123;
+            <span class="attr">"stats"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询到达不同城市的航班数量</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;flight_dest&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;flight_dest&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"DestCountry"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"flight_dest"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"DestCountry"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询每个岗位有多少人</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_count&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_count&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"job"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_count"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询目标地的航班次数以及天气信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;dest_city&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;DestCityName&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;whether_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET kibana_sample_data_flights/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;dest_city&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;DestCityName&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;whether_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"DestWeather"</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"dest_city"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"DestCityName"</span>
+            &#125;,
+            <span class="attr">"aggs"</span>: &#123;
+                <span class="attr">"whether_info"</span>: &#123;
+                    <span class="attr">"terms"</span>: &#123;
+                        <span class="attr">"field"</span>: <span class="string">"DestWeather"</span>
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询每个岗位下工资的信息(平均工资、最高工资、最少工资等)</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_inf&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_inf&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_inf"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;,
+            <span class="attr">"aggs"</span>: &#123;
+                <span class="attr">"sal_info"</span>: &#123;
+                    <span class="attr">"stats"</span>: &#123;
+                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询不同工种的男女员工数量、然后统计不同工种下男女员工的工资信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gender_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;gender&quot;</span><br>                    &#125;,<br>                    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gender_info&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;gender&quot;</span><br>                    &#125;,<br>                    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>                            &#125;<br>                        &#125;<br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_info"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;,
+            <span class="attr">"aggs"</span>: &#123;
+                <span class="attr">"gender_info"</span>: &#123;
+                    <span class="attr">"terms"</span>: &#123;
+                        <span class="attr">"field"</span>: <span class="string">"gender"</span>
+                    &#125;,
+                    <span class="attr">"aggs"</span>: &#123;
+                        <span class="attr">"sal_info"</span>: &#123;
+                            <span class="attr">"stats"</span>: &#123;
+                                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+                            &#125;
+                        &#125;
+                    &#125;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询年龄最大的两位员工的信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;top_age_2&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;top_hits&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">2</span>,<br>                <span class="hljs-attr">&quot;sort&quot;</span>: [<br>                    &#123;<br>                        <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;order&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;top_age_2&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;top_hits&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">2</span>,<br>                <span class="hljs-attr">&quot;sort&quot;</span>: [<br>                    &#123;<br>                        <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;order&quot;</span>: <span class="hljs-string">"desc"</span><br>                        &#125;<br>                    &#125;<br>                ]<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"top_age_2"</span>: &#123;
+            <span class="attr">"top_hits"</span>: &#123;
+                <span class="attr">"size"</span>: <span class="number">2</span>,
+                <span class="attr">"sort"</span>: [
+                    &#123;
+                        <span class="attr">"age"</span>: &#123;
+                            <span class="attr">"order"</span>: <span class="string">"desc"</span>
+                        &#125;
+                    &#125;
+                ]
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询不同区间员工工资的统计信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span>,<br>                <span class="hljs-attr">&quot;ranges&quot;</span>: [<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;0 &lt;= sal &lt;= 5000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">0</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number">5000</span><br>                    &#125;,<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;5001 &lt;= sal &lt;= 10000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">5001</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number">10000</span><br>                    &#125;,<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;10001 &lt;= sal &lt;= 15000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">10001</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span>,<br>                <span class="hljs-attr">&quot;ranges&quot;</span>: [<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;0 &lt;= sal &lt;= 5000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">0</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number">5000</span><br>                    &#125;,<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;5001 &lt;= sal &lt;= 10000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">5001</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number">10000</span><br>                    &#125;,<br>                    &#123;<br>                        <span class="hljs-attr">&quot;key&quot;</span>: <span class="hljs-string">&quot;10001 &lt;= sal &lt;= 15000&quot;</span>,<br>                        <span class="hljs-attr">&quot;from&quot;</span>: <span class="hljs-number">10001</span>,<br>                        <span class="hljs-attr">&quot;to&quot;</span>: <span class="hljs-number">15000</span><br>                    &#125;<br>                ]<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"sal_info"</span>: &#123;
+            <span class="attr">"range"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>,
+                <span class="attr">"ranges"</span>: [
+                    &#123;
+                        <span class="attr">"key"</span>: <span class="string">"0 <= sal <= 5000"</span>,
+                        <span class="attr">"from"</span>: <span class="number">0</span>,
+                        <span class="attr">"to"</span>: <span class="number">5000</span>
+                    &#125;,
+                    &#123;
+                        <span class="attr">"key"</span>: <span class="string">"5001 <= sal <= 10000"</span>,
+                        <span class="attr">"from"</span>: <span class="number">5001</span>,
+                        <span class="attr">"to"</span>: <span class="number">10000</span>
+                    &#125;,
+                    &#123;
+                        <span class="attr">"key"</span>: <span class="string">"10001 <= sal <= 15000"</span>,
+                        <span class="attr">"from"</span>: <span class="number">10001</span>,
+                        <span class="attr">"to"</span>: <span class="number">15000</span>
+                    &#125;
+                ]
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>以直方图的方式以每5000元为一个区间查看工资信息</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;histogram&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span>,<br>                <span class="hljs-attr">&quot;interval&quot;</span>: <span class="hljs-number">5000</span>,<br>                <span class="hljs-attr">&quot;extended_bounds&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">0</span>,<br>                    <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;histogram&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span>,<br>                <span class="hljs-attr">&quot;interval&quot;</span>: <span class="hljs-number">5000</span>,<br>                <span class="hljs-attr">&quot;extended_bounds&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;min&quot;</span>: <span class="hljs-number">0</span>,<br>                    <span class="hljs-attr">&quot;max&quot;</span>: <span class="hljs-number">30000</span><br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"sal_info"</span>: &#123;
+            <span class="attr">"histogram"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>,
+                <span class="attr">"interval"</span>: <span class="number">5000</span>,
+                <span class="attr">"extended_bounds"</span>: &#123;
+                    <span class="attr">"min"</span>: <span class="number">0</span>,
+                    <span class="attr">"max"</span>: <span class="number">30000</span>
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p>interval: 以指定的值为一个区间。</p>
@@ -714,32 +1260,144 @@
 <blockquote>
 <p><strong>查询平均工资大于最低的工种</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;job_avg_sal&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;min_sal_job&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;min_bucket&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;buckets_path&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;job_avg_sal&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;min_sal_job&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;min_bucket&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;buckets_path&quot;</span>: <span class="hljs-string">"job_info>job_avg_sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_info"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;,
+            <span class="attr">"aggs"</span>: &#123;
+                <span class="attr">"job_avg_sal"</span>: &#123;
+                    <span class="attr">"avg"</span>: &#123;
+                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+                    &#125;
+                &#125;
+            &#125;
+        &#125;,
+        <span class="attr">"min_sal_job"</span>: &#123;
+            <span class="attr">"min_bucket"</span>: &#123;
+                <span class="attr">"buckets_path"</span>: <span class="string">"job_info>job_avg_sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询工资和工种的信息</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_inf&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;job_inf&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;terms&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;job&quot;</span><br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;sal_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;stats&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"job_inf"</span>: &#123;
+            <span class="attr">"terms"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"job"</span>
+            &#125;
+        &#125;,
+        <span class="attr">"sal_info"</span>: &#123;
+            <span class="attr">"stats"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询年龄大于30岁的员工的平均工资</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">30</span><br>            &#125;<br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">30</span><br>            &#125;<br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"range"</span>: &#123;
+            <span class="attr">"age"</span>: &#123;
+                <span class="attr">"gte"</span>: <span class="number">30</span>
+            &#125;
+        &#125;
+    &#125;,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"avg_sal"</span>: &#123;
+            <span class="attr">"avg"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>查询Java员工的平均工资</strong> </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;constant_score&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span><br>                &#125;<br>            &#125;,<br>            <span class="hljs-attr">&quot;boost&quot;</span>: <span class="hljs-number">1.2</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;constant_score&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;term&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;job&quot;</span>: <span class="hljs-string">&quot;java&quot;</span><br>                &#125;<br>            &#125;,<br>            <span class="hljs-attr">&quot;boost&quot;</span>: <span class="hljs-number">1.2</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"constant_score"</span>: &#123;
+            <span class="attr">"filter"</span>: &#123;
+                <span class="attr">"term"</span>: &#123;
+                    <span class="attr">"job"</span>: <span class="string">"java"</span>
+                &#125;
+            &#125;,
+            <span class="attr">"boost"</span>: <span class="number">1.2</span>
+        &#125;
+    &#125;,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"avg_sal"</span>: &#123;
+            <span class="attr">"avg"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p>求30岁以上的员工的平均工资和所有员工的平均工资 </p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;get_30_emp_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">30</span><br>                    &#125;<br>                &#125;<br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;get_30_emp_avg_sal&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;all_emp_avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string"><code class="language-hljs json">GET employee/_search<br>&#123;<br>    <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">0</span>,<br>    <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;get_30_emp_info&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;filter&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;range&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;age&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;gte&quot;</span>: <span class="hljs-number">30</span><br>                    &#125;<br>                &#125;<br>            &#125;,<br>            <span class="hljs-attr">&quot;aggs&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;get_30_emp_avg_sal&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;sal&quot;</span><br>                    &#125;<br>                &#125;<br>            &#125;<br>        &#125;,<br>        <span class="hljs-attr">&quot;all_emp_avg_sal&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;avg&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">"sal"</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+&#123;
+    <span class="attr">"size"</span>: <span class="number">0</span>,
+    <span class="attr">"aggs"</span>: &#123;
+        <span class="attr">"get_30_emp_info"</span>: &#123;
+            <span class="attr">"filter"</span>: &#123;
+                <span class="attr">"range"</span>: &#123;
+                    <span class="attr">"age"</span>: &#123;
+                        <span class="attr">"gte"</span>: <span class="number">30</span>
+                    &#125;
+                &#125;
+            &#125;,
+            <span class="attr">"aggs"</span>: &#123;
+                <span class="attr">"get_30_emp_avg_sal"</span>: &#123;
+                    <span class="attr">"avg"</span>: &#123;
+                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+                    &#125;
+                &#125;
+            &#125;
+        &#125;,
+        <span class="attr">"all_emp_avg_sal"</span>: &#123;
+            <span class="attr">"avg"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <h3 id="3-2-推荐搜索"><a href="#3-2-推荐搜索" class="headerlink" title="3.2 推荐搜索"></a>3.2 推荐搜索</h3><blockquote>
 <p>在搜索过程中，因为单词的拼写错误，没有得到任何的结果，希望ES能够给我们一个推荐搜索。</p>
 </blockquote>
-<figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">"suggest"</span>: &#123;<br>     		 # title_suggestion为我们自定义的名字<br>        "title_suggestion": &#123;<br>            "text": "drema",<br>            "term": &#123;<br>                "field": "title",<br>                "suggest_mode": "popular"<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"suggest"</span>: &#123;
+     		 # title_suggestion为我们自定义的名字
+        "title_suggestion": &#123;
+            "text": "drema",
+            "term": &#123;
+                "field": "title",
+                "suggest_mode": "popular"
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p><strong>suggest_mode，有三个值：popular、missing、always</strong> </p>
@@ -758,12 +1416,68 @@
 <p>自动补全的功能对性能的要求极高，用户每发送输入一个字符就要发送一个请求去查找匹配项。</p>
 <p>ES采取了不同的数据结构来实现，并不是通过倒排索引来实现的；需要将对应的数据类型设置为<strong>completion</strong> ; 所以在将数据索引进ES之前需要先定义 mapping 信息。</p>
 </blockquote>
-<h4 id="3-3-1-定义mapping"><a href="#3-3-1-定义mapping" class="headerlink" title="3.3.1 定义mapping"></a>3.3.1 <strong>定义</strong>mapping</h4><figure class="highlight"><table><tr><td class="code"><pre class=" language-hljs json">&#123;<br>    <span class="hljs-attr">&quot;movies&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;properties&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;@version&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr">&quot;genre&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr">&quot;id&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr"><code class="language-hljs json">&#123;<br>    <span class="hljs-attr">&quot;movies&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;mappings&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;properties&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;@version&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr">&quot;genre&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr">&quot;id&quot;</span>: &#123;<br>                    <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;text&quot;</span>,<br>                    <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>                        <span class="hljs-attr">&quot;keyword&quot;</span>: &#123;<br>                            <span class="hljs-attr">&quot;type&quot;</span>: <span class="hljs-string">&quot;keyword&quot;</span>,<br>                            <span class="hljs-attr">&quot;ignore_above&quot;</span>: <span class="hljs-number">256</span><br>                        &#125;<br>                    &#125;<br>                &#125;,<br>                <span class="hljs-attr">"title"</span>: &#123;<br>	                  # 需要自动提示的属性类型必须是 completion<br>                    "type": "completion"<br>                &#125;,<br>                "year": &#123;<br>                    "type": "long"<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="3-3-1-定义mapping"><a href="#3-3-1-定义mapping" class="headerlink" title="3.3.1 定义mapping"></a>3.3.1 <strong>定义</strong>mapping</h4><pre class=" language-highlight json"><code class="language-highlight json">&#123;
+    <span class="attr">"movies"</span>: &#123;
+        <span class="attr">"mappings"</span>: &#123;
+            <span class="attr">"properties"</span>: &#123;
+                <span class="attr">"@version"</span>: &#123;
+                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
+                    <span class="attr">"fields"</span>: &#123;
+                        <span class="attr">"keyword"</span>: &#123;
+                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
+                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+                        &#125;
+                    &#125;
+                &#125;,
+                <span class="attr">"genre"</span>: &#123;
+                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
+                    <span class="attr">"fields"</span>: &#123;
+                        <span class="attr">"keyword"</span>: &#123;
+                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
+                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+                        &#125;
+                    &#125;
+                &#125;,
+                <span class="attr">"id"</span>: &#123;
+                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
+                    <span class="attr">"fields"</span>: &#123;
+                        <span class="attr">"keyword"</span>: &#123;
+                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
+                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+                        &#125;
+                    &#125;
+                &#125;,
+                <span class="attr">"title"</span>: &#123;
+	                  # 需要自动提示的属性类型必须是 completion
+                    "type": "completion"
+                &#125;,
+                "year": &#123;
+                    "type": "long"
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p>定义完 mapping 信息之后，导入响应的数据</p>
 </blockquote>
-<h4 id="3-3-2-前缀搜索"><a href="#3-3-2-前缀搜索" class="headerlink" title="3.3.2 前缀搜索"></a>3.3.2 前缀搜索</h4><figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;_source&quot;</span>: [<br>        <span class="hljs-string">&quot;title&quot;</span><br>    ],<br>    <span class="hljs-attr">&quot;suggest&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;prefix_suggestion&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;prefix&quot;</span>: <span class="hljs-string">&quot;Lan&quot;</span>,<br>            <span class="hljs-attr">&quot;completion&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-attr">&quot;skip_duplicates&quot;</span>: <span class="hljs-literal">true</span>,<br>                <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;_source&quot;</span>: [<br>        <span class="hljs-string">&quot;title&quot;</span><br>    ],<br>    <span class="hljs-attr">&quot;suggest&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;prefix_suggestion&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;prefix&quot;</span>: <span class="hljs-string">&quot;Lan&quot;</span>,<br>            <span class="hljs-attr">&quot;completion&quot;</span>: &#123;<br>                <span class="hljs-attr">&quot;field&quot;</span>: <span class="hljs-string">&quot;title&quot;</span>,<br>                <span class="hljs-attr">&quot;skip_duplicates&quot;</span>: <span class="hljs-literal">true</span>,<br>                <span class="hljs-attr">&quot;size&quot;</span>: <span class="hljs-number">10</span><br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<h4 id="3-3-2-前缀搜索"><a href="#3-3-2-前缀搜索" class="headerlink" title="3.3.2 前缀搜索"></a>3.3.2 前缀搜索</h4><pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"_source"</span>: [
+        <span class="string">"title"</span>
+    ],
+    <span class="attr">"suggest"</span>: &#123;
+        <span class="attr">"prefix_suggestion"</span>: &#123;
+            <span class="attr">"prefix"</span>: <span class="string">"Lan"</span>,
+            <span class="attr">"completion"</span>: &#123;
+                <span class="attr">"field"</span>: <span class="string">"title"</span>,
+                <span class="attr">"skip_duplicates"</span>: <span class="literal">true</span>,
+                <span class="attr">"size"</span>: <span class="number">10</span>
+            &#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <p><strong>自动提示功能实现</strong></p>
 <p><img src="https://gitee.com/niu_dehua/oss/raw/master/uPic/image-20210328001210925.png" alt="image-20210328001210925"></p>
@@ -779,7 +1493,21 @@
 <blockquote>
 <p>将所有的包含有 beautiful 的单词高亮显示</p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="code"><pre class=" language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;highlight&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;post_tags&quot;</span>: <span class="hljs-string">&quot;&lt;/span&gt;&quot;</span>,<br>        <span class="hljs-attr">&quot;pre_tags&quot;</span>: <span class="hljs-string">&quot;&lt;span color=&#x27;red&#x27;&gt;&quot;</span>,<br>        <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>            <span class="hljs-attr"><code class="language-hljs json">GET movies/_search<br>&#123;<br>    <span class="hljs-attr">&quot;query&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;match&quot;</span>: &#123;<br>            <span class="hljs-attr">&quot;title&quot;</span>: <span class="hljs-string">&quot;beautiful&quot;</span><br>        &#125;<br>    &#125;,<br>    <span class="hljs-attr">&quot;highlight&quot;</span>: &#123;<br>        <span class="hljs-attr">&quot;post_tags&quot;</span>: <span class="hljs-string">&quot;&lt;/span&gt;&quot;</span>,<br>        <span class="hljs-attr">&quot;pre_tags&quot;</span>: <span class="hljs-string">&quot;&lt;span color=&#x27;red&#x27;&gt;&quot;</span>,<br>        <span class="hljs-attr">&quot;fields&quot;</span>: &#123;<br>            <span class="hljs-attr">"title"</span>: &#123;&#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+&#123;
+    <span class="attr">"query"</span>: &#123;
+        <span class="attr">"match"</span>: &#123;
+            <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+        &#125;
+    &#125;,
+    <span class="attr">"highlight"</span>: &#123;
+        <span class="attr">"post_tags"</span>: <span class="string">"</span>"</span>,
+        <span class="attr">"pre_tags"</span>: <span class="string">"<span color=&#x27;red&#x27;>"</span>,
+        <span class="attr">"fields"</span>: &#123;
+            <span class="attr">"title"</span>: &#123;&#125;
+        &#125;
+    &#125;
+&#125;</code></pre>
 
 <blockquote>
 <p>pre_tags: 是需要高亮文本的前置 html 内容。</p>
