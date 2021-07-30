@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.3k
+                    12.5k
                 </div>
                 
 
@@ -473,165 +473,165 @@
 <li>创建一个普通列表</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
 print(x, type(x))
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;] <class &#x27;list&#x27;></span>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;] &lt;class &#39;list&#39;&gt;
 
-x = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>]
+x &#x3D; [2, 3, 4, 5, 6, 7]
 print(x, type(x))
-<span class="comment"># [2, 3, 4, 5, 6, 7] <class &#x27;list&#x27;></span></code></pre>
+# [2, 3, 4, 5, 6, 7] &lt;class &#39;list&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>利用<code>range()</code>创建列表</li>
 </ul>
 <p>【例子】 </p>
-<pre class=" language-highlight python">x = list(range(<span class="number"><code class="language-highlight python">x = list(range(<span class="number">10</span>))
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; list(range(10))
 print(x, type(x))
-<span class="comment"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <class &#x27;list&#x27;></span>
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] &lt;class &#39;list&#39;&gt;
 
-x = list(range(<span class="number">1</span>, <span class="number">11</span>, <span class="number">2</span>))
+x &#x3D; list(range(1, 11, 2))
 print(x, type(x))
-<span class="comment"># [1, 3, 5, 7, 9] <class &#x27;list&#x27;></span>
+# [1, 3, 5, 7, 9] &lt;class &#39;list&#39;&gt;
 
-x = list(range(<span class="number">10</span>, <span class="number">1</span>, <span class="number">-2</span>))
+x &#x3D; list(range(10, 1, -2))
 print(x, type(x))
-<span class="comment"># [10, 8, 6, 4, 2] <class &#x27;list&#x27;></span></code></pre>
+# [10, 8, 6, 4, 2] &lt;class &#39;list&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>利用推导式创建列表</li>
 </ul>
 <p>【例子】 </p>
-<pre class=" language-highlight python">x = [<span class="number">0</span>] * <span class="number"><code class="language-highlight python">x = [<span class="number">0</span>] * <span class="number">5</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [0] * 5
 print(x, type(x))
-<span class="comment"># [0, 0, 0, 0, 0] <class &#x27;list&#x27;></span>
+# [0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt;
 
-x = [<span class="number">0</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">5</span>)]
+x &#x3D; [0 for i in range(5)]
 print(x, type(x))
-<span class="comment"># [0, 0, 0, 0, 0] <class &#x27;list&#x27;></span>
+# [0, 0, 0, 0, 0] &lt;class &#39;list&#39;&gt;
 
-x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>)]
+x &#x3D; [i for i in range(10)]
 print(x, type(x))
-<span class="comment"># [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] <class &#x27;list&#x27;></span>
+# [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] &lt;class &#39;list&#39;&gt;
 
-x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>, <span class="number">2</span>)]
+x &#x3D; [i for i in range(1, 10, 2)]
 print(x, type(x))
-<span class="comment"># [1, 3, 5, 7, 9] <class &#x27;list&#x27;></span>
+# [1, 3, 5, 7, 9] &lt;class &#39;list&#39;&gt;
 
-x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>, <span class="number">1</span>, <span class="number">-2</span>)]
+x &#x3D; [i for i in range(10, 1, -2)]
 print(x, type(x))
-<span class="comment"># [10, 8, 6, 4, 2] <class &#x27;list&#x27;></span>
+# [10, 8, 6, 4, 2] &lt;class &#39;list&#39;&gt;
 
-x = [i ** <span class="number">2</span> <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">10</span>)]
+x &#x3D; [i ** 2 for i in range(1, 10)]
 print(x, type(x))
-<span class="comment"># [1, 4, 9, 16, 25, 36, 49, 64, 81] <class &#x27;list&#x27;></span>
+# [1, 4, 9, 16, 25, 36, 49, 64, 81] &lt;class &#39;list&#39;&gt;
 
-x = [i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">100</span>) <span class="keyword">if</span> (i % <span class="number">2</span>) != <span class="number">0</span> <span class="keyword">and</span> (i % <span class="number">3</span>) == <span class="number">0</span>]
+x &#x3D; [i for i in range(100) if (i % 2) !&#x3D; 0 and (i % 3) &#x3D;&#x3D; 0]
 print(x, type(x))
 
-<span class="comment"># [3, 9, 15, 21, 27, 33, 39,</span></code></pre>
+# [3, 9, 15, 21, 27, 33, 39,<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：</p>
 <p>由于list的元素可以是任何对象，因此列表中所保存的是对象的指针。即使保存一个简单的<code>[1,2,3]</code>，也有3个指针和3个整数对象。</p>
 <p><code>x = [a] * 4</code>操作中，只是创建4个指向list的引用，所以一旦<code>a</code>改变，<code>x</code>中4个<code>a</code>也会随之改变。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [[<span class="number">0</span>] * <span class="number">3</span>] * <span class="number"><code class="language-highlight python">x = [[<span class="number">0</span>] * <span class="number">3</span>] * <span class="number">4</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [[0] * 3] * 4
 print(x, type(x))
-<span class="comment"># [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]] <class &#x27;list&#x27;></span>
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]] &lt;class &#39;list&#39;&gt;
 
-x[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>
+x[0][0] &#x3D; 1
 print(x, type(x))
-<span class="comment"># [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0]] <class &#x27;list&#x27;></span>
+# [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0]] &lt;class &#39;list&#39;&gt;
 
-a = [<span class="number">0</span>] * <span class="number">3</span>
-x = [a] * <span class="number">4</span>
+a &#x3D; [0] * 3
+x &#x3D; [a] * 4
 print(x, type(x))
-<span class="comment"># [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]] <class &#x27;list&#x27;></span>
+# [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]] &lt;class &#39;list&#39;&gt;
 
-x[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">1</span>
+x[0][0] &#x3D; 1
 print(x, type(x))
-<span class="comment"># [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0]] <class &#x27;list&#x27;></span></code></pre>
+# [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0]] &lt;class &#39;list&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>创建一个混合列表</li>
 </ul>
 <p>【例子】 </p>
-<pre class=" language-highlight python">mix = [<span class="number">1</span>, <span class="string">&#x27;lsgo&#x27;</span>, <span class="number">3.14</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight python">mix = [<span class="number">1</span>, <span class="string">&#x27;lsgo&#x27;</span>, <span class="number">3.14</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">mix &#x3D; [1, &#39;lsgo&#39;, 3.14, [1, 2, 3]]
 print(mix, type(mix))  
-<span class="comment"># [1, &#x27;lsgo&#x27;, 3.14, [1, 2, 3]] <class &#x27;list&#x27;></span></code></pre>
+# [1, &#39;lsgo&#39;, 3.14, [1, 2, 3]] &lt;class &#39;list&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>创建一个空列表</li>
 </ul>
 <p>【例子】 </p>
-<pre class=" language-highlight python"><code class="language-highlight python">empty = []
-print(empty, type(empty))  <span class="comment"># [] <class &#x27;list&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">empty &#x3D; []
+print(empty, type(empty))  # [] &lt;class &#39;list&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>列表不像元组，列表内容可更改 (mutable)，因此附加 (<code>append</code>, <code>extend</code>)、插入 (<code>insert</code>)、删除 (<code>remove</code>, <code>pop</code>) 这些操作都可以用在它身上。</p>
 <h3 id="3-向列表中添加元素"><a href="#3-向列表中添加元素" class="headerlink" title="3. 向列表中添加元素"></a>3. 向列表中添加元素</h3><ul>
 <li><code>list.append(obj)</code> 在列表末尾添加新的对象，只接受一个参数，参数可以是任何数据类型，被追加的元素在 list 中保持着原结构类型。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-x.append(<span class="string">&#x27;Thursday&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+x.append(&#39;Thursday&#39;)
 print(x)  
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;, &#x27;Thursday&#x27;]</span>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;, &#39;Thursday&#39;]
 
-print(len(x))  <span class="comment"># 6</span></code></pre>
+print(len(x))  # 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>此元素如果是一个 list，那么这个 list 将作为一个整体进行追加，注意<code>append()</code>和<code>extend()</code>的区别。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-x.append([<span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Sunday&#x27;</span>])
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+x.append([&#39;Thursday&#39;, &#39;Sunday&#39;])
 print(x)  
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;, [&#x27;Thursday&#x27;, &#x27;Sunday&#x27;]]</span>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;, [&#39;Thursday&#39;, &#39;Sunday&#39;]]
 
-print(len(x))  <span class="comment"># 6</span></code></pre>
+print(len(x))  # 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>list.extend(seq)</code> 在列表末尾一次性追加另一个序列中的多个值（用新列表扩展原来的列表）</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-x.extend([<span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Sunday&#x27;</span>])
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+x.extend([&#39;Thursday&#39;, &#39;Sunday&#39;])
 print(x)  
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;, &#x27;Thursday&#x27;, &#x27;Sunday&#x27;]</span>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;, &#39;Thursday&#39;, &#39;Sunday&#39;]
 
-print(len(x))  <span class="comment"># 7</span></code></pre>
+print(len(x))  # 7<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>严格来说 <code>append</code> 是追加，把一个东西整体添加在列表后，而 <code>extend</code> 是扩展，把一个东西里的所有元素添加在列表后。</p>
 <ul>
 <li><code>list.insert(index, obj)</code> 在编号 <code>index</code> 位置插入 <code>obj</code>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-x.insert(<span class="number">2</span>, <span class="string">&#x27;Sunday&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+x.insert(2, &#39;Sunday&#39;)
 print(x)
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Sunday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Sunday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
 
-print(len(x))  <span class="comment"># 6</span></code></pre>
+print(len(x))  # 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-删除列表中的元素"><a href="#4-删除列表中的元素" class="headerlink" title="4. 删除列表中的元素"></a>4. 删除列表中的元素</h3><ul>
 <li><code>list.remove(obj)</code> 移除列表中某个值的第一个匹配项</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-x.remove(<span class="string">&#x27;Monday&#x27;</span>)
-print(x)  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+x.remove(&#39;Monday&#39;)
+print(x)  # [&#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>list.pop([index=-1])</code> 移除列表中的一个元素（默认最后一个元素），并且返回该元素的值</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-y = x.pop()
-print(y)  <span class="comment"># Friday</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+y &#x3D; x.pop()
+print(y)  # Friday
 
-y = x.pop(<span class="number">0</span>)
-print(y)  <span class="comment"># Monday</span>
+y &#x3D; x.pop(0)
+print(y)  # Monday
 
-y = x.pop(<span class="number">-2</span>)
-print(y)  <span class="comment"># Wednesday</span>
-print(x)  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Thursday&#x27;]</span></code></pre>
+y &#x3D; x.pop(-2)
+print(y)  # Wednesday
+print(x)  # [&#39;Tuesday&#39;, &#39;Thursday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>remove</code> 和 <code>pop</code> 都可以删除元素，前者是指定具体要删除的元素，后者是指定一个索引。</p>
 <ul>
@@ -639,9 +639,9 @@ print(x)  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Thursday&#x27;]</s
 </ul>
 <p>【例子】</p>
 <p>如果知道要删除的元素在列表中的位置，可使用<code>del</code>语句。</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-<span class="keyword">del</span> x[<span class="number">0</span>:<span class="number">2</span>]
-print(x)  <span class="comment"># [&#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+del x[0:2]
+print(x)  # [&#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>如果你要从列表中删除一个元素，且不再以任何方式使用它，就使用<code>del</code>语句；如果你要在删除元素后还能继续使用它，就使用方法<code>pop()</code>。</p>
 <h3 id="5-获取列表中的元素"><a href="#5-获取列表中的元素" class="headerlink" title="5. 获取列表中的元素"></a>5. 获取列表中的元素</h3><ul>
@@ -649,10 +649,10 @@ print(x)  <span class="comment"># [&#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, 
 <li>通过将索引指定为-1，可让Python返回最后一个列表元素，索引 -2 返回倒数第二个列表元素，以此类推。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, [<span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, [<span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]]
-print(x[<span class="number">0</span>], type(x[<span class="number">0</span>]))  <span class="comment"># Monday <class &#x27;str&#x27;></span>
-print(x[<span class="number">-1</span>], type(x[<span class="number">-1</span>]))  <span class="comment"># [&#x27;Thursday&#x27;, &#x27;Friday&#x27;] <class &#x27;list&#x27;></span>
-print(x[<span class="number">-2</span>], type(x[<span class="number">-2</span>]))  <span class="comment"># Wednesday <class &#x27;str&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, [&#39;Thursday&#39;, &#39;Friday&#39;]]
+print(x[0], type(x[0]))  # Monday &lt;class &#39;str&#39;&gt;
+print(x[-1], type(x[-1]))  # [&#39;Thursday&#39;, &#39;Friday&#39;] &lt;class &#39;list&#39;&gt;
+print(x[-2], type(x[-2]))  # Wednesday &lt;class &#39;str&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>切片的通用写法是 <code>start : stop : step</code></p>
 <ul>
@@ -660,68 +660,68 @@ print(x[<span class="number">-2</span>], type(x[<span class="number">-2</span>])
 <li>以 <code>step</code> 为 1 (默认) 从编号 <code>start</code> 往列表尾部切片。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">x = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-print(x[<span class="number">3</span>:])  <span class="comment"># [&#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span>
-print(x[<span class="number">-3</span>:])  <span class="comment"># [&#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+print(x[3:])  # [&#39;Thursday&#39;, &#39;Friday&#39;]
+print(x[-3:])  # [&#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>情况 2 - “: stop”</li>
 <li>以 <code>step</code> 为 1 (默认) 从列表头部往编号 <code>stop</code> 切片。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-print(week[:<span class="number">3</span>])  <span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;]</span>
-print(week[:<span class="number">-3</span>])  <span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">week &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+print(week[:3])  # [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;]
+print(week[:-3])  # [&#39;Monday&#39;, &#39;Tuesday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>情况 3 - “start : stop”</li>
 <li>以 <code>step</code> 为 1 (默认) 从编号 <code>start</code> 往编号 <code>stop</code> 切片。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-print(week[<span class="number">1</span>:<span class="number">3</span>])  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;]</span>
-print(week[<span class="number">-3</span>:<span class="number">-1</span>])  <span class="comment"># [&#x27;Wednesday&#x27;, &#x27;Thursday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">week &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+print(week[1:3])  # [&#39;Tuesday&#39;, &#39;Wednesday&#39;]
+print(week[-3:-1])  # [&#39;Wednesday&#39;, &#39;Thursday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>情况 4 - “start : stop : step”</li>
 <li>以具体的 <code>step</code> 从编号 <code>start</code> 往编号 <code>stop</code> 切片。注意最后把 <code>step</code> 设为 -1，相当于将列表反向排列。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
-print(week[<span class="number">1</span>:<span class="number">4</span>:<span class="number">2</span>])  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Thursday&#x27;]</span>
-print(week[:<span class="number">4</span>:<span class="number">2</span>])  <span class="comment"># [&#x27;Monday&#x27;, &#x27;Wednesday&#x27;]</span>
-print(week[<span class="number">1</span>::<span class="number">2</span>])  <span class="comment"># [&#x27;Tuesday&#x27;, &#x27;Thursday&#x27;]</span>
-print(week[::<span class="number">-1</span>])  
-<span class="comment"># [&#x27;Friday&#x27;, &#x27;Thursday&#x27;, &#x27;Wednesday&#x27;, &#x27;Tuesday&#x27;, &#x27;Monday&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">week &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
+print(week[1:4:2])  # [&#39;Tuesday&#39;, &#39;Thursday&#39;]
+print(week[:4:2])  # [&#39;Monday&#39;, &#39;Wednesday&#39;]
+print(week[1::2])  # [&#39;Tuesday&#39;, &#39;Thursday&#39;]
+print(week[::-1])  
+# [&#39;Friday&#39;, &#39;Thursday&#39;, &#39;Wednesday&#39;, &#39;Tuesday&#39;, &#39;Monday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>情况 5 - “ : “</li>
 <li>复制列表中的所有元素（浅拷贝）。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">week = [<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Wednesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">week &#x3D; [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]
 print(week[:])  
-<span class="comment"># [&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;]</span></code></pre>
+# [&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】浅拷贝与深拷贝</p>
-<pre class=" language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>, <span class="number">789</span>, <span class="number"><code class="language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>, <span class="number">789</span>, <span class="number">213</span>]
-list2 = list1
-list3 = list1[:]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 &#x3D; [123, 456, 789, 213]
+list2 &#x3D; list1
+list3 &#x3D; list1[:]
 
-print(list2)  <span class="comment"># [123, 456, 789, 213]</span>
-print(list3)  <span class="comment"># [123, 456, 789, 213]</span>
+print(list2)  # [123, 456, 789, 213]
+print(list3)  # [123, 456, 789, 213]
 list1.sort()
-print(list2)  <span class="comment"># [123, 213, 456, 789] </span>
-print(list3)  <span class="comment"># [123, 456, 789, 213]</span>
+print(list2)  # [123, 213, 456, 789] 
+print(list3)  # [123, 456, 789, 213]
 
-list1 = [[<span class="number">123</span>, <span class="number">456</span>], [<span class="number">789</span>, <span class="number">213</span>]]
-list2 = list1
-list3 = list1[:]
-print(list2)  <span class="comment"># [[123, 456], [789, 213]]</span>
-print(list3)  <span class="comment"># [[123, 456], [789, 213]]</span>
-list1[<span class="number">0</span>][<span class="number">0</span>] = <span class="number">111</span>
-print(list2)  <span class="comment"># [[111, 456], [789, 213]]</span>
-print(list3)  <span class="comment"># [[111, 456], [789, 213]]</span></code></pre>
+list1 &#x3D; [[123, 456], [789, 213]]
+list2 &#x3D; list1
+list3 &#x3D; list1[:]
+print(list2)  # [[123, 456], [789, 213]]
+print(list3)  # [[123, 456], [789, 213]]
+list1[0][0] &#x3D; 111
+print(list2)  # [[111, 456], [789, 213]]
+print(list3)  # [[111, 456], [789, 213]]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="6-列表的常用操作符"><a href="#6-列表的常用操作符" class="headerlink" title="6. 列表的常用操作符"></a>6. 列表的常用操作符</h3><ul>
 <li>等号操作符：<code>==</code></li>
@@ -732,45 +732,45 @@ print(list3)  <span class="comment"># [[111, 456], [789, 213]]</span></code></pr
 <p>「等号 ==」，只有成员、成员位置都相同时才返回True。</p>
 <p>列表拼接有两种方式，用「加号 +」和「乘号 *」，前者首尾拼接，后者复制拼接。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">list1 = [<span class="number">123</span>, <span class="number"><code class="language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>]
-list2 = [<span class="number">456</span>, <span class="number">123</span>]
-list3 = [<span class="number">123</span>, <span class="number">456</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 &#x3D; [123, 456]
+list2 &#x3D; [456, 123]
+list3 &#x3D; [123, 456]
 
-print(list1 == list2)  <span class="comment"># False</span>
-print(list1 == list3)  <span class="comment"># True</span>
+print(list1 &#x3D;&#x3D; list2)  # False
+print(list1 &#x3D;&#x3D; list3)  # True
 
-list4 = list1 + list2  <span class="comment"># extend()</span>
-print(list4)  <span class="comment"># [123, 456, 456, 123]</span>
+list4 &#x3D; list1 + list2  # extend()
+print(list4)  # [123, 456, 456, 123]
 
-list5 = list3 * <span class="number">3</span>
-print(list5)  <span class="comment"># [123, 456, 123, 456, 123, 456]</span>
+list5 &#x3D; list3 * 3
+print(list5)  # [123, 456, 123, 456, 123, 456]
 
-list3 *= <span class="number">3</span>
-print(list3)  <span class="comment"># [123, 456, 123, 456, 123, 456]</span>
+list3 *&#x3D; 3
+print(list3)  # [123, 456, 123, 456, 123, 456]
 
-print(<span class="number">123</span> <span class="keyword">in</span> list3)  <span class="comment"># True</span>
-print(<span class="number">456</span> <span class="keyword">not</span> <span class="keyword">in</span> list3)  <span class="comment"># False</span></code></pre>
+print(123 in list3)  # True
+print(456 not in list3)  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>前面三种方法（<code>append</code>, <code>extend</code>, <code>insert</code>）可对列表增加元素，它们没有返回值，是直接修改了原数据对象。<br>而将两个list相加，需要创建新的 list 对象，从而需要消耗额外的内存，特别是当 list 较大时，尽量不要使用 “+” 来添加list。</p>
 <h3 id="7-列表的其它方法"><a href="#7-列表的其它方法" class="headerlink" title="7. 列表的其它方法"></a>7. 列表的其它方法</h3><p><code>list.count(obj)</code> 统计某个元素在列表中出现的次数</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>] * <span class="number"><code class="language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>] * <span class="number">3</span>
-print(list1)  <span class="comment"># [123, 456, 123, 456, 123, 456]</span>
-num = list1.count(<span class="number">123</span>)
-print(num)  <span class="comment"># 3</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 &#x3D; [123, 456] * 3
+print(list1)  # [123, 456, 123, 456, 123, 456]
+num &#x3D; list1.count(123)
+print(num)  # 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>list.index(x[, start[, end]])</code> 从列表中找出某个值第一个匹配项的索引位置</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>] * <span class="number"><code class="language-highlight python">list1 = [<span class="number">123</span>, <span class="number">456</span>] * <span class="number">5</span>
-print(list1.index(<span class="number">123</span>))  <span class="comment"># 0</span>
-print(list1.index(<span class="number">123</span>, <span class="number">1</span>))  <span class="comment"># 2</span>
-print(list1.index(<span class="number">123</span>, <span class="number">3</span>, <span class="number">7</span>))  <span class="comment"># 4</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 &#x3D; [123, 456] * 5
+print(list1.index(123))  # 0
+print(list1.index(123, 1))  # 2
+print(list1.index(123, 3, 7))  # 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>list.reverse()</code> 反向列表中元素</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="number">123</span>, <span class="number">456</span>, <span class="number"><code class="language-highlight python">x = [<span class="number">123</span>, <span class="number">456</span>, <span class="number">789</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [123, 456, 789]
 x.reverse()
-print(x)  <span class="comment"># [789, 456, 123]</span></code></pre>
+print(x)  # [789, 456, 123]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p><code>list.sort(key=None, reverse=False)</code> 对原列表进行排序。</p>
 <ul>
@@ -779,29 +779,29 @@ print(x)  <span class="comment"># [789, 456, 123]</span></code></pre>
 <li>该方法没有返回值，但是会对列表的对象进行排序。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="number">123</span>, <span class="number">456</span>, <span class="number">789</span>, <span class="number"><code class="language-highlight python">x = [<span class="number">123</span>, <span class="number">456</span>, <span class="number">789</span>, <span class="number">213</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [123, 456, 789, 213]
 x.sort()
 print(x)
-<span class="comment"># [123, 213, 456, 789]</span>
+# [123, 213, 456, 789]
 
-x.sort(reverse=<span class="literal">True</span>)
+x.sort(reverse&#x3D;True)
 print(x)
-<span class="comment"># [789, 456, 213, 123]</span>
+# [789, 456, 213, 123]
 
 
-<span class="comment"># 获取列表的第二个元素</span>
-<span class="function"><span class="keyword">def</span> <span class="title">takeSecond</span>(<span class="params">elem</span>):</span>
-    <span class="keyword">return</span> elem[<span class="number">1</span>]
+# 获取列表的第二个元素
+def takeSecond(elem):
+    return elem[1]
 
 
-x = [(<span class="number">2</span>, <span class="number">2</span>), (<span class="number">3</span>, <span class="number">4</span>), (<span class="number">4</span>, <span class="number">1</span>), (<span class="number">1</span>, <span class="number">3</span>)]
-x.sort(key=takeSecond)
+x &#x3D; [(2, 2), (3, 4), (4, 1), (1, 3)]
+x.sort(key&#x3D;takeSecond)
 print(x)
-<span class="comment"># [(4, 1), (2, 2), (1, 3), (3, 4)]</span>
+# [(4, 1), (2, 2), (1, 3), (3, 4)]
 
-x.sort(key=<span class="keyword">lambda</span> a: a[<span class="number">0</span>])
+x.sort(key&#x3D;lambda a: a[0])
 print(x)
-<span class="comment"># [(1, 3), (2, 2), (3, 4), (4, 1)]</span></code></pre>
+# [(1, 3), (2, 2), (3, 4), (4, 1)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h2><h3 id="1-元组的定义"><a href="#1-元组的定义" class="headerlink" title="1. 元组的定义"></a>1. 元组的定义</h3><p>「元组」定义语法为：<code>(元素1, 元素2, ..., 元素n)</code></p>
 <ul>
@@ -814,65 +814,65 @@ print(x)
 <li>元组与列表类似，也用整数来对它进行索引 (indexing) 和切片 (slicing)。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">t1 = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string"><code class="language-highlight python">t1 = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>)
-t2 = <span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t1 &#x3D; (1, 10.31, &#39;python&#39;)
+t2 &#x3D; 1, 10.31, &#39;python&#39;
 print(t1, type(t1))
-<span class="comment"># (1, 10.31, &#x27;python&#x27;) <class &#x27;tuple&#x27;></span>
+# (1, 10.31, &#39;python&#39;) &lt;class &#39;tuple&#39;&gt;
 
 print(t2, type(t2))
-<span class="comment"># (1, 10.31, &#x27;python&#x27;) <class &#x27;tuple&#x27;></span>
+# (1, 10.31, &#39;python&#39;) &lt;class &#39;tuple&#39;&gt;
 
-tuple1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>)
-print(tuple1[<span class="number">1</span>])  <span class="comment"># 2</span>
-print(tuple1[<span class="number">5</span>:])  <span class="comment"># (6, 7, 8)</span>
-print(tuple1[:<span class="number">5</span>])  <span class="comment"># (1, 2, 3, 4, 5)</span>
-tuple2 = tuple1[:]
-print(tuple2)  <span class="comment"># (1, 2, 3, 4, 5, 6, 7, 8)</span></code></pre>
+tuple1 &#x3D; (1, 2, 3, 4, 5, 6, 7, 8)
+print(tuple1[1])  # 2
+print(tuple1[5:])  # (6, 7, 8)
+print(tuple1[:5])  # (1, 2, 3, 4, 5)
+tuple2 &#x3D; tuple1[:]
+print(tuple2)  # (1, 2, 3, 4, 5, 6, 7, 8)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>创建元组可以用小括号 ()，也可以什么都不用，为了可读性，建议还是用 ()。</li>
 <li>元组中只包含一个元素时，需要在元素后面添加逗号，否则括号会被当作运算符使用。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = (<span class="number"><code class="language-highlight python">x = (<span class="number">1</span>)
-print(type(x))  <span class="comment"># <class &#x27;int&#x27;></span>
-x = <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>
-print(type(x))  <span class="comment"># <class &#x27;tuple&#x27;></span>
-x = []
-print(type(x))  <span class="comment"># <class &#x27;list&#x27;></span>
-x = ()
-print(type(x))  <span class="comment"># <class &#x27;tuple&#x27;></span>
-x = (<span class="number">1</span>,)
-print(type(x))  <span class="comment"># <class &#x27;tuple&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; (1)
+print(type(x))  # &lt;class &#39;int&#39;&gt;
+x &#x3D; 2, 3, 4, 5
+print(type(x))  # &lt;class &#39;tuple&#39;&gt;
+x &#x3D; []
+print(type(x))  # &lt;class &#39;list&#39;&gt;
+x &#x3D; ()
+print(type(x))  # &lt;class &#39;tuple&#39;&gt;
+x &#x3D; (1,)
+print(type(x))  # &lt;class &#39;tuple&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python">print(<span class="number">8</span> * (<span class="number">8</span>))  <span class="comment"><code class="language-highlight python">print(<span class="number">8</span> * (<span class="number">8</span>))  <span class="comment"># 64</span>
-print(<span class="number">8</span> * (<span class="number">8</span>,))  <span class="comment"># (8, 8, 8, 8, 8, 8, 8, 8)</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(8 * (8))  # 64
+print(8 * (8,))  # (8, 8, 8, 8, 8, 8, 8, 8)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>【例子】创建二维元组。</p>
-<pre class=" language-highlight python">x = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>), (<span class="string">&#x27;data&#x27;</span>, <span class="number"><code class="language-highlight python">x = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>), (<span class="string">&#x27;data&#x27;</span>, <span class="number">11</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; (1, 10.31, &#39;python&#39;), (&#39;data&#39;, 11)
 print(x)
-<span class="comment"># ((1, 10.31, &#x27;python&#x27;), (&#x27;data&#x27;, 11))</span>
+# ((1, 10.31, &#39;python&#39;), (&#39;data&#39;, 11))
 
-print(x[<span class="number">0</span>])
-<span class="comment"># (1, 10.31, &#x27;python&#x27;)</span>
-print(x[<span class="number">0</span>][<span class="number">0</span>], x[<span class="number">0</span>][<span class="number">1</span>], x[<span class="number">0</span>][<span class="number">2</span>])
-<span class="comment"># 1 10.31 python</span>
+print(x[0])
+# (1, 10.31, &#39;python&#39;)
+print(x[0][0], x[0][1], x[0][2])
+# 1 10.31 python
 
-print(x[<span class="number">0</span>][<span class="number">0</span>:<span class="number">2</span>])
-<span class="comment"># (1, 10.31)</span></code></pre>
+print(x[0][0:2])
+# (1, 10.31)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-更新和删除一个元组"><a href="#3-更新和删除一个元组" class="headerlink" title="3. 更新和删除一个元组"></a>3. 更新和删除一个元组</h3><p>【例子】</p>
-<pre class=" language-highlight python">week = (<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string"><code class="language-highlight python">week = (<span class="string">&#x27;Monday&#x27;</span>, <span class="string">&#x27;Tuesday&#x27;</span>, <span class="string">&#x27;Thursday&#x27;</span>, <span class="string">&#x27;Friday&#x27;</span>)
-week = week[:<span class="number">2</span>] + (<span class="string">&#x27;Wednesday&#x27;</span>,) + week[<span class="number">2</span>:]
-print(week)  <span class="comment"># (&#x27;Monday&#x27;, &#x27;Tuesday&#x27;, &#x27;Wednesday&#x27;, &#x27;Thursday&#x27;, &#x27;Friday&#x27;)</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">week &#x3D; (&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;)
+week &#x3D; week[:2] + (&#39;Wednesday&#39;,) + week[2:]
+print(week)  # (&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;, &#39;Thursday&#39;, &#39;Friday&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】元组有不可更改 (immutable) 的性质，因此不能直接给元组的元素赋值，但是只要元组中的元素可更改 (mutable)，那么我们可以直接更改其元素，注意这跟赋值其元素不同。</p>
-<pre class=" language-highlight python">t1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, <span class="number">5</span>, <span class="number"><code class="language-highlight python">t1 = (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])
-print(t1)  <span class="comment"># (1, 2, 3, [4, 5, 6])</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t1 &#x3D; (1, 2, 3, [4, 5, 6])
+print(t1)  # (1, 2, 3, [4, 5, 6])
 
-t1[<span class="number">3</span>][<span class="number">0</span>] = <span class="number">9</span>
-print(t1)  <span class="comment"># (1, 2, 3, [9, 5, 6])</span></code></pre>
+t1[3][0] &#x3D; 9
+print(t1)  # (1, 2, 3, [9, 5, 6])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-元组相关的操作符"><a href="#4-元组相关的操作符" class="headerlink" title="4. 元组相关的操作符"></a>4. 元组相关的操作符</h3><ul>
 <li>等号操作符：<code>==</code></li>
@@ -883,73 +883,73 @@ print(t1)  <span class="comment"># (1, 2, 3, [9, 5, 6])</span></code></pre>
 <p>「等号 ==」，只有成员、成员位置都相同时才返回True。</p>
 <p>元组拼接有两种方式，用「加号 +」和「乘号 *」，前者首尾拼接，后者复制拼接。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">t1 = (<span class="number">123</span>, <span class="number"><code class="language-highlight python">t1 = (<span class="number">123</span>, <span class="number">456</span>)
-t2 = (<span class="number">456</span>, <span class="number">123</span>)
-t3 = (<span class="number">123</span>, <span class="number">456</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t1 &#x3D; (123, 456)
+t2 &#x3D; (456, 123)
+t3 &#x3D; (123, 456)
 
-print(t1 == t2)  <span class="comment"># False</span>
-print(t1 == t3)  <span class="comment"># True</span>
+print(t1 &#x3D;&#x3D; t2)  # False
+print(t1 &#x3D;&#x3D; t3)  # True
 
-t4 = t1 + t2
-print(t4)  <span class="comment"># (123, 456, 456, 123)</span>
+t4 &#x3D; t1 + t2
+print(t4)  # (123, 456, 456, 123)
 
-t5 = t3 * <span class="number">3</span>
-print(t5)  <span class="comment"># (123, 456, 123, 456, 123, 456)</span>
+t5 &#x3D; t3 * 3
+print(t5)  # (123, 456, 123, 456, 123, 456)
 
-t3 *= <span class="number">3</span>
-print(t3)  <span class="comment"># (123, 456, 123, 456, 123, 456)</span>
+t3 *&#x3D; 3
+print(t3)  # (123, 456, 123, 456, 123, 456)
 
-print(<span class="number">123</span> <span class="keyword">in</span> t3)  <span class="comment"># True</span>
-print(<span class="number">456</span> <span class="keyword">not</span> <span class="keyword">in</span> t3)  <span class="comment"># False</span></code></pre>
+print(123 in t3)  # True
+print(456 not in t3)  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="5-内置方法"><a href="#5-内置方法" class="headerlink" title="5. 内置方法"></a>5. 内置方法</h3><p>元组大小和内容都不可更改，因此只有 <code>count</code> 和 <code>index</code> 两种方法。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string"><code class="language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>)
-print(t.count(<span class="string">&#x27;python&#x27;</span>))  <span class="comment"># 1</span>
-print(t.index(<span class="number">10.31</span>))  <span class="comment"># 1</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t &#x3D; (1, 10.31, &#39;python&#39;)
+print(t.count(&#39;python&#39;))  # 1
+print(t.index(10.31))  # 1<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>count(&#39;python&#39;)</code> 是记录在元组 <code>t</code> 中该元素出现几次，显然是 1 次</li>
 <li><code>index(10.31)</code> 是找到该元素在元组 <code>t</code> 的索引，显然是 1</li>
 </ul>
 <h3 id="6-解压元组"><a href="#6-解压元组" class="headerlink" title="6. 解压元组"></a>6. 解压元组</h3><p>【例子】解压（unpack）一维元组（有几个元素左边括号定义几个变量）</p>
-<pre class=" language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string"><code class="language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, <span class="string">&#x27;python&#x27;</span>)
-(a, b, c) = t
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t &#x3D; (1, 10.31, &#39;python&#39;)
+(a, b, c) &#x3D; t
 print(a, b, c)
-<span class="comment"># 1 10.31 python</span></code></pre>
+# 1 10.31 python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】解压二维元组（按照元组里的元组结构来定义变量）</p>
-<pre class=" language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, (<span class="string">&#x27;OK&#x27;</span>, <span class="string"><code class="language-highlight python">t = (<span class="number">1</span>, <span class="number">10.31</span>, (<span class="string">&#x27;OK&#x27;</span>, <span class="string">&#x27;python&#x27;</span>))
-(a, b, (c, d)) = t
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t &#x3D; (1, 10.31, (&#39;OK&#39;, &#39;python&#39;))
+(a, b, (c, d)) &#x3D; t
 print(a, b, c, d)
-<span class="comment"># 1 10.31 OK python</span></code></pre>
+# 1 10.31 OK python<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】如果你只想要元组其中几个元素，用通配符「*」，英文叫 wildcard，在计算机语言中代表一个或多个元素。下例就是把多个元素丢给了 <code>rest</code> 变量。</p>
-<pre class=" language-highlight python">t = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number"><code class="language-highlight python">t = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>
-a, b, *rest, c = t
-print(a, b, c)  <span class="comment"># 1 2 5</span>
-print(rest)  <span class="comment"># [3, 4]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t &#x3D; 1, 2, 3, 4, 5
+a, b, *rest, c &#x3D; t
+print(a, b, c)  # 1 2 5
+print(rest)  # [3, 4]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】如果你根本不在乎 rest 变量，那么就用通配符「*」加上下划线「_」。</p>
-<pre class=" language-highlight python">t = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number"><code class="language-highlight python">t = <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>
-a, b, *_ = t
-print(a, b)  <span class="comment"># 1 2</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t &#x3D; 1, 2, 3, 4, 5
+a, b, *_ &#x3D; t
+print(a, b)  # 1 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><h3 id="1-字符串的定义"><a href="#1-字符串的定义" class="headerlink" title="1. 字符串的定义"></a>1. 字符串的定义</h3><ul>
 <li>Python 中字符串被定义为引号之间的字符集合。</li>
 <li>Python 支持使用成对的 单引号 或 双引号。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">t1 = <span class="string"><code class="language-highlight python">t1 = <span class="string">&#x27;i love Python!&#x27;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">t1 &#x3D; &#39;i love Python!&#39;
 print(t1, type(t1))
-<span class="comment"># i love Python! <class &#x27;str&#x27;></span>
+# i love Python! &lt;class &#39;str&#39;&gt;
 
-t2 = <span class="string">"I love Python!"</span>
+t2 &#x3D; &quot;I love Python!&quot;
 print(t2, type(t2))
-<span class="comment"># I love Python! <class &#x27;str&#x27;></span>
+# I love Python! &lt;class &#39;str&#39;&gt;
 
-print(<span class="number">5</span> + <span class="number">8</span>)  <span class="comment"># 13</span>
-print(<span class="string">&#x27;5&#x27;</span> + <span class="string">&#x27;8&#x27;</span>)  <span class="comment"># 58</span></code></pre>
+print(5 + 8)  # 13
+print(&#39;5&#39; + &#39;8&#39;)  # 58<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>Python 的常用转义字符</li>
@@ -987,28 +987,28 @@ print(<span class="string">&#x27;5&#x27;</span> + <span class="string">&#x27;8&#
 </tr>
 </tbody></table>
 <p>【例子】如果字符串中需要出现单引号或双引号，可以使用转义符号<code>\</code>对字符串中的符号进行转义。</p>
-<pre class=" language-highlight python">print(<span class="string">&#x27;let\&#x27;s go&#x27;</span>)  <span class="comment"><code class="language-highlight python">print(<span class="string">&#x27;let\&#x27;s go&#x27;</span>)  <span class="comment"># let&#x27;s go</span>
-print(<span class="string">"let&#x27;s go"</span>)  <span class="comment"># let&#x27;s go</span>
-print(<span class="string">&#x27;C:\\now&#x27;</span>)  <span class="comment"># C:\now</span>
-print(<span class="string">"C:\\Program Files\\Intel\\Wifi\\Help"</span>)
-<span class="comment"># C:\Program Files\Intel\Wifi\Help</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(&#39;let\&#39;s go&#39;)  # let&#39;s go
+print(&quot;let&#39;s go&quot;)  # let&#39;s go
+print(&#39;C:\\now&#39;)  # C:\now
+print(&quot;C:\\Program Files\\Intel\\Wifi\\Help&quot;)
+# C:\Program Files\Intel\Wifi\Help<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】原始字符串只需要在字符串前边加一个英文字母 r 即可。</p>
-<pre class=" language-highlight python">print(<span class="string"><code class="language-highlight python">print(<span class="string">r&#x27;C:\Program Files\Intel\Wifi\Help&#x27;</span>)  
-<span class="comment"># C:\Program Files\Intel\Wifi\Help</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(r&#39;C:\Program Files\Intel\Wifi\Help&#39;)  
+# C:\Program Files\Intel\Wifi\Help<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>【例子】三引号允许一个字符串跨多行，字符串中可以包含换行符、制表符以及其他特殊字符。</p>
-<pre class=" language-highlight python">para_str = <span class="string"><code class="language-highlight python">para_str = <span class="string">"""这是一个多行字符串的实例</span>
-<span class="string">多行字符串可以使用制表符</span>
-<span class="string">TAB ( \t )。</span>
-<span class="string">也可以使用换行符 [ \n ]。</span>
-<span class="string">"""</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">para_str &#x3D; &quot;&quot;&quot;这是一个多行字符串的实例
+多行字符串可以使用制表符
+TAB ( \t )。
+也可以使用换行符 [ \n ]。
+&quot;&quot;&quot;
 print(para_str)
-<span class="comment"># 这是一个多行字符串的实例</span>
-<span class="comment"># 多行字符串可以使用制表符</span>
-<span class="comment"># TAB (    )。</span>
-<span class="comment"># 也可以使用换行符 [</span>
-<span class="comment">#  ]。</span></code></pre>
+# 这是一个多行字符串的实例
+# 多行字符串可以使用制表符
+# TAB (    )。
+# 也可以使用换行符 [
+#  ]。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="2-字符串的切片与拼接"><a href="#2-字符串的切片与拼接" class="headerlink" title="2. 字符串的切片与拼接"></a>2. 字符串的切片与拼接</h3><ul>
 <li>类似于元组具有不可修改性</li>
@@ -1017,25 +1017,25 @@ print(para_str)
 <li>索引值可正可负，正索引从 0 开始，从左往右；负索引从 -1 开始，从右往左。使用负数索引时，会从最后一个元素开始计数。最后一个元素的位置编号是 -1。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str1 = <span class="string"><code class="language-highlight python">str1 = <span class="string">&#x27;I Love LsgoGroup&#x27;</span>
-print(str1[:<span class="number">6</span>])  <span class="comment"># I Love</span>
-print(str1[<span class="number">5</span>])  <span class="comment"># e</span>
-print(str1[:<span class="number">6</span>] + <span class="string">" 插入的字符串 "</span> + str1[<span class="number">6</span>:])  
-<span class="comment"># I Love 插入的字符串  LsgoGroup</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str1 &#x3D; &#39;I Love LsgoGroup&#39;
+print(str1[:6])  # I Love
+print(str1[5])  # e
+print(str1[:6] + &quot; 插入的字符串 &quot; + str1[6:])  
+# I Love 插入的字符串  LsgoGroup
 
-s = <span class="string">&#x27;Python&#x27;</span>
-print(s)  <span class="comment"># Python</span>
-print(s[<span class="number">2</span>:<span class="number">4</span>])  <span class="comment"># th</span>
-print(s[<span class="number">-5</span>:<span class="number">-2</span>])  <span class="comment"># yth</span>
-print(s[<span class="number">2</span>])  <span class="comment"># t</span>
-print(s[<span class="number">-1</span>])  <span class="comment"># n</span></code></pre>
+s &#x3D; &#39;Python&#39;
+print(s)  # Python
+print(s[2:4])  # th
+print(s[-5:-2])  # yth
+print(s[2])  # t
+print(s[-1])  # n<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-字符串的常用内置方法"><a href="#3-字符串的常用内置方法" class="headerlink" title="3. 字符串的常用内置方法"></a>3. 字符串的常用内置方法</h3><ul>
 <li><code>capitalize()</code> 将字符串的第一个字符转换为大写。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str2 = <span class="string"><code class="language-highlight python">str2 = <span class="string">&#x27;xiaoxie&#x27;</span>
-print(str2.capitalize())  <span class="comment"># Xiaoxie</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str2 &#x3D; &#39;xiaoxie&#39;
+print(str2.capitalize())  # Xiaoxie<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>lower()</code> 转换字符串中所有大写字符为小写。</li>
@@ -1043,56 +1043,56 @@ print(str2.capitalize())  <span class="comment"># Xiaoxie</span></code></pre>
 <li><code>swapcase()</code> 将字符串中大写转换为小写，小写转换为大写。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str2 = <span class="string"><code class="language-highlight python">str2 = <span class="string">"DAXIExiaoxie"</span>
-print(str2.lower())  <span class="comment"># daxiexiaoxie</span>
-print(str2.upper())  <span class="comment"># DAXIEXIAOXIE</span>
-print(str2.swapcase())  <span class="comment"># daxieXIAOXIE</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str2 &#x3D; &quot;DAXIExiaoxie&quot;
+print(str2.lower())  # daxiexiaoxie
+print(str2.upper())  # DAXIEXIAOXIE
+print(str2.swapcase())  # daxieXIAOXIE<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>count(str, beg= 0,end=len(string))</code> 返回<code>str</code>在 string 里面出现的次数，如果<code>beg</code>或者<code>end</code>指定则返回指定范围内<code>str</code>出现的次数。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str2 = <span class="string"><code class="language-highlight python">str2 = <span class="string">"DAXIExiaoxie"</span>
-print(str2.count(<span class="string">&#x27;xi&#x27;</span>))  <span class="comment"># 2</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str2 &#x3D; &quot;DAXIExiaoxie&quot;
+print(str2.count(&#39;xi&#39;))  # 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>endswith(suffix, beg=0, end=len(string))</code> 检查字符串是否以指定子字符串 <code>suffix</code> 结束，如果是，返回 True，否则返回 False。如果 <code>beg</code> 和 <code>end</code> 指定值，则在指定范围内检查。</li>
 <li><code>startswith(substr, beg=0,end=len(string))</code> 检查字符串是否以指定子字符串 <code>substr</code> 开头，如果是，返回 True，否则返回 False。如果 <code>beg</code> 和 <code>end</code> 指定值，则在指定范围内检查。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str2 = <span class="string"><code class="language-highlight python">str2 = <span class="string">"DAXIExiaoxie"</span>
-print(str2.endswith(<span class="string">&#x27;ie&#x27;</span>))  <span class="comment"># True</span>
-print(str2.endswith(<span class="string">&#x27;xi&#x27;</span>))  <span class="comment"># False</span>
-print(str2.startswith(<span class="string">&#x27;Da&#x27;</span>))  <span class="comment"># False</span>
-print(str2.startswith(<span class="string">&#x27;DA&#x27;</span>))  <span class="comment"># True</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str2 &#x3D; &quot;DAXIExiaoxie&quot;
+print(str2.endswith(&#39;ie&#39;))  # True
+print(str2.endswith(&#39;xi&#39;))  # False
+print(str2.startswith(&#39;Da&#39;))  # False
+print(str2.startswith(&#39;DA&#39;))  # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>find(str, beg=0, end=len(string))</code> 检测 <code>str</code> 是否包含在字符串中，如果指定范围 <code>beg</code> 和 <code>end</code>，则检查是否包含在指定范围内，如果包含，返回开始的索引值，否则返回 -1。</li>
 <li><code>rfind(str, beg=0,end=len(string))</code> 类似于 <code>find()</code> 函数，不过是从右边开始查找。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str2 = <span class="string"><code class="language-highlight python">str2 = <span class="string">"DAXIExiaoxie"</span>
-print(str2.find(<span class="string">&#x27;xi&#x27;</span>))  <span class="comment"># 5</span>
-print(str2.find(<span class="string">&#x27;ix&#x27;</span>))  <span class="comment"># -1</span>
-print(str2.rfind(<span class="string">&#x27;xi&#x27;</span>))  <span class="comment"># 9</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str2 &#x3D; &quot;DAXIExiaoxie&quot;
+print(str2.find(&#39;xi&#39;))  # 5
+print(str2.find(&#39;ix&#39;))  # -1
+print(str2.rfind(&#39;xi&#39;))  # 9<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>isnumeric()</code> 如果字符串中只包含数字字符，则返回 True，否则返回 False。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str3 = <span class="string"><code class="language-highlight python">str3 = <span class="string">&#x27;12345&#x27;</span>
-print(str3.isnumeric())  <span class="comment"># True</span>
-str3 += <span class="string">&#x27;a&#x27;</span>
-print(str3.isnumeric())  <span class="comment"># False</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str3 &#x3D; &#39;12345&#39;
+print(str3.isnumeric())  # True
+str3 +&#x3D; &#39;a&#39;
+print(str3.isnumeric())  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>ljust(width[, fillchar])</code>返回一个原字符串左对齐，并使用<code>fillchar</code>（默认空格）填充至长度<code>width</code>的新字符串。</li>
 <li><code>rjust(width[, fillchar])</code>返回一个原字符串右对齐，并使用<code>fillchar</code>（默认空格）填充至长度<code>width</code>的新字符串。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str4 = <span class="string"><code class="language-highlight python">str4 = <span class="string">&#x27;1101&#x27;</span>
-print(str4.ljust(<span class="number">8</span>, <span class="string">&#x27;0&#x27;</span>))  <span class="comment"># 11010000</span>
-print(str4.rjust(<span class="number">8</span>, <span class="string">&#x27;0&#x27;</span>))  <span class="comment"># 00001101</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str4 &#x3D; &#39;1101&#39;
+print(str4.ljust(8, &#39;0&#39;))  # 11010000
+print(str4.rjust(8, &#39;0&#39;))  # 00001101<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>lstrip([chars])</code> 截掉字符串左边的空格或指定字符。</li>
@@ -1100,116 +1100,116 @@ print(str4.rjust(<span class="number">8</span>, <span class="string">&#x27;0&#x2
 <li><code>strip([chars])</code> 在字符串上执行<code>lstrip()</code>和<code>rstrip()</code>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str5 = <span class="string"><code class="language-highlight python">str5 = <span class="string">&#x27; I Love LsgoGroup &#x27;</span>
-print(str5.lstrip())  <span class="comment"># &#x27;I Love LsgoGroup &#x27;</span>
-print(str5.lstrip().strip(<span class="string">&#x27;I&#x27;</span>))  <span class="comment"># &#x27; Love LsgoGroup &#x27;</span>
-print(str5.rstrip())  <span class="comment"># &#x27; I Love LsgoGroup&#x27;</span>
-print(str5.strip())  <span class="comment"># &#x27;I Love LsgoGroup&#x27;</span>
-print(str5.strip().strip(<span class="string">&#x27;p&#x27;</span>))  <span class="comment"># &#x27;I Love LsgoGrou&#x27;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str5 &#x3D; &#39; I Love LsgoGroup &#39;
+print(str5.lstrip())  # &#39;I Love LsgoGroup &#39;
+print(str5.lstrip().strip(&#39;I&#39;))  # &#39; Love LsgoGroup &#39;
+print(str5.rstrip())  # &#39; I Love LsgoGroup&#39;
+print(str5.strip())  # &#39;I Love LsgoGroup&#39;
+print(str5.strip().strip(&#39;p&#39;))  # &#39;I Love LsgoGrou&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>partition(sub)</code> 找到子字符串sub，把字符串分为一个三元组<code>(pre_sub,sub,fol_sub)</code>，如果字符串中不包含sub则返回<code>(&#39;原字符串&#39;,&#39;&#39;,&#39;&#39;)</code>。</li>
 <li><code>rpartition(sub)</code>类似于<code>partition()</code>方法，不过是从右边开始查找。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str5 = <span class="string"><code class="language-highlight python">str5 = <span class="string">&#x27; I Love LsgoGroup &#x27;</span>
-print(str5.strip().partition(<span class="string">&#x27;o&#x27;</span>))  <span class="comment"># (&#x27;I L&#x27;, &#x27;o&#x27;, &#x27;ve LsgoGroup&#x27;)</span>
-print(str5.strip().partition(<span class="string">&#x27;m&#x27;</span>))  <span class="comment"># (&#x27;I Love LsgoGroup&#x27;, &#x27;&#x27;, &#x27;&#x27;)</span>
-print(str5.strip().rpartition(<span class="string">&#x27;o&#x27;</span>))  <span class="comment"># (&#x27;I Love LsgoGr&#x27;, &#x27;o&#x27;, &#x27;up&#x27;)</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str5 &#x3D; &#39; I Love LsgoGroup &#39;
+print(str5.strip().partition(&#39;o&#39;))  # (&#39;I L&#39;, &#39;o&#39;, &#39;ve LsgoGroup&#39;)
+print(str5.strip().partition(&#39;m&#39;))  # (&#39;I Love LsgoGroup&#39;, &#39;&#39;, &#39;&#39;)
+print(str5.strip().rpartition(&#39;o&#39;))  # (&#39;I Love LsgoGr&#39;, &#39;o&#39;, &#39;up&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>replace(old, new [, max])</code> 把 将字符串中的<code>old</code>替换成<code>new</code>，如果<code>max</code>指定，则替换不超过<code>max</code>次。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str5 = <span class="string"><code class="language-highlight python">str5 = <span class="string">&#x27; I Love LsgoGroup &#x27;</span>
-print(str5.strip().replace(<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;We&#x27;</span>))  <span class="comment"># We Love LsgoGroup</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str5 &#x3D; &#39; I Love LsgoGroup &#39;
+print(str5.strip().replace(&#39;I&#39;, &#39;We&#39;))  # We Love LsgoGroup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>split(str=&quot;&quot;, num)</code> 不带参数默认是以空格为分隔符切片字符串，如果<code>num</code>参数有设置，则仅分隔<code>num</code>个子字符串，返回切片后的子字符串拼接的列表。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str5 = <span class="string"><code class="language-highlight python">str5 = <span class="string">&#x27; I Love LsgoGroup &#x27;</span>
-print(str5.strip().split())  <span class="comment"># [&#x27;I&#x27;, &#x27;Love&#x27;, &#x27;LsgoGroup&#x27;]</span>
-print(str5.strip().split(<span class="string">&#x27;o&#x27;</span>))  <span class="comment"># [&#x27;I L&#x27;, &#x27;ve Lsg&#x27;, &#x27;Gr&#x27;, &#x27;up&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str5 &#x3D; &#39; I Love LsgoGroup &#39;
+print(str5.strip().split())  # [&#39;I&#39;, &#39;Love&#39;, &#39;LsgoGroup&#39;]
+print(str5.strip().split(&#39;o&#39;))  # [&#39;I L&#39;, &#39;ve Lsg&#39;, &#39;Gr&#39;, &#39;up&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python">u = <span class="string"><code class="language-highlight python">u = <span class="string">"www.baidu.com.cn"</span>
-<span class="comment"># 使用默认分隔符</span>
-print(u.split())  <span class="comment"># [&#x27;www.baidu.com.cn&#x27;]</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">u &#x3D; &quot;www.baidu.com.cn&quot;
+# 使用默认分隔符
+print(u.split())  # [&#39;www.baidu.com.cn&#39;]
 
-<span class="comment"># 以"."为分隔符</span>
-print((u.split(<span class="string">&#x27;.&#x27;</span>)))  <span class="comment"># [&#x27;www&#x27;, &#x27;baidu&#x27;, &#x27;com&#x27;, &#x27;cn&#x27;]</span>
+# 以&quot;.&quot;为分隔符
+print((u.split(&#39;.&#39;)))  # [&#39;www&#39;, &#39;baidu&#39;, &#39;com&#39;, &#39;cn&#39;]
 
-<span class="comment"># 分割0次</span>
-print((u.split(<span class="string">"."</span>, <span class="number">0</span>)))  <span class="comment"># [&#x27;www.baidu.com.cn&#x27;]</span>
+# 分割0次
+print((u.split(&quot;.&quot;, 0)))  # [&#39;www.baidu.com.cn&#39;]
 
-<span class="comment"># 分割一次</span>
-print((u.split(<span class="string">"."</span>, <span class="number">1</span>)))  <span class="comment"># [&#x27;www&#x27;, &#x27;baidu.com.cn&#x27;]</span>
+# 分割一次
+print((u.split(&quot;.&quot;, 1)))  # [&#39;www&#39;, &#39;baidu.com.cn&#39;]
 
-<span class="comment"># 分割两次</span>
-print(u.split(<span class="string">"."</span>, <span class="number">2</span>))  <span class="comment"># [&#x27;www&#x27;, &#x27;baidu&#x27;, &#x27;com.cn&#x27;]</span>
+# 分割两次
+print(u.split(&quot;.&quot;, 2))  # [&#39;www&#39;, &#39;baidu&#39;, &#39;com.cn&#39;]
 
-<span class="comment"># 分割两次，并取序列为1的项</span>
-print((u.split(<span class="string">"."</span>, <span class="number">2</span>)[<span class="number">1</span>]))  <span class="comment"># baidu</span>
+# 分割两次，并取序列为1的项
+print((u.split(&quot;.&quot;, 2)[1]))  # baidu
 
-<span class="comment"># 分割两次，并把分割后的三个部分保存到三个变量</span>
-u1, u2, u3 = u.split(<span class="string">"."</span>, <span class="number">2</span>)
-print(u1)  <span class="comment"># www</span>
-print(u2)  <span class="comment"># baidu</span>
-print(u3)  <span class="comment"># com.cn</span></code></pre>
+# 分割两次，并把分割后的三个部分保存到三个变量
+u1, u2, u3 &#x3D; u.split(&quot;.&quot;, 2)
+print(u1)  # www
+print(u2)  # baidu
+print(u3)  # com.cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】去掉换行符</p>
-<pre class=" language-highlight python">c = <span class="string"><code class="language-highlight python">c = <span class="string">&#x27;&#x27;&#x27;say</span>
-<span class="string">hello</span>
-<span class="string">baby&#x27;&#x27;&#x27;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">c &#x3D; &#39;&#39;&#39;say
+hello
+baby&#39;&#39;&#39;
 
 print(c)
-<span class="comment"># say</span>
-<span class="comment"># hello</span>
-<span class="comment"># baby</span>
+# say
+# hello
+# baby
 
-print(c.split(<span class="string">&#x27;\n&#x27;</span>))  <span class="comment"># [&#x27;say&#x27;, &#x27;hello&#x27;, &#x27;baby&#x27;]</span></code></pre>
+print(c.split(&#39;\n&#39;))  # [&#39;say&#39;, &#39;hello&#39;, &#39;baby&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python">string = <span class="string"><code class="language-highlight python">string = <span class="string">"hello boy<[www.baidu.com]>byebye"</span>
-print(string.split(<span class="string">&#x27;[&#x27;</span>)[<span class="number">1</span>].split(<span class="string">&#x27;]&#x27;</span>)[<span class="number">0</span>])  <span class="comment"># www.baidu.com</span>
-print(string.split(<span class="string">&#x27;[&#x27;</span>)[<span class="number">1</span>].split(<span class="string">&#x27;]&#x27;</span>)[<span class="number">0</span>].split(<span class="string">&#x27;.&#x27;</span>))  <span class="comment"># [&#x27;www&#x27;, &#x27;baidu&#x27;, &#x27;com&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">string &#x3D; &quot;hello boy&lt;[www.baidu.com]&gt;byebye&quot;
+print(string.split(&#39;[&#39;)[1].split(&#39;]&#39;)[0])  # www.baidu.com
+print(string.split(&#39;[&#39;)[1].split(&#39;]&#39;)[0].split(&#39;.&#39;))  # [&#39;www&#39;, &#39;baidu&#39;, &#39;com&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>splitlines([keepends])</code> 按照行(‘\r’, ‘\r\n’, \n’)分隔，返回一个包含各行作为元素的列表，如果参数<code>keepends</code>为 False，不包含换行符，如果为 True，则保留换行符。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str6 = <span class="string"><code class="language-highlight python">str6 = <span class="string">&#x27;I \n Love \n LsgoGroup&#x27;</span>
-print(str6.splitlines())  <span class="comment"># [&#x27;I &#x27;, &#x27; Love &#x27;, &#x27; LsgoGroup&#x27;]</span>
-print(str6.splitlines(<span class="literal">True</span>))  <span class="comment"># [&#x27;I \n&#x27;, &#x27; Love \n&#x27;, &#x27; LsgoGroup&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str6 &#x3D; &#39;I \n Love \n LsgoGroup&#39;
+print(str6.splitlines())  # [&#39;I &#39;, &#39; Love &#39;, &#39; LsgoGroup&#39;]
+print(str6.splitlines(True))  # [&#39;I \n&#39;, &#39; Love \n&#39;, &#39; LsgoGroup&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>maketrans(intab, outtab)</code> 创建字符映射的转换表，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。</li>
 <li><code>translate(table, deletechars=&quot;&quot;)</code> 根据参数<code>table</code>给出的表，转换字符串的字符，要过滤掉的字符放到<code>deletechars</code>参数中。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str7 = <span class="string"><code class="language-highlight python">str7 = <span class="string">&#x27;this is string example....wow!!!&#x27;</span>
-intab = <span class="string">&#x27;aeiou&#x27;</span>
-outtab = <span class="string">&#x27;12345&#x27;</span>
-trantab = str7.maketrans(intab, outtab)
-print(trantab)  <span class="comment"># &#123;97: 49, 111: 52, 117: 53, 101: 50, 105: 51&#125;</span>
-print(str7.translate(trantab))  <span class="comment"># th3s 3s str3ng 2x1mpl2....w4w!!!</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str7 &#x3D; &#39;this is string example....wow!!!&#39;
+intab &#x3D; &#39;aeiou&#39;
+outtab &#x3D; &#39;12345&#39;
+trantab &#x3D; str7.maketrans(intab, outtab)
+print(trantab)  # &#123;97: 49, 111: 52, 117: 53, 101: 50, 105: 51&#125;
+print(str7.translate(trantab))  # th3s 3s str3ng 2x1mpl2....w4w!!!<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-字符串格式化"><a href="#4-字符串格式化" class="headerlink" title="4. 字符串格式化"></a>4. 字符串格式化</h3><ul>
 <li><code>format</code> 格式化函数</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">str8 = <span class="string">&quot;&#123;0&#125; Love &#123;1&#125;&quot;</span>.format(<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;Lsgogroup&#x27;</span>)  <span class="comment"><code class="language-highlight python">str8 = <span class="string">&quot;&#123;0&#125; Love &#123;1&#125;&quot;</span>.format(<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27;Lsgogroup&#x27;</span>)  <span class="comment"># 位置参数</span>
-print(str8)  <span class="comment"># I Love Lsgogroup</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">str8 &#x3D; &quot;&#123;0&#125; Love &#123;1&#125;&quot;.format(&#39;I&#39;, &#39;Lsgogroup&#39;)  # 位置参数
+print(str8)  # I Love Lsgogroup
 
-str8 = <span class="string">"&#123;a&#125; Love &#123;b&#125;"</span>.format(a=<span class="string">&#x27;I&#x27;</span>, b=<span class="string">&#x27;Lsgogroup&#x27;</span>)  <span class="comment"># 关键字参数</span>
-print(str8)  <span class="comment"># I Love Lsgogroup</span>
+str8 &#x3D; &quot;&#123;a&#125; Love &#123;b&#125;&quot;.format(a&#x3D;&#39;I&#39;, b&#x3D;&#39;Lsgogroup&#39;)  # 关键字参数
+print(str8)  # I Love Lsgogroup
 
-str8 = <span class="string">"&#123;0&#125; Love &#123;b&#125;"</span>.format(<span class="string">&#x27;I&#x27;</span>, b=<span class="string">&#x27;Lsgogroup&#x27;</span>)  <span class="comment"># 位置参数要在关键字参数之前</span>
-print(str8)  <span class="comment"># I Love Lsgogroup</span>
+str8 &#x3D; &quot;&#123;0&#125; Love &#123;b&#125;&quot;.format(&#39;I&#39;, b&#x3D;&#39;Lsgogroup&#39;)  # 位置参数要在关键字参数之前
+print(str8)  # I Love Lsgogroup
 
-str8 = <span class="string">&#x27;&#123;0:.2f&#125;&#123;1&#125;&#x27;</span>.format(<span class="number">27.658</span>, <span class="string">&#x27;GB&#x27;</span>)  <span class="comment"># 保留小数点后两位</span>
-print(str8)  <span class="comment"># 27.66GB</span></code></pre>
+str8 &#x3D; &#39;&#123;0:.2f&#125;&#123;1&#125;&#39;.format(27.658, &#39;GB&#39;)  # 保留小数点后两位
+print(str8)  # 27.66GB<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>Python 字符串格式化符号</li>
@@ -1271,20 +1271,20 @@ print(str8)  <span class="comment"># 27.66GB</span></code></pre>
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(<span class="string">&#x27;%c&#x27;</span> % <span class="number">97</span>)  <span class="comment"><code class="language-highlight python">print(<span class="string">&#x27;%c&#x27;</span> % <span class="number">97</span>)  <span class="comment"># a</span>
-print(<span class="string">&#x27;%c %c %c&#x27;</span> % (<span class="number">97</span>, <span class="number">98</span>, <span class="number">99</span>))  <span class="comment"># a b c</span>
-print(<span class="string">&#x27;%d + %d = %d&#x27;</span> % (<span class="number">4</span>, <span class="number">5</span>, <span class="number">9</span>))  <span class="comment"># 4 + 5 = 9</span>
-print(<span class="string">"我叫 %s 今年 %d 岁!"</span> % (<span class="string">&#x27;小明&#x27;</span>, <span class="number">10</span>))  <span class="comment"># 我叫 小明 今年 10 岁!</span>
-print(<span class="string">&#x27;%o&#x27;</span> % <span class="number">10</span>)  <span class="comment"># 12</span>
-print(<span class="string">&#x27;%x&#x27;</span> % <span class="number">10</span>)  <span class="comment"># a</span>
-print(<span class="string">&#x27;%X&#x27;</span> % <span class="number">10</span>)  <span class="comment"># A</span>
-print(<span class="string">&#x27;%f&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># 27.658000</span>
-print(<span class="string">&#x27;%e&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># 2.765800e+01</span>
-print(<span class="string">&#x27;%E&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># 2.765800E+01</span>
-print(<span class="string">&#x27;%g&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># 27.658</span>
-text = <span class="string">"I am %d years old."</span> % <span class="number">22</span>
-print(<span class="string">"I said: %s."</span> % text)  <span class="comment"># I said: I am 22 years old..</span>
-print(<span class="string">"I said: %r."</span> % text)  <span class="comment"># I said: &#x27;I am 22 years old.&#x27;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(&#39;%c&#39; % 97)  # a
+print(&#39;%c %c %c&#39; % (97, 98, 99))  # a b c
+print(&#39;%d + %d &#x3D; %d&#39; % (4, 5, 9))  # 4 + 5 &#x3D; 9
+print(&quot;我叫 %s 今年 %d 岁!&quot; % (&#39;小明&#39;, 10))  # 我叫 小明 今年 10 岁!
+print(&#39;%o&#39; % 10)  # 12
+print(&#39;%x&#39; % 10)  # a
+print(&#39;%X&#39; % 10)  # A
+print(&#39;%f&#39; % 27.658)  # 27.658000
+print(&#39;%e&#39; % 27.658)  # 2.765800e+01
+print(&#39;%E&#39; % 27.658)  # 2.765800E+01
+print(&#39;%g&#39; % 27.658)  # 27.658
+text &#x3D; &quot;I am %d years old.&quot; % 22
+print(&quot;I said: %s.&quot; % text)  # I said: I am 22 years old..
+print(&quot;I said: %r.&quot; % text)  # I said: &#39;I am 22 years old.&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>格式化操作符辅助指令</li>
@@ -1318,14 +1318,14 @@ print(<span class="string">"I said: %r."</span> % text)  <span class="comment">#
 </tr>
 </tbody></table>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(<span class="string">&#x27;%5.1f&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"><code class="language-highlight python">print(<span class="string">&#x27;%5.1f&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># &#x27; 27.7&#x27;</span>
-print(<span class="string">&#x27;%.2e&#x27;</span> % <span class="number">27.658</span>)  <span class="comment"># 2.77e+01</span>
-print(<span class="string">&#x27;%10d&#x27;</span> % <span class="number">10</span>)  <span class="comment"># &#x27;        10&#x27;</span>
-print(<span class="string">&#x27;%-10d&#x27;</span> % <span class="number">10</span>)  <span class="comment"># &#x27;10        &#x27;</span>
-print(<span class="string">&#x27;%+d&#x27;</span> % <span class="number">10</span>)  <span class="comment"># +10</span>
-print(<span class="string">&#x27;%#o&#x27;</span> % <span class="number">10</span>)  <span class="comment"># 0o12</span>
-print(<span class="string">&#x27;%#x&#x27;</span> % <span class="number">108</span>)  <span class="comment"># 0x6c</span>
-print(<span class="string">&#x27;%010d&#x27;</span> % <span class="number">5</span>)  <span class="comment"># 0000000005</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(&#39;%5.1f&#39; % 27.658)  # &#39; 27.7&#39;
+print(&#39;%.2e&#39; % 27.658)  # 2.77e+01
+print(&#39;%10d&#39; % 10)  # &#39;        10&#39;
+print(&#39;%-10d&#39; % 10)  # &#39;10        &#39;
+print(&#39;%+d&#39; % 10)  # +10
+print(&#39;%#o&#39; % 10)  # 0o12
+print(&#39;%#x&#39; % 108)  # 0x6c
+print(&#39;%010d&#39; % 5)  # 0000000005<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="1-可变类型与不可变类型"><a href="#1-可变类型与不可变类型" class="headerlink" title="1. 可变类型与不可变类型"></a>1. 可变类型与不可变类型</h3><ul>
 <li>序列是以连续的整数为索引，与此不同的是，字典以”关键字”为索引，关键字可以是任意不可变类型，通常用字符串或数值。</li>
@@ -1337,31 +1337,31 @@ print(<span class="string">&#x27;%010d&#x27;</span> % <span class="number">5</sp
 <li>便捷方法：用 <code>hash(X)</code>，只要不报错，证明 <code>X</code> 可被哈希，即不可变，反过来不可被哈希，即可变。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">i = <span class="number"><code class="language-highlight python">i = <span class="number">1</span>
-print(id(i))  <span class="comment"># 140732167000896</span>
-i = i + <span class="number">2</span>
-print(id(i))  <span class="comment"># 140732167000960</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">i &#x3D; 1
+print(id(i))  # 140732167000896
+i &#x3D; i + 2
+print(id(i))  # 140732167000960
 
-l = [<span class="number">1</span>, <span class="number">2</span>]
-print(id(l))  <span class="comment"># 4300825160</span>
-l.append(<span class="string">&#x27;Python&#x27;</span>)
-print(id(l))  <span class="comment"># 4300825160</span></code></pre>
+l &#x3D; [1, 2]
+print(id(l))  # 4300825160
+l.append(&#39;Python&#39;)
+print(id(l))  # 4300825160<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>整数 <code>i</code> 在加 1 之后的 <code>id</code> 和之前不一样，因此加完之后的这个 <code>i</code> (虽然名字没变)，但不是加之前的那个 <code>i</code> 了，因此整数是不可变类型。</li>
 <li>列表 <code>l</code> 在附加 <code>&#39;Python&#39;</code> 之后的 <code>id</code> 和之前一样，因此列表是可变类型。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(hash(<span class="string">&#x27;Name&#x27;</span>))  <span class="comment"><code class="language-highlight python">print(hash(<span class="string">&#x27;Name&#x27;</span>))  <span class="comment"># 7047218704141848153</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(hash(&#39;Name&#39;))  # 7047218704141848153
 
-print(hash((<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;Python&#x27;</span>)))  <span class="comment"># 1704535747474881831</span>
+print(hash((1, 2, &#39;Python&#39;)))  # 1704535747474881831
 
-print(hash([<span class="number">1</span>, <span class="number">2</span>, <span class="string">&#x27;Python&#x27;</span>]))
-<span class="comment"># TypeError: unhashable type: &#x27;list&#x27;</span>
-</code></pre>
+print(hash([1, 2, &#39;Python&#39;]))
+# TypeError: unhashable type: &#39;list&#39;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class=" language-highlight apache"><span class="attribute">print</span>(hash(&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight apache"><span class="attribute">print</span>(hash(&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;))
-<span class="comment"># TypeError: unhashable type: &#x27;set&#x27;</span></code></pre>
+<pre class="line-numbers language-none"><code class="language-none">print(hash(&#123;1, 2, 3&#125;))
+# TypeError: unhashable type: &#39;set&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>数值、字符和元组 都能被哈希，因此它们是不可变类型。</li>
@@ -1381,294 +1381,294 @@ print(hash([<span class="number">1</span>, <span class="number">2</span>, <span 
 <li>冒号 – 将键和值分开</li>
 </ul>
 <h3 id="3-创建和访问字典"><a href="#3-创建和访问字典" class="headerlink" title="3. 创建和访问字典"></a>3. 创建和访问字典</h3><p>【例子】</p>
-<pre class=" language-highlight python">brand = [<span class="string">&#x27;李宁&#x27;</span>, <span class="string">&#x27;耐克&#x27;</span>, <span class="string"><code class="language-highlight python">brand = [<span class="string">&#x27;李宁&#x27;</span>, <span class="string">&#x27;耐克&#x27;</span>, <span class="string">&#x27;阿迪达斯&#x27;</span>]
-slogan = [<span class="string">&#x27;一切皆有可能&#x27;</span>, <span class="string">&#x27;Just do it&#x27;</span>, <span class="string">&#x27;Impossible is nothing&#x27;</span>]
-print(<span class="string">&#x27;耐克的口号是:&#x27;</span>, slogan[brand.index(<span class="string">&#x27;耐克&#x27;</span>)])  
-<span class="comment"># 耐克的口号是: Just do it</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">brand &#x3D; [&#39;李宁&#39;, &#39;耐克&#39;, &#39;阿迪达斯&#39;]
+slogan &#x3D; [&#39;一切皆有可能&#39;, &#39;Just do it&#39;, &#39;Impossible is nothing&#39;]
+print(&#39;耐克的口号是:&#39;, slogan[brand.index(&#39;耐克&#39;)])  
+# 耐克的口号是: Just do it
 
-dic = &#123;<span class="string">&#x27;李宁&#x27;</span>: <span class="string">&#x27;一切皆有可能&#x27;</span>, <span class="string">&#x27;耐克&#x27;</span>: <span class="string">&#x27;Just do it&#x27;</span>, <span class="string">&#x27;阿迪达斯&#x27;</span>: <span class="string">&#x27;Impossible is nothing&#x27;</span>&#125;
-print(<span class="string">&#x27;耐克的口号是:&#x27;</span>, dic[<span class="string">&#x27;耐克&#x27;</span>])  
-<span class="comment"># 耐克的口号是: Just do it</span></code></pre>
+dic &#x3D; &#123;&#39;李宁&#39;: &#39;一切皆有可能&#39;, &#39;耐克&#39;: &#39;Just do it&#39;, &#39;阿迪达斯&#39;: &#39;Impossible is nothing&#39;&#125;
+print(&#39;耐克的口号是:&#39;, dic[&#39;耐克&#39;])  
+# 耐克的口号是: Just do it<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】通过字符串或数值作为<code>key</code>来创建字典。</p>
-<pre class=" language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&#x27;one&#x27;</span>, <span class="number">2</span>: <span class="string">&#x27;two&#x27;</span>, <span class="number">3</span>: <span class="string"><code class="language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&#x27;one&#x27;</span>, <span class="number">2</span>: <span class="string">&#x27;two&#x27;</span>, <span class="number">3</span>: <span class="string">&#x27;three&#x27;</span>&#125;
-print(dic1)  <span class="comment"># &#123;1: &#x27;one&#x27;, 2: &#x27;two&#x27;, 3: &#x27;three&#x27;&#125;</span>
-print(dic1[<span class="number">1</span>])  <span class="comment"># one</span>
-print(dic1[<span class="number">4</span>])  <span class="comment"># KeyError: 4</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; &#123;1: &#39;one&#39;, 2: &#39;two&#39;, 3: &#39;three&#39;&#125;
+print(dic1)  # &#123;1: &#39;one&#39;, 2: &#39;two&#39;, 3: &#39;three&#39;&#125;
+print(dic1[1])  # one
+print(dic1[4])  # KeyError: 4<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class=" language-highlight python">dic2 = &#123;<span class="string">&#x27;rice&#x27;</span>: <span class="number">35</span>, <span class="string">&#x27;wheat&#x27;</span>: <span class="number">101</span>, <span class="string">&#x27;corn&#x27;</span>: <span class="number"><code class="language-highlight python">dic2 = &#123;<span class="string">&#x27;rice&#x27;</span>: <span class="number">35</span>, <span class="string">&#x27;wheat&#x27;</span>: <span class="number">101</span>, <span class="string">&#x27;corn&#x27;</span>: <span class="number">67</span>&#125;
-print(dic2)  <span class="comment"># &#123;&#x27;wheat&#x27;: 101, &#x27;corn&#x27;: 67, &#x27;rice&#x27;: 35&#125;</span>
-print(dic2[<span class="string">&#x27;rice&#x27;</span>])  <span class="comment"># 35</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic2 &#x3D; &#123;&#39;rice&#39;: 35, &#39;wheat&#39;: 101, &#39;corn&#39;: 67&#125;
+print(dic2)  # &#123;&#39;wheat&#39;: 101, &#39;corn&#39;: 67, &#39;rice&#39;: 35&#125;
+print(dic2[&#39;rice&#39;])  # 35<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：如果我们取的键在字典中不存在，会直接报错<code>KeyError</code>。</p>
 <p>【例子】通过元组作为<code>key</code>来创建字典，但一般不这样使用。</p>
-<pre class=" language-highlight python">dic = &#123;(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>): <span class="string">&quot;Tom&quot;</span>, <span class="string">&quot;Age&quot;</span>: <span class="number">12</span>, <span class="number">3</span>: [<span class="number">3</span>, <span class="number">5</span>, <span class="number"><code class="language-highlight python">dic = &#123;(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>): <span class="string">&quot;Tom&quot;</span>, <span class="string">&quot;Age&quot;</span>: <span class="number">12</span>, <span class="number">3</span>: [<span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>]&#125;
-print(dic)  <span class="comment"># &#123;(1, 2, 3): &#x27;Tom&#x27;, &#x27;Age&#x27;: 12, 3: [3, 5, 7]&#125;</span>
-print(type(dic))  <span class="comment"># <class &#x27;dict&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;(1, 2, 3): &quot;Tom&quot;, &quot;Age&quot;: 12, 3: [3, 5, 7]&#125;
+print(dic)  # &#123;(1, 2, 3): &#39;Tom&#39;, &#39;Age&#39;: 12, 3: [3, 5, 7]&#125;
+print(type(dic))  # &lt;class &#39;dict&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>通过构造函数<code>dict</code>来创建字典。</p>
 <ul>
 <li><code>dict()</code> 创建一个空的字典。</li>
 </ul>
 <p>【例子】通过<code>key</code>直接把数据放入字典中，但一个<code>key</code>只能对应一个<code>value</code>，多次对一个<code>key</code>放入 <code>value</code>，后面的值会把前面的值冲掉。</p>
-<pre class=" language-highlight python"><code class="language-highlight python">dic = dict()
-dic[<span class="string">&#x27;a&#x27;</span>] = <span class="number">1</span>
-dic[<span class="string">&#x27;b&#x27;</span>] = <span class="number">2</span>
-dic[<span class="string">&#x27;c&#x27;</span>] = <span class="number">3</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; dict()
+dic[&#39;a&#39;] &#x3D; 1
+dic[&#39;b&#39;] &#x3D; 2
+dic[&#39;c&#39;] &#x3D; 3
 
 print(dic)
-<span class="comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span>
+# &#123;&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3&#125;
 
-dic[<span class="string">&#x27;a&#x27;</span>] = <span class="number">11</span>
+dic[&#39;a&#39;] &#x3D; 11
 print(dic)
-<span class="comment"># &#123;&#x27;a&#x27;: 11, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3&#125;</span>
+# &#123;&#39;a&#39;: 11, &#39;b&#39;: 2, &#39;c&#39;: 3&#125;
 
-dic[<span class="string">&#x27;d&#x27;</span>] = <span class="number">4</span>
+dic[&#39;d&#39;] &#x3D; 4
 print(dic)
-<span class="comment"># &#123;&#x27;a&#x27;: 11, &#x27;b&#x27;: 2, &#x27;c&#x27;: 3, &#x27;d&#x27;: 4&#125;</span></code></pre>
+# &#123;&#39;a&#39;: 11, &#39;b&#39;: 2, &#39;c&#39;: 3, &#39;d&#39;: 4&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict(mapping)</code> new dictionary initialized from a mapping object’s (key, value) pairs</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic1 = dict([(<span class="string">&#x27;apple&#x27;</span>, <span class="number">4139</span>), (<span class="string">&#x27;peach&#x27;</span>, <span class="number">4127</span>), (<span class="string">&#x27;cherry&#x27;</span>, <span class="number"><code class="language-highlight python">dic1 = dict([(<span class="string">&#x27;apple&#x27;</span>, <span class="number">4139</span>), (<span class="string">&#x27;peach&#x27;</span>, <span class="number">4127</span>), (<span class="string">&#x27;cherry&#x27;</span>, <span class="number">4098</span>)])
-print(dic1)  <span class="comment"># &#123;&#x27;cherry&#x27;: 4098, &#x27;apple&#x27;: 4139, &#x27;peach&#x27;: 4127&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; dict([(&#39;apple&#39;, 4139), (&#39;peach&#39;, 4127), (&#39;cherry&#39;, 4098)])
+print(dic1)  # &#123;&#39;cherry&#39;: 4098, &#39;apple&#39;: 4139, &#39;peach&#39;: 4127&#125;
 
-dic2 = dict(((<span class="string">&#x27;apple&#x27;</span>, <span class="number">4139</span>), (<span class="string">&#x27;peach&#x27;</span>, <span class="number">4127</span>), (<span class="string">&#x27;cherry&#x27;</span>, <span class="number">4098</span>)))
-print(dic2)  <span class="comment"># &#123;&#x27;peach&#x27;: 4127, &#x27;cherry&#x27;: 4098, &#x27;apple&#x27;: 4139&#125;</span></code></pre>
+dic2 &#x3D; dict(((&#39;apple&#39;, 4139), (&#39;peach&#39;, 4127), (&#39;cherry&#39;, 4098)))
+print(dic2)  # &#123;&#39;peach&#39;: 4127, &#39;cherry&#39;: 4098, &#39;apple&#39;: 4139&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict(**kwargs)</code> -&gt; new dictionary initialized with the name=value pairs in the keyword argument list.  For example:  dict(one=1, two=2)</li>
 </ul>
 <p>【例子】这种情况下，键只能为字符串类型，并且创建的时候字符串不能加引号，加上就会直接报语法错误。</p>
-<pre class=" language-highlight python">dic = dict(name=<span class="string">&#x27;Tom&#x27;</span>, age=<span class="number"><code class="language-highlight python">dic = dict(name=<span class="string">&#x27;Tom&#x27;</span>, age=<span class="number">10</span>)
-print(dic)  <span class="comment"># &#123;&#x27;name&#x27;: &#x27;Tom&#x27;, &#x27;age&#x27;: 10&#125;</span>
-print(type(dic))  <span class="comment"># <class &#x27;dict&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; dict(name&#x3D;&#39;Tom&#39;, age&#x3D;10)
+print(dic)  # &#123;&#39;name&#39;: &#39;Tom&#39;, &#39;age&#39;: 10&#125;
+print(type(dic))  # &lt;class &#39;dict&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-字典的内置方法"><a href="#4-字典的内置方法" class="headerlink" title="4. 字典的内置方法"></a>4. 字典的内置方法</h3><ul>
 <li><code>dict.fromkeys(seq[, value])</code> 用于创建一个新字典，以序列 <code>seq</code> 中元素做字典的键，<code>value</code> 为字典所有键对应的初始值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">seq = (<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string"><code class="language-highlight python">seq = (<span class="string">&#x27;name&#x27;</span>, <span class="string">&#x27;age&#x27;</span>, <span class="string">&#x27;sex&#x27;</span>)
-dic1 = dict.fromkeys(seq)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">seq &#x3D; (&#39;name&#39;, &#39;age&#39;, &#39;sex&#39;)
+dic1 &#x3D; dict.fromkeys(seq)
 print(dic1)
-<span class="comment"># &#123;&#x27;name&#x27;: None, &#x27;age&#x27;: None, &#x27;sex&#x27;: None&#125;</span>
+# &#123;&#39;name&#39;: None, &#39;age&#39;: None, &#39;sex&#39;: None&#125;
 
-dic2 = dict.fromkeys(seq, <span class="number">10</span>)
+dic2 &#x3D; dict.fromkeys(seq, 10)
 print(dic2)
-<span class="comment"># &#123;&#x27;name&#x27;: 10, &#x27;age&#x27;: 10, &#x27;sex&#x27;: 10&#125;</span>
+# &#123;&#39;name&#39;: 10, &#39;age&#39;: 10, &#39;sex&#39;: 10&#125;
 
-dic3 = dict.fromkeys(seq, (<span class="string">&#x27;小马&#x27;</span>, <span class="string">&#x27;8&#x27;</span>, <span class="string">&#x27;男&#x27;</span>))
+dic3 &#x3D; dict.fromkeys(seq, (&#39;小马&#39;, &#39;8&#39;, &#39;男&#39;))
 print(dic3)
-<span class="comment"># &#123;&#x27;name&#x27;: (&#x27;小马&#x27;, &#x27;8&#x27;, &#x27;男&#x27;), &#x27;age&#x27;: (&#x27;小马&#x27;, &#x27;8&#x27;, &#x27;男&#x27;), &#x27;sex&#x27;: (&#x27;小马&#x27;, &#x27;8&#x27;, &#x27;男&#x27;)&#125;</span></code></pre>
+# &#123;&#39;name&#39;: (&#39;小马&#39;, &#39;8&#39;, &#39;男&#39;), &#39;age&#39;: (&#39;小马&#39;, &#39;8&#39;, &#39;男&#39;), &#39;sex&#39;: (&#39;小马&#39;, &#39;8&#39;, &#39;男&#39;)&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.keys()</code>返回一个可迭代对象，可以使用 <code>list()</code> 来转换为列表，列表为字典中的所有键。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
-print(dic.keys())  <span class="comment"># dict_keys([&#x27;Name&#x27;, &#x27;Age&#x27;])</span>
-lst = list(dic.keys())  <span class="comment"># 转换为列表</span>
-print(lst)  <span class="comment"># [&#x27;Name&#x27;, &#x27;Age&#x27;]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;lsgogroup&#39;, &#39;Age&#39;: 7&#125;
+print(dic.keys())  # dict_keys([&#39;Name&#39;, &#39;Age&#39;])
+lst &#x3D; list(dic.keys())  # 转换为列表
+print(lst)  # [&#39;Name&#39;, &#39;Age&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.values()</code>返回一个迭代器，可以使用 <code>list()</code> 来转换为列表，列表为字典中的所有值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Sex&#x27;</span>: <span class="string">&#x27;female&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>, <span class="string">&#x27;Name&#x27;</span>: <span class="string"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Sex&#x27;</span>: <span class="string">&#x27;female&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>, <span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Zara&#x27;</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Sex&#39;: &#39;female&#39;, &#39;Age&#39;: 7, &#39;Name&#39;: &#39;Zara&#39;&#125;
 print(dic.values())
-<span class="comment"># dict_values([&#x27;female&#x27;, 7, &#x27;Zara&#x27;])</span>
+# dict_values([&#39;female&#39;, 7, &#39;Zara&#39;])
 
 print(list(dic.values()))
-<span class="comment"># [7, &#x27;female&#x27;, &#x27;Zara&#x27;]</span></code></pre>
+# [7, &#39;female&#39;, &#39;Zara&#39;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.items()</code>以列表返回可遍历的 (键, 值) 元组数组。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 7&#125;
 print(dic.items())
-<span class="comment"># dict_items([(&#x27;Name&#x27;, &#x27;Lsgogroup&#x27;), (&#x27;Age&#x27;, 7)])</span>
+# dict_items([(&#39;Name&#39;, &#39;Lsgogroup&#39;), (&#39;Age&#39;, 7)])
 
 print(tuple(dic.items()))
-<span class="comment"># ((&#x27;Name&#x27;, &#x27;Lsgogroup&#x27;), (&#x27;Age&#x27;, 7))</span>
+# ((&#39;Name&#39;, &#39;Lsgogroup&#39;), (&#39;Age&#39;, 7))
 
 print(list(dic.items()))
-<span class="comment"># [(&#x27;Name&#x27;, &#x27;Lsgogroup&#x27;), (&#x27;Age&#x27;, 7)]</span></code></pre>
+# [(&#39;Name&#39;, &#39;Lsgogroup&#39;), (&#39;Age&#39;, 7)]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.get(key, default=None)</code> 返回指定键的值，如果值不在字典中返回默认值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">27</span>&#125;
-print(<span class="string">"Age 值为 : %s"</span> % dic.get(<span class="string">&#x27;Age&#x27;</span>))  <span class="comment"># Age 值为 : 27</span>
-print(<span class="string">"Sex 值为 : %s"</span> % dic.get(<span class="string">&#x27;Sex&#x27;</span>, <span class="string">"NA"</span>))  <span class="comment"># Sex 值为 : NA</span>
-print(dic)  <span class="comment"># &#123;&#x27;Name&#x27;: &#x27;Lsgogroup&#x27;, &#x27;Age&#x27;: 27&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 27&#125;
+print(&quot;Age 值为 : %s&quot; % dic.get(&#39;Age&#39;))  # Age 值为 : 27
+print(&quot;Sex 值为 : %s&quot; % dic.get(&#39;Sex&#39;, &quot;NA&quot;))  # Sex 值为 : NA
+print(dic)  # &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 27&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.setdefault(key, default=None)</code>和<code>get()</code>方法 类似, 如果键不存在于字典中，将会添加键并将值设为默认值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
-print(<span class="string">"Age 键的值为 : %s"</span> % dic.setdefault(<span class="string">&#x27;Age&#x27;</span>, <span class="literal">None</span>))  <span class="comment"># Age 键的值为 : 7</span>
-print(<span class="string">"Sex 键的值为 : %s"</span> % dic.setdefault(<span class="string">&#x27;Sex&#x27;</span>, <span class="literal">None</span>))  <span class="comment"># Sex 键的值为 : None</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 7&#125;
+print(&quot;Age 键的值为 : %s&quot; % dic.setdefault(&#39;Age&#39;, None))  # Age 键的值为 : 7
+print(&quot;Sex 键的值为 : %s&quot; % dic.setdefault(&#39;Sex&#39;, None))  # Sex 键的值为 : None
 print(dic)  
-<span class="comment"># &#123;&#x27;Age&#x27;: 7, &#x27;Name&#x27;: &#x27;Lsgogroup&#x27;, &#x27;Sex&#x27;: None&#125;</span></code></pre>
+# &#123;&#39;Age&#39;: 7, &#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Sex&#39;: None&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>key in dict</code> <code>in</code> 操作符用于判断键是否存在于字典中，如果键在字典 dict 里返回<code>true</code>，否则返回<code>false</code>。而<code>not in</code>操作符刚好相反，如果键在字典 dict 里返回<code>false</code>，否则返回<code>true</code>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 7&#125;
 
-<span class="comment"># in 检测键 Age 是否存在</span>
-<span class="keyword">if</span> <span class="string">&#x27;Age&#x27;</span> <span class="keyword">in</span> dic:
-    print(<span class="string">"键 Age 存在"</span>)
-<span class="keyword">else</span>:
-    print(<span class="string">"键 Age 不存在"</span>)
+# in 检测键 Age 是否存在
+if &#39;Age&#39; in dic:
+    print(&quot;键 Age 存在&quot;)
+else:
+    print(&quot;键 Age 不存在&quot;)
 
-<span class="comment"># 检测键 Sex 是否存在</span>
-<span class="keyword">if</span> <span class="string">&#x27;Sex&#x27;</span> <span class="keyword">in</span> dic:
-    print(<span class="string">"键 Sex 存在"</span>)
-<span class="keyword">else</span>:
-    print(<span class="string">"键 Sex 不存在"</span>)
+# 检测键 Sex 是否存在
+if &#39;Sex&#39; in dic:
+    print(&quot;键 Sex 存在&quot;)
+else:
+    print(&quot;键 Sex 不存在&quot;)
 
-<span class="comment"># not in 检测键 Age 是否存在</span>
-<span class="keyword">if</span> <span class="string">&#x27;Age&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> dic:
-    print(<span class="string">"键 Age 不存在"</span>)
-<span class="keyword">else</span>:
-    print(<span class="string">"键 Age 存在"</span>)
+# not in 检测键 Age 是否存在
+if &#39;Age&#39; not in dic:
+    print(&quot;键 Age 不存在&quot;)
+else:
+    print(&quot;键 Age 存在&quot;)
 
-<span class="comment"># 键 Age 存在</span>
-<span class="comment"># 键 Sex 不存在</span>
-<span class="comment"># 键 Age 存在</span></code></pre>
+# 键 Age 存在
+# 键 Sex 不存在
+# 键 Age 存在<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.pop(key[,default])</code>删除字典给定键 <code>key</code> 所对应的值，返回值为被删除的值。<code>key</code> 值必须给出。若<code>key</code>不存在，则返回 <code>default</code> 值。</li>
 <li><code>del dict[key]</code> 删除字典给定键 <code>key</code> 所对应的值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&quot;a&quot;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number"><code class="language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&quot;a&quot;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number">2</span>]&#125;
-print(dic1.pop(<span class="number">1</span>), dic1)  <span class="comment"># a &#123;2: [1, 2]&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; &#123;1: &quot;a&quot;, 2: [1, 2]&#125;
+print(dic1.pop(1), dic1)  # a &#123;2: [1, 2]&#125;
 
-<span class="comment"># 设置默认值，必须添加，否则报错</span>
-print(dic1.pop(<span class="number">3</span>, <span class="string">"nokey"</span>), dic1)  <span class="comment"># nokey &#123;2: [1, 2]&#125;</span>
+# 设置默认值，必须添加，否则报错
+print(dic1.pop(3, &quot;nokey&quot;), dic1)  # nokey &#123;2: [1, 2]&#125;
 
-<span class="keyword">del</span> dic1[<span class="number">2</span>]
-print(dic1)  <span class="comment"># &#123;&#125;</span></code></pre>
+del dic1[2]
+print(dic1)  # &#123;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.popitem()</code>随机返回并删除字典中的一对键和值，如果字典已经为空，却调用了此方法，就报出KeyError异常。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&quot;a&quot;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number"><code class="language-highlight python">dic1 = &#123;<span class="number">1</span>: <span class="string">&quot;a&quot;</span>, <span class="number">2</span>: [<span class="number">1</span>, <span class="number">2</span>]&#125;
-print(dic1.popitem())  <span class="comment"># &#123;2: [1, 2]&#125;</span>
-print(dic1)  <span class="comment"># (1, &#x27;a&#x27;)</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; &#123;1: &quot;a&quot;, 2: [1, 2]&#125;
+print(dic1.popitem())  # &#123;2: [1, 2]&#125;
+print(dic1)  # (1, &#39;a&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.clear()</code>用于删除字典内所有元素。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Zara&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Zara&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
-print(<span class="string">"字典长度 : %d"</span> % len(dic))  <span class="comment"># 字典长度 : 2</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Zara&#39;, &#39;Age&#39;: 7&#125;
+print(&quot;字典长度 : %d&quot; % len(dic))  # 字典长度 : 2
 dic.clear()
-print(<span class="string">"字典删除后长度 : %d"</span> % len(dic))  
-<span class="comment"># 字典删除后长度 : 0</span></code></pre>
+print(&quot;字典删除后长度 : %d&quot; % len(dic))  
+# 字典删除后长度 : 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.copy()</code>返回一个字典的浅复制。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic1 = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>, <span class="string">&#x27;Class&#x27;</span>: <span class="string"><code class="language-highlight python">dic1 = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>, <span class="string">&#x27;Class&#x27;</span>: <span class="string">&#x27;First&#x27;</span>&#125;
-dic2 = dic1.copy()
-print(<span class="string">"dic2"</span>)  
-<span class="comment"># &#123;&#x27;Age&#x27;: 7, &#x27;Name&#x27;: &#x27;Lsgogroup&#x27;, &#x27;Class&#x27;: &#x27;First&#x27;&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;&#125;
+dic2 &#x3D; dic1.copy()
+print(&quot;dic2&quot;)  
+# &#123;&#39;Age&#39;: 7, &#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Class&#39;: &#39;First&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】直接赋值和 copy 的区别</p>
-<pre class=" language-highlight python">dic1 = &#123;<span class="string">&#x27;user&#x27;</span>: <span class="string">&#x27;lsgogroup&#x27;</span>, <span class="string">&#x27;num&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight python">dic1 = &#123;<span class="string">&#x27;user&#x27;</span>: <span class="string">&#x27;lsgogroup&#x27;</span>, <span class="string">&#x27;num&#x27;</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic1 &#x3D; &#123;&#39;user&#39;: &#39;lsgogroup&#39;, &#39;num&#39;: [1, 2, 3]&#125;
 
-<span class="comment"># 引用对象</span>
-dic2 = dic1  
-<span class="comment"># 浅拷贝父对象（一级目录），子对象（二级目录）不拷贝，还是引用</span>
-dic3 = dic1.copy()  
+# 引用对象
+dic2 &#x3D; dic1  
+# 浅拷贝父对象（一级目录），子对象（二级目录）不拷贝，还是引用
+dic3 &#x3D; dic1.copy()  
 
-print(id(dic1))  <span class="comment"># 148635574728</span>
-print(id(dic2))  <span class="comment"># 148635574728</span>
-print(id(dic3))  <span class="comment"># 148635574344</span>
+print(id(dic1))  # 148635574728
+print(id(dic2))  # 148635574728
+print(id(dic3))  # 148635574344
 
-<span class="comment"># 修改 data 数据</span>
-dic1[<span class="string">&#x27;user&#x27;</span>] = <span class="string">&#x27;root&#x27;</span>
-dic1[<span class="string">&#x27;num&#x27;</span>].remove(<span class="number">1</span>)
+# 修改 data 数据
+dic1[&#39;user&#39;] &#x3D; &#39;root&#39;
+dic1[&#39;num&#39;].remove(1)
 
-<span class="comment"># 输出结果</span>
-print(dic1)  <span class="comment"># &#123;&#x27;user&#x27;: &#x27;root&#x27;, &#x27;num&#x27;: [2, 3]&#125;</span>
-print(dic2)  <span class="comment"># &#123;&#x27;user&#x27;: &#x27;root&#x27;, &#x27;num&#x27;: [2, 3]&#125;</span>
-print(dic3)  <span class="comment"># &#123;&#x27;user&#x27;: &#x27;runoob&#x27;, &#x27;num&#x27;: [2, 3]&#125;</span></code></pre>
+# 输出结果
+print(dic1)  # &#123;&#39;user&#39;: &#39;root&#39;, &#39;num&#39;: [2, 3]&#125;
+print(dic2)  # &#123;&#39;user&#39;: &#39;root&#39;, &#39;num&#39;: [2, 3]&#125;
+print(dic3)  # &#123;&#39;user&#39;: &#39;runoob&#39;, &#39;num&#39;: [2, 3]&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>dict.update(dict2)</code>把字典参数 <code>dict2</code> 的 <code>key:value</code>对 更新到字典 <code>dict</code> 里。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number"><code class="language-highlight python">dic = &#123;<span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;Lsgogroup&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">7</span>&#125;
-dic2 = &#123;<span class="string">&#x27;Sex&#x27;</span>: <span class="string">&#x27;female&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>: <span class="number">8</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">dic &#x3D; &#123;&#39;Name&#39;: &#39;Lsgogroup&#39;, &#39;Age&#39;: 7&#125;
+dic2 &#x3D; &#123;&#39;Sex&#39;: &#39;female&#39;, &#39;Age&#39;: 8&#125;
 dic.update(dic2)
 print(dic)  
-<span class="comment"># &#123;&#x27;Sex&#x27;: &#x27;female&#x27;, &#x27;Age&#x27;: 8, &#x27;Name&#x27;: &#x27;Lsgogroup&#x27;&#125;</span></code></pre>
+# &#123;&#39;Sex&#39;: &#39;female&#39;, &#39;Age&#39;: 8, &#39;Name&#39;: &#39;Lsgogroup&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>Python 中<code>set</code>与<code>dict</code>类似，也是一组<code>key</code>的集合，但不存储<code>value</code>。由于<code>key</code>不能重复，所以，在<code>set</code>中，没有重复的<code>key</code>。</p>
 <p>注意，<code>key</code>为不可变类型，即可哈希的值。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">num = &#123;&#125;
-print(type(num))  <span class="comment"># <class &#x27;dict&#x27;></span>
-num = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;
-print(type(num))  <span class="comment"># <class &#x27;set&#x27;></span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num &#x3D; &#123;&#125;
+print(type(num))  # &lt;class &#39;dict&#39;&gt;
+num &#x3D; &#123;1, 2, 3, 4&#125;
+print(type(num))  # &lt;class &#39;set&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-集合的创建"><a href="#1-集合的创建" class="headerlink" title="1. 集合的创建"></a>1. 集合的创建</h3><ul>
 <li>先创建对象再加入元素。</li>
 <li>在创建空集合的时候只能使用<code>s = set()</code>，因为<code>s = &#123;&#125;</code>创建的是空字典。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">basket = set()
-basket.add(<span class="string">&#x27;apple&#x27;</span>)
-basket.add(<span class="string">&#x27;banana&#x27;</span>)
-print(basket)  <span class="comment"># &#123;&#x27;banana&#x27;, &#x27;apple&#x27;&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">basket &#x3D; set()
+basket.add(&#39;apple&#39;)
+basket.add(&#39;banana&#39;)
+print(basket)  # &#123;&#39;banana&#39;, &#39;apple&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>直接把一堆元素用花括号括起来<code>&#123;元素1, 元素2, ..., 元素n&#125;</code>。</li>
 <li>重复元素在<code>set</code>中会被自动被过滤。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">basket = &#123;<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pear&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string"><code class="language-highlight python">basket = &#123;<span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;apple&#x27;</span>, <span class="string">&#x27;pear&#x27;</span>, <span class="string">&#x27;orange&#x27;</span>, <span class="string">&#x27;banana&#x27;</span>&#125;
-print(basket)  <span class="comment"># &#123;&#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;pear&#x27;, &#x27;orange&#x27;&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">basket &#x3D; &#123;&#39;apple&#39;, &#39;orange&#39;, &#39;apple&#39;, &#39;pear&#39;, &#39;orange&#39;, &#39;banana&#39;&#125;
+print(basket)  # &#123;&#39;banana&#39;, &#39;apple&#39;, &#39;pear&#39;, &#39;orange&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>使用<code>set(value)</code>工厂函数，把列表或元组转换成集合。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = set(<span class="string"><code class="language-highlight python">a = set(<span class="string">&#x27;abracadabra&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; set(&#39;abracadabra&#39;)
 print(a)  
-<span class="comment"># &#123;&#x27;r&#x27;, &#x27;b&#x27;, &#x27;d&#x27;, &#x27;c&#x27;, &#x27;a&#x27;&#125;</span>
+# &#123;&#39;r&#39;, &#39;b&#39;, &#39;d&#39;, &#39;c&#39;, &#39;a&#39;&#125;
 
-b = set((<span class="string">"Google"</span>, <span class="string">"Lsgogroup"</span>, <span class="string">"Taobao"</span>, <span class="string">"Taobao"</span>))
+b &#x3D; set((&quot;Google&quot;, &quot;Lsgogroup&quot;, &quot;Taobao&quot;, &quot;Taobao&quot;))
 print(b)  
-<span class="comment"># &#123;&#x27;Taobao&#x27;, &#x27;Lsgogroup&#x27;, &#x27;Google&#x27;&#125;</span>
+# &#123;&#39;Taobao&#39;, &#39;Lsgogroup&#39;, &#39;Google&#39;&#125;
 
-c = set([<span class="string">"Google"</span>, <span class="string">"Lsgogroup"</span>, <span class="string">"Taobao"</span>, <span class="string">"Google"</span>])
+c &#x3D; set([&quot;Google&quot;, &quot;Lsgogroup&quot;, &quot;Taobao&quot;, &quot;Google&quot;])
 print(c)  
-<span class="comment"># &#123;&#x27;Taobao&#x27;, &#x27;Lsgogroup&#x27;, &#x27;Google&#x27;&#125;</span></code></pre>
+# &#123;&#39;Taobao&#39;, &#39;Lsgogroup&#39;, &#39;Google&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】去掉列表中重复的元素</p>
-<pre class=" language-highlight python">lst = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number"><code class="language-highlight python">lst = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">1</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">lst &#x3D; [0, 1, 2, 3, 4, 5, 5, 3, 1]
 
-temp = []
-<span class="keyword">for</span> item <span class="keyword">in</span> lst:
-    <span class="keyword">if</span> item <span class="keyword">not</span> <span class="keyword">in</span> temp:
+temp &#x3D; []
+for item in lst:
+    if item not in temp:
         temp.append(item)
 
-print(temp)  <span class="comment"># [0, 1, 2, 3, 4, 5]</span>
+print(temp)  # [0, 1, 2, 3, 4, 5]
 
-a = set(lst)
-print(list(a))  <span class="comment"># [0, 1, 2, 3, 4, 5]</span></code></pre>
+a &#x3D; set(lst)
+print(list(a))  # [0, 1, 2, 3, 4, 5]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>从结果发现集合的两个特点：无序 (unordered) 和唯一 (unique)。</p>
 <p>由于 <code>set</code> 存储的是无序集合，所以我们不可以为集合创建索引或执行切片(slice)操作，也没有键(keys)可用来获取集合中元素的值，但是可以判断一个元素是否在集合中。</p>
@@ -1676,80 +1676,80 @@ print(list(a))  <span class="comment"># [0, 1, 2, 3, 4, 5]</span></code></pre>
 <li>可以使用<code>len()</code>內建函数得到集合的大小。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string"><code class="language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>])
-print(len(s))  <span class="comment"># 3</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; set([&#39;Google&#39;, &#39;Baidu&#39;, &#39;Taobao&#39;])
+print(len(s))  # 3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>可以使用<code>for</code>把集合中的数据一个个读取出来。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string"><code class="language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>])
-<span class="keyword">for</span> item <span class="keyword">in</span> s:
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; set([&#39;Google&#39;, &#39;Baidu&#39;, &#39;Taobao&#39;])
+for item in s:
     print(item)
     
-<span class="comment"># Baidu</span>
-<span class="comment"># Google</span>
-<span class="comment"># Taobao</span></code></pre>
+# Baidu
+# Google
+# Taobao<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>可以通过<code>in</code>或<code>not in</code>判断一个元素是否在集合中已经存在</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string"><code class="language-highlight python">s = set([<span class="string">&#x27;Google&#x27;</span>, <span class="string">&#x27;Baidu&#x27;</span>, <span class="string">&#x27;Taobao&#x27;</span>])
-print(<span class="string">&#x27;Taobao&#x27;</span> <span class="keyword">in</span> s)  <span class="comment"># True</span>
-print(<span class="string">&#x27;Facebook&#x27;</span> <span class="keyword">not</span> <span class="keyword">in</span> s)  <span class="comment"># True</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; set([&#39;Google&#39;, &#39;Baidu&#39;, &#39;Taobao&#39;])
+print(&#39;Taobao&#39; in s)  # True
+print(&#39;Facebook&#39; not in s)  # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-集合的内置方法"><a href="#3-集合的内置方法" class="headerlink" title="3. 集合的内置方法"></a>3. 集合的内置方法</h3><ul>
 <li><code>set.add(elmnt)</code>用于给集合添加元素，如果添加的元素在集合中已存在，则不执行任何操作。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string"><code class="language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">"cherry"</span>&#125;
-fruits.add(<span class="string">"orange"</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fruits &#x3D; &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;&#125;
+fruits.add(&quot;orange&quot;)
 print(fruits)  
-<span class="comment"># &#123;&#x27;orange&#x27;, &#x27;cherry&#x27;, &#x27;banana&#x27;, &#x27;apple&#x27;&#125;</span>
+# &#123;&#39;orange&#39;, &#39;cherry&#39;, &#39;banana&#39;, &#39;apple&#39;&#125;
 
-fruits.add(<span class="string">"apple"</span>)
+fruits.add(&quot;apple&quot;)
 print(fruits)  
-<span class="comment"># &#123;&#x27;orange&#x27;, &#x27;cherry&#x27;, &#x27;banana&#x27;, &#x27;apple&#x27;&#125;</span></code></pre>
+# &#123;&#39;orange&#39;, &#39;cherry&#39;, &#39;banana&#39;, &#39;apple&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.update(set)</code>用于修改当前集合，可以添加新的元素或集合到当前集合中，如果添加的元素在集合中已存在，则该元素只会出现一次，重复的会忽略。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string"><code class="language-highlight python">x = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">"cherry"</span>&#125;
-y = &#123;<span class="string">"google"</span>, <span class="string">"baidu"</span>, <span class="string">"apple"</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;&#125;
+y &#x3D; &#123;&quot;google&quot;, &quot;baidu&quot;, &quot;apple&quot;&#125;
 x.update(y)
 print(x)
-<span class="comment"># &#123;&#x27;cherry&#x27;, &#x27;banana&#x27;, &#x27;apple&#x27;, &#x27;google&#x27;, &#x27;baidu&#x27;&#125;</span>
+# &#123;&#39;cherry&#39;, &#39;banana&#39;, &#39;apple&#39;, &#39;google&#39;, &#39;baidu&#39;&#125;
 
-y.update([<span class="string">"lsgo"</span>, <span class="string">"dreamtech"</span>])
+y.update([&quot;lsgo&quot;, &quot;dreamtech&quot;])
 print(y)
-<span class="comment"># &#123;&#x27;lsgo&#x27;, &#x27;baidu&#x27;, &#x27;dreamtech&#x27;, &#x27;apple&#x27;, &#x27;google&#x27;&#125;</span></code></pre>
+# &#123;&#39;lsgo&#39;, &#39;baidu&#39;, &#39;dreamtech&#39;, &#39;apple&#39;, &#39;google&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.remove(item)</code> 用于移除集合中的指定元素。如果元素不存在，则会发生错误。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string"><code class="language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">"cherry"</span>&#125;
-fruits.remove(<span class="string">"banana"</span>)
-print(fruits)  <span class="comment"># &#123;&#x27;apple&#x27;, &#x27;cherry&#x27;&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fruits &#x3D; &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;&#125;
+fruits.remove(&quot;banana&quot;)
+print(fruits)  # &#123;&#39;apple&#39;, &#39;cherry&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.discard(value)</code> 用于移除指定的集合元素。<code>remove()</code> 方法在移除一个不存在的元素时会发生错误，而 <code>discard()</code> 方法不会。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string"><code class="language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">"cherry"</span>&#125;
-fruits.discard(<span class="string">"banana"</span>)
-print(fruits)  <span class="comment"># &#123;&#x27;apple&#x27;, &#x27;cherry&#x27;&#125;</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fruits &#x3D; &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;&#125;
+fruits.discard(&quot;banana&quot;)
+print(fruits)  # &#123;&#39;apple&#39;, &#39;cherry&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.pop()</code> 用于随机移除一个元素。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string"><code class="language-highlight python">fruits = &#123;<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;banana&quot;</span>, <span class="string">"cherry"</span>&#125;
-x = fruits.pop()
-print(fruits)  <span class="comment"># &#123;&#x27;cherry&#x27;, &#x27;apple&#x27;&#125;</span>
-print(x)  <span class="comment"># banana</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">fruits &#x3D; &#123;&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;&#125;
+x &#x3D; fruits.pop()
+print(fruits)  # &#123;&#39;cherry&#39;, &#39;apple&#39;&#125;
+print(x)  # banana<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>由于 set 是无序和无重复元素的集合，所以两个或多个 set 可以做数学意义上的集合操作。</p>
 <ul>
@@ -1758,35 +1758,35 @@ print(x)  <span class="comment"># banana</span></code></pre>
 <li><code>set.intersection_update(set1, set2)</code> 交集，在原始的集合上移除不重叠的元素。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = set(<span class="string"><code class="language-highlight python">a = set(<span class="string">&#x27;abracadabra&#x27;</span>)
-b = set(<span class="string">&#x27;alacazam&#x27;</span>)
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;a&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27;&#125;</span>
-print(b)  <span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;, &#x27;l&#x27;, &#x27;m&#x27;, &#x27;z&#x27;&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; set(&#39;abracadabra&#39;)
+b &#x3D; set(&#39;alacazam&#39;)
+print(a)  # &#123;&#39;r&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;&#125;
+print(b)  # &#123;&#39;c&#39;, &#39;a&#39;, &#39;l&#39;, &#39;m&#39;, &#39;z&#39;&#125;
 
-c = a.intersection(b)
-print(c)  <span class="comment"># &#123;&#x27;a&#x27;, &#x27;c&#x27;&#125;</span>
-print(a & b)  <span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;&#125;</span>
-print(a)  <span class="comment"># &#123;&#x27;a&#x27;, &#x27;r&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27;&#125;</span>
+c &#x3D; a.intersection(b)
+print(c)  # &#123;&#39;a&#39;, &#39;c&#39;&#125;
+print(a &amp; b)  # &#123;&#39;c&#39;, &#39;a&#39;&#125;
+print(a)  # &#123;&#39;a&#39;, &#39;r&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;&#125;
 
 a.intersection_update(b)
-print(a)  <span class="comment"># &#123;&#x27;a&#x27;, &#x27;c&#x27;&#125;</span></code></pre>
+print(a)  # &#123;&#39;a&#39;, &#39;c&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.union(set1, set2)</code> 返回两个集合的并集。</li>
 <li><code>set1 | set2</code> 返回两个集合的并集。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = set(<span class="string"><code class="language-highlight python">a = set(<span class="string">&#x27;abracadabra&#x27;</span>)
-b = set(<span class="string">&#x27;alacazam&#x27;</span>)
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;a&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27;&#125;</span>
-print(b)  <span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;, &#x27;l&#x27;, &#x27;m&#x27;, &#x27;z&#x27;&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; set(&#39;abracadabra&#39;)
+b &#x3D; set(&#39;alacazam&#39;)
+print(a)  # &#123;&#39;r&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;&#125;
+print(b)  # &#123;&#39;c&#39;, &#39;a&#39;, &#39;l&#39;, &#39;m&#39;, &#39;z&#39;&#125;
 
 print(a | b)  
-<span class="comment"># &#123;&#x27;l&#x27;, &#x27;d&#x27;, &#x27;m&#x27;, &#x27;b&#x27;, &#x27;a&#x27;, &#x27;r&#x27;, &#x27;z&#x27;, &#x27;c&#x27;&#125;</span>
+# &#123;&#39;l&#39;, &#39;d&#39;, &#39;m&#39;, &#39;b&#39;, &#39;a&#39;, &#39;r&#39;, &#39;z&#39;, &#39;c&#39;&#125;
 
-c = a.union(b)
+c &#x3D; a.union(b)
 print(c)  
-<span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;, &#x27;d&#x27;, &#x27;m&#x27;, &#x27;r&#x27;, &#x27;b&#x27;, &#x27;z&#x27;, &#x27;l&#x27;&#125;</span></code></pre>
+# &#123;&#39;c&#39;, &#39;a&#39;, &#39;d&#39;, &#39;m&#39;, &#39;r&#39;, &#39;b&#39;, &#39;z&#39;, &#39;l&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.difference(set)</code> 返回集合的差集。</li>
@@ -1794,18 +1794,18 @@ print(c)
 <li><code>set.difference_update(set)</code> 集合的差集，直接在原来的集合中移除元素，没有返回值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = set(<span class="string"><code class="language-highlight python">a = set(<span class="string">&#x27;abracadabra&#x27;</span>)
-b = set(<span class="string">&#x27;alacazam&#x27;</span>)
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;a&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27;&#125;</span>
-print(b)  <span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;, &#x27;l&#x27;, &#x27;m&#x27;, &#x27;z&#x27;&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; set(&#39;abracadabra&#39;)
+b &#x3D; set(&#39;alacazam&#39;)
+print(a)  # &#123;&#39;r&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;&#125;
+print(b)  # &#123;&#39;c&#39;, &#39;a&#39;, &#39;l&#39;, &#39;m&#39;, &#39;z&#39;&#125;
 
-c = a.difference(b)
-print(c)  <span class="comment"># &#123;&#x27;b&#x27;, &#x27;d&#x27;, &#x27;r&#x27;&#125;</span>
-print(a - b)  <span class="comment"># &#123;&#x27;d&#x27;, &#x27;b&#x27;, &#x27;r&#x27;&#125;</span>
+c &#x3D; a.difference(b)
+print(c)  # &#123;&#39;b&#39;, &#39;d&#39;, &#39;r&#39;&#125;
+print(a - b)  # &#123;&#39;d&#39;, &#39;b&#39;, &#39;r&#39;&#125;
 
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;d&#x27;, &#x27;c&#x27;, &#x27;a&#x27;, &#x27;b&#x27;&#125;</span>
+print(a)  # &#123;&#39;r&#39;, &#39;d&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;&#125;
 a.difference_update(b)
-print(a)  <span class="comment"># &#123;&#x27;d&#x27;, &#x27;r&#x27;, &#x27;b&#x27;&#125;</span></code></pre>
+print(a)  # &#123;&#39;d&#39;, &#39;r&#39;, &#39;b&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.symmetric_difference(set)</code>返回集合的异或。</li>
@@ -1813,129 +1813,129 @@ print(a)  <span class="comment"># &#123;&#x27;d&#x27;, &#x27;r&#x27;, &#x27;b&#x
 <li><code>set.symmetric_difference_update(set)</code>移除当前集合中在另外一个指定集合相同的元素，并将另外一个指定集合中不同的元素插入到当前集合中。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = set(<span class="string"><code class="language-highlight python">a = set(<span class="string">&#x27;abracadabra&#x27;</span>)
-b = set(<span class="string">&#x27;alacazam&#x27;</span>)
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;a&#x27;, &#x27;c&#x27;, &#x27;b&#x27;, &#x27;d&#x27;&#125;</span>
-print(b)  <span class="comment"># &#123;&#x27;c&#x27;, &#x27;a&#x27;, &#x27;l&#x27;, &#x27;m&#x27;, &#x27;z&#x27;&#125;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; set(&#39;abracadabra&#39;)
+b &#x3D; set(&#39;alacazam&#39;)
+print(a)  # &#123;&#39;r&#39;, &#39;a&#39;, &#39;c&#39;, &#39;b&#39;, &#39;d&#39;&#125;
+print(b)  # &#123;&#39;c&#39;, &#39;a&#39;, &#39;l&#39;, &#39;m&#39;, &#39;z&#39;&#125;
 
-c = a.symmetric_difference(b)
-print(c)  <span class="comment"># &#123;&#x27;m&#x27;, &#x27;r&#x27;, &#x27;l&#x27;, &#x27;b&#x27;, &#x27;z&#x27;, &#x27;d&#x27;&#125;</span>
-print(a ^ b)  <span class="comment"># &#123;&#x27;m&#x27;, &#x27;r&#x27;, &#x27;l&#x27;, &#x27;b&#x27;, &#x27;z&#x27;, &#x27;d&#x27;&#125;</span>
+c &#x3D; a.symmetric_difference(b)
+print(c)  # &#123;&#39;m&#39;, &#39;r&#39;, &#39;l&#39;, &#39;b&#39;, &#39;z&#39;, &#39;d&#39;&#125;
+print(a ^ b)  # &#123;&#39;m&#39;, &#39;r&#39;, &#39;l&#39;, &#39;b&#39;, &#39;z&#39;, &#39;d&#39;&#125;
 
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;d&#x27;, &#x27;c&#x27;, &#x27;a&#x27;, &#x27;b&#x27;&#125;</span>
+print(a)  # &#123;&#39;r&#39;, &#39;d&#39;, &#39;c&#39;, &#39;a&#39;, &#39;b&#39;&#125;
 a.symmetric_difference_update(b)
-print(a)  <span class="comment"># &#123;&#x27;r&#x27;, &#x27;b&#x27;, &#x27;m&#x27;, &#x27;l&#x27;, &#x27;z&#x27;, &#x27;d&#x27;&#125;</span></code></pre>
+print(a)  # &#123;&#39;r&#39;, &#39;b&#39;, &#39;m&#39;, &#39;l&#39;, &#39;z&#39;, &#39;d&#39;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.issubset(set)</code>判断集合是不是被其他集合包含，如果是则返回 True，否则返回 False。</li>
 <li><code>set1 &lt;= set2</code> 判断集合是不是被其他集合包含，如果是则返回 True，否则返回 False。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = &#123;<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string"><code class="language-highlight python">x = &#123;<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">"c"</span>&#125;
-y = &#123;<span class="string">"f"</span>, <span class="string">"e"</span>, <span class="string">"d"</span>, <span class="string">"c"</span>, <span class="string">"b"</span>, <span class="string">"a"</span>&#125;
-z = x.issubset(y)
-print(z)  <span class="comment"># True</span>
-print(x <= y)  <span class="comment"># True</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+y &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;, &quot;a&quot;&#125;
+z &#x3D; x.issubset(y)
+print(z)  # True
+print(x &lt;&#x3D; y)  # True
 
-x = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;
-y = &#123;<span class="string">"f"</span>, <span class="string">"e"</span>, <span class="string">"d"</span>, <span class="string">"c"</span>, <span class="string">"b"</span>&#125;
-z = x.issubset(y)
-print(z)  <span class="comment"># False</span>
-print(x <= y)  <span class="comment"># False</span></code></pre>
+x &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+y &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;&#125;
+z &#x3D; x.issubset(y)
+print(z)  # False
+print(x &lt;&#x3D; y)  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.issuperset(set)</code>用于判断集合是不是包含其他集合，如果是则返回 True，否则返回 False。</li>
 <li><code>set1 &gt;= set2</code> 判断集合是不是包含其他集合，如果是则返回 True，否则返回 False。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = &#123;<span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string"><code class="language-highlight python">x = &#123;<span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">"a"</span>&#125;
-y = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;
-z = x.issuperset(y)
-print(z)  <span class="comment"># True</span>
-print(x >= y)  <span class="comment"># True</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;, &quot;a&quot;&#125;
+y &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+z &#x3D; x.issuperset(y)
+print(z)  # True
+print(x &gt;&#x3D; y)  # True
 
-x = &#123;<span class="string">"f"</span>, <span class="string">"e"</span>, <span class="string">"d"</span>, <span class="string">"c"</span>, <span class="string">"b"</span>&#125;
-y = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;
-z = x.issuperset(y)
-print(z)  <span class="comment"># False</span>
-print(x >= y)  <span class="comment"># False</span></code></pre>
+x &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;&#125;
+y &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+z &#x3D; x.issuperset(y)
+print(z)  # False
+print(x &gt;&#x3D; y)  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>set.isdisjoint(set)</code> 用于判断两个集合是不是不相交，如果是返回 True，否则返回 False。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = &#123;<span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string"><code class="language-highlight python">x = &#123;<span class="string">&quot;f&quot;</span>, <span class="string">&quot;e&quot;</span>, <span class="string">&quot;d&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">"b"</span>&#125;
-y = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;
-z = x.isdisjoint(y)
-print(z)  <span class="comment"># False</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;c&quot;, &quot;b&quot;&#125;
+y &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+z &#x3D; x.isdisjoint(y)
+print(z)  # False
 
-x = &#123;<span class="string">"f"</span>, <span class="string">"e"</span>, <span class="string">"d"</span>, <span class="string">"m"</span>, <span class="string">"g"</span>&#125;
-y = &#123;<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>&#125;
-z = x.isdisjoint(y)
-print(z)  <span class="comment"># True</span></code></pre>
+x &#x3D; &#123;&quot;f&quot;, &quot;e&quot;, &quot;d&quot;, &quot;m&quot;, &quot;g&quot;&#125;
+y &#x3D; &#123;&quot;a&quot;, &quot;b&quot;, &quot;c&quot;&#125;
+z &#x3D; x.isdisjoint(y)
+print(z)  # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="4-集合的转换"><a href="#4-集合的转换" class="headerlink" title="4. 集合的转换"></a>4. 集合的转换</h3><p>【例子】</p>
-<pre class=" language-highlight python">se = set(range(<span class="number"><code class="language-highlight python">se = set(range(<span class="number">4</span>))
-li = list(se)
-tu = tuple(se)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">se &#x3D; set(range(4))
+li &#x3D; list(se)
+tu &#x3D; tuple(se)
 
-print(se, type(se))  <span class="comment"># &#123;0, 1, 2, 3&#125; <class &#x27;set&#x27;></span>
-print(li, type(li))  <span class="comment"># [0, 1, 2, 3] <class &#x27;list&#x27;></span>
-print(tu, type(tu))  <span class="comment"># (0, 1, 2, 3) <class &#x27;tuple&#x27;></span></code></pre>
+print(se, type(se))  # &#123;0, 1, 2, 3&#125; &lt;class &#39;set&#39;&gt;
+print(li, type(li))  # [0, 1, 2, 3] &lt;class &#39;list&#39;&gt;
+print(tu, type(tu))  # (0, 1, 2, 3) &lt;class &#39;tuple&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="5-不可变集合"><a href="#5-不可变集合" class="headerlink" title="5. 不可变集合"></a>5. 不可变集合</h3><p>Python 提供了不能改变元素的集合的实现版本，即不能增加或删除元素，类型名叫<code>frozenset</code>。需要注意的是<code>frozenset</code>仍然可以进行集合操作，只是不能用带有<code>update</code>的方法。</p>
 <ul>
 <li><code>frozenset([iterable])</code> 返回一个冻结的集合，冻结后集合不能再添加或删除任何元素。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = frozenset(range(<span class="number">10</span>))  <span class="comment"><code class="language-highlight python">a = frozenset(range(<span class="number">10</span>))  <span class="comment"># 生成一个新的不可变集合</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; frozenset(range(10))  # 生成一个新的不可变集合
 print(a)  
-<span class="comment"># frozenset(&#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9&#125;)</span>
+# frozenset(&#123;0, 1, 2, 3, 4, 5, 6, 7, 8, 9&#125;)
 
-b = frozenset(<span class="string">&#x27;lsgogroup&#x27;</span>)
+b &#x3D; frozenset(&#39;lsgogroup&#39;)
 print(b)  
-<span class="comment"># frozenset(&#123;&#x27;g&#x27;, &#x27;s&#x27;, &#x27;p&#x27;, &#x27;r&#x27;, &#x27;u&#x27;, &#x27;o&#x27;, &#x27;l&#x27;&#125;)</span></code></pre>
+# frozenset(&#123;&#39;g&#39;, &#39;s&#39;, &#39;p&#39;, &#39;r&#39;, &#39;u&#39;, &#39;o&#39;, &#39;l&#39;&#125;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="序列"><a href="#序列" class="headerlink" title="序列"></a>序列</h2><p>在 Python 中，序列类型包括字符串、列表、元组、集合和字典，这些序列支持一些通用的操作，但比较特殊的是，集合和字典不支持索引、切片、相加和相乘操作。</p>
 <h3 id="1-针对序列的内置函数"><a href="#1-针对序列的内置函数" class="headerlink" title="1. 针对序列的内置函数"></a>1. 针对序列的内置函数</h3><ul>
 <li><code>list(sub)</code> 把一个可迭代对象转换为列表。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">a = list()
-print(a)  <span class="comment"># []</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; list()
+print(a)  # []
 
-b = <span class="string">&#x27;I Love LsgoGroup&#x27;</span>
-b = list(b)
+b &#x3D; &#39;I Love LsgoGroup&#39;
+b &#x3D; list(b)
 print(b)  
-<span class="comment"># [&#x27;I&#x27;, &#x27; &#x27;, &#x27;L&#x27;, &#x27;o&#x27;, &#x27;v&#x27;, &#x27;e&#x27;, &#x27; &#x27;, &#x27;L&#x27;, &#x27;s&#x27;, &#x27;g&#x27;, &#x27;o&#x27;, &#x27;G&#x27;, &#x27;r&#x27;, &#x27;o&#x27;, &#x27;u&#x27;, &#x27;p&#x27;]</span>
+# [&#39;I&#39;, &#39; &#39;, &#39;L&#39;, &#39;o&#39;, &#39;v&#39;, &#39;e&#39;, &#39; &#39;, &#39;L&#39;, &#39;s&#39;, &#39;g&#39;, &#39;o&#39;, &#39;G&#39;, &#39;r&#39;, &#39;o&#39;, &#39;u&#39;, &#39;p&#39;]
 
-c = (<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>)
-c = list(c)
-print(c)  <span class="comment"># [1, 1, 2, 3, 5, 8]</span></code></pre>
+c &#x3D; (1, 1, 2, 3, 5, 8)
+c &#x3D; list(c)
+print(c)  # [1, 1, 2, 3, 5, 8]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>tuple(sub)</code> 把一个可迭代对象转换为元组。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">a = tuple()
-print(a)  <span class="comment"># ()</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; tuple()
+print(a)  # ()
 
-b = <span class="string">&#x27;I Love LsgoGroup&#x27;</span>
-b = tuple(b)
+b &#x3D; &#39;I Love LsgoGroup&#39;
+b &#x3D; tuple(b)
 print(b)  
-<span class="comment"># (&#x27;I&#x27;, &#x27; &#x27;, &#x27;L&#x27;, &#x27;o&#x27;, &#x27;v&#x27;, &#x27;e&#x27;, &#x27; &#x27;, &#x27;L&#x27;, &#x27;s&#x27;, &#x27;g&#x27;, &#x27;o&#x27;, &#x27;G&#x27;, &#x27;r&#x27;, &#x27;o&#x27;, &#x27;u&#x27;, &#x27;p&#x27;)</span>
+# (&#39;I&#39;, &#39; &#39;, &#39;L&#39;, &#39;o&#39;, &#39;v&#39;, &#39;e&#39;, &#39; &#39;, &#39;L&#39;, &#39;s&#39;, &#39;g&#39;, &#39;o&#39;, &#39;G&#39;, &#39;r&#39;, &#39;o&#39;, &#39;u&#39;, &#39;p&#39;)
 
-c = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">8</span>]
-c = tuple(c)
-print(c)  <span class="comment"># (1, 1, 2, 3, 5, 8)</span></code></pre>
+c &#x3D; [1, 1, 2, 3, 5, 8]
+c &#x3D; tuple(c)
+print(c)  # (1, 1, 2, 3, 5, 8)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>str(obj)</code> 把obj对象转换为字符串</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = <span class="number"><code class="language-highlight python">a = <span class="number">123</span>
-a = str(a)
-print(a)  <span class="comment"># 123</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; 123
+a &#x3D; str(a)
+print(a)  # 123<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>len(s)</code> 返回对象（字符、列表、元组等）长度或元素个数。<ul>
@@ -1944,39 +1944,39 @@ print(a)  <span class="comment"># 123</span></code></pre>
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">a = list()
-print(len(a))  <span class="comment"># 0</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; list()
+print(len(a))  # 0
 
-b = (<span class="string">&#x27;I&#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;L&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;v&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27; &#x27;</span>, <span class="string">&#x27;L&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;G&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;p&#x27;</span>)
-print(len(b))  <span class="comment"># 16</span>
+b &#x3D; (&#39;I&#39;, &#39; &#39;, &#39;L&#39;, &#39;o&#39;, &#39;v&#39;, &#39;e&#39;, &#39; &#39;, &#39;L&#39;, &#39;s&#39;, &#39;g&#39;, &#39;o&#39;, &#39;G&#39;, &#39;r&#39;, &#39;o&#39;, &#39;u&#39;, &#39;p&#39;)
+print(len(b))  # 16
 
-c = <span class="string">&#x27;I Love LsgoGroup&#x27;</span>
-print(len(c))  <span class="comment"># 16</span></code></pre>
+c &#x3D; &#39;I Love LsgoGroup&#39;
+print(len(c))  # 16<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>max(sub)</code>返回序列或者参数集合中的最大值</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"><code class="language-highlight python">print(max(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"># 5</span>
-print(max([<span class="number">-8</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">83</span>]))  <span class="comment"># 99</span>
-print(max(<span class="string">&#x27;IloveLsgoGroup&#x27;</span>))  <span class="comment"># v</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(max(1, 2, 3, 4, 5))  # 5
+print(max([-8, 99, 3, 7, 83]))  # 99
+print(max(&#39;IloveLsgoGroup&#39;))  # v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>min(sub)</code>返回序列或参数集合中的最小值</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight py">print(min(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"><code class="language-highlight py">print(min(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"># 1</span>
-print(min([<span class="number">-8</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">83</span>]))  <span class="comment"># -8</span>
-print(min(<span class="string">&#x27;IloveLsgoGroup&#x27;</span>))  <span class="comment"># G</span></code></pre>
+<pre class="line-numbers language-py" data-language="py"><code class="language-py">print(min(1, 2, 3, 4, 5))  # 1
+print(min([-8, 99, 3, 7, 83]))  # -8
+print(min(&#39;IloveLsgoGroup&#39;))  # G<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>sum(iterable[, start=0])</code> 返回序列<code>iterable</code>与可选参数<code>start</code>的总和。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(sum([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))  <span class="comment"><code class="language-highlight python">print(sum([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]))  <span class="comment"># 25</span>
-print(sum([<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], <span class="number">10</span>))  <span class="comment"># 35</span>
-print(sum((<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>)))  <span class="comment"># 25</span>
-print(sum((<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>), <span class="number">20</span>))  <span class="comment"># 45</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(sum([1, 3, 5, 7, 9]))  # 25
+print(sum([1, 3, 5, 7, 9], 10))  # 35
+print(sum((1, 3, 5, 7, 9)))  # 25
+print(sum((1, 3, 5, 7, 9), 20))  # 45<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>sorted(iterable, key=None, reverse=False) </code> 对所有可迭代的对象进行排序操作。<ul>
@@ -1988,14 +1988,14 @@ print(sum((<span class="number">1</span>, <span class="number">3</span>, <span c
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">x = [<span class="number">-8</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number"><code class="language-highlight python">x = [<span class="number">-8</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">83</span>]
-print(sorted(x))  <span class="comment"># [-8, 3, 7, 83, 99]</span>
-print(sorted(x, reverse=<span class="literal">True</span>))  <span class="comment"># [99, 83, 7, 3, -8]</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">x &#x3D; [-8, 99, 3, 7, 83]
+print(sorted(x))  # [-8, 3, 7, 83, 99]
+print(sorted(x, reverse&#x3D;True))  # [99, 83, 7, 3, -8]
 
-t = (&#123;<span class="string">"age"</span>: <span class="number">20</span>, <span class="string">"name"</span>: <span class="string">"a"</span>&#125;, &#123;<span class="string">"age"</span>: <span class="number">25</span>, <span class="string">"name"</span>: <span class="string">"b"</span>&#125;, &#123;<span class="string">"age"</span>: <span class="number">10</span>, <span class="string">"name"</span>: <span class="string">"c"</span>&#125;)
-x = sorted(t, key=<span class="keyword">lambda</span> a: a[<span class="string">"age"</span>])
+t &#x3D; (&#123;&quot;age&quot;: 20, &quot;name&quot;: &quot;a&quot;&#125;, &#123;&quot;age&quot;: 25, &quot;name&quot;: &quot;b&quot;&#125;, &#123;&quot;age&quot;: 10, &quot;name&quot;: &quot;c&quot;&#125;)
+x &#x3D; sorted(t, key&#x3D;lambda a: a[&quot;age&quot;])
 print(x)
-<span class="comment"># [&#123;&#x27;age&#x27;: 10, &#x27;name&#x27;: &#x27;c&#x27;&#125;, &#123;&#x27;age&#x27;: 20, &#x27;name&#x27;: &#x27;a&#x27;&#125;, &#123;&#x27;age&#x27;: 25, &#x27;name&#x27;: &#x27;b&#x27;&#125;]</span></code></pre>
+# [&#123;&#39;age&#39;: 10, &#39;name&#39;: &#39;c&#39;&#125;, &#123;&#39;age&#39;: 20, &#39;name&#39;: &#39;a&#39;&#125;, &#123;&#39;age&#39;: 25, &#39;name&#39;: &#39;b&#39;&#125;]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>reversed(seq)</code> 函数返回一个反转的迭代器。<ul>
@@ -2004,44 +2004,44 @@ print(x)
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">s = <span class="string"><code class="language-highlight python">s = <span class="string">&#x27;lsgogroup&#x27;</span>
-x = reversed(s)
-print(type(x))  <span class="comment"># <class &#x27;reversed&#x27;></span>
-print(x)  <span class="comment"># <reversed object at 0x000002507E8EC2C8></span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">s &#x3D; &#39;lsgogroup&#39;
+x &#x3D; reversed(s)
+print(type(x))  # &lt;class &#39;reversed&#39;&gt;
+print(x)  # &lt;reversed object at 0x000002507E8EC2C8&gt;
 print(list(x))
-<span class="comment"># [&#x27;p&#x27;, &#x27;u&#x27;, &#x27;o&#x27;, &#x27;r&#x27;, &#x27;g&#x27;, &#x27;o&#x27;, &#x27;g&#x27;, &#x27;s&#x27;, &#x27;l&#x27;]</span>
+# [&#39;p&#39;, &#39;u&#39;, &#39;o&#39;, &#39;r&#39;, &#39;g&#39;, &#39;o&#39;, &#39;g&#39;, &#39;s&#39;, &#39;l&#39;]
 
-t = (<span class="string">&#x27;l&#x27;</span>, <span class="string">&#x27;s&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;g&#x27;</span>, <span class="string">&#x27;r&#x27;</span>, <span class="string">&#x27;o&#x27;</span>, <span class="string">&#x27;u&#x27;</span>, <span class="string">&#x27;p&#x27;</span>)
+t &#x3D; (&#39;l&#39;, &#39;s&#39;, &#39;g&#39;, &#39;o&#39;, &#39;g&#39;, &#39;r&#39;, &#39;o&#39;, &#39;u&#39;, &#39;p&#39;)
 print(list(reversed(t)))
-<span class="comment"># [&#x27;p&#x27;, &#x27;u&#x27;, &#x27;o&#x27;, &#x27;r&#x27;, &#x27;g&#x27;, &#x27;o&#x27;, &#x27;g&#x27;, &#x27;s&#x27;, &#x27;l&#x27;]</span>
+# [&#39;p&#39;, &#39;u&#39;, &#39;o&#39;, &#39;r&#39;, &#39;g&#39;, &#39;o&#39;, &#39;g&#39;, &#39;s&#39;, &#39;l&#39;]
 
-r = range(<span class="number">5</span>, <span class="number">9</span>)
+r &#x3D; range(5, 9)
 print(list(reversed(r)))
-<span class="comment"># [8, 7, 6, 5]</span>
+# [8, 7, 6, 5]
 
-x = [<span class="number">-8</span>, <span class="number">99</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">83</span>]
+x &#x3D; [-8, 99, 3, 7, 83]
 print(list(reversed(x)))
-<span class="comment"># [83, 7, 3, 99, -8]</span></code></pre>
+# [83, 7, 3, 99, -8]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>enumerate(sequence, [start=0])</code></li>
 </ul>
 <p>【例子】用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，同时列出数据和数据下标，一般用在 for 循环当中。</p>
-<pre class=" language-highlight python">seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string"><code class="language-highlight python">seasons = [<span class="string">&#x27;Spring&#x27;</span>, <span class="string">&#x27;Summer&#x27;</span>, <span class="string">&#x27;Fall&#x27;</span>, <span class="string">&#x27;Winter&#x27;</span>]
-a = list(enumerate(seasons))
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">seasons &#x3D; [&#39;Spring&#39;, &#39;Summer&#39;, &#39;Fall&#39;, &#39;Winter&#39;]
+a &#x3D; list(enumerate(seasons))
 print(a)  
-<span class="comment"># [(0, &#x27;Spring&#x27;), (1, &#x27;Summer&#x27;), (2, &#x27;Fall&#x27;), (3, &#x27;Winter&#x27;)]</span>
+# [(0, &#39;Spring&#39;), (1, &#39;Summer&#39;), (2, &#39;Fall&#39;), (3, &#39;Winter&#39;)]
 
-b = list(enumerate(seasons, <span class="number">1</span>))
+b &#x3D; list(enumerate(seasons, 1))
 print(b)  
-<span class="comment"># [(1, &#x27;Spring&#x27;), (2, &#x27;Summer&#x27;), (3, &#x27;Fall&#x27;), (4, &#x27;Winter&#x27;)]</span>
+# [(1, &#39;Spring&#39;), (2, &#39;Summer&#39;), (3, &#39;Fall&#39;), (4, &#39;Winter&#39;)]
 
-<span class="keyword">for</span> i, element <span class="keyword">in</span> a:
-    print(<span class="string">&#x27;&#123;0&#125;,&#123;1&#125;&#x27;</span>.format(i, element))
-<span class="comment"># 0,Spring</span>
-<span class="comment"># 1,Summer</span>
-<span class="comment"># 2,Fall</span>
-<span class="comment"># 3,Winter</span></code></pre>
+for i, element in a:
+    print(&#39;&#123;0&#125;,&#123;1&#125;&#39;.format(i, element))
+# 0,Spring
+# 1,Summer
+# 2,Fall
+# 3,Winter<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>zip(iter1 [,iter2 [...]])</code><ul>
@@ -2052,19 +2052,19 @@ print(b)
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number"><code class="language-highlight python">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
-b = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]
-c = [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; [1, 2, 3]
+b &#x3D; [4, 5, 6]
+c &#x3D; [4, 5, 6, 7, 8]
 
-zipped = zip(a, b)
-print(zipped)  <span class="comment"># <zip object at 0x000000C5D89EDD88></span>
-print(list(zipped))  <span class="comment"># [(1, 4), (2, 5), (3, 6)]</span>
-zipped = zip(a, c)
-print(list(zipped))  <span class="comment"># [(1, 4), (2, 5), (3, 6)]</span>
+zipped &#x3D; zip(a, b)
+print(zipped)  # &lt;zip object at 0x000000C5D89EDD88&gt;
+print(list(zipped))  # [(1, 4), (2, 5), (3, 6)]
+zipped &#x3D; zip(a, c)
+print(list(zipped))  # [(1, 4), (2, 5), (3, 6)]
 
-a1, a2 = zip(*zip(a, b))
-print(list(a1))  <span class="comment"># [1, 2, 3]</span>
-print(list(a2))  <span class="comment"># [4, 5, 6]</span></code></pre>
+a1, a2 &#x3D; zip(*zip(a, b))
+print(list(a1))  # [1, 2, 3]
+print(list(a2))  # [4, 5, 6]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 

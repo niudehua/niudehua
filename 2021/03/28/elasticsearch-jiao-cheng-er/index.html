@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    5.1k
                 </div>
                 
 
@@ -454,69 +454,69 @@
 <h4 id="1-1-1-term与terms"><a href="#1-1-1-term与terms" class="headerlink" title="1.1.1 term与terms"></a>1.1.1 term与terms</h4><blockquote>
 <p><strong>查询电影名字中包含有 beautiful 这个单词的所有的电影，用于查询的单词不会进行分词的处理</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search 
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"term"</span>: &#123;
-            <span class="attr">"title"</span>: &#123;
-                <span class="attr">"value"</span>: <span class="string">"beautiful"</span>
+    &quot;query&quot;: &#123;
+        &quot;term&quot;: &#123;
+            &quot;title&quot;: &#123;
+                &quot;value&quot;: &quot;beautiful&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询电影名字中包含有 beautiful 或者 mind 这两个单词的所有的电影，用于查询的单词不会进行分词的处理</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"terms"</span>: &#123;
-            <span class="attr">"title"</span>: [
-                <span class="string">"beautiful"</span>,
-                <span class="string">"mind"</span>
+    &quot;query&quot;: &#123;
+        &quot;terms&quot;: &#123;
+            &quot;title&quot;: [
+                &quot;beautiful&quot;,
+                &quot;mind&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-1-2-range"><a href="#1-1-2-range" class="headerlink" title="1.1.2 range"></a>1.1.2 range</h4><blockquote>
 <p><strong>查询上映在2016到2018年的所有的电影，再根据上映时间的倒序进行排序</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"range"</span>: &#123;
-            <span class="attr">"year"</span>: &#123;
-                <span class="attr">"gte"</span>: <span class="number">2016</span>,
-                <span class="attr">"lte"</span>: <span class="number">2018</span>
+    &quot;query&quot;: &#123;
+        &quot;range&quot;: &#123;
+            &quot;year&quot;: &#123;
+                &quot;gte&quot;: 2016,
+                &quot;lte&quot;: 2018
             &#125;
         &#125;
     &#125;,
-    <span class="attr">"sort"</span>: [
+    &quot;sort&quot;: [
         &#123;
-            <span class="attr">"year"</span>: &#123;
-                <span class="attr">"order"</span>: <span class="string">"desc"</span>
+            &quot;year&quot;: &#123;
+                &quot;order&quot;: &quot;desc&quot;
             &#125;
         &#125;
     ]
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-1-3-Constant-Score"><a href="#1-1-3-Constant-Score" class="headerlink" title="1.1.3 Constant Score"></a>1.1.3 Constant Score</h4><blockquote>
 <p><strong>查询title中包含有beautiful的所有的电影，不进行相关性算分，查询的数据进行缓存，提高效率</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"constant_score"</span>: &#123;
-            <span class="attr">"filter"</span>: &#123;
-                <span class="attr">"term"</span>: &#123;
-                    <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+    &quot;query&quot;: &#123;
+        &quot;constant_score&quot;: &#123;
+            &quot;filter&quot;: &#123;
+                &quot;term&quot;: &#123;
+                    &quot;title&quot;: &quot;beautiful&quot;
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-2-全文查询"><a href="#1-2-全文查询" class="headerlink" title="1.2 全文查询"></a>1.2 全文查询</h3><blockquote>
 <p>全文查询的种类有: Match Query、Match Phrase Query、Query String Query等 </p>
@@ -525,94 +525,94 @@
 <h4 id="1-2-1-match"><a href="#1-2-1-match" class="headerlink" title="1.2.1 match"></a>1.2.1 match</h4><blockquote>
 <p><strong>查询电影名字中包含有beautiful的所有电影，每页十条，取第二页的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"match"</span>: &#123;
-            <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+    &quot;query&quot;: &#123;
+        &quot;match&quot;: &#123;
+            &quot;title&quot;: &quot;beautiful&quot;
         &#125;
     &#125;,
-    <span class="attr">"from"</span>: <span class="number">10</span>,
-    <span class="attr">"size"</span>: <span class="number">10</span>
-&#125;</code></pre>
+    &quot;from&quot;: 10,
+    &quot;size&quot;: 10
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询电影名字中包含有 beautiful 或者 mind 的所有的数据，但是只查询title和id两个属性</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"_source"</span>: [
-        <span class="string">"title"</span>,
-        <span class="string">"id"</span>
+    &quot;_source&quot;: [
+        &quot;title&quot;,
+        &quot;id&quot;
     ],
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"match"</span>: &#123;
-            <span class="attr">"title"</span>: <span class="string">"beautiful mind"</span>
+    &quot;query&quot;: &#123;
+        &quot;match&quot;: &#123;
+            &quot;title&quot;: &quot;beautiful mind&quot;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-2-2-match-phrase"><a href="#1-2-2-match-phrase" class="headerlink" title="1.2.2 match_phrase"></a>1.2.2 match_phrase</h4><blockquote>
 <p><strong>查询电影名字中包含有 “beautiful mind” 这个短语的所有的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"match_phrase"</span>: &#123;
-            <span class="attr">"title"</span>: <span class="string">"beautiful mind"</span>
+    &quot;query&quot;: &#123;
+        &quot;match_phrase&quot;: &#123;
+            &quot;title&quot;: &quot;beautiful mind&quot;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-2-3-multi-match"><a href="#1-2-3-multi-match" class="headerlink" title="1.2.3 multi_match"></a>1.2.3 multi_match</h4><blockquote>
 <p><strong>查询 title 或 genre 中包含有 beautiful 或者 Adventure 的所有的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"multi_match"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"beautiful Adventure"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>,
-                <span class="string">"genre"</span>
+    &quot;query&quot;: &#123;
+        &quot;multi_match&quot;: &#123;
+            &quot;query&quot;: &quot;beautiful Adventure&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;,
+                &quot;genre&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-2-4-match-all"><a href="#1-2-4-match-all" class="headerlink" title="1.2.4 match_all"></a>1.2.4 match_all</h4><blockquote>
 <p><strong>查询所有的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"match_all"</span>: &#123;&#125;
+    &quot;query&quot;: &#123;
+        &quot;match_all&quot;: &#123;&#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-2-5-query-string"><a href="#1-2-5-query-string" class="headerlink" title="1.2.5 query_string"></a>1.2.5 query_string</h4><blockquote>
 <p><strong>查询 title 中包含有 beautiful 和 mind 的所有的电影</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"query_string"</span>: &#123;
-            <span class="attr">"default_field"</span>: <span class="string">"title"</span>,
-            <span class="attr">"query"</span>: <span class="string">"mind AND beautiful"</span>
+    &quot;query&quot;: &#123;
+        &quot;query_string&quot;: &#123;
+            &quot;default_field&quot;: &quot;title&quot;,
+            &quot;query&quot;: &quot;mind AND beautiful&quot;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"query_string"</span>: &#123;
-            <span class="attr">"default_field"</span>: <span class="string">"title"</span>,
-            <span class="attr">"query"</span>: <span class="string">"mind beautiful"</span>,
-            <span class="attr">"default_operator"</span>: <span class="string">"AND"</span>
+    &quot;query&quot;: &#123;
+        &quot;query_string&quot;: &#123;
+            &quot;default_field&quot;: &quot;title&quot;,
+            &quot;query&quot;: &quot;mind beautiful&quot;,
+            &quot;default_operator&quot;: &quot;AND&quot;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="1-2-6-simple-query-string"><a href="#1-2-6-simple-query-string" class="headerlink" title="1.2.6 simple_query_string"></a>1.2.6 simple_query_string</h4><blockquote>
 <p>simple_query_string 覆盖了很多其他查询的用法。</p>
@@ -620,236 +620,236 @@
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 和 mind 的所有的电影</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"beautiful + mind"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;beautiful + mind&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;beautiful mind&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;
             ],
-            <span class="attr">"default_operator"</span>: <span class="string">"AND"</span>
+            &quot;default_operator&quot;: &quot;AND&quot;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询title中包含 “beautiful mind” 这个短语的所有的电影 (用法和match_phrase类似)</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"\"beautiful mind\""</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;\&quot;beautiful mind\&quot;&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询title或genre中包含有 beautiful mind romance 这个三个单词的所有的电影 （与multi_match类似）</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search 
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"beautiful mind Romance"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>,
-                <span class="string">"genre"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;beautiful mind Romance&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;,
+                &quot;genre&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询title中包含 “beautiful mind” 或者 “Modern Romance” 这两个短语的所有的电影</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"\"beautiful mind\" | \"Modern Romance\""</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;\&quot;beautiful mind\&quot; | \&quot;Modern Romance\&quot;&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询title或者genre中包含有 beautiful + mind 这个两个词，或者Comedy + Romance + Musical + Drama + Children 这个五个词的所有的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"(beautiful + mind) | (Comedy + Romance + Musical + Drama + Children)"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>,
-                <span class="string">"genre"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;(beautiful + mind) | (Comedy + Romance + Musical + Drama + Children)&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;,
+                &quot;genre&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含 beautiful 和 people 但是不包含 Animals 的所有的数据</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"simple_query_string"</span>: &#123;
-            <span class="attr">"query"</span>: <span class="string">"beautiful + people + -Animals"</span>,
-            <span class="attr">"fields"</span>: [
-                <span class="string">"title"</span>
+    &quot;query&quot;: &#123;
+        &quot;simple_query_string&quot;: &#123;
+            &quot;query&quot;: &quot;beautiful + people + -Animals&quot;,
+            &quot;fields&quot;: [
+                &quot;title&quot;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>.</p>
 <h3 id="1-3-模糊搜索"><a href="#1-3-模糊搜索" class="headerlink" title="1.3 模糊搜索"></a>1.3 模糊搜索</h3><blockquote>
 <p><strong>查询title中从第6个字母开始只要最多纠正一次，就与 neverendign 匹配的所有的数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"fuzzy"</span>: &#123;
-            <span class="attr">"title"</span>: &#123;
-                <span class="attr">"value"</span>: <span class="string">"neverendign"</span>,
-                <span class="attr">"fuzziness"</span>: <span class="number">1</span>,
-                <span class="attr">"prefix_length"</span>: <span class="number">5</span>
+    &quot;query&quot;: &#123;
+        &quot;fuzzy&quot;: &#123;
+            &quot;title&quot;: &#123;
+                &quot;value&quot;: &quot;neverendign&quot;,
+                &quot;fuzziness&quot;: 1,
+                &quot;prefix_length&quot;: 5
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-4-多条件查询"><a href="#1-4-多条件查询" class="headerlink" title="1.4 多条件查询"></a>1.4 多条件查询</h3><blockquote>
 <p><strong>查询title中包含有beautiful或者mind单词，并且上映时间在2016~1018年的所有的电影</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"bool"</span>: &#123;
-            <span class="attr">"must"</span>: [
+    &quot;query&quot;: &#123;
+        &quot;bool&quot;: &#123;
+            &quot;must&quot;: [
                 &#123;
-                    <span class="attr">"simple_query_string"</span>: &#123;
-                        <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
-                        <span class="attr">"fields"</span>: [
-                            <span class="string">"title"</span>
+                    &quot;simple_query_string&quot;: &#123;
+                        &quot;query&quot;: &quot;beautiful mind&quot;,
+                        &quot;fields&quot;: [
+                            &quot;title&quot;
                         ]
                     &#125;
                 &#125;,
                 &#123;
-                    <span class="attr">"range"</span>: &#123;
-                        <span class="attr">"year"</span>: &#123;
-                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
-                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                    &quot;range&quot;: &#123;
+                        &quot;year&quot;: &#123;
+                            &quot;gte&quot;: 2016,
+                            &quot;lte&quot;: 2018
                         &#125;
                     &#125;
                 &#125;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询title中包含有beautiful或者mind单词，并且上映时间不在2016~1018年的所有的电影</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"bool"</span>: &#123;
-            <span class="attr">"must"</span>: [
+    &quot;query&quot;: &#123;
+        &quot;bool&quot;: &#123;
+            &quot;must&quot;: [
                 &#123;
-                    <span class="attr">"simple_query_string"</span>: &#123;
-                        <span class="attr">"query"</span>: <span class="string">"beautiful mind"</span>,
-                        <span class="attr">"fields"</span>: [
-                            <span class="string">"title"</span>
+                    &quot;simple_query_string&quot;: &#123;
+                        &quot;query&quot;: &quot;beautiful mind&quot;,
+                        &quot;fields&quot;: [
+                            &quot;title&quot;
                         ]
                     &#125;
                 &#125;
             ],
-            <span class="attr">"must_not"</span>: [
+            &quot;must_not&quot;: [
                 &#123;
-                    <span class="attr">"range"</span>: &#123;
-                        <span class="attr">"year"</span>: &#123;
-                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
-                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                    &quot;range&quot;: &#123;
+                        &quot;year&quot;: &#123;
+                            &quot;gte&quot;: 2016,
+                            &quot;lte&quot;: 2018
                         &#125;
                     &#125;
                 &#125;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 这个单词，并且上映年份在2016~2018年间的所有电影，但是不进行相关性的算分</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json"># filter不会进行相关性的算分，并且会将查出来的结果进行缓存，效率上比 query 高 
-GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json"># filter不会进行相关性的算分，并且会将查出来的结果进行缓存，效率上比 query 高 
+GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"bool"</span>: &#123;
-            <span class="attr">"filter"</span>: [
+    &quot;query&quot;: &#123;
+        &quot;bool&quot;: &#123;
+            &quot;filter&quot;: [
                 &#123;
-                    <span class="attr">"term"</span>: &#123;
-                        <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+                    &quot;term&quot;: &#123;
+                        &quot;title&quot;: &quot;beautiful&quot;
                     &#125;
                 &#125;,
                 &#123;
-                    <span class="attr">"range"</span>: &#123;
-                        <span class="attr">"year"</span>: &#123;
-                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
-                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                    &quot;range&quot;: &#123;
+                        &quot;year&quot;: &#123;
+                            &quot;gte&quot;: 2016,
+                            &quot;lte&quot;: 2018
                         &#125;
                     &#125;
                 &#125;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询 title 中包含有 beautiful 这个单词，或者年份在2016~2018年间的所有电影</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"bool"</span>: &#123;
-            <span class="attr">"should"</span>: [
+    &quot;query&quot;: &#123;
+        &quot;bool&quot;: &#123;
+            &quot;should&quot;: [
                 &#123;
-                    <span class="attr">"term"</span>: &#123;
-                        <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+                    &quot;term&quot;: &#123;
+                        &quot;title&quot;: &quot;beautiful&quot;
                     &#125;
                 &#125;,
                 &#123;
-                    <span class="attr">"range"</span>: &#123;
-                        <span class="attr">"year"</span>: &#123;
-                            <span class="attr">"gte"</span>: <span class="number">2016</span>,
-                            <span class="attr">"lte"</span>: <span class="number">2018</span>
+                    &quot;range&quot;: &#123;
+                        &quot;year&quot;: &#123;
+                            &quot;gte&quot;: 2016,
+                            &quot;lte&quot;: 2018
                         &#125;
                     &#125;
                 &#125;
             ]
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>must</strong></p>
@@ -902,10 +902,10 @@ GET movies/_search
 <h3 id="2-2-Mapping的定义"><a href="#2-2-Mapping的定义" class="headerlink" title="2.2 Mapping的定义"></a>2.2 Mapping的定义</h3><blockquote>
 <p>语法格式如下：</p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">PUT users 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">PUT users 
 &#123;
-    <span class="attr">"mappings"</span>: &#123;<span class="comment">// define your mappings here&#125;</span>
-&#125;</code></pre>
+    &quot;mappings&quot;: &#123;&#x2F;&#x2F; define your mappings here&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>定义mapping的建议方式: 写入一个样本文档到临时索引中，ES会自动生成mapping信息，通过访问mapping信息的api查询mapping的定义，修改自动生成的mapping成为我们需要方式，创建索引，删除临时索引，简而言之就是 “卸磨杀驴” 。</strong></p>
@@ -920,79 +920,79 @@ GET movies/_search
 <blockquote>
 <p>聚合搜索的语法格式如下：</p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET indexName/_search 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET indexName&#x2F;_search 
 &#123;
-    "aggs": &#123;   #聚合分析的名字是由用户自定义的
-        "aggs_name": &#123;
-            "aggs_type": &#123;
+    &quot;aggs&quot;: &#123;   #聚合分析的名字是由用户自定义的
+        &quot;aggs_name&quot;: &#123;
+            &quot;aggs_type&quot;: &#123;
                # aggregation body
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>给employee索引创建mapping信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">PUT employee
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">PUT employee
 &#123;
-    <span class="attr">"mappings"</span>: &#123;
-        <span class="attr">"properties"</span>: &#123;
-            <span class="attr">"id"</span>: &#123;
-                <span class="attr">"type"</span>: <span class="string">"integer"</span>
+    &quot;mappings&quot;: &#123;
+        &quot;properties&quot;: &#123;
+            &quot;id&quot;: &#123;
+                &quot;type&quot;: &quot;integer&quot;
             &#125;,
-            <span class="attr">"name"</span>: &#123;
-                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &quot;name&quot;: &#123;
+                &quot;type&quot;: &quot;keyword&quot;
             &#125;,
-            <span class="attr">"job"</span>: &#123;
-                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &quot;job&quot;: &#123;
+                &quot;type&quot;: &quot;keyword&quot;
             &#125;,
-            <span class="attr">"age"</span>: &#123;
-                <span class="attr">"type"</span>: <span class="string">"integer"</span>
+            &quot;age&quot;: &#123;
+                &quot;type&quot;: &quot;integer&quot;
             &#125;,
-            <span class="attr">"gender"</span>: &#123;
-                <span class="attr">"type"</span>: <span class="string">"keyword"</span>
+            &quot;gender&quot;: &#123;
+                &quot;type&quot;: &quot;keyword&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>往 employee索引中写入数据</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">PUT employee/_bulk 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">1</span>&#125;&#125;
-&#123;<span class="attr">"id"</span>: <span class="number">1</span>, <span class="attr">"name"</span>: <span class="string">"Bob"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">21</span>, <span class="attr">"sal"</span>: <span class="number">8000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">2</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">2</span>, <span class="attr">"name"</span>: <span class="string">"Rod"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">31</span>, <span class="attr">"sal"</span>: <span class="number">18000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">3</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">3</span>, <span class="attr">"name"</span>: <span class="string">"Gaving"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">24</span>, <span class="attr">"sal"</span>: <span class="number">12000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">4</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">4</span>, <span class="attr">"name"</span>: <span class="string">"King"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">26</span>, <span class="attr">"sal"</span>: <span class="number">15000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">5</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">5</span>, <span class="attr">"name"</span>: <span class="string">"Jonhson"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">29</span>, <span class="attr">"sal"</span>: <span class="number">16000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">6</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">6</span>, <span class="attr">"name"</span>: <span class="string">"Douge"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">41</span>, <span class="attr">"sal"</span>: <span class="number">20000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">7</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">7</span>, <span class="attr">"name"</span>: <span class="string">"cutting"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">27</span>, <span class="attr">"sal"</span>: <span class="number">7000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">8</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">8</span>, <span class="attr">"name"</span>: <span class="string">"Bona"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">22</span>, <span class="attr">"sal"</span>: <span class="number">14000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">9</span>&#125;&#125;
-&#123;<span class="attr">"id"</span>: <span class="number">9</span>, <span class="attr">"name"</span>: <span class="string">"Shyon"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">20</span>, <span class="attr">"sal"</span>: <span class="number">19000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">10</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">10</span>, <span class="attr">"name"</span>: <span class="string">"James"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">18</span>, <span class="attr">"sal"</span>: <span class="number">22000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">11</span>&#125;&#125;
-&#123;<span class="attr">"id"</span>: <span class="number">11</span>, <span class="attr">"name"</span>: <span class="string">"Golsling"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">32</span>, <span class="attr">"sal"</span>: <span class="number">23000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">12</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">12</span>, <span class="attr">"name"</span>: <span class="string">"Lily"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">24</span>, <span class="attr">"sal"</span>: <span class="number">2000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">13</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">13</span>, <span class="attr">"name"</span>: <span class="string">"Jack"</span>, <span class="attr">"job"</span>: <span class="string">"html"</span>, <span class="attr">"age"</span>: <span class="number">23</span>, <span class="attr">"sal"</span>: <span class="number">3000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125; 
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">14</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">14</span>, <span class="attr">"name"</span>: <span class="string">"Rose"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">36</span>, <span class="attr">"sal"</span>: <span class="number">6000</span>, <span class="attr">"gender"</span>: <span class="string">"female"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">15</span>&#125;&#125; 
-&#123;<span class="attr">"id"</span>: <span class="number">15</span>, <span class="attr">"name"</span>: <span class="string">"Will"</span>, <span class="attr">"job"</span>: <span class="string">"dba"</span>, <span class="attr">"age"</span>: <span class="number">38</span>, <span class="attr">"sal"</span>: <span class="number">4500</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125;
-&#123;<span class="attr">"index"</span>: &#123;<span class="attr">"_id"</span>: <span class="number">16</span>&#125;&#125;
-&#123;<span class="attr">"id"</span>: <span class="number">16</span>, <span class="attr">"name"</span>: <span class="string">"smith"</span>, <span class="attr">"job"</span>: <span class="string">"java"</span>, <span class="attr">"age"</span>: <span class="number">32</span>, <span class="attr">"sal"</span>: <span class="number">23000</span>, <span class="attr">"gender"</span>: <span class="string">"male"</span>&#125;</code></pre>
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">PUT employee&#x2F;_bulk 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 1&#125;&#125;
+&#123;&quot;id&quot;: 1, &quot;name&quot;: &quot;Bob&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 21, &quot;sal&quot;: 8000, &quot;gender&quot;: &quot;female&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 2&#125;&#125; 
+&#123;&quot;id&quot;: 2, &quot;name&quot;: &quot;Rod&quot;, &quot;job&quot;: &quot;html&quot;, &quot;age&quot;: 31, &quot;sal&quot;: 18000, &quot;gender&quot;: &quot;female&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 3&#125;&#125; 
+&#123;&quot;id&quot;: 3, &quot;name&quot;: &quot;Gaving&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 24, &quot;sal&quot;: 12000, &quot;gender&quot;: &quot;male&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 4&#125;&#125; 
+&#123;&quot;id&quot;: 4, &quot;name&quot;: &quot;King&quot;, &quot;job&quot;: &quot;dba&quot;, &quot;age&quot;: 26, &quot;sal&quot;: 15000, &quot;gender&quot;: &quot;female&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 5&#125;&#125; 
+&#123;&quot;id&quot;: 5, &quot;name&quot;: &quot;Jonhson&quot;, &quot;job&quot;: &quot;dba&quot;, &quot;age&quot;: 29, &quot;sal&quot;: 16000, &quot;gender&quot;: &quot;male&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 6&#125;&#125; 
+&#123;&quot;id&quot;: 6, &quot;name&quot;: &quot;Douge&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 41, &quot;sal&quot;: 20000, &quot;gender&quot;: &quot;female&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 7&#125;&#125; 
+&#123;&quot;id&quot;: 7, &quot;name&quot;: &quot;cutting&quot;, &quot;job&quot;: &quot;dba&quot;, &quot;age&quot;: 27, &quot;sal&quot;: 7000, &quot;gender&quot;: &quot;male&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 8&#125;&#125; 
+&#123;&quot;id&quot;: 8, &quot;name&quot;: &quot;Bona&quot;, &quot;job&quot;: &quot;html&quot;, &quot;age&quot;: 22, &quot;sal&quot;: 14000, &quot;gender&quot;: &quot;female&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 9&#125;&#125;
+&#123;&quot;id&quot;: 9, &quot;name&quot;: &quot;Shyon&quot;, &quot;job&quot;: &quot;dba&quot;, &quot;age&quot;: 20, &quot;sal&quot;: 19000, &quot;gender&quot;: &quot;female&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 10&#125;&#125; 
+&#123;&quot;id&quot;: 10, &quot;name&quot;: &quot;James&quot;, &quot;job&quot;: &quot;html&quot;, &quot;age&quot;: 18, &quot;sal&quot;: 22000, &quot;gender&quot;: &quot;male&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 11&#125;&#125;
+&#123;&quot;id&quot;: 11, &quot;name&quot;: &quot;Golsling&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 32, &quot;sal&quot;: 23000, &quot;gender&quot;: &quot;female&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 12&#125;&#125; 
+&#123;&quot;id&quot;: 12, &quot;name&quot;: &quot;Lily&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 24, &quot;sal&quot;: 2000, &quot;gender&quot;: &quot;male&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 13&#125;&#125; 
+&#123;&quot;id&quot;: 13, &quot;name&quot;: &quot;Jack&quot;, &quot;job&quot;: &quot;html&quot;, &quot;age&quot;: 23, &quot;sal&quot;: 3000, &quot;gender&quot;: &quot;female&quot;&#125; 
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 14&#125;&#125; 
+&#123;&quot;id&quot;: 14, &quot;name&quot;: &quot;Rose&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 36, &quot;sal&quot;: 6000, &quot;gender&quot;: &quot;female&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 15&#125;&#125; 
+&#123;&quot;id&quot;: 15, &quot;name&quot;: &quot;Will&quot;, &quot;job&quot;: &quot;dba&quot;, &quot;age&quot;: 38, &quot;sal&quot;: 4500, &quot;gender&quot;: &quot;male&quot;&#125;
+&#123;&quot;index&quot;: &#123;&quot;_id&quot;: 16&#125;&#125;
+&#123;&quot;id&quot;: 16, &quot;name&quot;: &quot;smith&quot;, &quot;job&quot;: &quot;java&quot;, &quot;age&quot;: 32, &quot;sal&quot;: 23000, &quot;gender&quot;: &quot;male&quot;&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="3-1-1-单值的输出"><a href="#3-1-1-单值的输出" class="headerlink" title="3.1.1 单值的输出"></a>3.1.1 单值的输出</h4><blockquote>
 <p>ES中大多数的数学计算只输出一个值，如：min、max、sum、avg、cardinality</p>
@@ -1000,72 +1000,72 @@ GET movies/_search
 <blockquote>
 <p><strong>查询工资的总和</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search 
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"other_info"</span>: &#123;
-            <span class="attr">"sum"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;other_info&quot;: &#123;
+            &quot;sum&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询员工的平均工资</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search 
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search 
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"other_aggs_info"</span>: &#123;
-            <span class="attr">"avg"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;other_aggs_info&quot;: &#123;
+            &quot;avg&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询总共有多少个岗位, cardinality的值类似于sql中的 count distinct,即去重统计总数</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_count"</span>: &#123;
-            <span class="attr">"cardinality"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_count&quot;: &#123;
+            &quot;cardinality&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询航班票价的最高值、平均值、最低值</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET kibana_sample_data_flights&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"max_price"</span>: &#123;
-            <span class="attr">"max"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;max_price&quot;: &#123;
+            &quot;max&quot;: &#123;
+                &quot;field&quot;: &quot;AvgTicketPrice&quot;
             &#125;
         &#125;,
-        <span class="attr">"min_price"</span>: &#123;
-            <span class="attr">"min"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+        &quot;min_price&quot;: &#123;
+            &quot;min&quot;: &#123;
+                &quot;field&quot;: &quot;AvgTicketPrice&quot;
             &#125;
         &#125;,
-        <span class="attr">"avg_price"</span>: &#123;
-            <span class="attr">"avg"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"AvgTicketPrice"</span>
+        &quot;avg_price&quot;: &#123;
+            &quot;avg&quot;: &#123;
+                &quot;field&quot;: &quot;AvgTicketPrice&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="3-1-2-多值的输出"><a href="#3-1-2-多值的输出" class="headerlink" title="3.1.2 多值的输出"></a>3.1.2 多值的输出</h4><blockquote>
 <p>ES还有些函数，可以一次性输出很多个统计的数据: terms、stats </p>
@@ -1073,112 +1073,112 @@ GET movies/_search
 <blockquote>
 <p><strong>查询工资的信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"sal_info"</span>: &#123;
-            <span class="attr">"stats"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;sal_info&quot;: &#123;
+            &quot;stats&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询到达不同城市的航班数量</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET kibana_sample_data_flights&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"flight_dest"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"DestCountry"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;flight_dest&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;DestCountry&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询每个岗位有多少人</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_count"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_count&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询目标地的航班次数以及天气信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET kibana_sample_data_flights/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET kibana_sample_data_flights&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"dest_city"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"DestCityName"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;dest_city&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;DestCityName&quot;
             &#125;,
-            <span class="attr">"aggs"</span>: &#123;
-                <span class="attr">"whether_info"</span>: &#123;
-                    <span class="attr">"terms"</span>: &#123;
-                        <span class="attr">"field"</span>: <span class="string">"DestWeather"</span>
+            &quot;aggs&quot;: &#123;
+                &quot;whether_info&quot;: &#123;
+                    &quot;terms&quot;: &#123;
+                        &quot;field&quot;: &quot;DestWeather&quot;
                     &#125;
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询每个岗位下工资的信息(平均工资、最高工资、最少工资等)</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_inf"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_inf&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;,
-            <span class="attr">"aggs"</span>: &#123;
-                <span class="attr">"sal_info"</span>: &#123;
-                    <span class="attr">"stats"</span>: &#123;
-                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &quot;aggs&quot;: &#123;
+                &quot;sal_info&quot;: &#123;
+                    &quot;stats&quot;: &#123;
+                        &quot;field&quot;: &quot;sal&quot;
                     &#125;
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询不同工种的男女员工数量、然后统计不同工种下男女员工的工资信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_info"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_info&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;,
-            <span class="attr">"aggs"</span>: &#123;
-                <span class="attr">"gender_info"</span>: &#123;
-                    <span class="attr">"terms"</span>: &#123;
-                        <span class="attr">"field"</span>: <span class="string">"gender"</span>
+            &quot;aggs&quot;: &#123;
+                &quot;gender_info&quot;: &#123;
+                    &quot;terms&quot;: &#123;
+                        &quot;field&quot;: &quot;gender&quot;
                     &#125;,
-                    <span class="attr">"aggs"</span>: &#123;
-                        <span class="attr">"sal_info"</span>: &#123;
-                            <span class="attr">"stats"</span>: &#123;
-                                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+                    &quot;aggs&quot;: &#123;
+                        &quot;sal_info&quot;: &#123;
+                            &quot;stats&quot;: &#123;
+                                &quot;field&quot;: &quot;sal&quot;
                             &#125;
                         &#125;
                     &#125;
@@ -1186,81 +1186,81 @@ GET movies/_search
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询年龄最大的两位员工的信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"top_age_2"</span>: &#123;
-            <span class="attr">"top_hits"</span>: &#123;
-                <span class="attr">"size"</span>: <span class="number">2</span>,
-                <span class="attr">"sort"</span>: [
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;top_age_2&quot;: &#123;
+            &quot;top_hits&quot;: &#123;
+                &quot;size&quot;: 2,
+                &quot;sort&quot;: [
                     &#123;
-                        <span class="attr">"age"</span>: &#123;
-                            <span class="attr">"order"</span>: <span class="string">"desc"</span>
+                        &quot;age&quot;: &#123;
+                            &quot;order&quot;: &quot;desc&quot;
                         &#125;
                     &#125;
                 ]
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询不同区间员工工资的统计信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"sal_info"</span>: &#123;
-            <span class="attr">"range"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>,
-                <span class="attr">"ranges"</span>: [
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;sal_info&quot;: &#123;
+            &quot;range&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;,
+                &quot;ranges&quot;: [
                     &#123;
-                        <span class="attr">"key"</span>: <span class="string">"0 <= sal <= 5000"</span>,
-                        <span class="attr">"from"</span>: <span class="number">0</span>,
-                        <span class="attr">"to"</span>: <span class="number">5000</span>
+                        &quot;key&quot;: &quot;0 &lt;&#x3D; sal &lt;&#x3D; 5000&quot;,
+                        &quot;from&quot;: 0,
+                        &quot;to&quot;: 5000
                     &#125;,
                     &#123;
-                        <span class="attr">"key"</span>: <span class="string">"5001 <= sal <= 10000"</span>,
-                        <span class="attr">"from"</span>: <span class="number">5001</span>,
-                        <span class="attr">"to"</span>: <span class="number">10000</span>
+                        &quot;key&quot;: &quot;5001 &lt;&#x3D; sal &lt;&#x3D; 10000&quot;,
+                        &quot;from&quot;: 5001,
+                        &quot;to&quot;: 10000
                     &#125;,
                     &#123;
-                        <span class="attr">"key"</span>: <span class="string">"10001 <= sal <= 15000"</span>,
-                        <span class="attr">"from"</span>: <span class="number">10001</span>,
-                        <span class="attr">"to"</span>: <span class="number">15000</span>
+                        &quot;key&quot;: &quot;10001 &lt;&#x3D; sal &lt;&#x3D; 15000&quot;,
+                        &quot;from&quot;: 10001,
+                        &quot;to&quot;: 15000
                     &#125;
                 ]
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>以直方图的方式以每5000元为一个区间查看工资信息</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"sal_info"</span>: &#123;
-            <span class="attr">"histogram"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>,
-                <span class="attr">"interval"</span>: <span class="number">5000</span>,
-                <span class="attr">"extended_bounds"</span>: &#123;
-                    <span class="attr">"min"</span>: <span class="number">0</span>,
-                    <span class="attr">"max"</span>: <span class="number">30000</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;sal_info&quot;: &#123;
+            &quot;histogram&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;,
+                &quot;interval&quot;: 5000,
+                &quot;extended_bounds&quot;: &#123;
+                    &quot;min&quot;: 0,
+                    &quot;max&quot;: 30000
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>interval: 以指定的值为一个区间。</p>
@@ -1269,144 +1269,144 @@ GET movies/_search
 <blockquote>
 <p><strong>查询平均工资大于最低的工种</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_info"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_info&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;,
-            <span class="attr">"aggs"</span>: &#123;
-                <span class="attr">"job_avg_sal"</span>: &#123;
-                    <span class="attr">"avg"</span>: &#123;
-                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &quot;aggs&quot;: &#123;
+                &quot;job_avg_sal&quot;: &#123;
+                    &quot;avg&quot;: &#123;
+                        &quot;field&quot;: &quot;sal&quot;
                     &#125;
                 &#125;
             &#125;
         &#125;,
-        <span class="attr">"min_sal_job"</span>: &#123;
-            <span class="attr">"min_bucket"</span>: &#123;
-                <span class="attr">"buckets_path"</span>: <span class="string">"job_info>job_avg_sal"</span>
+        &quot;min_sal_job&quot;: &#123;
+            &quot;min_bucket&quot;: &#123;
+                &quot;buckets_path&quot;: &quot;job_info&gt;job_avg_sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询工资和工种的信息</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"job_inf"</span>: &#123;
-            <span class="attr">"terms"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"job"</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;job_inf&quot;: &#123;
+            &quot;terms&quot;: &#123;
+                &quot;field&quot;: &quot;job&quot;
             &#125;
         &#125;,
-        <span class="attr">"sal_info"</span>: &#123;
-            <span class="attr">"stats"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+        &quot;sal_info&quot;: &#123;
+            &quot;stats&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询年龄大于30岁的员工的平均工资</strong></p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"range"</span>: &#123;
-            <span class="attr">"age"</span>: &#123;
-                <span class="attr">"gte"</span>: <span class="number">30</span>
+    &quot;size&quot;: 0,
+    &quot;query&quot;: &#123;
+        &quot;range&quot;: &#123;
+            &quot;age&quot;: &#123;
+                &quot;gte&quot;: 30
             &#125;
         &#125;
     &#125;,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"avg_sal"</span>: &#123;
-            <span class="attr">"avg"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+    &quot;aggs&quot;: &#123;
+        &quot;avg_sal&quot;: &#123;
+            &quot;avg&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>查询Java员工的平均工资</strong> </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"constant_score"</span>: &#123;
-            <span class="attr">"filter"</span>: &#123;
-                <span class="attr">"term"</span>: &#123;
-                    <span class="attr">"job"</span>: <span class="string">"java"</span>
+    &quot;size&quot;: 0,
+    &quot;query&quot;: &#123;
+        &quot;constant_score&quot;: &#123;
+            &quot;filter&quot;: &#123;
+                &quot;term&quot;: &#123;
+                    &quot;job&quot;: &quot;java&quot;
                 &#125;
             &#125;,
-            <span class="attr">"boost"</span>: <span class="number">1.2</span>
+            &quot;boost&quot;: 1.2
         &#125;
     &#125;,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"avg_sal"</span>: &#123;
-            <span class="attr">"avg"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+    &quot;aggs&quot;: &#123;
+        &quot;avg_sal&quot;: &#123;
+            &quot;avg&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>求30岁以上的员工的平均工资和所有员工的平均工资 </p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET employee/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET employee&#x2F;_search
 &#123;
-    <span class="attr">"size"</span>: <span class="number">0</span>,
-    <span class="attr">"aggs"</span>: &#123;
-        <span class="attr">"get_30_emp_info"</span>: &#123;
-            <span class="attr">"filter"</span>: &#123;
-                <span class="attr">"range"</span>: &#123;
-                    <span class="attr">"age"</span>: &#123;
-                        <span class="attr">"gte"</span>: <span class="number">30</span>
+    &quot;size&quot;: 0,
+    &quot;aggs&quot;: &#123;
+        &quot;get_30_emp_info&quot;: &#123;
+            &quot;filter&quot;: &#123;
+                &quot;range&quot;: &#123;
+                    &quot;age&quot;: &#123;
+                        &quot;gte&quot;: 30
                     &#125;
                 &#125;
             &#125;,
-            <span class="attr">"aggs"</span>: &#123;
-                <span class="attr">"get_30_emp_avg_sal"</span>: &#123;
-                    <span class="attr">"avg"</span>: &#123;
-                        <span class="attr">"field"</span>: <span class="string">"sal"</span>
+            &quot;aggs&quot;: &#123;
+                &quot;get_30_emp_avg_sal&quot;: &#123;
+                    &quot;avg&quot;: &#123;
+                        &quot;field&quot;: &quot;sal&quot;
                     &#125;
                 &#125;
             &#125;
         &#125;,
-        <span class="attr">"all_emp_avg_sal"</span>: &#123;
-            <span class="attr">"avg"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"sal"</span>
+        &quot;all_emp_avg_sal&quot;: &#123;
+            &quot;avg&quot;: &#123;
+                &quot;field&quot;: &quot;sal&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-2-推荐搜索"><a href="#3-2-推荐搜索" class="headerlink" title="3.2 推荐搜索"></a>3.2 推荐搜索</h3><blockquote>
 <p>在搜索过程中，因为单词的拼写错误，没有得到任何的结果，希望ES能够给我们一个推荐搜索。</p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"suggest"</span>: &#123;
+    &quot;suggest&quot;: &#123;
      		 # title_suggestion为我们自定义的名字
-        "title_suggestion": &#123;
-            "text": "drema",
-            "term": &#123;
-                "field": "title",
-                "suggest_mode": "popular"
+        &quot;title_suggestion&quot;: &#123;
+            &quot;text&quot;: &quot;drema&quot;,
+            &quot;term&quot;: &#123;
+                &quot;field&quot;: &quot;title&quot;,
+                &quot;suggest_mode&quot;: &quot;popular&quot;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p><strong>suggest_mode，有三个值：popular、missing、always</strong> </p>
@@ -1425,68 +1425,68 @@ GET movies/_search
 <p>自动补全的功能对性能的要求极高，用户每发送输入一个字符就要发送一个请求去查找匹配项。</p>
 <p>ES采取了不同的数据结构来实现，并不是通过倒排索引来实现的；需要将对应的数据类型设置为<strong>completion</strong> ; 所以在将数据索引进ES之前需要先定义 mapping 信息。</p>
 </blockquote>
-<h4 id="3-3-1-定义mapping"><a href="#3-3-1-定义mapping" class="headerlink" title="3.3.1 定义mapping"></a>3.3.1 <strong>定义</strong>mapping</h4><pre class=" language-highlight json"><code class="language-highlight json">&#123;
-    <span class="attr">"movies"</span>: &#123;
-        <span class="attr">"mappings"</span>: &#123;
-            <span class="attr">"properties"</span>: &#123;
-                <span class="attr">"@version"</span>: &#123;
-                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
-                    <span class="attr">"fields"</span>: &#123;
-                        <span class="attr">"keyword"</span>: &#123;
-                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
-                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+<h4 id="3-3-1-定义mapping"><a href="#3-3-1-定义mapping" class="headerlink" title="3.3.1 定义mapping"></a>3.3.1 <strong>定义</strong>mapping</h4><pre class="line-numbers language-json" data-language="json"><code class="language-json">&#123;
+    &quot;movies&quot;: &#123;
+        &quot;mappings&quot;: &#123;
+            &quot;properties&quot;: &#123;
+                &quot;@version&quot;: &#123;
+                    &quot;type&quot;: &quot;text&quot;,
+                    &quot;fields&quot;: &#123;
+                        &quot;keyword&quot;: &#123;
+                            &quot;type&quot;: &quot;keyword&quot;,
+                            &quot;ignore_above&quot;: 256
                         &#125;
                     &#125;
                 &#125;,
-                <span class="attr">"genre"</span>: &#123;
-                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
-                    <span class="attr">"fields"</span>: &#123;
-                        <span class="attr">"keyword"</span>: &#123;
-                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
-                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+                &quot;genre&quot;: &#123;
+                    &quot;type&quot;: &quot;text&quot;,
+                    &quot;fields&quot;: &#123;
+                        &quot;keyword&quot;: &#123;
+                            &quot;type&quot;: &quot;keyword&quot;,
+                            &quot;ignore_above&quot;: 256
                         &#125;
                     &#125;
                 &#125;,
-                <span class="attr">"id"</span>: &#123;
-                    <span class="attr">"type"</span>: <span class="string">"text"</span>,
-                    <span class="attr">"fields"</span>: &#123;
-                        <span class="attr">"keyword"</span>: &#123;
-                            <span class="attr">"type"</span>: <span class="string">"keyword"</span>,
-                            <span class="attr">"ignore_above"</span>: <span class="number">256</span>
+                &quot;id&quot;: &#123;
+                    &quot;type&quot;: &quot;text&quot;,
+                    &quot;fields&quot;: &#123;
+                        &quot;keyword&quot;: &#123;
+                            &quot;type&quot;: &quot;keyword&quot;,
+                            &quot;ignore_above&quot;: 256
                         &#125;
                     &#125;
                 &#125;,
-                <span class="attr">"title"</span>: &#123;
+                &quot;title&quot;: &#123;
 	                  # 需要自动提示的属性类型必须是 completion
-                    "type": "completion"
+                    &quot;type&quot;: &quot;completion&quot;
                 &#125;,
-                "year": &#123;
-                    "type": "long"
+                &quot;year&quot;: &#123;
+                    &quot;type&quot;: &quot;long&quot;
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>定义完 mapping 信息之后，导入响应的数据</p>
 </blockquote>
-<h4 id="3-3-2-前缀搜索"><a href="#3-3-2-前缀搜索" class="headerlink" title="3.3.2 前缀搜索"></a>3.3.2 前缀搜索</h4><pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<h4 id="3-3-2-前缀搜索"><a href="#3-3-2-前缀搜索" class="headerlink" title="3.3.2 前缀搜索"></a>3.3.2 前缀搜索</h4><pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"_source"</span>: [
-        <span class="string">"title"</span>
+    &quot;_source&quot;: [
+        &quot;title&quot;
     ],
-    <span class="attr">"suggest"</span>: &#123;
-        <span class="attr">"prefix_suggestion"</span>: &#123;
-            <span class="attr">"prefix"</span>: <span class="string">"Lan"</span>,
-            <span class="attr">"completion"</span>: &#123;
-                <span class="attr">"field"</span>: <span class="string">"title"</span>,
-                <span class="attr">"skip_duplicates"</span>: <span class="literal">true</span>,
-                <span class="attr">"size"</span>: <span class="number">10</span>
+    &quot;suggest&quot;: &#123;
+        &quot;prefix_suggestion&quot;: &#123;
+            &quot;prefix&quot;: &quot;Lan&quot;,
+            &quot;completion&quot;: &#123;
+                &quot;field&quot;: &quot;title&quot;,
+                &quot;skip_duplicates&quot;: true,
+                &quot;size&quot;: 10
             &#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>自动提示功能实现</strong></p>
 <p><img src="https://gitee.com/niu_dehua/oss/raw/master/uPic/image-20210328001210925.png" alt="image-20210328001210925"></p>
@@ -1502,21 +1502,21 @@ GET movies/_search
 <blockquote>
 <p>将所有的包含有 beautiful 的单词高亮显示</p>
 </blockquote>
-<pre class=" language-highlight json"><code class="language-highlight json">GET movies/_search
+<pre class="line-numbers language-json" data-language="json"><code class="language-json">GET movies&#x2F;_search
 &#123;
-    <span class="attr">"query"</span>: &#123;
-        <span class="attr">"match"</span>: &#123;
-            <span class="attr">"title"</span>: <span class="string">"beautiful"</span>
+    &quot;query&quot;: &#123;
+        &quot;match&quot;: &#123;
+            &quot;title&quot;: &quot;beautiful&quot;
         &#125;
     &#125;,
-    <span class="attr">"highlight"</span>: &#123;
-        <span class="attr">"post_tags"</span>: <span class="string">"</span>"</span>,
-        <span class="attr">"pre_tags"</span>: <span class="string">"<span color=&#x27;red&#x27;>"</span>,
-        <span class="attr">"fields"</span>: &#123;
-            <span class="attr">"title"</span>: &#123;&#125;
+    &quot;highlight&quot;: &#123;
+        &quot;post_tags&quot;: &quot;&lt;&#x2F;span&gt;&quot;,
+        &quot;pre_tags&quot;: &quot;&lt;span color&#x3D;&#39;red&#39;&gt;&quot;,
+        &quot;fields&quot;: &#123;
+            &quot;title&quot;: &#123;&#125;
         &#125;
     &#125;
-&#125;</code></pre>
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>pre_tags: 是需要高亮文本的前置 html 内容。</p>

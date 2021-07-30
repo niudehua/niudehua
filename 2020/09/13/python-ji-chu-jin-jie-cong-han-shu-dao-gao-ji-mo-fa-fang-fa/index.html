@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    11.9k
                 </div>
                 
 
@@ -501,31 +501,31 @@
 <p>def functionname (parameters):<br><br>&nbsp; &nbsp; &nbsp; &nbsp;”函数_文档字符串”<br><br>&nbsp; &nbsp; &nbsp; &nbsp; function_suite<br><br>&nbsp; &nbsp; &nbsp; &nbsp; return [expression]</p>
 </blockquote>
 <h3 id="函数的调用"><a href="#函数的调用" class="headerlink" title="函数的调用"></a>函数的调用</h3><p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printme</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printme</span>(<span class="params">str</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printme(str):
     print(str)
 
 
-printme(<span class="string">"我要调用用户自定义函数!"</span>)  <span class="comment"># 我要调用用户自定义函数!</span>
-printme(<span class="string">"再次调用同一函数"</span>)  <span class="comment"># 再次调用同一函数</span>
-temp = printme(<span class="string">&#x27;hello&#x27;</span>) <span class="comment"># hello</span>
-print(temp)  <span class="comment"># None</span></code></pre>
+printme(&quot;我要调用用户自定义函数!&quot;)  # 我要调用用户自定义函数!
+printme(&quot;再次调用同一函数&quot;)  # 再次调用同一函数
+temp &#x3D; printme(&#39;hello&#39;) # hello
+print(temp)  # None<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="函数文档"><a href="#函数文档" class="headerlink" title="函数文档"></a>函数文档</h3><pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">MyFirstFunction</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">MyFirstFunction</span>(<span class="params">name</span>):</span>
-    <span class="string">"函数定义过程中name是形参"</span>
-    <span class="comment"># 因为Ta只是一个形式，表示占据一个参数位置</span>
-    print(<span class="string">&#x27;传递进来的&#123;0&#125;叫做实参，因为Ta是具体的参数值！&#x27;</span>.format(name))
+<h3 id="函数文档"><a href="#函数文档" class="headerlink" title="函数文档"></a>函数文档</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">def MyFirstFunction(name):
+    &quot;函数定义过程中name是形参&quot;
+    # 因为Ta只是一个形式，表示占据一个参数位置
+    print(&#39;传递进来的&#123;0&#125;叫做实参，因为Ta是具体的参数值！&#39;.format(name))
 
 
-MyFirstFunction(<span class="string">&#x27;老马的程序人生&#x27;</span>)  
-<span class="comment"># 传递进来的老马的程序人生叫做实参，因为Ta是具体的参数值！</span>
+MyFirstFunction(&#39;老马的程序人生&#39;)  
+# 传递进来的老马的程序人生叫做实参，因为Ta是具体的参数值！
 
 print(MyFirstFunction.__doc__)  
-<span class="comment"># 函数定义过程中name是形参</span>
+# 函数定义过程中name是形参
 
 help(MyFirstFunction)
-<span class="comment"># Help on function MyFirstFunction in module __main__:</span>
-<span class="comment"># MyFirstFunction(name)</span>
-<span class="comment">#    函数定义过程中name是形参</span></code></pre>
+# Help on function MyFirstFunction in module __main__:
+# MyFirstFunction(name)
+#    函数定义过程中name是形参<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="函数参数"><a href="#函数参数" class="headerlink" title="函数参数"></a>函数参数</h3><p>Python 的函数具有非常灵活多样的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。从简到繁的参数形态如下：</p>
 <ul>
@@ -552,22 +552,22 @@ help(MyFirstFunction)
 <li>默认参数一定要放在位置参数 <b>后面</b>，不然程序会报错。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">name, age=<span class="number"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">name, age=<span class="number">8</span></span>):</span>
-    print(<span class="string">&#x27;Name:&#123;0&#125;,Age:&#123;1&#125;&#x27;</span>.format(name, age))
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printinfo(name, age&#x3D;8):
+    print(&#39;Name:&#123;0&#125;,Age:&#123;1&#125;&#39;.format(name, age))
 
 
-printinfo(<span class="string">&#x27;小马&#x27;</span>)  <span class="comment"># Name:小马,Age:8</span>
-printinfo(<span class="string">&#x27;小马&#x27;</span>, <span class="number">10</span>)  <span class="comment"># Name:小马,Age:10</span></code></pre>
+printinfo(&#39;小马&#39;)  # Name:小马,Age:8
+printinfo(&#39;小马&#39;, 10)  # Name:小马,Age:10<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>Python 允许函数调用时参数的顺序与声明时不一致，因为 Python 解释器能够用参数名匹配参数值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">name, age</span>):</span>
-    print(<span class="string">&#x27;Name:&#123;0&#125;,Age:&#123;1&#125;&#x27;</span>.format(name, age))
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printinfo(name, age):
+    print(&#39;Name:&#123;0&#125;,Age:&#123;1&#125;&#39;.format(name, age))
 
 
-printinfo(age=<span class="number">8</span>, name=<span class="string">&#x27;小马&#x27;</span>)  <span class="comment"># Name:小马,Age:8</span></code></pre>
+printinfo(age&#x3D;8, name&#x3D;&#39;小马&#39;)  # Name:小马,Age:8<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>3. 可变参数</strong></p>
 <p>顾名思义，可变参数就是传入的参数个数是可变的，可以是 0, 1, 2 到任意个，是不定长的参数。</p>
@@ -579,17 +579,17 @@ printinfo(age=<span class="number">8</span>, name=<span class="string">&#x27;小
 <li>加了星号（*）的变量名会存放所有未命名的变量参数。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1, *args</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printinfo(arg1, *args):
     print(arg1)
-    <span class="keyword">for</span> var <span class="keyword">in</span> args:
+    for var in args:
         print(var)
 
 
-printinfo(<span class="number">10</span>)  <span class="comment"># 10</span>
-printinfo(<span class="number">70</span>, <span class="number">60</span>, <span class="number">50</span>)
-<span class="comment"># 70</span>
-<span class="comment"># 60</span>
-<span class="comment"># 50</span></code></pre>
+printinfo(10)  # 10
+printinfo(70, 60, 50)
+# 70
+# 60
+# 50<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>4. 关键字参数</strong></p>
 <blockquote>
@@ -599,20 +599,20 @@ printinfo(<span class="number">70</span>, <span class="number">60</span>, <span 
 <li><code>**kw</code> - 关键字参数，可以是从零个到任意个，自动组装成字典。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1, *args, **kwargs</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printinfo(arg1, *args, **kwargs):
     print(arg1)
     print(args)
     print(kwargs)
 
 
-printinfo(<span class="number">70</span>, <span class="number">60</span>, <span class="number">50</span>)
-<span class="comment"># 70</span>
-<span class="comment"># (60, 50)</span>
-<span class="comment"># &#123;&#125;</span>
-printinfo(<span class="number">70</span>, <span class="number">60</span>, <span class="number">50</span>, a=<span class="number">1</span>, b=<span class="number">2</span>)
-<span class="comment"># 70</span>
-<span class="comment"># (60, 50)</span>
-<span class="comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span></code></pre>
+printinfo(70, 60, 50)
+# 70
+# (60, 50)
+# &#123;&#125;
+printinfo(70, 60, 50, a&#x3D;1, b&#x3D;2)
+# 70
+# (60, 50)
+# &#123;&#39;a&#39;: 1, &#39;b&#39;: 2&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>「可变参数」和「关键字参数」的同异总结如下：</p>
 <ul>
@@ -629,19 +629,19 @@ printinfo(<span class="number">70</span>, <span class="number">60</span>, <span 
 <li>使用命名关键字参数时，要特别注意不能缺少参数名。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printinfo</span>(<span class="params">arg1, *, nkw, **kwargs</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printinfo(arg1, *, nkw, **kwargs):
     print(arg1)
     print(nkw)
     print(kwargs)
 
 
-printinfo(<span class="number">70</span>, nkw=<span class="number">10</span>, a=<span class="number">1</span>, b=<span class="number">2</span>)
-<span class="comment"># 70</span>
-<span class="comment"># 10</span>
-<span class="comment"># &#123;&#x27;a&#x27;: 1, &#x27;b&#x27;: 2&#125;</span>
+printinfo(70, nkw&#x3D;10, a&#x3D;1, b&#x3D;2)
+# 70
+# 10
+# &#123;&#39;a&#39;: 1, &#39;b&#39;: 2&#125;
 
-printinfo(<span class="number">70</span>, <span class="number">10</span>, a=<span class="number">1</span>, b=<span class="number">2</span>)
-<span class="comment"># TypeError: printinfo() takes 1 positional argument but 2 were given</span></code></pre>
+printinfo(70, 10, a&#x3D;1, b&#x3D;2)
+# TypeError: printinfo() takes 1 positional argument but 2 were given<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>没有写参数名<code>nwk</code>，因此 10 被当成「位置参数」，而原函数只有 1 个位置函数，现在调用了 2 个，因此程序会报错。</li>
@@ -660,34 +660,34 @@ printinfo(<span class="number">70</span>, <span class="number">10</span>, a=<spa
 <p>命名关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。定义命名关键字参数不要忘了写分隔符 <code>*</code>，否则定义的是位置参数。</p>
 <p>警告：虽然可以组合多达 5 种参数，但不要同时使用太多的组合，否则函数很难懂。</p>
 <h3 id="函数的返回值"><a href="#函数的返回值" class="headerlink" title="函数的返回值"></a>函数的返回值</h3><p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">add</span>(<span class="params">a, b</span>):</span>
-    <span class="keyword">return</span> a + b
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def add(a, b):
+    return a + b
 
 
-print(add(<span class="number">1</span>, <span class="number">2</span>))  <span class="comment"># 3</span>
-print(add([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]))  <span class="comment"># [1, 2, 3, 4, 5, 6]</span></code></pre>
-
-<p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">back</span>():</span>
-    <span class="keyword">return</span> [<span class="number">1</span>, <span class="string">&#x27;小马的程序人生&#x27;</span>, <span class="number">3.14</span>]
-
-
-print(back())  <span class="comment"># [1, &#x27;小马的程序人生&#x27;, 3.14]</span></code></pre>
+print(add(1, 2))  # 3
+print(add([1, 2, 3], [4, 5, 6]))  # [1, 2, 3, 4, 5, 6]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">back</span>():</span>
-    <span class="keyword">return</span> <span class="number">1</span>, <span class="string">&#x27;小马的程序人生&#x27;</span>, <span class="number">3.14</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def back():
+    return [1, &#39;小马的程序人生&#39;, 3.14]
 
 
-print(back())  <span class="comment"># (1, &#x27;小马的程序人生&#x27;, 3.14)</span></code></pre>
+print(back())  # [1, &#39;小马的程序人生&#39;, 3.14]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printme</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">printme</span>(<span class="params">str</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def back():
+    return 1, &#39;小马的程序人生&#39;, 3.14
+
+
+print(back())  # (1, &#39;小马的程序人生&#39;, 3.14)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>【例子】</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def printme(str):
     print(str)
 
-temp = printme(<span class="string">&#x27;hello&#x27;</span>) <span class="comment"># hello</span>
-print(temp) <span class="comment"># None</span>
-print(type(temp))  <span class="comment"># <class &#x27;NoneType&#x27;></span></code></pre>
+temp &#x3D; printme(&#39;hello&#39;) # hello
+print(temp) # None
+print(type(temp))  # &lt;class &#39;NoneType&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="变量作用域"><a href="#变量作用域" class="headerlink" title="变量作用域"></a>变量作用域</h3><ul>
 <li>Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。</li>
@@ -696,47 +696,47 @@ print(type(temp))  <span class="comment"># <class &#x27;NoneType&#x27;></span></
 <li>局部变量只能在其被声明的函数内部访问，而全局变量可以在整个程序范围内访问。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">discounts</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">discounts</span>(<span class="params">price, rate</span>):</span>
-    final_price = price * rate
-    <span class="keyword">return</span> final_price
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def discounts(price, rate):
+    final_price &#x3D; price * rate
+    return final_price
 
 
-old_price = float(input(<span class="string">&#x27;请输入原价:&#x27;</span>))  <span class="comment"># 98</span>
-rate = float(input(<span class="string">&#x27;请输入折扣率:&#x27;</span>))  <span class="comment"># 0.9</span>
-new_price = discounts(old_price, rate)
-print(<span class="string">&#x27;打折后价格是:%.2f&#x27;</span> % new_price)  <span class="comment"># 88.20</span></code></pre>
+old_price &#x3D; float(input(&#39;请输入原价:&#39;))  # 98
+rate &#x3D; float(input(&#39;请输入折扣率:&#39;))  # 0.9
+new_price &#x3D; discounts(old_price, rate)
+print(&#39;打折后价格是:%.2f&#39; % new_price)  # 88.20<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>当内部作用域想修改外部作用域的变量时，就要用到<code>global</code>和<code>nonlocal</code>关键字了。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">num = <span class="number"><code class="language-highlight python">num = <span class="number">1</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">num &#x3D; 1
 
 
-<span class="function"><span class="keyword">def</span> <span class="title">fun1</span>():</span>
-    <span class="keyword">global</span> num  <span class="comment"># 需要使用 global 关键字声明</span>
-    print(num)  <span class="comment"># 1</span>
-    num = <span class="number">123</span>
-    print(num)  <span class="comment"># 123</span>
+def fun1():
+    global num  # 需要使用 global 关键字声明
+    print(num)  # 1
+    num &#x3D; 123
+    print(num)  # 123
 
 
 fun1()
-print(num)  <span class="comment"># 123</span></code></pre>
+print(num)  # 123<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>内嵌函数</strong></p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">outer</span>():</span>
-    print(<span class="string">&#x27;outer函数在这被调用&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def outer():
+    print(&#39;outer函数在这被调用&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span>
-        print(<span class="string">&#x27;inner函数在这被调用&#x27;</span>)
+    def inner():
+        print(&#39;inner函数在这被调用&#39;)
 
-    inner()  <span class="comment"># 该函数只能在outer函数内部被调用</span>
+    inner()  # 该函数只能在outer函数内部被调用
 
 
 outer()
-<span class="comment"># outer函数在这被调用</span>
-<span class="comment"># inner函数在这被调用</span></code></pre>
+# outer函数在这被调用
+# inner函数在这被调用<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>闭包</strong></p>
 <ul>
@@ -745,49 +745,49 @@ outer()
 <li>通过闭包可以访问外层非全局作用域的变量，这个作用域称为 <b>闭包作用域</b>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">funX</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">funX</span>(<span class="params">x</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">funY</span>(<span class="params">y</span>):</span>
-        <span class="keyword">return</span> x * y
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def funX(x):
+    def funY(y):
+        return x * y
 
-    <span class="keyword">return</span> funY
+    return funY
 
 
-i = funX(<span class="number">8</span>)
-print(type(i))  <span class="comment"># <class &#x27;function&#x27;></span>
-print(i(<span class="number">5</span>))  <span class="comment"># 40</span></code></pre>
+i &#x3D; funX(8)
+print(type(i))  # &lt;class &#39;function&#39;&gt;
+print(i(5))  # 40<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】闭包的返回值通常是函数。</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">make_counter</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">make_counter</span>(<span class="params">init</span>):</span>
-    counter = [init]
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def make_counter(init):
+    counter &#x3D; [init]
 
-    <span class="function"><span class="keyword">def</span> <span class="title">inc</span>():</span> counter[<span class="number">0</span>] += <span class="number">1</span>
+    def inc(): counter[0] +&#x3D; 1
 
-    <span class="function"><span class="keyword">def</span> <span class="title">dec</span>():</span> counter[<span class="number">0</span>] -= <span class="number">1</span>
+    def dec(): counter[0] -&#x3D; 1
 
-    <span class="function"><span class="keyword">def</span> <span class="title">get</span>():</span> <span class="keyword">return</span> counter[<span class="number">0</span>]
+    def get(): return counter[0]
 
-    <span class="function"><span class="keyword">def</span> <span class="title">reset</span>():</span> counter[<span class="number">0</span>] = init
+    def reset(): counter[0] &#x3D; init
 
-    <span class="keyword">return</span> inc, dec, get, reset
+    return inc, dec, get, reset
 
 
-inc, dec, get, reset = make_counter(<span class="number">0</span>)
+inc, dec, get, reset &#x3D; make_counter(0)
 inc()
 inc()
 inc()
-print(get())  <span class="comment"># 3</span>
+print(get())  # 3
 dec()
-print(get())  <span class="comment"># 2</span>
+print(get())  # 2
 reset()
-print(get())  <span class="comment"># 0</span></code></pre>
+print(get())  # 0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】 如果要修改闭包作用域中的变量则需要 <code>nonlocal</code> 关键字</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">outer</span>():</span>
-    num = <span class="number">10</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def outer():
+    num &#x3D; 10
 
-    <span class="function"><span class="keyword">def</span> <span class="title">inner</span>():</span>
-        <span class="keyword">nonlocal</span> num  <span class="comment"># nonlocal关键字声明</span>
-        num = <span class="number">100</span>
+    def inner():
+        nonlocal num  # nonlocal关键字声明
+        num &#x3D; 100
         print(num)
 
     inner()
@@ -796,62 +796,62 @@ print(get())  <span class="comment"># 0</span></code></pre>
 
 outer()
 
-<span class="comment"># 100</span>
-<span class="comment"># 100</span></code></pre>
+# 100
+# 100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><strong>递归</strong></p>
 <ul>
 <li>如果一个函数在内部调用自身本身，这个函数就是递归函数。</li>
 </ul>
 <p>【例子】<code>n! = 1 x 2 x 3 x ... x n</code></p>
-<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 利用循环</span>
-n = <span class="number">5</span>
-<span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):
-    n = n * k
-print(n)  <span class="comment"># 120</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 利用循环
+n &#x3D; 5
+for k in range(1, 5):
+    n &#x3D; n * k
+print(n)  # 120
 
-<span class="comment"># 利用递归</span>
-<span class="function"><span class="keyword">def</span> <span class="title">factorial</span>(<span class="params">n</span>):</span>
-    <span class="keyword">if</span> n == <span class="number">1</span>:
-        <span class="keyword">return</span> <span class="number">1</span>
-    <span class="keyword">return</span> n * factorial(n - <span class="number">1</span>)
+# 利用递归
+def factorial(n):
+    if n &#x3D;&#x3D; 1:
+        return 1
+    return n * factorial(n - 1)
 
 
-print(factorial(<span class="number">5</span>)) <span class="comment"># 120</span></code></pre>
+print(factorial(5)) # 120<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】斐波那契数列 <code>f(n)=f(n-1)+f(n-2), f(0)=0 f(1)=1</code></p>
-<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 利用循环</span>
-i = <span class="number">0</span>
-j = <span class="number">1</span>
-lst = list([i, j])
-<span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">2</span>, <span class="number">11</span>):
-    k = i + j
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 利用循环
+i &#x3D; 0
+j &#x3D; 1
+lst &#x3D; list([i, j])
+for k in range(2, 11):
+    k &#x3D; i + j
     lst.append(k)
-    i = j
-    j = k
+    i &#x3D; j
+    j &#x3D; k
 print(lst)  
-<span class="comment"># [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span>
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
 
-<span class="comment"># 利用递归</span>
-<span class="function"><span class="keyword">def</span> <span class="title">recur_fibo</span>(<span class="params">n</span>):</span>
-    <span class="keyword">if</span> n <= <span class="number">1</span>:
-        <span class="keyword">return</span> n
-    <span class="keyword">return</span> recur_fibo(n - <span class="number">1</span>) + recur_fibo(n - <span class="number">2</span>)
+# 利用递归
+def recur_fibo(n):
+    if n &lt;&#x3D; 1:
+        return n
+    return recur_fibo(n - 1) + recur_fibo(n - 2)
 
 
-lst = list()
-<span class="keyword">for</span> k <span class="keyword">in</span> range(<span class="number">11</span>):
+lst &#x3D; list()
+for k in range(11):
     lst.append(recur_fibo(k))
 print(lst)  
-<span class="comment"># [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]</span></code></pre>
+# [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】设置递归的层数，Python默认递归层数为 100</p>
-<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> sys
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import sys
 
-sys.setrecursionlimit(<span class="number">1000</span>)
+sys.setrecursionlimit(1000)
 
 
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="Lambda-表达式"><a href="#Lambda-表达式" class="headerlink" title="Lambda 表达式"></a>Lambda 表达式</h2><h3 id="匿名函数的定义"><a href="#匿名函数的定义" class="headerlink" title="匿名函数的定义"></a>匿名函数的定义</h3><p>在 Python 里有两类函数：</p>
 <ul>
@@ -874,57 +874,57 @@ sys.setrecursionlimit(<span class="number">1000</span>)
 <li>匿名函数拥有自己的命名空间，且不能访问自己参数列表之外或全局命名空间里的参数。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">sqr</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">sqr</span>(<span class="params">x</span>):</span>
-    <span class="keyword">return</span> x ** <span class="number">2</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def sqr(x):
+    return x ** 2
 
 
 print(sqr)
-<span class="comment"># <function sqr at 0x000000BABD3A4400></span>
+# &lt;function sqr at 0x000000BABD3A4400&gt;
 
-y = [sqr(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)]
+y &#x3D; [sqr(x) for x in range(10)]
 print(y)
-<span class="comment"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
-lbd_sqr = <span class="keyword">lambda</span> x: x ** <span class="number">2</span>
+lbd_sqr &#x3D; lambda x: x ** 2
 print(lbd_sqr)
-<span class="comment"># <function <lambda> at 0x000000BABB6AC1E0></span>
+# &lt;function &lt;lambda&gt; at 0x000000BABB6AC1E0&gt;
 
-y = [lbd_sqr(x) <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>)]
+y &#x3D; [lbd_sqr(x) for x in range(10)]
 print(y)
-<span class="comment"># [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
 
-sumary = <span class="keyword">lambda</span> arg1, arg2: arg1 + arg2
-print(sumary(<span class="number">10</span>, <span class="number">20</span>))  <span class="comment"># 30</span>
+sumary &#x3D; lambda arg1, arg2: arg1 + arg2
+print(sumary(10, 20))  # 30
 
-func = <span class="keyword">lambda</span> *args: sum(args)
-print(func(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>))  <span class="comment"># 15</span></code></pre>
+func &#x3D; lambda *args: sum(args)
+print(func(1, 2, 3, 4, 5))  # 15<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="匿名函数的应用"><a href="#匿名函数的应用" class="headerlink" title="匿名函数的应用"></a>匿名函数的应用</h3><p>函数式编程 是指代码中每一块都是不可变的，都由纯函数的形式组成。这里的纯函数，是指函数本身相互独立、互不影响，对于相同的输入，总会有相同的输出，没有任何副作用。</p>
 <p>【例子】非函数式编程</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x</span>):</span>
-    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(x)):
-        x[i] += <span class="number">10</span>
-    <span class="keyword">return</span> x
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def f(x):
+    for i in range(0, len(x)):
+        x[i] +&#x3D; 10
+    return x
 
 
-x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+x &#x3D; [1, 2, 3]
 f(x)
 print(x)
-<span class="comment"># [11, 12, 13]</span></code></pre>
+# [11, 12, 13]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】函数式编程</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">f</span>(<span class="params">x</span>):</span>
-    y = []
-    <span class="keyword">for</span> item <span class="keyword">in</span> x:
-        y.append(item + <span class="number">10</span>)
-    <span class="keyword">return</span> y
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def f(x):
+    y &#x3D; []
+    for item in x:
+        y.append(item + 10)
+    return y
 
 
-x = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]
+x &#x3D; [1, 2, 3]
 f(x)
 print(x)
-<span class="comment"># [1, 2, 3]</span></code></pre>
+# [1, 2, 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>匿名函数 常常应用于函数式编程的高阶函数 (high-order function)中，主要有两种形式：</p>
 <ul>
@@ -936,36 +936,36 @@ print(x)
 <li><code>filter(function, iterable)</code> 过滤序列，过滤掉不符合条件的元素，返回一个迭代器对象，如果要转换为列表，可以使用 <code>list()</code> 来转换。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">odd = <span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number"><code class="language-highlight python">odd = <span class="keyword">lambda</span> x: x % <span class="number">2</span> == <span class="number">1</span>
-templist = filter(odd, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>])
-print(list(templist))  <span class="comment"># [1, 3, 5, 7, 9]</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">odd &#x3D; lambda x: x % 2 &#x3D;&#x3D; 1
+templist &#x3D; filter(odd, [1, 2, 3, 4, 5, 6, 7, 8, 9])
+print(list(templist))  # [1, 3, 5, 7, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>map(function, *iterables)</code> 根据提供的函数对指定序列做映射。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">m1 = map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number"><code class="language-highlight python">m1 = map(<span class="keyword">lambda</span> x: x ** <span class="number">2</span>, [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>])
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">m1 &#x3D; map(lambda x: x ** 2, [1, 2, 3, 4, 5])
 print(list(m1))  
-<span class="comment"># [1, 4, 9, 16, 25]</span>
+# [1, 4, 9, 16, 25]
 
-m2 = map(<span class="keyword">lambda</span> x, y: x + y, [<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>], [<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>])
+m2 &#x3D; map(lambda x, y: x + y, [1, 3, 5, 7, 9], [2, 4, 6, 8, 10])
 print(list(m2))  
-<span class="comment"># [3, 7, 11, 15, 19]</span></code></pre>
+# [3, 7, 11, 15, 19]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>除了 Python 这些内置函数，我们也可以自己定义高阶函数。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">apply_to_list</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">apply_to_list</span>(<span class="params">fun, some_list</span>):</span>
-    <span class="keyword">return</span> fun(some_list)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def apply_to_list(fun, some_list):
+    return fun(some_list)
 
-lst = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]
+lst &#x3D; [1, 2, 3, 4, 5]
 print(apply_to_list(sum, lst))
-<span class="comment"># 15</span>
+# 15
 
 print(apply_to_list(len, lst))
-<span class="comment"># 5</span>
+# 5
 
-print(apply_to_list(<span class="keyword">lambda</span> x: sum(x) / len(x), lst))
-<span class="comment"># 3.0</span></code></pre>
+print(apply_to_list(lambda x: sum(x) &#x2F; len(x), lst))
+# 3.0<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><h3 id="对象-属性-方法"><a href="#对象-属性-方法" class="headerlink" title="对象 = 属性 + 方法"></a>对象 = 属性 + 方法</h3><p>对象是类的实例。换句话说，类主要定义对象的结构，然后我们以类为模板创建对象。类不但包含方法定义，而且还包含所有实例共享的数据。</p>
 <ul>
@@ -973,138 +973,138 @@ print(apply_to_list(<span class="keyword">lambda</span> x: sum(x) / len(x), lst)
 </ul>
 <p>我们可以使用关键字 <code>class</code> 定义 Python 类，关键字后面紧跟类的名称、分号和类的实现。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Turtle</span>:</span>  <span class="comment"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Turtle</span>:</span>  <span class="comment"># Python中的类名约定以大写字母开头</span>
-    <span class="string">"""关于类的一个简单例子"""</span>
-    <span class="comment"># 属性</span>
-    color = <span class="string">&#x27;green&#x27;</span>
-    weight = <span class="number">10</span>
-    legs = <span class="number">4</span>
-    shell = <span class="literal">True</span>
-    mouth = <span class="string">&#x27;大嘴&#x27;</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Turtle:  # Python中的类名约定以大写字母开头
+    &quot;&quot;&quot;关于类的一个简单例子&quot;&quot;&quot;
+    # 属性
+    color &#x3D; &#39;green&#39;
+    weight &#x3D; 10
+    legs &#x3D; 4
+    shell &#x3D; True
+    mouth &#x3D; &#39;大嘴&#39;
 
-    <span class="comment"># 方法</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">climb</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;我正在很努力的向前爬...&#x27;</span>)
+    # 方法
+    def climb(self):
+        print(&#39;我正在很努力的向前爬...&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;我正在飞快的向前跑...&#x27;</span>)
+    def run(self):
+        print(&#39;我正在飞快的向前跑...&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">bite</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;咬死你咬死你!!&#x27;</span>)
+    def bite(self):
+        print(&#39;咬死你咬死你!!&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;有得吃，真满足...&#x27;</span>)
+    def eat(self):
+        print(&#39;有得吃，真满足...&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">sleep</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;困了，睡了，晚安，zzz&#x27;</span>)
+    def sleep(self):
+        print(&#39;困了，睡了，晚安，zzz&#39;)
 
 
-tt = Turtle()
+tt &#x3D; Turtle()
 print(tt)
-<span class="comment"># <__main__.Turtle object at 0x0000007C32D67F98></span>
+# &lt;__main__.Turtle object at 0x0000007C32D67F98&gt;
 
 print(type(tt))
-<span class="comment"># <class &#x27;__main__.Turtle&#x27;></span>
+# &lt;class &#39;__main__.Turtle&#39;&gt;
 
 print(tt.__class__)
-<span class="comment"># <class &#x27;__main__.Turtle&#x27;></span>
+# &lt;class &#39;__main__.Turtle&#39;&gt;
 
 print(tt.__class__.__name__)
-<span class="comment"># Turtle</span>
+# Turtle
 
 tt.climb()
-<span class="comment"># 我正在很努力的向前爬...</span>
+# 我正在很努力的向前爬...
 
 tt.run()
-<span class="comment"># 我正在飞快的向前跑...</span>
+# 我正在飞快的向前跑...
 
 tt.bite()
-<span class="comment"># 咬死你咬死你!!</span>
+# 咬死你咬死你!!
 
-<span class="comment"># Python类也是对象。它们是type的实例</span>
+# Python类也是对象。它们是type的实例
 print(type(Turtle))
-<span class="comment"># <class &#x27;type&#x27;></span></code></pre>
+# &lt;class &#39;type&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>继承：子类自动共享父类之间数据和方法的机制</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">MyList</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">MyList</span>(<span class="params">list</span>):</span>
-    <span class="keyword">pass</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class MyList(list):
+    pass
 
 
-lst = MyList([<span class="number">1</span>, <span class="number">5</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">8</span>])
-lst.append(<span class="number">9</span>)
+lst &#x3D; MyList([1, 5, 2, 7, 8])
+lst.append(9)
 lst.sort()
 print(lst)
 
-<span class="comment"># [1, 2, 5, 7, 8, 9]</span></code></pre>
+# [1, 2, 5, 7, 8, 9]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>多态：不同对象对同一方法响应不同的行动</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span>
-        <span class="keyword">raise</span> AttributeError(<span class="string">&#x27;子类必须实现这个方法&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Animal:
+    def run(self):
+        raise AttributeError(&#39;子类必须实现这个方法&#39;)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">People</span>(<span class="params">Animal</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;人正在走&#x27;</span>)
+class People(Animal):
+    def run(self):
+        print(&#39;人正在走&#39;)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Pig</span>(<span class="params">Animal</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;pig is walking&#x27;</span>)
+class Pig(Animal):
+    def run(self):
+        print(&#39;pig is walking&#39;)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Dog</span>(<span class="params">Animal</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">run</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;dog is running&#x27;</span>)
+class Dog(Animal):
+    def run(self):
+        print(&#39;dog is running&#39;)
 
 
-<span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">animal</span>):</span>
+def func(animal):
     animal.run()
 
 
 func(Pig())
-<span class="comment"># pig is walking</span></code></pre>
+# pig is walking<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h3 id="self-是什么？"><a href="#self-是什么？" class="headerlink" title="self 是什么？"></a>self 是什么？</h3><p>Python 的 <code>self</code> 相当于 C++ 的 <code>this</code> 指针。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">prt</span>(<span class="params">self</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Test:
+    def prt(self):
         print(self)
         print(self.__class__)
 
 
-t = Test()
+t &#x3D; Test()
 t.prt()
-<span class="comment"># <__main__.Test object at 0x000000BC5A351208></span>
-<span class="comment"># <class &#x27;__main__.Test&#x27;></span></code></pre>
+# &lt;__main__.Test object at 0x000000BC5A351208&gt;
+# &lt;class &#39;__main__.Test&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>类的方法与普通的函数只有一个特别的区别 —— 它们必须有一个额外的第一个参数名称（对应于该实例，即该对象本身），按照惯例它的名称是 <code>self</code>。在调用方法时，我们无需明确提供与参数 <code>self</code> 相对应的参数。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Ball</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">setName</span>(<span class="params">self, name</span>):</span>
-        self.name = name
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Ball:
+    def setName(self, name):
+        self.name &#x3D; name
 
-    <span class="function"><span class="keyword">def</span> <span class="title">kick</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"我叫%s,该死的，谁踢我..."</span> % self.name)
+    def kick(self):
+        print(&quot;我叫%s,该死的，谁踢我...&quot; % self.name)
 
 
-a = Ball()
-a.setName(<span class="string">"球A"</span>)
-b = Ball()
-b.setName(<span class="string">"球B"</span>)
-c = Ball()
-c.setName(<span class="string">"球C"</span>)
+a &#x3D; Ball()
+a.setName(&quot;球A&quot;)
+b &#x3D; Ball()
+b.setName(&quot;球B&quot;)
+c &#x3D; Ball()
+c.setName(&quot;球C&quot;)
 a.kick()
-<span class="comment"># 我叫球A,该死的，谁踢我...</span>
+# 我叫球A,该死的，谁踢我...
 b.kick()
-<span class="comment"># 我叫球B,该死的，谁踢我...</span></code></pre>
+# 我叫球B,该死的，谁踢我...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h3 id="Python-的魔法方法"><a href="#Python-的魔法方法" class="headerlink" title="Python 的魔法方法"></a>Python 的魔法方法</h3><p>据说，Python 的对象天生拥有一些神奇的方法，它们是面向对象的 Python 的一切…</p>
@@ -1112,75 +1112,75 @@ b.kick()
 <p>如果你的对象实现了这些方法中的某一个，那么这个方法就会在特殊的情况下被 Python 所调用，而这一切都是自动发生的…</p>
 <p>类有一个名为<code>__init__(self[, param1, param2...])</code>的魔法方法，该方法在类实例化时会自动调用。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><code class="language-highlight python">
-<span class="class"><span class="keyword">class</span> <span class="title">Ball</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name</span>):</span>
-        self.name = name
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+class Ball:
+    def __init__(self, name):
+        self.name &#x3D; name
 
-    <span class="function"><span class="keyword">def</span> <span class="title">kick</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"我叫%s,该死的，谁踢我..."</span> % self.name)
+    def kick(self):
+        print(&quot;我叫%s,该死的，谁踢我...&quot; % self.name)
 
 
-a = Ball(<span class="string">"球A"</span>)
-b = Ball(<span class="string">"球B"</span>)
-c = Ball(<span class="string">"球C"</span>)
+a &#x3D; Ball(&quot;球A&quot;)
+b &#x3D; Ball(&quot;球B&quot;)
+c &#x3D; Ball(&quot;球C&quot;)
 a.kick()
-<span class="comment"># 我叫球A,该死的，谁踢我...</span>
+# 我叫球A,该死的，谁踢我...
 b.kick()
-<span class="comment"># 我叫球B,该死的，谁踢我...</span></code></pre>
+# 我叫球B,该死的，谁踢我...<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h3 id="公有和私有"><a href="#公有和私有" class="headerlink" title="公有和私有"></a>公有和私有</h3><p>在 Python 中定义私有变量只需要在变量名或函数名前加上“__”两个下划线，那么这个函数或变量就会为私有的了。</p>
 <p>【例子】类的私有属性实例</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">JustCounter</span>:</span>
-    __secretCount = <span class="number">0</span>  <span class="comment"># 私有变量</span>
-    publicCount = <span class="number">0</span>  <span class="comment"># 公开变量</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class JustCounter:
+    __secretCount &#x3D; 0  # 私有变量
+    publicCount &#x3D; 0  # 公开变量
 
-    <span class="function"><span class="keyword">def</span> <span class="title">count</span>(<span class="params">self</span>):</span>
-        self.__secretCount += <span class="number">1</span>
-        self.publicCount += <span class="number">1</span>
+    def count(self):
+        self.__secretCount +&#x3D; 1
+        self.publicCount +&#x3D; 1
         print(self.__secretCount)
 
 
-counter = JustCounter()
-counter.count()  <span class="comment"># 1</span>
-counter.count()  <span class="comment"># 2</span>
-print(counter.publicCount)  <span class="comment"># 2</span>
+counter &#x3D; JustCounter()
+counter.count()  # 1
+counter.count()  # 2
+print(counter.publicCount)  # 2
 
-<span class="comment"># Python的私有为伪私有</span>
-print(counter._JustCounter__secretCount)  <span class="comment"># 2 </span>
+# Python的私有为伪私有
+print(counter._JustCounter__secretCount)  # 2 
 print(counter.__secretCount)  
-<span class="comment"># AttributeError: &#x27;JustCounter&#x27; object has no attribute &#x27;__secretCount&#x27;</span></code></pre>
+# AttributeError: &#39;JustCounter&#39; object has no attribute &#39;__secretCount&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】类的私有方法实例</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Site</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, name, url</span>):</span>
-        self.name = name  <span class="comment"># public</span>
-        self.__url = url  <span class="comment"># private</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Site:
+    def __init__(self, name, url):
+        self.name &#x3D; name  # public
+        self.__url &#x3D; url  # private
 
-    <span class="function"><span class="keyword">def</span> <span class="title">who</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;name  : &#x27;</span>, self.name)
-        print(<span class="string">&#x27;url : &#x27;</span>, self.__url)
+    def who(self):
+        print(&#39;name  : &#39;, self.name)
+        print(&#39;url : &#39;, self.__url)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__foo</span>(<span class="params">self</span>):</span>  <span class="comment"># 私有方法</span>
-        print(<span class="string">&#x27;这是私有方法&#x27;</span>)
+    def __foo(self):  # 私有方法
+        print(&#39;这是私有方法&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">foo</span>(<span class="params">self</span>):</span>  <span class="comment"># 公共方法</span>
-        print(<span class="string">&#x27;这是公共方法&#x27;</span>)
+    def foo(self):  # 公共方法
+        print(&#39;这是公共方法&#39;)
         self.__foo()
 
 
-x = Site(<span class="string">&#x27;老马的程序人生&#x27;</span>, <span class="string">&#x27;https://blog.csdn.net/LSGO_MYP&#x27;</span>)
+x &#x3D; Site(&#39;老马的程序人生&#39;, &#39;https:&#x2F;&#x2F;blog.csdn.net&#x2F;LSGO_MYP&#39;)
 x.who()
-<span class="comment"># name  :  老马的程序人生</span>
-<span class="comment"># url :  https://blog.csdn.net/LSGO_MYP</span>
+# name  :  老马的程序人生
+# url :  https:&#x2F;&#x2F;blog.csdn.net&#x2F;LSGO_MYP
 
 x.foo()
-<span class="comment"># 这是公共方法</span>
-<span class="comment"># 这是私有方法</span>
+# 这是公共方法
+# 这是私有方法
 
 x.__foo()
-<span class="comment"># AttributeError: &#x27;Site&#x27; object has no attribute &#x27;__foo&#x27;</span></code></pre>
+# AttributeError: &#39;Site&#39; object has no attribute &#39;__foo&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><p>Python 同样支持类的继承，派生类的定义如下所示：</p>
@@ -1192,120 +1192,120 @@ x.__foo()
 <p>class DerivedClassName(modname.BaseClassName):<br><br>&nbsp; &nbsp; &nbsp; &nbsp;statement-1<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;.<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;.<br><br>&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;.<br><br>&nbsp; &nbsp; &nbsp; &nbsp;statement-N</p>
 </blockquote>
 <p>【例子】如果子类中定义与父类同名的方法或属性，则会自动覆盖父类对应的方法或属性。</p>
-<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 类定义</span>
-<span class="class"><span class="keyword">class</span> <span class="title">people</span>:</span>
-    <span class="comment"># 定义基本属性</span>
-    name = <span class="string">&#x27;&#x27;</span>
-    age = <span class="number">0</span>
-    <span class="comment"># 定义私有属性,私有属性在类外部无法直接进行访问</span>
-    __weight = <span class="number">0</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 类定义
+class people:
+    # 定义基本属性
+    name &#x3D; &#39;&#39;
+    age &#x3D; 0
+    # 定义私有属性,私有属性在类外部无法直接进行访问
+    __weight &#x3D; 0
 
-    <span class="comment"># 定义构造方法</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w</span>):</span>
-        self.name = n
-        self.age = a
-        self.__weight = w
+    # 定义构造方法
+    def __init__(self, n, a, w):
+        self.name &#x3D; n
+        self.age &#x3D; a
+        self.__weight &#x3D; w
 
-    <span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s 说: 我 %d 岁。"</span> % (self.name, self.age))
+    def speak(self):
+        print(&quot;%s 说: 我 %d 岁。&quot; % (self.name, self.age))
 
 
-<span class="comment"># 单继承示例</span>
-<span class="class"><span class="keyword">class</span> <span class="title">student</span>(<span class="params">people</span>):</span>
-    grade = <span class="string">&#x27;&#x27;</span>
+# 单继承示例
+class student(people):
+    grade &#x3D; &#39;&#39;
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w, g</span>):</span>
-        <span class="comment"># 调用父类的构函</span>
+    def __init__(self, n, a, w, g):
+        # 调用父类的构函
         people.__init__(self, n, a, w)
-        self.grade = g
+        self.grade &#x3D; g
 
-    <span class="comment"># 覆写父类的方法</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s 说: 我 %d 岁了，我在读 %d 年级"</span> % (self.name, self.age, self.grade))
+    # 覆写父类的方法
+    def speak(self):
+        print(&quot;%s 说: 我 %d 岁了，我在读 %d 年级&quot; % (self.name, self.age, self.grade))
 
 
-s = student(<span class="string">&#x27;小马的程序人生&#x27;</span>, <span class="number">10</span>, <span class="number">60</span>, <span class="number">3</span>)
+s &#x3D; student(&#39;小马的程序人生&#39;, 10, 60, 3)
 s.speak()
-<span class="comment"># 小马的程序人生 说: 我 10 岁了，我在读 3 年级</span></code></pre>
+# 小马的程序人生 说: 我 10 岁了，我在读 3 年级<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：如果上面的程序去掉：<code>people.__init__(self, n, a, w)</code>，则输出：<code> 说: 我 0 岁了，我在读 3 年级</code>，因为子类的构造方法把父类的构造方法覆盖了。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> random
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import random
 
-<span class="class"><span class="keyword">class</span> <span class="title">Fish</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
-        self.x = random.randint(<span class="number">0</span>, <span class="number">10</span>)
-        self.y = random.randint(<span class="number">0</span>, <span class="number">10</span>)
+class Fish:
+    def __init__(self):
+        self.x &#x3D; random.randint(0, 10)
+        self.y &#x3D; random.randint(0, 10)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">move</span>(<span class="params">self</span>):</span>
-        self.x -= <span class="number">1</span>
-        print(<span class="string">"我的位置"</span>, self.x, self.y)
-
-
-<span class="class"><span class="keyword">class</span> <span class="title">GoldFish</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 金鱼</span>
-    <span class="keyword">pass</span>
+    def move(self):
+        self.x -&#x3D; 1
+        print(&quot;我的位置&quot;, self.x, self.y)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Carp</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 鲤鱼</span>
-    <span class="keyword">pass</span>
+class GoldFish(Fish):  # 金鱼
+    pass
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Salmon</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 三文鱼</span>
-    <span class="keyword">pass</span>
+class Carp(Fish):  # 鲤鱼
+    pass
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Shark</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 鲨鱼</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
-        self.hungry = <span class="literal">True</span>
-
-    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span>
-        <span class="keyword">if</span> self.hungry:
-            print(<span class="string">"吃货的梦想就是天天有得吃！"</span>)
-            self.hungry = <span class="literal">False</span>
-        <span class="keyword">else</span>:
-            print(<span class="string">"太撑了，吃不下了！"</span>)
-            self.hungry = <span class="literal">True</span>
+class Salmon(Fish):  # 三文鱼
+    pass
 
 
-g = GoldFish()
-g.move()  <span class="comment"># 我的位置 9 4</span>
-s = Shark()
-s.eat() <span class="comment"># 吃货的梦想就是天天有得吃！</span>
+class Shark(Fish):  # 鲨鱼
+    def __init__(self):
+        self.hungry &#x3D; True
+
+    def eat(self):
+        if self.hungry:
+            print(&quot;吃货的梦想就是天天有得吃！&quot;)
+            self.hungry &#x3D; False
+        else:
+            print(&quot;太撑了，吃不下了！&quot;)
+            self.hungry &#x3D; True
+
+
+g &#x3D; GoldFish()
+g.move()  # 我的位置 9 4
+s &#x3D; Shark()
+s.eat() # 吃货的梦想就是天天有得吃！
 s.move()  
-<span class="comment"># AttributeError: &#x27;Shark&#x27; object has no attribute &#x27;x&#x27;</span></code></pre>
+# AttributeError: &#39;Shark&#39; object has no attribute &#39;x&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>解决该问题可用以下两种方式：</p>
 <ul>
 <li>调用未绑定的父类方法<code>Fish.__init__(self)</code></li>
 </ul>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Shark</span>(<span class="params">Fish</span>):</span>  <span class="comment"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Shark</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 鲨鱼</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Shark(Fish):  # 鲨鱼
+    def __init__(self):
         Fish.__init__(self)
-        self.hungry = <span class="literal">True</span>
+        self.hungry &#x3D; True
 
-    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span>
-        <span class="keyword">if</span> self.hungry:
-            print(<span class="string">"吃货的梦想就是天天有得吃！"</span>)
-            self.hungry = <span class="literal">False</span>
-        <span class="keyword">else</span>:
-            print(<span class="string">"太撑了，吃不下了！"</span>)
-            self.hungry = <span class="literal">True</span></code></pre>
+    def eat(self):
+        if self.hungry:
+            print(&quot;吃货的梦想就是天天有得吃！&quot;)
+            self.hungry &#x3D; False
+        else:
+            print(&quot;太撑了，吃不下了！&quot;)
+            self.hungry &#x3D; True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>使用super函数<code>super().__init__()</code></li>
 </ul>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Shark</span>(<span class="params">Fish</span>):</span>  <span class="comment"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Shark</span>(<span class="params">Fish</span>):</span>  <span class="comment"># 鲨鱼</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Shark(Fish):  # 鲨鱼
+    def __init__(self):
         super().__init__()
-        self.hungry = <span class="literal">True</span>
+        self.hungry &#x3D; True
 
-    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span>
-        <span class="keyword">if</span> self.hungry:
-            print(<span class="string">"吃货的梦想就是天天有得吃！"</span>)
-            self.hungry = <span class="literal">False</span>
-        <span class="keyword">else</span>:
-            print(<span class="string">"太撑了，吃不下了！"</span>)
-            self.hungry = <span class="literal">True</span></code></pre>
+    def eat(self):
+        if self.hungry:
+            print(&quot;吃货的梦想就是天天有得吃！&quot;)
+            self.hungry &#x3D; False
+        else:
+            print(&quot;太撑了，吃不下了！&quot;)
+            self.hungry &#x3D; True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>Python 虽然支持多继承的形式，但我们一般不使用多继承，因为容易引起混乱。</p>
 <blockquote>
@@ -1313,99 +1313,99 @@ s.move()
 </blockquote>
 <p>需要注意圆括号中父类的顺序，若是父类中有相同的方法名，而在子类使用时未指定，Python 从左至右搜索，即方法在子类中未找到时，从左到右查找父类中是否包含方法。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 类定义</span>
-<span class="class"><span class="keyword">class</span> <span class="title">People</span>:</span>
-    <span class="comment"># 定义基本属性</span>
-    name = <span class="string">&#x27;&#x27;</span>
-    age = <span class="number">0</span>
-    <span class="comment"># 定义私有属性,私有属性在类外部无法直接进行访问</span>
-    __weight = <span class="number">0</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 类定义
+class People:
+    # 定义基本属性
+    name &#x3D; &#39;&#39;
+    age &#x3D; 0
+    # 定义私有属性,私有属性在类外部无法直接进行访问
+    __weight &#x3D; 0
 
-    <span class="comment"># 定义构造方法</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w</span>):</span>
-        self.name = n
-        self.age = a
-        self.__weight = w
+    # 定义构造方法
+    def __init__(self, n, a, w):
+        self.name &#x3D; n
+        self.age &#x3D; a
+        self.__weight &#x3D; w
 
-    <span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s 说: 我 %d 岁。"</span> % (self.name, self.age))
+    def speak(self):
+        print(&quot;%s 说: 我 %d 岁。&quot; % (self.name, self.age))
 
 
-<span class="comment"># 单继承示例</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Student</span>(<span class="params">People</span>):</span>
-    grade = <span class="string">&#x27;&#x27;</span>
+# 单继承示例
+class Student(People):
+    grade &#x3D; &#39;&#39;
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w, g</span>):</span>
-        <span class="comment"># 调用父类的构函</span>
+    def __init__(self, n, a, w, g):
+        # 调用父类的构函
         People.__init__(self, n, a, w)
-        self.grade = g
+        self.grade &#x3D; g
 
-    <span class="comment"># 覆写父类的方法</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s 说: 我 %d 岁了，我在读 %d 年级"</span> % (self.name, self.age, self.grade))
-
-
-<span class="comment"># 另一个类，多重继承之前的准备</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Speaker</span>:</span>
-    topic = <span class="string">&#x27;&#x27;</span>
-    name = <span class="string">&#x27;&#x27;</span>
-
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, t</span>):</span>
-        self.name = n
-        self.topic = t
-
-    <span class="function"><span class="keyword">def</span> <span class="title">speak</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"我叫 %s，我是一个演说家，我演讲的主题是 %s"</span> % (self.name, self.topic))
+    # 覆写父类的方法
+    def speak(self):
+        print(&quot;%s 说: 我 %d 岁了，我在读 %d 年级&quot; % (self.name, self.age, self.grade))
 
 
-<span class="comment"># 多重继承</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Sample01</span>(<span class="params">Speaker, Student</span>):</span>
-    a = <span class="string">&#x27;&#x27;</span>
+# 另一个类，多重继承之前的准备
+class Speaker:
+    topic &#x3D; &#39;&#39;
+    name &#x3D; &#39;&#39;
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w, g, t</span>):</span>
+    def __init__(self, n, t):
+        self.name &#x3D; n
+        self.topic &#x3D; t
+
+    def speak(self):
+        print(&quot;我叫 %s，我是一个演说家，我演讲的主题是 %s&quot; % (self.name, self.topic))
+
+
+# 多重继承
+class Sample01(Speaker, Student):
+    a &#x3D; &#39;&#39;
+
+    def __init__(self, n, a, w, g, t):
         Student.__init__(self, n, a, w, g)
         Speaker.__init__(self, n, t)
 
-<span class="comment"># 方法名同，默认调用的是在括号中排前地父类的方法</span>
-test = Sample01(<span class="string">"Tim"</span>, <span class="number">25</span>, <span class="number">80</span>, <span class="number">4</span>, <span class="string">"Python"</span>)
+# 方法名同，默认调用的是在括号中排前地父类的方法
+test &#x3D; Sample01(&quot;Tim&quot;, 25, 80, 4, &quot;Python&quot;)
 test.speak()  
-<span class="comment"># 我叫 Tim，我是一个演说家，我演讲的主题是 Python</span>
+# 我叫 Tim，我是一个演说家，我演讲的主题是 Python
 
-<span class="class"><span class="keyword">class</span> <span class="title">Sample02</span>(<span class="params">Student, Speaker</span>):</span>
-    a = <span class="string">&#x27;&#x27;</span>
+class Sample02(Student, Speaker):
+    a &#x3D; &#39;&#39;
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n, a, w, g, t</span>):</span>
+    def __init__(self, n, a, w, g, t):
         Student.__init__(self, n, a, w, g)
         Speaker.__init__(self, n, t)
 
-<span class="comment"># 方法名同，默认调用的是在括号中排前地父类的方法</span>
-test = Sample02(<span class="string">"Tim"</span>, <span class="number">25</span>, <span class="number">80</span>, <span class="number">4</span>, <span class="string">"Python"</span>)
+# 方法名同，默认调用的是在括号中排前地父类的方法
+test &#x3D; Sample02(&quot;Tim&quot;, 25, 80, 4, &quot;Python&quot;)
 test.speak()  
-<span class="comment"># Tim 说: 我 25 岁了，我在读 4 年级</span></code></pre>
+# Tim 说: 我 25 岁了，我在读 4 年级<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h3><p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Turtle</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x</span>):</span>
-        self.num = x
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Turtle:
+    def __init__(self, x):
+        self.num &#x3D; x
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Fish</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x</span>):</span>
-        self.num = x
+class Fish:
+    def __init__(self, x):
+        self.num &#x3D; x
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">Pool</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x, y</span>):</span>
-        self.turtle = Turtle(x)
-        self.fish = Fish(y)
+class Pool:
+    def __init__(self, x, y):
+        self.turtle &#x3D; Turtle(x)
+        self.fish &#x3D; Fish(y)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">print_num</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"水池里面有乌龟%s只，小鱼%s条"</span> % (self.turtle.num, self.fish.num))
+    def print_num(self):
+        print(&quot;水池里面有乌龟%s只，小鱼%s条&quot; % (self.turtle.num, self.fish.num))
 
 
-p = Pool(<span class="number">2</span>, <span class="number">3</span>)
+p &#x3D; Pool(2, 3)
 p.print_num()
-<span class="comment"># 水池里面有乌龟2只，小鱼3条</span></code></pre>
+# 水池里面有乌龟2只，小鱼3条<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="类、类对象和实例对象"><a href="#类、类对象和实例对象" class="headerlink" title="类、类对象和实例对象"></a>类、类对象和实例对象</h3><p><img src="https://gitee.com/niu_dehua/oss/raw/master/uPic/20191007090316462.png" alt="类对象和实例对象"></p>
 <p>类对象：创建一个类，其实也是一个对象也在内存开辟了一块空间，称为类对象，类对象只有一个。</p>
@@ -1414,121 +1414,121 @@ p.print_num()
 </blockquote>
 <p>实例对象：就是通过实例化类创建的对象，称为实例对象，实例对象可以有多个。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    <span class="keyword">pass</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A(object):
+    pass
 
-<span class="comment"># 实例化对象 a、b、c都属于实例对象。</span>
-a = A()
-b = A()
-c = A()</code></pre>
+# 实例化对象 a、b、c都属于实例对象。
+a &#x3D; A()
+b &#x3D; A()
+c &#x3D; A()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>类属性：类里面方法外面定义的变量称为类属性。类属性所属于类对象并且多个实例对象之间共享同一个类属性，说白了就是类属性所有的通过该类实例化的对象都能共享。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>():</span>
-    a = <span class="number">0</span>  <span class="comment">#类属性</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, xx</span>):</span>
-        A.a = xx  <span class="comment">#使用类属性可以通过 （类名.类属性）调用。</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A():
+    a &#x3D; 0  #类属性
+    def __init__(self, xx):
+        A.a &#x3D; xx  #使用类属性可以通过 （类名.类属性）调用。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>实例属性：实例属性和具体的某个实例对象有关系，并且一个实例对象和另外一个实例对象是不共享属性的，说白了实例属性只能在自己的对象里面使用，其他的对象不能直接使用，因为<code>self</code>是谁调用，它的值就属于该对象。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="comment"><code class="language-highlight python"><span class="comment"># 创建类对象</span>
-<span class="class"><span class="keyword">class</span> <span class="title">Test</span>(<span class="params">object</span>):</span>
-    class_attr = <span class="number">100</span>  <span class="comment"># 类属性</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"># 创建类对象
+class Test(object):
+    class_attr &#x3D; 100  # 类属性
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
-        self.sl_attr = <span class="number">100</span>  <span class="comment"># 实例属性</span>
+    def __init__(self):
+        self.sl_attr &#x3D; 100  # 实例属性
 
-    <span class="function"><span class="keyword">def</span> <span class="title">func</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;类对象.类属性的值:&#x27;</span>, Test.class_attr)  <span class="comment"># 调用类属性</span>
-        print(<span class="string">&#x27;self.类属性的值&#x27;</span>, self.class_attr)  <span class="comment"># 相当于把类属性 变成实例属性</span>
-        print(<span class="string">&#x27;self.实例属性的值&#x27;</span>, self.sl_attr)  <span class="comment"># 调用实例属性</span>
+    def func(self):
+        print(&#39;类对象.类属性的值:&#39;, Test.class_attr)  # 调用类属性
+        print(&#39;self.类属性的值&#39;, self.class_attr)  # 相当于把类属性 变成实例属性
+        print(&#39;self.实例属性的值&#39;, self.sl_attr)  # 调用实例属性
 
 
-a = Test()
+a &#x3D; Test()
 a.func()
 
-<span class="comment"># 类对象.类属性的值: 100</span>
-<span class="comment"># self.类属性的值 100</span>
-<span class="comment"># self.实例属性的值 100</span>
+# 类对象.类属性的值: 100
+# self.类属性的值 100
+# self.实例属性的值 100
 
-b = Test()
+b &#x3D; Test()
 b.func()
 
-<span class="comment"># 类对象.类属性的值: 100</span>
-<span class="comment"># self.类属性的值 100</span>
-<span class="comment"># self.实例属性的值 100</span>
+# 类对象.类属性的值: 100
+# self.类属性的值 100
+# self.实例属性的值 100
 
-a.class_attr = <span class="number">200</span>
-a.sl_attr = <span class="number">200</span>
+a.class_attr &#x3D; 200
+a.sl_attr &#x3D; 200
 a.func()
 
-<span class="comment"># 类对象.类属性的值: 100</span>
-<span class="comment"># self.类属性的值 200</span>
-<span class="comment"># self.实例属性的值 200</span>
+# 类对象.类属性的值: 100
+# self.类属性的值 200
+# self.实例属性的值 200
 
 b.func()
 
-<span class="comment"># 类对象.类属性的值: 100</span>
-<span class="comment"># self.类属性的值 100</span>
-<span class="comment"># self.实例属性的值 100</span>
+# 类对象.类属性的值: 100
+# self.类属性的值 100
+# self.实例属性的值 100
 
-Test.class_attr = <span class="number">300</span>
+Test.class_attr &#x3D; 300
 a.func()
 
-<span class="comment"># 类对象.类属性的值: 300</span>
-<span class="comment"># self.类属性的值 200</span>
-<span class="comment"># self.实例属性的值 200</span>
+# 类对象.类属性的值: 300
+# self.类属性的值 200
+# self.实例属性的值 200
 
 b.func()
-<span class="comment"># 类对象.类属性的值: 300</span>
-<span class="comment"># self.类属性的值 300</span>
-<span class="comment"># self.实例属性的值 100</span></code></pre>
+# 类对象.类属性的值: 300
+# self.类属性的值 300
+# self.实例属性的值 100<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>注意：属性与方法名相同，属性会覆盖方法。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">x</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;x_man&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A:
+    def x(self):
+        print(&#39;x_man&#39;)
 
 
-aa = A()
-aa.x()  <span class="comment"># x_man</span>
-aa.x = <span class="number">1</span>
-print(aa.x)  <span class="comment"># 1</span>
+aa &#x3D; A()
+aa.x()  # x_man
+aa.x &#x3D; 1
+print(aa.x)  # 1
 aa.x()
-<span class="comment"># TypeError: &#x27;int&#x27; object is not callable</span></code></pre>
+# TypeError: &#39;int&#39; object is not callable<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="什么是绑定？"><a href="#什么是绑定？" class="headerlink" title="什么是绑定？"></a>什么是绑定？</h3><p>Python 严格要求方法需要有实例才能被调用，这种限制其实就是 Python 所谓的绑定概念。</p>
 <p>Python 对象的数据属性通常存储在名为<code>.__ dict__</code>的字典中，我们可以直接访问<code>__dict__</code>，或利用 Python 的内置函数<code>vars()</code>获取<code>.__ dict__</code>。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">CC</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">setXY</span>(<span class="params">self, x, y</span>):</span>
-        self.x = x
-        self.y = y
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class CC:
+    def setXY(self, x, y):
+        self.x &#x3D; x
+        self.y &#x3D; y
 
-    <span class="function"><span class="keyword">def</span> <span class="title">printXY</span>(<span class="params">self</span>):</span>
+    def printXY(self):
         print(self.x, self.y)
 
 
-dd = CC()
+dd &#x3D; CC()
 print(dd.__dict__)
-<span class="comment"># &#123;&#125;</span>
+# &#123;&#125;
 
 print(vars(dd))
-<span class="comment"># &#123;&#125;</span>
+# &#123;&#125;
 
 print(CC.__dict__)
-<span class="comment"># &#123;&#x27;__module__&#x27;: &#x27;__main__&#x27;, &#x27;setXY&#x27;: <function CC.setXY at 0x000000C3473DA048>, &#x27;printXY&#x27;: <function CC.printXY at 0x000000C3473C4F28>, &#x27;__dict__&#x27;: <attribute &#x27;__dict__&#x27; of &#x27;CC&#x27; objects>, &#x27;__weakref__&#x27;: <attribute &#x27;__weakref__&#x27; of &#x27;CC&#x27; objects>, &#x27;__doc__&#x27;: None&#125;</span>
+# &#123;&#39;__module__&#39;: &#39;__main__&#39;, &#39;setXY&#39;: &lt;function CC.setXY at 0x000000C3473DA048&gt;, &#39;printXY&#39;: &lt;function CC.printXY at 0x000000C3473C4F28&gt;, &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;CC&#39; objects&gt;, &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;CC&#39; objects&gt;, &#39;__doc__&#39;: None&#125;
 
-dd.setXY(<span class="number">4</span>, <span class="number">5</span>)
+dd.setXY(4, 5)
 print(dd.__dict__)
-<span class="comment"># &#123;&#x27;x&#x27;: 4, &#x27;y&#x27;: 5&#125;</span>
+# &#123;&#39;x&#39;: 4, &#39;y&#39;: 5&#125;
 
 print(vars(CC))
-<span class="comment"># &#123;&#x27;__module__&#x27;: &#x27;__main__&#x27;, &#x27;setXY&#x27;: <function CC.setXY at 0x000000632CA9B048>, &#x27;printXY&#x27;: <function CC.printXY at 0x000000632CA83048>, &#x27;__dict__&#x27;: <attribute &#x27;__dict__&#x27; of &#x27;CC&#x27; objects>, &#x27;__weakref__&#x27;: <attribute &#x27;__weakref__&#x27; of &#x27;CC&#x27; objects>, &#x27;__doc__&#x27;: None&#125;</span>
+# &#123;&#39;__module__&#39;: &#39;__main__&#39;, &#39;setXY&#39;: &lt;function CC.setXY at 0x000000632CA9B048&gt;, &#39;printXY&#39;: &lt;function CC.printXY at 0x000000632CA83048&gt;, &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;CC&#39; objects&gt;, &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;CC&#39; objects&gt;, &#39;__doc__&#39;: None&#125;
 
 print(CC.__dict__)
-<span class="comment"># &#123;&#x27;__module__&#x27;: &#x27;__main__&#x27;, &#x27;setXY&#x27;: <function CC.setXY at 0x000000632CA9B048>, &#x27;printXY&#x27;: <function CC.printXY at 0x000000632CA83048>, &#x27;__dict__&#x27;: <attribute &#x27;__dict__&#x27; of &#x27;CC&#x27; objects>, &#x27;__weakref__&#x27;: <attribute &#x27;__weakref__&#x27; of &#x27;CC&#x27; objects>, &#x27;__doc__&#x27;: None&#125;</span></code></pre>
+# &#123;&#39;__module__&#39;: &#39;__main__&#39;, &#39;setXY&#39;: &lt;function CC.setXY at 0x000000632CA9B048&gt;, &#39;printXY&#39;: &lt;function CC.printXY at 0x000000632CA83048&gt;, &#39;__dict__&#39;: &lt;attribute &#39;__dict__&#39; of &#39;CC&#39; objects&gt;, &#39;__weakref__&#39;: &lt;attribute &#39;__weakref__&#39; of &#39;CC&#39; objects&gt;, &#39;__doc__&#39;: None&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="一些相关的内置函数（BIF）"><a href="#一些相关的内置函数（BIF）" class="headerlink" title="一些相关的内置函数（BIF）"></a>一些相关的内置函数（BIF）</h3><ul>
 <li><code>issubclass(class, classinfo)</code> 方法用于判断参数 class 是否是类型参数 classinfo 的子类。</li>
@@ -1536,18 +1536,18 @@ print(CC.__dict__)
 <li><code>classinfo</code>可以是类对象的元组，只要class是其中任何一个候选类的子类，则返回<code>True</code>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span>
-    <span class="keyword">pass</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A:
+    pass
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span>
-    <span class="keyword">pass</span>
+class B(A):
+    pass
 
 
-print(issubclass(B, A))  <span class="comment"># True</span>
-print(issubclass(B, B))  <span class="comment"># True</span>
-print(issubclass(A, B))  <span class="comment"># False</span>
-print(issubclass(B, object))  <span class="comment"># True</span></code></pre>
+print(issubclass(B, A))  # True
+print(issubclass(B, B))  # True
+print(issubclass(A, B))  # False
+print(issubclass(B, object))  # True<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>isinstance(object, classinfo)</code> 方法用于判断一个对象是否是一个已知的类型，类似<code>type()</code>。</li>
@@ -1557,109 +1557,109 @@ print(issubclass(B, object))  <span class="comment"># True</span></code></pre>
 <li>如果第二个参数不是类或者由类对象组成的元组，会抛出一个<code>TypeError</code>异常。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">a = <span class="number"><code class="language-highlight python">a = <span class="number">2</span>
-print(isinstance(a, int))  <span class="comment"># True</span>
-print(isinstance(a, str))  <span class="comment"># False</span>
-print(isinstance(a, (str, int, list)))  <span class="comment"># True</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">a &#x3D; 2
+print(isinstance(a, int))  # True
+print(isinstance(a, str))  # False
+print(isinstance(a, (str, int, list)))  # True
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span>
-    <span class="keyword">pass</span>
+class A:
+    pass
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span>
-    <span class="keyword">pass</span>
+class B(A):
+    pass
 
 
-print(isinstance(A(), A))  <span class="comment"># True</span>
-print(type(A()) == A)  <span class="comment"># True</span>
-print(isinstance(B(), A))  <span class="comment"># True</span>
-print(type(B()) == A)  <span class="comment"># False</span></code></pre>
+print(isinstance(A(), A))  # True
+print(type(A()) &#x3D;&#x3D; A)  # True
+print(isinstance(B(), A))  # True
+print(type(B()) &#x3D;&#x3D; A)  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>hasattr(object, name)</code>用于判断对象是否包含对应的属性。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Coordinate</span>:</span>
-    x = <span class="number">10</span>
-    y = <span class="number">-5</span>
-    z = <span class="number">0</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Coordinate:
+    x &#x3D; 10
+    y &#x3D; -5
+    z &#x3D; 0
 
 
-point1 = Coordinate()
-print(hasattr(point1, <span class="string">&#x27;x&#x27;</span>))  <span class="comment"># True</span>
-print(hasattr(point1, <span class="string">&#x27;y&#x27;</span>))  <span class="comment"># True</span>
-print(hasattr(point1, <span class="string">&#x27;z&#x27;</span>))  <span class="comment"># True</span>
-print(hasattr(point1, <span class="string">&#x27;no&#x27;</span>))  <span class="comment"># False</span></code></pre>
+point1 &#x3D; Coordinate()
+print(hasattr(point1, &#39;x&#39;))  # True
+print(hasattr(point1, &#39;y&#39;))  # True
+print(hasattr(point1, &#39;z&#39;))  # True
+print(hasattr(point1, &#39;no&#39;))  # False<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>getattr(object, name[, default])</code>用于返回一个对象属性值。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    bar = <span class="number">1</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A(object):
+    bar &#x3D; 1
 
 
-a = A()
-print(getattr(a, <span class="string">&#x27;bar&#x27;</span>))  <span class="comment"># 1</span>
-print(getattr(a, <span class="string">&#x27;bar2&#x27;</span>, <span class="number">3</span>))  <span class="comment"># 3</span>
-print(getattr(a, <span class="string">&#x27;bar2&#x27;</span>))
-<span class="comment"># AttributeError: &#x27;A&#x27; object has no attribute &#x27;bar2&#x27;</span></code></pre>
+a &#x3D; A()
+print(getattr(a, &#39;bar&#39;))  # 1
+print(getattr(a, &#39;bar2&#39;, 3))  # 3
+print(getattr(a, &#39;bar2&#39;))
+# AttributeError: &#39;A&#39; object has no attribute &#39;bar2&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】这个例子很酷！</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">set</span>(<span class="params">self, a, b</span>):</span>
-        x = a
-        a = b
-        b = x
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A(object):
+    def set(self, a, b):
+        x &#x3D; a
+        a &#x3D; b
+        b &#x3D; x
         print(a, b)
 
 
-a = A()
-c = getattr(a, <span class="string">&#x27;set&#x27;</span>)
-c(a=<span class="string">&#x27;1&#x27;</span>, b=<span class="string">&#x27;2&#x27;</span>)  <span class="comment"># 2 1</span>
-</code></pre>
+a &#x3D; A()
+c &#x3D; getattr(a, &#39;set&#39;)
+c(a&#x3D;&#39;1&#39;, b&#x3D;&#39;2&#39;)  # 2 1
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>setattr(object, name, value)</code>对应函数 <code>getattr()</code>，用于设置属性值，该属性不一定是存在的。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    bar = <span class="number">1</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A(object):
+    bar &#x3D; 1
 
 
-a = A()
-print(getattr(a, <span class="string">&#x27;bar&#x27;</span>))  <span class="comment"># 1</span>
-setattr(a, <span class="string">&#x27;bar&#x27;</span>, <span class="number">5</span>)
-print(a.bar)  <span class="comment"># 5</span>
-setattr(a, <span class="string">"age"</span>, <span class="number">28</span>)
-print(a.age)  <span class="comment"># 28</span></code></pre>
+a &#x3D; A()
+print(getattr(a, &#39;bar&#39;))  # 1
+setattr(a, &#39;bar&#39;, 5)
+print(a.bar)  # 5
+setattr(a, &quot;age&quot;, 28)
+print(a.age)  # 28<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>delattr(object, name)</code>用于删除属性。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Coordinate</span>:</span>
-    x = <span class="number">10</span>
-    y = <span class="number">-5</span>
-    z = <span class="number">0</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Coordinate:
+    x &#x3D; 10
+    y &#x3D; -5
+    z &#x3D; 0
 
 
-point1 = Coordinate()
+point1 &#x3D; Coordinate()
 
-print(<span class="string">&#x27;x = &#x27;</span>, point1.x)  <span class="comment"># x =  10</span>
-print(<span class="string">&#x27;y = &#x27;</span>, point1.y)  <span class="comment"># y =  -5</span>
-print(<span class="string">&#x27;z = &#x27;</span>, point1.z)  <span class="comment"># z =  0</span>
+print(&#39;x &#x3D; &#39;, point1.x)  # x &#x3D;  10
+print(&#39;y &#x3D; &#39;, point1.y)  # y &#x3D;  -5
+print(&#39;z &#x3D; &#39;, point1.z)  # z &#x3D;  0
 
-delattr(Coordinate, <span class="string">&#x27;z&#x27;</span>)
+delattr(Coordinate, &#39;z&#39;)
 
-print(<span class="string">&#x27;--删除 z 属性后--&#x27;</span>)  <span class="comment"># --删除 z 属性后--</span>
-print(<span class="string">&#x27;x = &#x27;</span>, point1.x)  <span class="comment"># x =  10</span>
-print(<span class="string">&#x27;y = &#x27;</span>, point1.y)  <span class="comment"># y =  -5</span>
+print(&#39;--删除 z 属性后--&#39;)  # --删除 z 属性后--
+print(&#39;x &#x3D; &#39;, point1.x)  # x &#x3D;  10
+print(&#39;y &#x3D; &#39;, point1.y)  # y &#x3D;  -5
 
-<span class="comment"># 触发错误</span>
-print(<span class="string">&#x27;z = &#x27;</span>, point1.z)
-<span class="comment"># AttributeError: &#x27;Coordinate&#x27; object has no attribute &#x27;z&#x27;</span></code></pre>
+# 触发错误
+print(&#39;z &#x3D; &#39;, point1.z)
+# AttributeError: &#39;Coordinate&#39; object has no attribute &#39;z&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>class property([fget[, fset[, fdel[, doc]]]])</code>用于在新式类中返回属性值。<ul>
@@ -1671,29 +1671,29 @@ print(<span class="string">&#x27;z = &#x27;</span>, point1.z)
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">object</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
-        self.__x = <span class="literal">None</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class C(object):
+    def __init__(self):
+        self.__x &#x3D; None
 
-    <span class="function"><span class="keyword">def</span> <span class="title">getx</span>(<span class="params">self</span>):</span>
-        <span class="keyword">return</span> self.__x
+    def getx(self):
+        return self.__x
 
-    <span class="function"><span class="keyword">def</span> <span class="title">setx</span>(<span class="params">self, value</span>):</span>
-        self.__x = value
+    def setx(self, value):
+        self.__x &#x3D; value
 
-    <span class="function"><span class="keyword">def</span> <span class="title">delx</span>(<span class="params">self</span>):</span>
-        <span class="keyword">del</span> self.__x
+    def delx(self):
+        del self.__x
 
-    x = property(getx, setx, delx, <span class="string">"I&#x27;m the &#x27;x&#x27; property."</span>)
+    x &#x3D; property(getx, setx, delx, &quot;I&#39;m the &#39;x&#39; property.&quot;)
 
 
-cc = C()
-cc.x = <span class="number">2</span>
-print(cc.x)  <span class="comment"># 2</span>
+cc &#x3D; C()
+cc.x &#x3D; 2
+print(cc.x)  # 2
 
-<span class="keyword">del</span> cc.x
+del cc.x
 print(cc.x)
-<span class="comment"># AttributeError: &#x27;C&#x27; object has no attribute &#x27;_C__x&#x27;</span></code></pre>
+# AttributeError: &#39;C&#39; object has no attribute &#39;_C__x&#39;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="魔法方法"><a href="#魔法方法" class="headerlink" title="魔法方法"></a>魔法方法</h2><p>魔法方法总是被双下划线包围，例如<code>__init__</code>。</p>
 <p>魔法方法是面向对象的 Python 的一切，如果你不知道魔法方法，说明你还没能意识到面向对象的 Python 的强大。</p>
@@ -1707,21 +1707,21 @@ print(cc.x)
 <li><code>__init__(self[, ...])</code> 构造器，当一个实例被创建的时候调用的初始化方法</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, x, y</span>):</span>
-        self.x = x
-        self.y = y
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Rectangle:
+    def __init__(self, x, y):
+        self.x &#x3D; x
+        self.y &#x3D; y
 
-    <span class="function"><span class="keyword">def</span> <span class="title">getPeri</span>(<span class="params">self</span>):</span>
-        <span class="keyword">return</span> (self.x + self.y) * <span class="number">2</span>
+    def getPeri(self):
+        return (self.x + self.y) * 2
 
-    <span class="function"><span class="keyword">def</span> <span class="title">getArea</span>(<span class="params">self</span>):</span>
-        <span class="keyword">return</span> self.x * self.y
+    def getArea(self):
+        return self.x * self.y
 
 
-rect = Rectangle(<span class="number">4</span>, <span class="number">5</span>)
-print(rect.getPeri())  <span class="comment"># 18</span>
-print(rect.getArea())  <span class="comment"># 20</span></code></pre>
+rect &#x3D; Rectangle(4, 5)
+print(rect.getPeri())  # 18
+print(rect.getArea())  # 20<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__new__(cls[, ...])</code> 在一个对象实例化的时候所调用的第一个方法，在调用<code>__init__</code>初始化前，先调用<code>__new__</code>。<ul>
@@ -1731,108 +1731,108 @@ print(rect.getArea())  <span class="comment"># 20</span></code></pre>
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, value</span>):</span>
-        print(<span class="string">"into A __init__"</span>)
-        self.value = value
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class A(object):
+    def __init__(self, value):
+        print(&quot;into A __init__&quot;)
+        self.value &#x3D; value
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls, *args, **kwargs</span>):</span>
-        print(<span class="string">"into A __new__"</span>)
+    def __new__(cls, *args, **kwargs):
+        print(&quot;into A __new__&quot;)
         print(cls)
-        <span class="keyword">return</span> object.__new__(cls)
+        return object.__new__(cls)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, value</span>):</span>
-        print(<span class="string">"into B __init__"</span>)
-        self.value = value
+class B(A):
+    def __init__(self, value):
+        print(&quot;into B __init__&quot;)
+        self.value &#x3D; value
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls, *args, **kwargs</span>):</span>
-        print(<span class="string">"into B __new__"</span>)
+    def __new__(cls, *args, **kwargs):
+        print(&quot;into B __new__&quot;)
         print(cls)
-        <span class="keyword">return</span> super().__new__(cls, *args, **kwargs)
+        return super().__new__(cls, *args, **kwargs)
 
 
-b = B(<span class="number">10</span>)
+b &#x3D; B(10)
 
-<span class="comment"># 结果：</span>
-<span class="comment"># into B __new__</span>
-<span class="comment"># <class &#x27;__main__.B&#x27;></span>
-<span class="comment"># into A __new__</span>
-<span class="comment"># <class &#x27;__main__.B&#x27;></span>
-<span class="comment"># into B __init__</span>
+# 结果：
+# into B __new__
+# &lt;class &#39;__main__.B&#39;&gt;
+# into A __new__
+# &lt;class &#39;__main__.B&#39;&gt;
+# into B __init__
 
-<span class="class"><span class="keyword">class</span> <span class="title">A</span>(<span class="params">object</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, value</span>):</span>
-        print(<span class="string">"into A __init__"</span>)
-        self.value = value
+class A(object):
+    def __init__(self, value):
+        print(&quot;into A __init__&quot;)
+        self.value &#x3D; value
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls, *args, **kwargs</span>):</span>
-        print(<span class="string">"into A __new__"</span>)
+    def __new__(cls, *args, **kwargs):
+        print(&quot;into A __new__&quot;)
         print(cls)
-        <span class="keyword">return</span> object.__new__(cls)
+        return object.__new__(cls)
 
 
-<span class="class"><span class="keyword">class</span> <span class="title">B</span>(<span class="params">A</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, value</span>):</span>
-        print(<span class="string">"into B __init__"</span>)
-        self.value = value
+class B(A):
+    def __init__(self, value):
+        print(&quot;into B __init__&quot;)
+        self.value &#x3D; value
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls, *args, **kwargs</span>):</span>
-        print(<span class="string">"into B __new__"</span>)
+    def __new__(cls, *args, **kwargs):
+        print(&quot;into B __new__&quot;)
         print(cls)
-        <span class="keyword">return</span> super().__new__(A, *args, **kwargs)  <span class="comment"># 改动了cls变为A</span>
+        return super().__new__(A, *args, **kwargs)  # 改动了cls变为A
 
 
-b = B(<span class="number">10</span>)
+b &#x3D; B(10)
 
-<span class="comment"># 结果：</span>
-<span class="comment"># into B __new__</span>
-<span class="comment"># <class &#x27;__main__.B&#x27;></span>
-<span class="comment"># into A __new__</span>
-<span class="comment"># <class &#x27;__main__.A&#x27;></span></code></pre>
+# 结果：
+# into B __new__
+# &lt;class &#39;__main__.B&#39;&gt;
+# into A __new__
+# &lt;class &#39;__main__.A&#39;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>若<code>__new__</code>没有正确返回当前类<code>cls</code>的实例，那<code>__init__</code>是不会被调用的，即使是父类的实例也不行，将没有<code>__init__</code>被调用。</li>
 </ul>
 <p>【例子】利用<code>__new__</code>实现单例模式。</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Earth</span>:</span>
-    <span class="keyword">pass</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Earth:
+    pass
 
 
-a = Earth()
-print(id(a))  <span class="comment"># 260728291456</span>
-b = Earth()
-print(id(b))  <span class="comment"># 260728291624</span>
+a &#x3D; Earth()
+print(id(a))  # 260728291456
+b &#x3D; Earth()
+print(id(b))  # 260728291624
 
-<span class="class"><span class="keyword">class</span> <span class="title">Earth</span>:</span>
-    __instance = <span class="literal">None</span>  <span class="comment"># 定义一个类属性做判断</span>
+class Earth:
+    __instance &#x3D; None  # 定义一个类属性做判断
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls</span>):</span>
-        <span class="keyword">if</span> cls.__instance <span class="keyword">is</span> <span class="literal">None</span>:
-            cls.__instance = object.__new__(cls)
-            <span class="keyword">return</span> cls.__instance
-        <span class="keyword">else</span>:
-            <span class="keyword">return</span> cls.__instance
+    def __new__(cls):
+        if cls.__instance is None:
+            cls.__instance &#x3D; object.__new__(cls)
+            return cls.__instance
+        else:
+            return cls.__instance
 
 
-a = Earth()
-print(id(a))  <span class="comment"># 512320401648</span>
-b = Earth()
-print(id(b))  <span class="comment"># 512320401648</span></code></pre>
+a &#x3D; Earth()
+print(id(a))  # 512320401648
+b &#x3D; Earth()
+print(id(b))  # 512320401648<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__new__</code>方法主要是当你继承一些不可变的 class 时（比如<code>int, str, tuple</code>）， 提供给你一个自定义这些类的实例化过程的途径。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">CapStr</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">CapStr</span>(<span class="params">str</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span>(<span class="params">cls, string</span>):</span>
-        string = string.upper()
-        <span class="keyword">return</span> str.__new__(cls, string)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class CapStr(str):
+    def __new__(cls, string):
+        string &#x3D; string.upper()
+        return str.__new__(cls, string)
 
 
-a = CapStr(<span class="string">"i love lsgogroup"</span>)
-print(a)  <span class="comment"># I LOVE LSGOGROUP</span></code></pre>
+a &#x3D; CapStr(&quot;i love lsgogroup&quot;)
+print(a)  # I LOVE LSGOGROUP<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__del__(self)</code> 析构器，当一个对象将要被系统回收之时调用的方法。</li>
@@ -1842,22 +1842,22 @@ print(a)  <span class="comment"># I LOVE LSGOGROUP</span></code></pre>
 <p>大部分时候，Python 的 ARC 都能准确、高效地回收系统中的每个对象。但如果系统中出现循环引用的情况，比如对象 a 持有一个实例变量引用对象 b，而对象 b 又持有一个实例变量引用对象 a，此时两个对象的引用计数都是 1，而实际上程序已经不再有变量引用它们，系统应该回收它们，此时 Python 的垃圾回收器就可能没那么快，要等专门的循环垃圾回收器（Cyclic Garbage Collector）来检测并回收这种引用循环。</p>
 </blockquote>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>(<span class="params">object</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;into C __init__&#x27;</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class C(object):
+    def __init__(self):
+        print(&#39;into C __init__&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__del__</span>(<span class="params">self</span>):</span>
-        print(<span class="string">&#x27;into C __del__&#x27;</span>)
+    def __del__(self):
+        print(&#39;into C __del__&#39;)
 
 
-c1 = C()
-<span class="comment"># into C __init__</span>
-c2 = c1
-c3 = c2
-<span class="keyword">del</span> c3
-<span class="keyword">del</span> c2
-<span class="keyword">del</span> c1
-<span class="comment"># into C __del__</span></code></pre>
+c1 &#x3D; C()
+# into C __init__
+c2 &#x3D; c1
+c3 &#x3D; c2
+del c3
+del c2
+del c1
+# into C __del__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><p><code>__str__(self)</code>:</p>
@@ -1877,113 +1877,113 @@ c3 = c2
 </li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span>:</span>
-    <span class="string">"""定义一个猫类"""</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Cat:
+    &quot;&quot;&quot;定义一个猫类&quot;&quot;&quot;
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, new_name, new_age</span>):</span>
-        <span class="string">"""在创建完对象之后 会自动调用, 它完成对象的初始化的功能"""</span>
-        self.name = new_name
-        self.age = new_age
+    def __init__(self, new_name, new_age):
+        &quot;&quot;&quot;在创建完对象之后 会自动调用, 它完成对象的初始化的功能&quot;&quot;&quot;
+        self.name &#x3D; new_name
+        self.age &#x3D; new_age
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span>(<span class="params">self</span>):</span>
-        <span class="string">"""返回一个对象的描述信息"""</span>
-        <span class="keyword">return</span> <span class="string">"名字是:%s , 年龄是:%d"</span> % (self.name, self.age)
+    def __str__(self):
+        &quot;&quot;&quot;返回一个对象的描述信息&quot;&quot;&quot;
+        return &quot;名字是:%s , 年龄是:%d&quot; % (self.name, self.age)
         
-    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span>(<span class="params">self</span>):</span>
-        <span class="string">"""返回一个对象的描述信息"""</span>
-        <span class="keyword">return</span> <span class="string">"Cat:(%s,%d)"</span> % (self.name, self.age)
+    def __repr__(self):
+        &quot;&quot;&quot;返回一个对象的描述信息&quot;&quot;&quot;
+        return &quot;Cat:(%s,%d)&quot; % (self.name, self.age)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">eat</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s在吃鱼...."</span> % self.name)
+    def eat(self):
+        print(&quot;%s在吃鱼....&quot; % self.name)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">drink</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"%s在喝可乐..."</span> % self.name)
+    def drink(self):
+        print(&quot;%s在喝可乐...&quot; % self.name)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">introduce</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"名字是:%s, 年龄是:%d"</span> % (self.name, self.age))
+    def introduce(self):
+        print(&quot;名字是:%s, 年龄是:%d&quot; % (self.name, self.age))
 
 
-<span class="comment"># 创建了一个对象</span>
-tom = Cat(<span class="string">"汤姆"</span>, <span class="number">30</span>)
-print(tom)  <span class="comment"># 名字是:汤姆 , 年龄是:30</span>
-print(str(tom)) <span class="comment"># 名字是:汤姆 , 年龄是:30</span>
-print(repr(tom))  <span class="comment"># Cat:(汤姆,30)</span>
-tom.eat()  <span class="comment"># 汤姆在吃鱼....</span>
-tom.introduce()  <span class="comment"># 名字是:汤姆, 年龄是:30</span></code></pre>
+# 创建了一个对象
+tom &#x3D; Cat(&quot;汤姆&quot;, 30)
+print(tom)  # 名字是:汤姆 , 年龄是:30
+print(str(tom)) # 名字是:汤姆 , 年龄是:30
+print(repr(tom))  # Cat:(汤姆,30)
+tom.eat()  # 汤姆在吃鱼....
+tom.introduce()  # 名字是:汤姆, 年龄是:30<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>__str__(self)</code> 的返回结果可读性强。也就是说，<code>__str__</code> 的意义是得到便于人们阅读的信息，就像下面的 ‘2019-10-11’ 一样。</p>
 <p><code>__repr__(self)</code> 的返回结果应更准确。怎么说，<code>__repr__</code> 存在的目的在于调试，便于开发者使用。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="keyword"><code class="language-highlight python"><span class="keyword">import</span> datetime
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">import datetime
 
-today = datetime.date.today()
-print(str(today))  <span class="comment"># 2019-10-11</span>
-print(repr(today))  <span class="comment"># datetime.date(2019, 10, 11)</span>
-print(<span class="string">&#x27;%s&#x27;</span> %today)  <span class="comment"># 2019-10-11</span>
-print(<span class="string">&#x27;%r&#x27;</span> %today)  <span class="comment"># datetime.date(2019, 10, 11)</span></code></pre>
+today &#x3D; datetime.date.today()
+print(str(today))  # 2019-10-11
+print(repr(today))  # datetime.date(2019, 10, 11)
+print(&#39;%s&#39; %today)  # 2019-10-11
+print(&#39;%r&#39; %today)  # datetime.date(2019, 10, 11)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><p>类型工厂函数，指的是“不通过类而是通过函数来创建对象”。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span>
-    <span class="keyword">pass</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class C:
+    pass
 
 
-print(type(len))  <span class="comment"># <class &#x27;builtin_function_or_method&#x27;></span>
-print(type(dir))  <span class="comment"># <class &#x27;builtin_function_or_method&#x27;></span>
-print(type(int))  <span class="comment"># <class &#x27;type&#x27;></span>
-print(type(list))  <span class="comment"># <class &#x27;type&#x27;></span>
-print(type(tuple))  <span class="comment"># <class &#x27;type&#x27;></span>
-print(type(C))  <span class="comment"># <class &#x27;type&#x27;></span>
-print(int(<span class="string">&#x27;123&#x27;</span>))  <span class="comment"># 123</span>
+print(type(len))  # &lt;class &#39;builtin_function_or_method&#39;&gt;
+print(type(dir))  # &lt;class &#39;builtin_function_or_method&#39;&gt;
+print(type(int))  # &lt;class &#39;type&#39;&gt;
+print(type(list))  # &lt;class &#39;type&#39;&gt;
+print(type(tuple))  # &lt;class &#39;type&#39;&gt;
+print(type(C))  # &lt;class &#39;type&#39;&gt;
+print(int(&#39;123&#39;))  # 123
 
-<span class="comment"># 这个例子中list工厂函数把一个元祖对象加工成了一个列表对象。</span>
-print(list((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)))  <span class="comment"># [1, 2, 3]</span></code></pre>
+# 这个例子中list工厂函数把一个元祖对象加工成了一个列表对象。
+print(list((1, 2, 3)))  # [1, 2, 3]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__add__(self, other)</code>定义加法的行为：<code>+</code></li>
 <li><code>__sub__(self, other)</code>定义减法的行为：<code>-</code></li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">MyClass</span>:</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class MyClass:
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, height, weight</span>):</span>
-        self.height = height
-        self.weight = weight
+    def __init__(self, height, weight):
+        self.height &#x3D; height
+        self.weight &#x3D; weight
 
-    <span class="comment"># 两个对象的长相加，宽不变.返回一个新的类</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__add__</span>(<span class="params">self, others</span>):</span>
-        <span class="keyword">return</span> MyClass(self.height + others.height, self.weight + others.weight)
+    # 两个对象的长相加，宽不变.返回一个新的类
+    def __add__(self, others):
+        return MyClass(self.height + others.height, self.weight + others.weight)
 
-    <span class="comment"># 两个对象的宽相减，长不变.返回一个新的类</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__sub__</span>(<span class="params">self, others</span>):</span>
-        <span class="keyword">return</span> MyClass(self.height - others.height, self.weight - others.weight)
+    # 两个对象的宽相减，长不变.返回一个新的类
+    def __sub__(self, others):
+        return MyClass(self.height - others.height, self.weight - others.weight)
 
-    <span class="comment"># 说一下自己的参数</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">intro</span>(<span class="params">self</span>):</span>
-        print(<span class="string">"高为"</span>, self.height, <span class="string">" 重为"</span>, self.weight)
+    # 说一下自己的参数
+    def intro(self):
+        print(&quot;高为&quot;, self.height, &quot; 重为&quot;, self.weight)
 
 
-<span class="function"><span class="keyword">def</span> <span class="title">main</span>():</span>
-    a = MyClass(height=<span class="number">10</span>, weight=<span class="number">5</span>)
+def main():
+    a &#x3D; MyClass(height&#x3D;10, weight&#x3D;5)
     a.intro()
 
-    b = MyClass(height=<span class="number">20</span>, weight=<span class="number">10</span>)
+    b &#x3D; MyClass(height&#x3D;20, weight&#x3D;10)
     b.intro()
 
-    c = b - a
+    c &#x3D; b - a
     c.intro()
 
-    d = a + b
+    d &#x3D; a + b
     d.intro()
 
 
-<span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
     main()
 
-<span class="comment"># 高为 10  重为 5</span>
-<span class="comment"># 高为 20  重为 10</span>
-<span class="comment"># 高为 10  重为 5</span>
-<span class="comment"># 高为 30  重为 15</span></code></pre>
+# 高为 10  重为 5
+# 高为 20  重为 10
+# 高为 10  重为 5
+# 高为 30  重为 15<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__mul__(self, other)</code>定义乘法的行为：<code>*</code></li>
@@ -1994,8 +1994,8 @@ print(list((<span class="number">1</span>, <span class="number">2</span>, <span 
 <li><code>divmod(a, b)</code>把除数和余数运算结果结合起来，返回一个包含商和余数的元组<code>(a // b, a % b)</code>。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">print(divmod(<span class="number">7</span>, <span class="number">2</span>))  <span class="comment"><code class="language-highlight python">print(divmod(<span class="number">7</span>, <span class="number">2</span>))  <span class="comment"># (3, 1)</span>
-print(divmod(<span class="number">8</span>, <span class="number">2</span>))  <span class="comment"># (4, 0)</span></code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">print(divmod(7, 2))  # (3, 1)
+print(divmod(8, 2))  # (4, 0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -2026,15 +2026,15 @@ print(divmod(<span class="number">8</span>, <span class="number">2</span>))  <sp
 <p><code>a + b</code></p>
 <p>这里加数是<code>a</code>，被加数是<code>b</code>，因此是<code>a</code>主动，反运算就是如果<code>a</code>对象的<code>__add__()</code>方法没有实现或者不支持相应的操作，那么 Python 就会调用<code>b</code>的<code>__radd__()</code>方法。</p>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Nint</span>(<span class="params"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Nint</span>(<span class="params">int</span>):</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__radd__</span>(<span class="params">self, other</span>):</span>
-        <span class="keyword">return</span> int.__sub__(other, self) <span class="comment"># 注意 self 在后面</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Nint(int):
+    def __radd__(self, other):
+        return int.__sub__(other, self) # 注意 self 在后面
 
 
-a = Nint(<span class="number">5</span>)
-b = Nint(<span class="number">3</span>)
-print(a + b)  <span class="comment"># 8</span>
-print(<span class="number">1</span> + b)  <span class="comment"># -2</span></code></pre>
+a &#x3D; Nint(5)
+b &#x3D; Nint(3)
+print(a + b)  # 8
+print(1 + b)  # -2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="增量赋值运算符"><a href="#增量赋值运算符" class="headerlink" title="增量赋值运算符"></a>增量赋值运算符</h3><ul>
 <li><code>__iadd__(self, other)</code>定义赋值加法的行为：<code>+=</code></li>
@@ -2063,33 +2063,33 @@ print(<span class="number">1</span> + b)  <span class="comment"># -2</span></cod
 <li><code>__delattr__(self, name)</code>：定义当一个属性被删除时的行为。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">C</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span>(<span class="params">self, item</span>):</span>
-        print(<span class="string">&#x27;__getattribute__&#x27;</span>)
-        <span class="keyword">return</span> super().__getattribute__(item)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class C:
+    def __getattribute__(self, item):
+        print(&#39;__getattribute__&#39;)
+        return super().__getattribute__(item)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span>(<span class="params">self, item</span>):</span>
-        print(<span class="string">&#x27;__getattr__&#x27;</span>)
+    def __getattr__(self, item):
+        print(&#39;__getattr__&#39;)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span>(<span class="params">self, key, value</span>):</span>
-        print(<span class="string">&#x27;__setattr__&#x27;</span>)
+    def __setattr__(self, key, value):
+        print(&#39;__setattr__&#39;)
         super().__setattr__(key, value)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__delattr__</span>(<span class="params">self, item</span>):</span>
-        print(<span class="string">&#x27;__delattr__&#x27;</span>)
+    def __delattr__(self, item):
+        print(&#39;__delattr__&#39;)
         super().__delattr__(item)
 
 
-c = C()
+c &#x3D; C()
 c.x
-<span class="comment"># __getattribute__</span>
-<span class="comment"># __getattr__</span>
+# __getattribute__
+# __getattr__
 
-c.x = <span class="number">1</span>
-<span class="comment"># __setattr__</span>
+c.x &#x3D; 1
+# __setattr__
 
-<span class="keyword">del</span> c.x
-<span class="comment"># __delattr__</span></code></pre>
+del c.x
+# __delattr__<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><p>描述符就是将某种特殊类型的类的实例指派给另一个类的属性。</p>
 <ul>
@@ -2098,30 +2098,30 @@ c.x = <span class="number">1</span>
 <li><code>__del__(self, instance)</code>控制删除操作，不返回任何内容。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">MyDecriptor</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__get__</span>(<span class="params">self, instance, owner</span>):</span>
-        print(<span class="string">&#x27;__get__&#x27;</span>, self, instance, owner)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class MyDecriptor:
+    def __get__(self, instance, owner):
+        print(&#39;__get__&#39;, self, instance, owner)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__set__</span>(<span class="params">self, instance, value</span>):</span>
-        print(<span class="string">&#x27;__set__&#x27;</span>, self, instance, value)
+    def __set__(self, instance, value):
+        print(&#39;__set__&#39;, self, instance, value)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__delete__</span>(<span class="params">self, instance</span>):</span>
-        print(<span class="string">&#x27;__delete__&#x27;</span>, self, instance)
-
-
-<span class="class"><span class="keyword">class</span> <span class="title">Test</span>:</span>
-    x = MyDecriptor()
+    def __delete__(self, instance):
+        print(&#39;__delete__&#39;, self, instance)
 
 
-t = Test()
+class Test:
+    x &#x3D; MyDecriptor()
+
+
+t &#x3D; Test()
 t.x
-<span class="comment"># __get__ <__main__.MyDecriptor object at 0x000000CEAAEB6B00> <__main__.Test object at 0x000000CEABDC0898> <class &#x27;__main__.Test&#x27;></span>
+# __get__ &lt;__main__.MyDecriptor object at 0x000000CEAAEB6B00&gt; &lt;__main__.Test object at 0x000000CEABDC0898&gt; &lt;class &#39;__main__.Test&#39;&gt;
 
-t.x = <span class="string">&#x27;x-man&#x27;</span>
-<span class="comment"># __set__ <__main__.MyDecriptor object at 0x00000023687C6B00> <__main__.Test object at 0x00000023696B0940> x-man</span>
+t.x &#x3D; &#39;x-man&#39;
+# __set__ &lt;__main__.MyDecriptor object at 0x00000023687C6B00&gt; &lt;__main__.Test object at 0x00000023696B0940&gt; x-man
 
-<span class="keyword">del</span> t.x
-<span class="comment"># __delete__ <__main__.MyDecriptor object at 0x000000EC9B160A90> <__main__.Test object at 0x000000EC9B160B38></span></code></pre>
+del t.x
+# __delete__ &lt;__main__.MyDecriptor object at 0x000000EC9B160A90&gt; &lt;__main__.Test object at 0x000000EC9B160B38&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="定制序列"><a href="#定制序列" class="headerlink" title="定制序列"></a>定制序列</h3><p>协议（Protocols）与其它编程语言中的接口很相似，它规定你哪些方法必须要定义。然而，在 Python 中的协议就显得不那么正式。事实上，在 Python 中，协议更像是一种指南。</p>
 <p><strong>容器类型的协议</strong></p>
@@ -2130,30 +2130,30 @@ t.x = <span class="string">&#x27;x-man&#x27;</span>
 <li>如果你希望定制的容器是可变的话，除了<code>__len__()</code>和<code>__getitem__()</code>方法，你还需要定义<code>__setitem__()</code>和<code>__delitem__()</code>两个方法。</li>
 </ul>
 <p>【例子】编写一个不可改变的自定义列表，要求记录列表中每个元素被访问的次数。</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">CountList</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, *args</span>):</span>
-        self.values = [x <span class="keyword">for</span> x <span class="keyword">in</span> args]
-        self.count = &#123;&#125;.fromkeys(range(len(self.values)), <span class="number">0</span>)
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class CountList:
+    def __init__(self, *args):
+        self.values &#x3D; [x for x in args]
+        self.count &#x3D; &#123;&#125;.fromkeys(range(len(self.values)), 0)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span>(<span class="params">self</span>):</span>
-        <span class="keyword">return</span> len(self.values)
+    def __len__(self):
+        return len(self.values)
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span>(<span class="params">self, item</span>):</span>
-        self.count[item] += <span class="number">1</span>
-        <span class="keyword">return</span> self.values[item]
+    def __getitem__(self, item):
+        self.count[item] +&#x3D; 1
+        return self.values[item]
 
 
-c1 = CountList(<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>)
-c2 = CountList(<span class="number">2</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">8</span>, <span class="number">10</span>)
-print(c1[<span class="number">1</span>])  <span class="comment"># 3</span>
-print(c2[<span class="number">2</span>])  <span class="comment"># 6</span>
-print(c1[<span class="number">1</span>] + c2[<span class="number">1</span>])  <span class="comment"># 7</span>
+c1 &#x3D; CountList(1, 3, 5, 7, 9)
+c2 &#x3D; CountList(2, 4, 6, 8, 10)
+print(c1[1])  # 3
+print(c2[2])  # 6
+print(c1[1] + c2[1])  # 7
 
 print(c1.count)
-<span class="comment"># &#123;0: 0, 1: 2, 2: 0, 3: 0, 4: 0&#125;</span>
+# &#123;0: 0, 1: 2, 2: 0, 3: 0, 4: 0&#125;
 
 print(c2.count)
-<span class="comment"># &#123;0: 0, 1: 1, 2: 1, 3: 0, 4: 0&#125;</span></code></pre>
+# &#123;0: 0, 1: 1, 2: 1, 3: 0, 4: 0&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li><code>__len__(self)</code>定义当被<code>len()</code>调用时的行为（返回容器中元素的个数）。</li>
@@ -2162,15 +2162,15 @@ print(c2.count)
 <li><code>__delitem__(self, key)</code>定义删除容器中指定元素的行为，相当于<code>del self[key]</code>。</li>
 </ul>
 <p>【例子】编写一个可改变的自定义列表，要求记录列表中每个元素被访问的次数。</p>
-<pre class=" language-highlight python"><code class="language-highlight python">
-- `__len__(self)`定义当被`len()`调用时的行为（返回容器中元素的个数）。
-- `__getitem__(self, key)`定义获取容器中元素的行为，相当于`self[key]`。
-- `__setitem__(self, key, value)`定义设置容器中指定元素的行为，相当于`self[key] = value`。
-- `__delitem__(self, key)`定义删除容器中指定元素的行为，相当于`<span class="keyword">del</span> self[key]`。
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">
+- &#96;__len__(self)&#96;定义当被&#96;len()&#96;调用时的行为（返回容器中元素的个数）。
+- &#96;__getitem__(self, key)&#96;定义获取容器中元素的行为，相当于&#96;self[key]&#96;。
+- &#96;__setitem__(self, key, value)&#96;定义设置容器中指定元素的行为，相当于&#96;self[key] &#x3D; value&#96;。
+- &#96;__delitem__(self, key)&#96;定义删除容器中指定元素的行为，相当于&#96;del self[key]&#96;。
 
 
 【例子】编写一个可改变的自定义列表，要求记录列表中每个元素被访问的次数。
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><ul>
 <li>迭代是 Python 最强大的功能之一，是访问集合元素的一种方式。</li>
@@ -2180,38 +2180,38 @@ print(c2.count)
 <li>字符串，列表或元组对象都可用于创建迭代器：</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">string = <span class="string"><code class="language-highlight python">string = <span class="string">&#x27;lsgogroup&#x27;</span>
-<span class="keyword">for</span> c <span class="keyword">in</span> string:
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">string &#x3D; &#39;lsgogroup&#39;
+for c in string:
     print(c)
 
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">l</span>
-<span class="string">s</span>
-<span class="string">g</span>
-<span class="string">o</span>
-<span class="string">g</span>
-<span class="string">r</span>
-<span class="string">o</span>
-<span class="string">u</span>
-<span class="string">p</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+&#39;&#39;&#39;
+l
+s
+g
+o
+g
+r
+o
+u
+p
+&#39;&#39;&#39;
 
-<span class="keyword">for</span> c <span class="keyword">in</span> iter(string):
-    print(c)</code></pre>
+for c in iter(string):
+    print(c)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】</p>
-<pre class=" language-highlight python">links = &#123;<span class="string">&#x27;B&#x27;</span>: <span class="string">&#x27;百度&#x27;</span>, <span class="string">&#x27;A&#x27;</span>: <span class="string">&#x27;阿里&#x27;</span>, <span class="string">&#x27;T&#x27;</span>: <span class="string"><code class="language-highlight python">links = &#123;<span class="string">&#x27;B&#x27;</span>: <span class="string">&#x27;百度&#x27;</span>, <span class="string">&#x27;A&#x27;</span>: <span class="string">&#x27;阿里&#x27;</span>, <span class="string">&#x27;T&#x27;</span>: <span class="string">&#x27;腾讯&#x27;</span>&#125;
-<span class="keyword">for</span> each <span class="keyword">in</span> links:
-    print(<span class="string">&#x27;%s -> %s&#x27;</span> % (each, links[each]))
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">links &#x3D; &#123;&#39;B&#39;: &#39;百度&#39;, &#39;A&#39;: &#39;阿里&#39;, &#39;T&#39;: &#39;腾讯&#39;&#125;
+for each in links:
+    print(&#39;%s -&gt; %s&#39; % (each, links[each]))
     
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">B -> 百度</span>
-<span class="string">A -> 阿里</span>
-<span class="string">T -> 腾讯</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+&#39;&#39;&#39;
+B -&gt; 百度
+A -&gt; 阿里
+T -&gt; 腾讯
+&#39;&#39;&#39;
 
-<span class="keyword">for</span> each <span class="keyword">in</span> iter(links):
-    print(<span class="string">&#x27;%s -> %s&#x27;</span> % (each, links[each]))</code></pre>
+for each in iter(links):
+    print(&#39;%s -&gt; %s&#39; % (each, links[each]))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>迭代器有两个基本的方法：<code>iter()</code> 和 <code>next()</code>。</li>
@@ -2221,25 +2221,25 @@ print(c2.count)
 <li><code>default</code> – 可选，用于设置在没有下一个元素时返回该默认值，如果不设置，又没有下一个元素则会触发 <code>StopIteration</code> 异常。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python">links = &#123;<span class="string">&#x27;B&#x27;</span>: <span class="string">&#x27;百度&#x27;</span>, <span class="string">&#x27;A&#x27;</span>: <span class="string">&#x27;阿里&#x27;</span>, <span class="string">&#x27;T&#x27;</span>: <span class="string"><code class="language-highlight python">links = &#123;<span class="string">&#x27;B&#x27;</span>: <span class="string">&#x27;百度&#x27;</span>, <span class="string">&#x27;A&#x27;</span>: <span class="string">&#x27;阿里&#x27;</span>, <span class="string">&#x27;T&#x27;</span>: <span class="string">&#x27;腾讯&#x27;</span>&#125;
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">links &#x3D; &#123;&#39;B&#39;: &#39;百度&#39;, &#39;A&#39;: &#39;阿里&#39;, &#39;T&#39;: &#39;腾讯&#39;&#125;
 
-it = iter(links)
-<span class="keyword">while</span> <span class="literal">True</span>:
-    <span class="keyword">try</span>:
-        each = next(it)
-    <span class="keyword">except</span> StopIteration:
-        <span class="keyword">break</span>
+it &#x3D; iter(links)
+while True:
+    try:
+        each &#x3D; next(it)
+    except StopIteration:
+        break
     print(each)
 
-<span class="comment"># B</span>
-<span class="comment"># A</span>
-<span class="comment"># T</span>
+# B
+# A
+# T
 
-it = iter(links)
-print(next(it))  <span class="comment"># B</span>
-print(next(it))  <span class="comment"># A</span>
-print(next(it))  <span class="comment"># T</span>
-print(next(it))  <span class="comment"># StopIteration</span></code></pre>
+it &#x3D; iter(links)
+print(next(it))  # B
+print(next(it))  # A
+print(next(it))  # T
+print(next(it))  # StopIteration<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>把一个类作为一个迭代器使用需要在类中实现两个魔法方法 <code>__iter__()</code> 与 <code>__next__()</code> 。</p>
 <ul>
@@ -2248,27 +2248,27 @@ print(next(it))  <span class="comment"># StopIteration</span></code></pre>
 <li><code>StopIteration</code> 异常用于标识迭代的完成，防止出现无限循环的情况，在 <code>__next__()</code> 方法中我们可以设置在完成指定循环次数后触发 <code>StopIteration</code> 异常来结束迭代。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title"><code class="language-highlight python"><span class="class"><span class="keyword">class</span> <span class="title">Fibs</span>:</span>
-    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, n=<span class="number">10</span></span>):</span>
-        self.a = <span class="number">0</span>
-        self.b = <span class="number">1</span>
-        self.n = n
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">class Fibs:
+    def __init__(self, n&#x3D;10):
+        self.a &#x3D; 0
+        self.b &#x3D; 1
+        self.n &#x3D; n
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span>(<span class="params">self</span>):</span>
-        <span class="keyword">return</span> self
+    def __iter__(self):
+        return self
 
-    <span class="function"><span class="keyword">def</span> <span class="title">__next__</span>(<span class="params">self</span>):</span>
-        self.a, self.b = self.b, self.a + self.b
-        <span class="keyword">if</span> self.a > self.n:
-            <span class="keyword">raise</span> StopIteration
-        <span class="keyword">return</span> self.a
+    def __next__(self):
+        self.a, self.b &#x3D; self.b, self.a + self.b
+        if self.a &gt; self.n:
+            raise StopIteration
+        return self.a
 
 
-fibs = Fibs(<span class="number">100</span>)
-<span class="keyword">for</span> each <span class="keyword">in</span> fibs:
-    print(each, end=<span class="string">&#x27; &#x27;</span>)
+fibs &#x3D; Fibs(100)
+for each in fibs:
+    print(each, end&#x3D;&#39; &#39;)
 
-<span class="comment"># 1 1 2 3 5 8 13 21 34 55 89</span></code></pre>
+# 1 1 2 3 5 8 13 21 34 55 89<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><b>4.10 生成器</b></p>
 <ul>
@@ -2278,44 +2278,44 @@ fibs = Fibs(<span class="number">100</span>)
 <li>调用一个生成器函数，返回的是一个迭代器对象。</li>
 </ul>
 <p>【例子】</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">myGen</span>():</span>
-    print(<span class="string">&#x27;生成器执行！&#x27;</span>)
-    <span class="keyword">yield</span> <span class="number">1</span>
-    <span class="keyword">yield</span> <span class="number">2</span>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def myGen():
+    print(&#39;生成器执行！&#39;)
+    yield 1
+    yield 2
     
-myG = myGen()
-<span class="keyword">for</span> each <span class="keyword">in</span> myG:
+myG &#x3D; myGen()
+for each in myG:
     print(each)
 
-<span class="string">&#x27;&#x27;&#x27;</span>
-<span class="string">生成器执行！</span>
-<span class="string">1</span>
-<span class="string">2</span>
-<span class="string">&#x27;&#x27;&#x27;</span>
+&#39;&#39;&#39;
+生成器执行！
+1
+2
+&#39;&#39;&#39;
 
-myG = myGen()
+myG &#x3D; myGen()
 print(next(myG))  
-<span class="comment"># 生成器执行！</span>
-<span class="comment"># 1</span>
+# 生成器执行！
+# 1
 
-print(next(myG))  <span class="comment"># 2</span>
-print(next(myG))  <span class="comment"># StopIteration</span></code></pre>
+print(next(myG))  # 2
+print(next(myG))  # StopIteration<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>【例子】用生成器实现斐波那契数列。</p>
-<pre class=" language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">libs</span>(<span class="params"><code class="language-highlight python"><span class="function"><span class="keyword">def</span> <span class="title">libs</span>(<span class="params">n</span>):</span>
-    a = <span class="number">0</span>
-    b = <span class="number">1</span>
-    <span class="keyword">while</span> <span class="literal">True</span>:
-        a, b = b, a + b
-        <span class="keyword">if</span> a > n:
-            <span class="keyword">return</span>
-        <span class="keyword">yield</span> a
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">def libs(n):
+    a &#x3D; 0
+    b &#x3D; 1
+    while True:
+        a, b &#x3D; b, a + b
+        if a &gt; n:
+            return
+        yield a
 
 
-<span class="keyword">for</span> each <span class="keyword">in</span> libs(<span class="number">100</span>):
-    print(each, end=<span class="string">&#x27; &#x27;</span>)
+for each in libs(100):
+    print(each, end&#x3D;&#39; &#39;)
 
-<span class="comment"># 1 1 2 3 5 8 13 21 34 55 89</span></code></pre>
+# 1 1 2 3 5 8 13 21 34 55 89<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 

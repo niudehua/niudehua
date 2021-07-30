@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    163
+                    190
                 </div>
                 
 
@@ -449,7 +449,7 @@
                 <hr>
 <h1 id="Maven清理下载失败文件"><a href="#Maven清理下载失败文件" class="headerlink" title="Maven清理下载失败文件"></a>Maven清理下载失败文件</h1><ul>
 <li><p>cleanLastUpdated.bat（windows版本）</p>
-<pre><div class="caption"><span>basic</span></div><code class="highlight visual">@echo off
+<pre class="line-numbers language-visual" data-language="visual"><div class="caption"><span>basic</span></div><code class="language-visual">@echo off
 rem create by niudehua
   
 rem 这里写你的仓库路径
@@ -460,24 +460,24 @@ for &#x2F;f &quot;delims&#x3D;&quot; %%i in (&#39;dir &#x2F;b &#x2F;s &quot;%REP
     del &#x2F;s &#x2F;q &quot;%%i&quot;
 )
 rem 搜索完毕
-pause</code></pre>
+pause<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 </li>
 <li><p>cleanLastUpdated.sh（linux版本）</p>
-<pre class=" language-highlight bash"><span class="comment"><code class="language-highlight bash"><span class="comment"># create by niudehua</span>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># create by niudehua
 
-<span class="comment"># 这里写你的仓库路径</span>
-REPOSITORY_PATH=/Users/deng/.m2/repository
+# 这里写你的仓库路径
+REPOSITORY_PATH&#x3D;&#x2F;Users&#x2F;deng&#x2F;.m2&#x2F;repository
 rm -f lastUpdatedFile.txt
-<span class="comment"># 查询</span>
-  date <span class="string">"+%Y-%m-%d %H:%M:%S"</span>  >> lastUpdatedFile.txt
-  <span class="built_in">echo</span>  <span class="string">"开始搜索"</span><span class="variable">$REPOSITORY_PATH</span> >> lastUpdatedFile.txt
-  find <span class="variable">$REPOSITORY_PATH</span> -name <span class="string">"*lastUpdated*"</span> >> lastUpdatedFile.txt
-<span class="comment"># 删除</span>
-  find <span class="variable">$REPOSITORY_PATH</span> -name <span class="string">"*lastUpdated*"</span> |xargs rm -fr
-  date <span class="string">"+%Y-%m-%d %H:%M:%S"</span>  >> lastUpdatedFile.txt
-  <span class="built_in">echo</span> <span class="string">"搜索完毕"</span><span class="variable">$REPOSITORY_PATH</span> >> lastUpdatedFile.txt
+# 查询
+  date &quot;+%Y-%m-%d %H:%M:%S&quot;  &gt;&gt; lastUpdatedFile.txt
+  echo  &quot;开始搜索&quot;$REPOSITORY_PATH &gt;&gt; lastUpdatedFile.txt
+  find $REPOSITORY_PATH -name &quot;*lastUpdated*&quot; &gt;&gt; lastUpdatedFile.txt
+# 删除
+  find $REPOSITORY_PATH -name &quot;*lastUpdated*&quot; |xargs rm -fr
+  date &quot;+%Y-%m-%d %H:%M:%S&quot;  &gt;&gt; lastUpdatedFile.txt
+  echo &quot;搜索完毕&quot;$REPOSITORY_PATH &gt;&gt; lastUpdatedFile.txt
   cat  lastUpdatedFile.txt
-</code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 </li>
 </ul>
